@@ -321,7 +321,7 @@ body {
 }
 
 .bg-gradient-hero {
-  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 50%, var(--accent-600) 100%);
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 50%, var(--primary-700) 100%);
 }
 
 .bg-gradient-overlay {
@@ -514,19 +514,22 @@ body {
 
 /* Primary Button */
 .btn-primary {
-  background: var(--bg-gradient-primary);
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
   color: white;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 4px rgba(27, 54, 93, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--primary-600);
 }
 
 .btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 8px rgba(27, 54, 93, 0.20), 0 2px 4px rgba(27, 54, 93, 0.15);
+  border-color: var(--primary-700);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 4px rgba(27, 54, 93, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Secondary Button */
