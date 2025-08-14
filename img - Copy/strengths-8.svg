@@ -1,0 +1,28 @@
+<svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_342_7010)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M89.467 44.5222C89.467 69.0689 69.5693 88.9666 45.0226 88.9666C20.4758 88.9666 0.578125 69.0689 0.578125 44.5222C0.578125 19.9755 20.4758 0.0777588 45.0226 0.0777588C69.5693 0.0777588 89.467 19.9755 89.467 44.5222ZM83.3369 44.5222C83.3369 65.6827 66.1831 82.8361 45.0229 82.8361C23.8628 82.8361 6.70899 65.6823 6.70899 44.5222C6.70899 23.3621 23.8628 6.20827 45.0229 6.20827C66.1831 6.20827 83.3369 23.3621 83.3369 44.5222Z" fill="url(#paint0_linear_342_7010)"/>
+<path d="M70.0225 44.5222C70.0225 58.3303 58.8305 69.5222 45.0225 69.5222C31.2144 69.5222 20.0225 58.3303 20.0225 44.5222C20.0225 30.7142 31.2144 19.5222 45.0225 19.5222C58.8305 19.5222 70.0225 30.7142 70.0225 44.5222Z" fill="url(#paint1_linear_342_7010)"/>
+<path d="M60.4238 35.7643C60.4238 40.8495 56.302 44.9713 51.2168 44.9713C46.1315 44.9713 42.0098 40.8495 42.0098 35.7643C42.0098 30.679 46.1315 26.5573 51.2168 26.5573C56.302 26.5573 60.4238 30.679 60.4238 35.7643Z" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_342_7010" x1="0.578125" y1="44.5222" x2="89.5312" y2="44.5222" gradientUnits="userSpaceOnUse">
+<stop stop-color="#030844"/>
+<stop offset="0.19" stop-color="#293881"/>
+<stop offset="0.26" stop-color="#1736A9"/>
+<stop offset="0.31" stop-color="#2643C5"/>
+<stop offset="0.39" stop-color="#435CFA"/>
+<stop offset="0.4" stop-color="#435CFA"/>
+<stop offset="0.51" stop-color="#1038BD"/>
+<stop offset="0.59" stop-color="#143098"/>
+<stop offset="0.77" stop-color="#1D2663"/>
+<stop offset="1" stop-color="#03043B"/>
+</linearGradient>
+<linearGradient id="paint1_linear_342_7010" x1="20.0225" y1="19.5222" x2="70.0225" y2="69.5222" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC200"/>
+<stop offset="1" stop-color="#FF785E"/>
+</linearGradient>
+<clipPath id="clip0_342_7010">
+<rect width="90" height="90" fill="white" transform="translate(0.5)"/>
+</clipPath>
+</defs>
+</svg>

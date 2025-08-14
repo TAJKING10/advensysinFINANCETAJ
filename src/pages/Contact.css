@@ -1,0 +1,88 @@
+/* Contact Page Styles */
+.contact-page {
+  padding-top: 80px;
+}
+
+/* Office Hours */
+.office-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hours-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-light);
+  border-left: 4px solid var(--primary-color);
+}
+
+.hours-item.emergency {
+  border-left-color: var(--secondary-color);
+  background: linear-gradient(135deg, var(--secondary-color), var(--secondary-color));
+  color: var(--white);
+}
+
+.day {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hours-item.emergency .day,
+.hours-item.emergency .time {
+  color: var(--white);
+}
+
+.time {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.hours-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-page {
+    padding-top: 70px;
+  }
+
+  .office-hours {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hours-item {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hours-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
