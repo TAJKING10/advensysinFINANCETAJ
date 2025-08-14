@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import { useLocation as useLocationContext } from '../../contexts/LocationContext'
+import { HiChevronDown, HiPhone, HiSparkles } from 'react-icons/hi'
+import { FaQuoteLeft } from 'react-icons/fa'
 import './Header.css'
 
 const Header = () => {
@@ -112,7 +114,7 @@ const Header = () => {
               >
                 <span className="switcher-flag">{languages[currentLanguage]?.flag}</span>
                 <span className="switcher-text">{languages[currentLanguage]?.code?.toUpperCase()}</span>
-                <img src="/assets/arrow.svg" alt="" className={`switcher-arrow ${isLanguageDropdownOpen ? 'open' : ''}`} />
+                <HiChevronDown className={`switcher-arrow ${isLanguageDropdownOpen ? 'open' : ''}`} />
               </button>
               {isLanguageDropdownOpen && (
                 <div className="switcher-dropdown">
@@ -140,7 +142,7 @@ const Header = () => {
               >
                 <span className="switcher-flag">{currentLocationData?.flag}</span>
                 <span className="switcher-text">{currentLocationData?.name}</span>
-                <img src="/assets/arrow.svg" alt="" className={`switcher-arrow ${isLocationDropdownOpen ? 'open' : ''}`} />
+                <HiChevronDown className={`switcher-arrow ${isLocationDropdownOpen ? 'open' : ''}`} />
               </button>
               {isLocationDropdownOpen && (
                 <div className="switcher-dropdown">
@@ -161,13 +163,14 @@ const Header = () => {
             {/* Contact Info */}
             <div className="contact-info">
               <a href={`tel:${currentLocationData?.phone}`} className="contact-link">
-                <img src="/assets/phone.svg" alt={t('header.phone')} />
+                <HiPhone />
                 <span>{currentLocationData?.phone}</span>
               </a>
             </div>
 
             {/* Get Quote Button */}
             <Link to="/contact" className="btn btn-primary">
+              <FaQuoteLeft />
               {t('common.getQuote')}
             </Link>
 
@@ -238,6 +241,7 @@ const Header = () => {
             </li>
             <li className="nav-mobile-item">
               <Link to="/contact" className="btn btn-primary btn-mobile">
+                <FaQuoteLeft />
                 {t('common.getQuote')}
               </Link>
             </li>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { HiChevronLeft, HiChevronRight, HiSparkles } from 'react-icons/hi'
 import './Hero.css'
 
 const Hero = () => {
@@ -116,7 +117,7 @@ const Hero = () => {
             onClick={prevSlide}
             aria-label="Previous slide"
           >
-            <img src="/assets/arrow.svg" alt="Previous" />
+            <HiChevronLeft />
           </button>
           
           <div className="slide-indicators">
@@ -135,7 +136,7 @@ const Hero = () => {
             onClick={nextSlide}
             aria-label="Next slide"
           >
-            <img src="/assets/arrow.svg" alt="Next" />
+            <HiChevronRight />
           </button>
         </div>
 
