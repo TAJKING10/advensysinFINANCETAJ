@@ -8,6 +8,7 @@
 
 main {
   flex: 1;
+  padding-top: 80px; /* Account for fixed header height */
 }
 
 /* Page transition animations */
@@ -63,13 +64,52 @@ main {
   border: 0;
 }
 
-/* Focus styles for better accessibility */
+/* Enhanced Focus styles for better accessibility */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Focus within for complex components */
+.card:focus-within,
+.service-card:focus-within {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --border-light: #666666;
+    --border-medium: #333333;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .hero-image img {
+    animation: none;
+  }
+  
+  .hero-title {
+    animation: none;
+  }
 }
 
 /* Smooth scrolling for anchor links */
