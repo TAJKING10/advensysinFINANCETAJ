@@ -307,6 +307,76 @@ export default {
         flexible: 'Options flexibles de franchise et co-paiement',
         submission: 'Soumission facile de réclamations en ligne'
       }
+    },
+    life: {
+      features: {
+        term: 'Assurance Vie Temporaire',
+        whole: 'Assurance Vie Entière',
+        universal: 'Assurance Vie Universelle',
+        investment: 'Options d\'Investissement',
+        living: 'Avantages de Vie',
+        flexible: 'Plans de Paiement Flexibles'
+      },
+      benefits: {
+        security: 'Sécurité financière pour les proches',
+        savings: 'Épargne avec avantages fiscaux',
+        coverage: 'Montants de couverture flexibles',
+        exam: 'Options sans examen médical disponibles'
+      }
+    },
+    business: {
+      features: {
+        liability: 'Assurance Responsabilité Générale',
+        property: 'Couverture Propriété',
+        workers: 'Compensation des Travailleurs',
+        cyber: 'Protection Cyber Responsabilité',
+        professional: 'Indemnité Professionnelle',
+        interruption: 'Interruption d\'Affaires'
+      },
+      benefits: {
+        tailored: 'Couverture adaptée à votre industrie',
+        expertise: 'Expertise en gestion des risques',
+        rates: 'Tarifs d\'affaires compétitifs',
+        specialists: 'Spécialistes d\'affaires dédiés'
+      }
+    },
+    property: {
+      features: {
+        homeowners: 'Assurance Propriétaire',
+        renters: 'Assurance Locataire',
+        condo: 'Couverture Copropriété',
+        personal: 'Protection Biens Personnels',
+        liability: 'Couverture Responsabilité',
+        expenses: 'Frais de Subsistance Additionnels'
+      },
+      benefits: {
+        replacement: 'Couverture coût de remplacement',
+        discounts: 'Multiples opportunités de rabais',
+        belongings: 'Protection biens personnels',
+        housing: 'Assistance logement temporaire'
+      }
+    },
+    financial: {
+      features: {
+        retirement: 'Planification Retraite',
+        investment: 'Conseil en Investissement',
+        tax: 'Stratégies Planification Fiscale',
+        estate: 'Planification Succession',
+        education: 'Financement Éducation',
+        risk: 'Évaluation des Risques'
+      },
+      benefits: {
+        planners: 'Planificateurs financiers certifiés',
+        strategies: 'Stratégies personnalisées',
+        reviews: 'Révisions régulières de portefeuille',
+        readiness: 'Analyse préparation retraite'
+      }
+    },
+    cta: {
+      title: 'Prêt à Être Protégé ?',
+      description: 'Contactez-nous aujourd\'hui pour une consultation gratuite et un devis personnalisé. Nos experts en assurance sont là pour vous aider à trouver la couverture parfaite.',
+      button: 'Devis Gratuit',
+      phone: 'Appelez : +1 (234) 567-890'
     }
   },
 
@@ -393,6 +463,12 @@ export default {
     searchPlaceholder: 'Rechercher des articles...',
     noResults: 'Aucun article trouvé correspondant à votre recherche.',
     loadMore: 'Charger Plus d\'Articles',
+    newsletter: {
+      title: 'Restez à Jour',
+      description: 'Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles d\'assurance, conseils et mises à jour directement dans votre boîte de réception.',
+      placeholder: 'Entrez votre adresse email',
+      subscribe: 'S\'abonner'
+    },
     articles: {
       healthChanges: {
         title: 'Changements 2024 de l\'Assurance Santé que Vous Devez Connaître',

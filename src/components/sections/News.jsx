@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../../contexts/LanguageContext'
 import './News.css'
 
 const News = () => {
+  const { t } = useLanguage()
   const newsArticles = [
     {
       id: 1,
@@ -36,9 +38,9 @@ const News = () => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center">
-          <h2 className="section-title">Latest News & Insights</h2>
+          <h2 className="section-title">{t('news.title')}</h2>
           <p className="section-subtitle">
-            Stay informed with the latest updates and expert advice from the insurance industry
+            {t('news.description')}
           </p>
         </div>
 
@@ -64,7 +66,7 @@ const News = () => {
                 <p className="news-excerpt">{article.excerpt}</p>
                 
                 <Link to={article.link} className="news-read-more">
-                  Read More
+                  {t('common.readMore')}
                   <img src="/assets/arrow.svg" alt="" />
                 </Link>
               </div>
@@ -75,7 +77,7 @@ const News = () => {
         {/* View All Link */}
         <div className="news-actions text-center">
           <Link to="/news" className="btn btn-primary">
-            View All Articles
+            {t('common.readMore')}
           </Link>
         </div>
       </div>

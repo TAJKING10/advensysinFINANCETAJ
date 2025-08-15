@@ -53,7 +53,14 @@ const News = () => {
     }
   ]
 
-  const categories = ['All', 'Health Insurance', 'Auto Insurance', 'Life Insurance', 'Business Insurance', 'Property Insurance']
+  const categories = [
+    { key: 'All', label: t('newsPage.categories.all') },
+    { key: 'Health Insurance', label: t('newsPage.categories.health') },
+    { key: 'Auto Insurance', label: t('newsPage.categories.auto') },
+    { key: 'Life Insurance', label: t('newsPage.categories.life') },
+    { key: 'Business Insurance', label: t('newsPage.categories.business') },
+    { key: 'Property Insurance', label: t('newsPage.categories.property') }
+  ]
   const [selectedCategory, setSelectedCategory] = React.useState('All')
 
   const filteredArticles = selectedCategory === 'All' 
@@ -115,11 +122,11 @@ const News = () => {
             <div className="category-buttons">
               {categories.map(category => (
                 <button
-                  key={category}
-                  className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
-                  onClick={() => setSelectedCategory(category)}
+                  key={category.key}
+                  className={`category-btn ${selectedCategory === category.key ? 'active' : ''}`}
+                  onClick={() => setSelectedCategory(category.key)}
                 >
-                  {category}
+                  {category.label}
                 </button>
               ))}
             </div>
@@ -149,7 +156,7 @@ const News = () => {
                   <div className="news-footer">
                     <span className="news-author">By {article.author}</span>
                     <Link to={`/news/${article.id}`} className="news-read-more">
-                      Read More
+                      {t('common.readMore')}
                       <img src="/assets/arrow.svg" alt="" />
                     </Link>
                   </div>
@@ -171,20 +178,19 @@ const News = () => {
         <div className="container">
           <div className="newsletter-signup">
             <div className="newsletter-content">
-              <h2 className="newsletter-title">Stay Updated</h2>
+              <h2 className="newsletter-title">{t('newsPage.newsletter.title')}</h2>
               <p className="newsletter-description">
-                Subscribe to our newsletter to receive the latest insurance news, 
-                tips, and updates directly in your inbox.
+                {t('newsPage.newsletter.description')}
               </p>
               <form className="newsletter-form">
                 <input 
                   type="email" 
-                  placeholder="Enter your email address" 
+                  placeholder={t('newsPage.newsletter.placeholder')} 
                   className="newsletter-input"
                   required
                 />
                 <button type="submit" className="btn btn-primary">
-                  Subscribe
+                  {t('newsPage.newsletter.subscribe')}
                 </button>
               </form>
             </div>

@@ -307,6 +307,76 @@ export default {
         flexible: 'Flexibla självrisker och co-pay alternativ',
         submission: 'Enkel online-skadeanmälan'
       }
+    },
+    life: {
+      features: {
+        term: 'Terminslivförsäkring',
+        whole: 'Hellivförsäkring',
+        universal: 'Universell Livförsäkring',
+        investment: 'Investeringsalternativ',
+        living: 'Levande Förmåner',
+        flexible: 'Flexibla Betalningsplaner'
+      },
+      benefits: {
+        security: 'Ekonomisk trygghet för nära och kära',
+        savings: 'Skatteförmånligt sparande',
+        coverage: 'Flexibla täckningsbelopp',
+        exam: 'Alternativ utan läkarundersökning tillgängliga'
+      }
+    },
+    business: {
+      features: {
+        liability: 'Allmän Ansvarsförsäkring',
+        property: 'Egendomstäckning',
+        workers: 'Arbetsskadeersättning',
+        cyber: 'Cyber Ansvarsskydd',
+        professional: 'Yrkesansvar',
+        interruption: 'Driftavbrott'
+      },
+      benefits: {
+        tailored: 'Skräddarsydd täckning för din bransch',
+        expertise: 'Expertis inom riskhantering',
+        rates: 'Konkurrenskraftiga affärspriser',
+        specialists: 'Dedikerade affärsspecialister'
+      }
+    },
+    property: {
+      features: {
+        homeowners: 'Hemägareförsäkring',
+        renters: 'Hyresgästförsäkring',
+        condo: 'Bostadsrättstäckning',
+        personal: 'Personligt Egendomsskydd',
+        liability: 'Ansvarstäckning',
+        expenses: 'Ytterligare Levnadskostnader'
+      },
+      benefits: {
+        replacement: 'Täckning för återställningskostnad',
+        discounts: 'Flera rabattmöjligheter',
+        belongings: 'Skydd för personliga tillhörigheter',
+        housing: 'Tillfälligt boendebistand'
+      }
+    },
+    financial: {
+      features: {
+        retirement: 'Pensionsplanering',
+        investment: 'Investeringsrådgivning',
+        tax: 'Skatteplaneringsstrategier',
+        estate: 'Dödsboplanering',
+        education: 'Utbildningsfinansiering',
+        risk: 'Riskbedömning'
+      },
+      benefits: {
+        planners: 'Certifierade finansplanerare',
+        strategies: 'Personliga strategier',
+        reviews: 'Regelbundna portföljgenomgångar',
+        readiness: 'Pensionsberedskapsanalys'
+      }
+    },
+    cta: {
+      title: 'Redo att Skyddas?',
+      description: 'Kontakta oss idag för en gratis konsultation och personlig offert. Våra försäkringsexperter är här för att hjälpa dig hitta den perfekta täckningen.',
+      button: 'Få Gratis Offert',
+      phone: 'Ring: +1 (234) 567-890'
     }
   },
 
@@ -393,6 +463,12 @@ export default {
     searchPlaceholder: 'Sök nyhetsartiklar...',
     noResults: 'Inga artiklar hittades som matchar din sökning.',
     loadMore: 'Ladda Fler Artiklar',
+    newsletter: {
+      title: 'Håll Dig Uppdaterad',
+      description: 'Prenumerera på vårt nyhetsbrev för att få de senaste försäkringsnyheterna, tipsen och uppdateringarna direkt i din inkorg.',
+      placeholder: 'Ange din e-postadress',
+      subscribe: 'Prenumerera'
+    },
     articles: {
       healthChanges: {
         title: '2024 Års Sjukförsäkringsförändringar Du Behöver Veta',

@@ -53,78 +53,78 @@ const Services = () => {
       description: t('services.items.lifeInsurance.description'),
       image: '/assets/category-3.png',
       features: [
-        'Term Life Insurance',
-        'Whole Life Insurance',
-        'Universal Life Insurance',
-        'Investment Options',
-        'Living Benefits',
-        'Flexible Payment Plans'
+        t('servicesPage.life.features.term'),
+        t('servicesPage.life.features.whole'),
+        t('servicesPage.life.features.universal'),
+        t('servicesPage.life.features.investment'),
+        t('servicesPage.life.features.living'),
+        t('servicesPage.life.features.flexible')
       ],
       benefits: [
-        'Financial security for loved ones',
-        'Tax-advantaged savings',
-        'Flexible coverage amounts',
-        'No medical exam options available'
+        t('servicesPage.life.benefits.security'),
+        t('servicesPage.life.benefits.savings'),
+        t('servicesPage.life.benefits.coverage'),
+        t('servicesPage.life.benefits.exam')
       ]
     },
     {
       id: 'business',
-      title: 'Business Insurance',
-      description: 'Comprehensive business protection including liability, property, and workers\' compensation.',
+      title: t('services.items.businessInsurance.title'),
+      description: t('services.items.businessInsurance.description'),
       image: '/assets/category-4.png',
       features: [
-        'General Liability Insurance',
-        'Property Coverage',
-        'Workers\' Compensation',
-        'Cyber Liability Protection',
-        'Professional Indemnity',
-        'Business Interruption'
+        t('servicesPage.business.features.liability'),
+        t('servicesPage.business.features.property'),
+        t('servicesPage.business.features.workers'),
+        t('servicesPage.business.features.cyber'),
+        t('servicesPage.business.features.professional'),
+        t('servicesPage.business.features.interruption')
       ],
       benefits: [
-        'Tailored coverage for your industry',
-        'Risk management expertise',
-        'Competitive business rates',
-        'Dedicated business specialists'
+        t('servicesPage.business.benefits.tailored'),
+        t('servicesPage.business.benefits.expertise'),
+        t('servicesPage.business.benefits.rates'),
+        t('servicesPage.business.benefits.specialists')
       ]
     },
     {
       id: 'property',
-      title: 'Property Insurance',
-      description: 'Protect your home and personal belongings with our comprehensive property insurance solutions.',
+      title: t('services.items.propertyInsurance.title'),
+      description: t('services.items.propertyInsurance.description'),
       image: '/assets/category-5.png',
       features: [
-        'Homeowners Insurance',
-        'Renters Insurance',
-        'Condo Coverage',
-        'Personal Property Protection',
-        'Liability Coverage',
-        'Additional Living Expenses'
+        t('servicesPage.property.features.homeowners'),
+        t('servicesPage.property.features.renters'),
+        t('servicesPage.property.features.condo'),
+        t('servicesPage.property.features.personal'),
+        t('servicesPage.property.features.liability'),
+        t('servicesPage.property.features.expenses')
       ],
       benefits: [
-        'Replacement cost coverage',
-        'Multiple discount opportunities',
-        'Personal belongings protection',
-        'Temporary housing assistance'
+        t('servicesPage.property.benefits.replacement'),
+        t('servicesPage.property.benefits.discounts'),
+        t('servicesPage.property.benefits.belongings'),
+        t('servicesPage.property.benefits.housing')
       ]
     },
     {
       id: 'financial',
-      title: 'Financial Planning',
-      description: 'Professional financial planning and investment advisory services for your future.',
+      title: t('services.items.financialPlanning.title'),
+      description: t('services.items.financialPlanning.description'),
       image: '/assets/category.png',
       features: [
-        'Retirement Planning',
-        'Investment Advisory',
-        'Tax Planning Strategies',
-        'Estate Planning',
-        'Education Funding',
-        'Risk Assessment'
+        t('servicesPage.financial.features.retirement'),
+        t('servicesPage.financial.features.investment'),
+        t('servicesPage.financial.features.tax'),
+        t('servicesPage.financial.features.estate'),
+        t('servicesPage.financial.features.education'),
+        t('servicesPage.financial.features.risk')
       ],
       benefits: [
-        'Certified financial planners',
-        'Personalized strategies',
-        'Regular portfolio reviews',
-        'Retirement readiness analysis'
+        t('servicesPage.financial.benefits.planners'),
+        t('servicesPage.financial.benefits.strategies'),
+        t('servicesPage.financial.benefits.reviews'),
+        t('servicesPage.financial.benefits.readiness')
       ]
     }
   ]
@@ -233,18 +233,17 @@ const Services = () => {
         <div className="container">
           <div className="services-cta">
             <div className="cta-content text-center">
-              <h2 className="cta-title">Ready to Get Protected?</h2>
+              <h2 className="cta-title">{t('servicesPage.cta.title')}</h2>
               <p className="cta-description">
-                Contact us today for a free consultation and personalized quote. 
-                Our insurance experts are here to help you find the perfect coverage.
+                {t('servicesPage.cta.description')}
               </p>
               <div className="cta-actions">
                 <Link to="/contact" className="btn btn-primary btn-lg">
-                  Get Free Quote
+                  {t('servicesPage.cta.button')}
                 </Link>
                 <a href="tel:+1234567890" className="cta-phone">
                   <img src="/assets/phone.svg" alt="Phone" />
-                  <span>Call: +1 (234) 567-890</span>
+                  <span>{t('servicesPage.cta.phone')}</span>
                 </a>
               </div>
             </div>

@@ -307,6 +307,76 @@ export default {
         flexible: 'Flexible deductible and co-pay options',
         submission: 'Easy online claims submission'
       }
+    },
+    life: {
+      features: {
+        term: 'Term Life Insurance',
+        whole: 'Whole Life Insurance',
+        universal: 'Universal Life Insurance',
+        investment: 'Investment Options',
+        living: 'Living Benefits',
+        flexible: 'Flexible Payment Plans'
+      },
+      benefits: {
+        security: 'Financial security for loved ones',
+        savings: 'Tax-advantaged savings',
+        coverage: 'Flexible coverage amounts',
+        exam: 'No medical exam options available'
+      }
+    },
+    business: {
+      features: {
+        liability: 'General Liability Insurance',
+        property: 'Property Coverage',
+        workers: 'Workers\' Compensation',
+        cyber: 'Cyber Liability Protection',
+        professional: 'Professional Indemnity',
+        interruption: 'Business Interruption'
+      },
+      benefits: {
+        tailored: 'Tailored coverage for your industry',
+        expertise: 'Risk management expertise',
+        rates: 'Competitive business rates',
+        specialists: 'Dedicated business specialists'
+      }
+    },
+    property: {
+      features: {
+        homeowners: 'Homeowners Insurance',
+        renters: 'Renters Insurance',
+        condo: 'Condo Coverage',
+        personal: 'Personal Property Protection',
+        liability: 'Liability Coverage',
+        expenses: 'Additional Living Expenses'
+      },
+      benefits: {
+        replacement: 'Replacement cost coverage',
+        discounts: 'Multiple discount opportunities',
+        belongings: 'Personal belongings protection',
+        housing: 'Temporary housing assistance'
+      }
+    },
+    financial: {
+      features: {
+        retirement: 'Retirement Planning',
+        investment: 'Investment Advisory',
+        tax: 'Tax Planning Strategies',
+        estate: 'Estate Planning',
+        education: 'Education Funding',
+        risk: 'Risk Assessment'
+      },
+      benefits: {
+        planners: 'Certified financial planners',
+        strategies: 'Personalized strategies',
+        reviews: 'Regular portfolio reviews',
+        readiness: 'Retirement readiness analysis'
+      }
+    },
+    cta: {
+      title: 'Ready to Get Protected?',
+      description: 'Contact us today for a free consultation and personalized quote. Our insurance experts are here to help you find the perfect coverage.',
+      button: 'Get Free Quote',
+      phone: 'Call: +1 (234) 567-890'
     }
   },
 
@@ -393,6 +463,12 @@ export default {
     searchPlaceholder: 'Search news articles...',
     noResults: 'No articles found matching your search.',
     loadMore: 'Load More Articles',
+    newsletter: {
+      title: 'Stay Updated',
+      description: 'Subscribe to our newsletter to receive the latest insurance news, tips, and updates directly in your inbox.',
+      placeholder: 'Enter your email address',
+      subscribe: 'Subscribe'
+    },
     articles: {
       healthChanges: {
         title: '2024 Health Insurance Changes You Need to Know',
