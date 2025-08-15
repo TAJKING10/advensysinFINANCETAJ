@@ -11,6 +11,7 @@ export const locations = {
     phone: '+46 72 529 81 26',
     email: 'contact@advensys-in-finance.com',
     address: 'Advensys In Finance Sweden Filial, c/o SERVANDO BOLAG AB, BOX 5814, 102 48 Stockholm, Sweden',
+    mapsUrl: 'https://maps.google.com/maps?q=c/o+SERVANDO+BOLAG+AB,+BOX+5814,+102+48+Stockholm,+Sweden',
     timezone: 'CET',
     workingHours: '09:00 - 17:00'
   },
@@ -22,6 +23,7 @@ export const locations = {
     phone: '+33 6 98 21 44 46',
     email: 'contact@advensys-in-finance.com',
     address: 'Advensys Insurance Finance SARL (AIF), 66 Avenue des Champs Elysées, F-75008 Paris',
+    mapsUrl: 'https://maps.google.com/maps?q=66+Avenue+des+Champs+Elysees,+F-75008+Paris,+France',
     timezone: 'CET',
     workingHours: '09:00 - 17:00'
   },
@@ -33,6 +35,7 @@ export const locations = {
     phone: '+352 661 11 22 60',
     email: 'contact@advensys-in-finance.com',
     address: '34 Grand rue L-9710 Clervaux',
+    mapsUrl: 'https://maps.google.com/maps?q=34+Grand+Rue,+L-9710+Clervaux,+Luxembourg',
     timezone: 'CET',
     workingHours: '09:00 - 17:00'
   }

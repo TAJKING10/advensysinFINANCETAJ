@@ -32,7 +32,11 @@ const Contact = () => {
     {
       icon: '/assets/geo.svg',
       title: t('contact.info.address'),
-      info: ['Paris: 66 Avenue des Champs Elysées, F-75008 Paris', 'Luxembourg: 34 Grand rue L-9710 Clervaux', 'Stockholm: c/o SERVANDO BOLAG AB, BOX 5814, 102 48 Stockholm']
+      info: [
+        { text: 'Paris: 66 Avenue des Champs Elysées, F-75008 Paris', url: 'https://maps.google.com/maps?q=66+Avenue+des+Champs+Elysees,+F-75008+Paris,+France' },
+        { text: 'Luxembourg: 34 Grand rue L-9710 Clervaux', url: 'https://maps.google.com/maps?q=34+Grand+Rue,+L-9710+Clervaux,+Luxembourg' },
+        { text: 'Stockholm: c/o SERVANDO BOLAG AB, BOX 5814, 102 48 Stockholm', url: 'https://maps.google.com/maps?q=c/o+SERVANDO+BOLAG+AB,+BOX+5814,+102+48+Stockholm,+Sweden' }
+      ]
     },
     {
       icon: '/assets/phone-2.svg',
@@ -199,7 +203,20 @@ const Contact = () => {
                     <div className="contact-method-content">
                       <h4 className="contact-method-title">{item.title}</h4>
                       {item.info.map((info, i) => (
-                        <p key={i} className="contact-method-info">{info}</p>
+                        <p key={i} className="contact-method-info">
+                          {typeof info === 'object' && info.url ? (
+                            <a 
+                              href={info.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              style={{ color: 'inherit', textDecoration: 'underline' }}
+                            >
+                              {info.text}
+                            </a>
+                          ) : (
+                            info
+                          )}
+                        </p>
                       ))}
                     </div>
                   </div>
