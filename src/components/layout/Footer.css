@@ -187,7 +187,7 @@
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-3);
   padding: var(--space-2) 0;
   border-radius: var(--radius-lg);
@@ -207,6 +207,7 @@
   flex-shrink: 0;
   opacity: 0.8;
   transition: var(--transition-all);
+  margin-top: 2px;
 }
 
 /* Make phone icon blue */
@@ -226,6 +227,7 @@
 
 .contact-item div {
   flex: 1;
+  line-height: 1.4;
 }
 
 .contact-item p {
