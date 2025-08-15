@@ -8,9 +8,9 @@ export const locations = {
     name: 'Sweden',
     flag: '🇸🇪',
     currency: 'SEK',
-    phone: '+46 8 123 456 78',
-    email: 'sweden@advensys-insurance.com',
-    address: 'Storgatan 123, 111 22 Stockholm, Sweden',
+    phone: '+46 72 529 81 26',
+    email: 'contact@advensys-in-finance.com',
+    address: 'Advensys In Finance Sweden Filial, c/o SERVANDO BOLAG AB, BOX 5814, 102 48 Stockholm, Sweden',
     timezone: 'CET',
     workingHours: '09:00 - 17:00'
   },
@@ -19,9 +19,9 @@ export const locations = {
     name: 'France',
     flag: '🇫🇷',
     currency: 'EUR',
-    phone: '+33 1 23 45 67 89',
-    email: 'france@advensys-insurance.com',
-    address: '123 Rue de la Paix, 75001 Paris, France',
+    phone: '+33 6 98 21 44 46',
+    email: 'contact@advensys-in-finance.com',
+    address: 'Advensys Insurance Finance SARL (AIF), 66 Avenue des Champs Elysées, F-75008 Paris',
     timezone: 'CET',
     workingHours: '09:00 - 17:00'
   },
@@ -30,9 +30,9 @@ export const locations = {
     name: 'Luxembourg',
     flag: '🇱🇺',
     currency: 'EUR',
-    phone: '+352 26 12 34 56',
-    email: 'luxembourg@advensys-insurance.com',
-    address: '12 Avenue de la Liberté, L-1930 Luxembourg City, Luxembourg',
+    phone: '+352 661 11 22 60',
+    email: 'contact@advensys-in-finance.com',
+    address: '34 Grand rue L-9710 Clervaux',
     timezone: 'CET',
     workingHours: '09:00 - 17:00'
   }

@@ -29,6 +29,8 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  justify-items: center;
+  max-width: 100%;
 }
 
 /* Service Card */
@@ -39,6 +41,10 @@
   box-shadow: var(--shadow-light);
   transition: all var(--transition-base);
   border: 1px solid var(--border-light);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -115,6 +121,9 @@
 /* Service Content */
 .service-content {
   padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-title {
@@ -158,6 +167,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: auto;
 }
 
 .service-contact {

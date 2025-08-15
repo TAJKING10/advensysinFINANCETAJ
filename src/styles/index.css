@@ -1137,12 +1137,67 @@ body {
   border-radius: var(--radius-2xl);
 }
 
+/* ENHANCED RESPONSIVE ALIGNMENT */
+/* Global alignment fixes for all screen sizes */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure all containers have proper max-width and centering */
+.container, 
+[class*="container"] {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+/* Prevent layout shift on all grid layouts */
+.grid,
+[class*="grid-"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Ensure flex containers don't overflow */
+.flex,
+[class*="flex"] {
+  min-width: 0;
+}
+
+/* Responsive alignment utilities */
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.align-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 /* RESPONSIVE DESIGN */
 @media (min-width: 640px) {
   .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sm\:text-lg { font-size: var(--font-size-lg); }
   .sm\:text-xl { font-size: var(--font-size-xl); }
+  .sm\:align-center { justify-content: center; }
+  .sm\:align-start { justify-content: flex-start; }
+  .sm\:align-end { justify-content: flex-end; }
 }
 
 @media (min-width: 768px) {
@@ -1154,9 +1209,18 @@ body {
   .md\:text-3xl { font-size: var(--font-size-3xl); }
   .md\:text-4xl { font-size: var(--font-size-4xl); }
   .md\:text-5xl { font-size: var(--font-size-5xl); }
+  .md\:align-center { justify-content: center; text-align: center; }
+  .md\:align-start { justify-content: flex-start; text-align: left; }
+  .md\:align-end { justify-content: flex-end; text-align: right; }
   
   .form-row.cols-2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Better container alignment on medium screens */
+  .container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
   }
 }
 
@@ -1168,6 +1232,16 @@ body {
   .lg\:text-4xl { font-size: var(--font-size-4xl); }
   .lg\:text-5xl { font-size: var(--font-size-5xl); }
   .lg\:text-6xl { font-size: var(--font-size-6xl); }
+  .lg\:align-center { justify-content: center; text-align: center; }
+  .lg\:align-start { justify-content: flex-start; text-align: left; }
+  .lg\:align-end { justify-content: flex-end; text-align: right; }
+  
+  /* Optimal container width on large screens */
+  .container {
+    max-width: var(--container-xl);
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
 }
 
 @media (max-width: 768px) {

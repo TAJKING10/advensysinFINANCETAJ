@@ -102,7 +102,7 @@ const Footer = () => {
                 <div className="contact-item">
                   <img src="/assets/site.svg" alt="Website" className="contact-icon" />
                   <div>
-                    <p>www.advensys-finance.com</p>
+                    <p>www.advensys-in-finance.com</p>
                   </div>
                 </div>
               </div>

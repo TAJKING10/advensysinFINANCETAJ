@@ -29,23 +29,23 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: '/assets/geo.svg',
-      title: 'Our Location',
-      info: ['123 Business Street', 'Suite 100, City, State 12345']
+      title: 'Our Locations',
+      info: ['Paris: 66 Avenue des Champs Elysées, F-75008 Paris', 'Luxembourg: 34 Grand rue L-9710 Clervaux', 'Stockholm: c/o SERVANDO BOLAG AB, BOX 5814, 102 48 Stockholm']
     },
     {
       icon: '/assets/phone-2.svg',
       title: 'Phone Numbers',
-      info: ['+1 (555) 123-4567', '+1 (555) 987-6543']
+      info: ['+33 6 98 21 44 46 (Paris)', '+352 661 11 22 60 (Luxembourg)', '+46 72 529 81 26 (Stockholm)']
     },
     {
       icon: '/assets/email-2.svg',
       title: 'Email Address',
-      info: ['info@advensys-finance.com', 'support@advensys-finance.com']
+      info: ['contact@advensys-in-finance.com']
     },
     {
       icon: '/assets/site.svg',
       title: 'Website',
-      info: ['www.advensys-finance.com']
+      info: ['www.advensys-in-finance.com']
     }
   ]
 

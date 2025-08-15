@@ -8,6 +8,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* Contact Form */
@@ -163,6 +165,7 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  width: 100%;
 }
 
 .contact-method-icon {
@@ -180,6 +183,11 @@
   width: 20px;
   height: 20px;
   filter: hue-rotate(200deg);
+}
+
+.contact-method-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .contact-method-title {
