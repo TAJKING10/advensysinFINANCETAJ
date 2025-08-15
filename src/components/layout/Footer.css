@@ -187,11 +187,12 @@
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-3);
   padding: var(--space-2) 0;
   border-radius: var(--radius-lg);
   transition: var(--transition-all);
+  min-height: 44px;
 }
 
 .contact-item:hover {
@@ -204,14 +205,23 @@
   height: 20px;
   filter: invert(1);
   flex-shrink: 0;
-  margin-top: var(--space-1);
   opacity: 0.8;
   transition: var(--transition-all);
+}
+
+/* Make phone icon blue */
+.contact-item:nth-child(2) .contact-icon {
+  filter: invert(27%) sepia(90%) saturate(1652%) hue-rotate(205deg) brightness(100%) contrast(90%);
 }
 
 .contact-item:hover .contact-icon {
   opacity: 1;
   filter: invert(1) sepia(1) saturate(2) hue-rotate(200deg);
+}
+
+/* Keep phone icon blue on hover */
+.contact-item:nth-child(2):hover .contact-icon {
+  filter: invert(27%) sepia(90%) saturate(1652%) hue-rotate(205deg) brightness(110%) contrast(100%);
 }
 
 .contact-item div {
