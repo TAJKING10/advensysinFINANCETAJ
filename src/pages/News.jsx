@@ -1,52 +1,55 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../contexts/LanguageContext'
 import './News.css'
 
 const News = () => {
+  const { t } = useLanguage()
+  
   const newsArticles = [
     {
       id: 1,
-      title: 'Understanding Health Insurance Changes for 2024',
-      excerpt: 'Important updates to health insurance policies that could affect your coverage and premiums. Learn about new regulations and how they impact your healthcare costs.',
+      title: t('newsPage.articles.healthChanges.title'),
+      excerpt: t('newsPage.articles.healthChanges.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/news-1.png',
       date: '2024-01-15',
-      category: 'Health Insurance',
-      readTime: '5 min read',
-      author: 'Dr. Sarah Johnson'
+      category: t('newsPage.categories.health'),
+      readTime: t('newsPage.readTime', { minutes: '5' }),
+      author: t('newsPage.articles.healthChanges.author')
     },
     {
       id: 2,
-      title: 'Top 5 Tips for Choosing the Right Auto Insurance',
-      excerpt: 'Expert advice on selecting auto insurance that provides the best value and protection for your vehicle and budget.',
+      title: t('newsPage.articles.autoTips.title'),
+      excerpt: t('newsPage.articles.autoTips.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/news-2.png',
       date: '2024-01-10',
-      category: 'Auto Insurance',
-      readTime: '4 min read',
-      author: 'Mike Thompson'
+      category: t('newsPage.categories.auto'),
+      readTime: t('newsPage.readTime', { minutes: '4' }),
+      author: t('newsPage.articles.autoTips.author')
     },
     {
       id: 3,
-      title: 'Why Life Insurance is Essential for Young Families',
-      excerpt: 'Discover why securing life insurance early can provide financial security and peace of mind for growing families.',
+      title: t('newsPage.articles.lifeFamilies.title'),
+      excerpt: t('newsPage.articles.lifeFamilies.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/hero-1.png',
       date: '2024-01-05',
-      category: 'Life Insurance',
-      readTime: '6 min read',
-      author: 'Jennifer Davis'
+      category: t('newsPage.categories.life'),
+      readTime: t('newsPage.readTime', { minutes: '6' }),
+      author: t('newsPage.articles.lifeFamilies.author')
     },
     {
       id: 4,
-      title: 'Small Business Insurance: What You Need to Know',
-      excerpt: 'Essential insurance coverage every small business owner should consider to protect their investment and employees.',
+      title: t('newsPage.articles.businessTips.title'),
+      excerpt: t('newsPage.articles.businessTips.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/hero-2.png',
       date: '2023-12-28',
-      category: 'Business Insurance',
-      readTime: '7 min read',
-      author: 'Robert Wilson'
+      category: t('newsPage.categories.business'),
+      readTime: t('newsPage.readTime', { minutes: '7' }),
+      author: t('newsPage.articles.businessTips.author')
     }
   ]
 
@@ -68,9 +71,9 @@ const News = () => {
       <section className="page-header">
         <div className="container">
           <div className="page-header-content">
-            <h1 className="page-title">News & Insights</h1>
+            <h1 className="page-title">{t('newsPage.title')}</h1>
             <p className="page-subtitle">
-              Stay informed with the latest updates and expert advice from the insurance industry
+              {t('newsPage.subtitle')}
             </p>
           </div>
         </div>
@@ -89,11 +92,11 @@ const News = () => {
                 <h2 className="featured-title">{newsArticles[0].title}</h2>
                 <p className="featured-excerpt">{newsArticles[0].excerpt}</p>
                 <div className="featured-author-info">
-                  <span className="author">By {newsArticles[0].author}</span>
+                  <span className="author">{t('newsPage.byAuthor', { author: newsArticles[0].author })}</span>
                   <span className="read-time">{newsArticles[0].readTime}</span>
                 </div>
                 <Link to={`/news/${newsArticles[0].id}`} className="btn btn-primary">
-                  Read Full Article
+                  {t('news.readMore')}
                 </Link>
               </div>
               <div className="featured-image">
@@ -108,7 +111,7 @@ const News = () => {
       <section className="section bg-light">
         <div className="container">
           <div className="category-filter">
-            <h3 className="filter-title">Filter by Category:</h3>
+            <h3 className="filter-title">{t('newsPage.filterByCategory')}</h3>
             <div className="category-buttons">
               {categories.map(category => (
                 <button

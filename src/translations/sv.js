@@ -10,6 +10,7 @@ export default {
 
   // Common
   common: {
+    siteTitle: 'Advensys Insurance Finance',
     getQuote: 'Få Offert',
     learnMore: 'Läs Mer',
     contactUs: 'Kontakta Oss',
@@ -22,7 +23,15 @@ export default {
     close: 'Stäng',
     back: 'Tillbaka',
     next: 'Nästa',
-    previous: 'Föregående'
+    previous: 'Föregående',
+    yes: 'Ja',
+    no: 'Nej',
+    save: 'Spara',
+    cancel: 'Avbryt',
+    edit: 'Redigera',
+    delete: 'Radera',
+    view: 'Visa',
+    download: 'Ladda Ner'
   },
 
   // Header
@@ -128,7 +137,29 @@ export default {
       integrity: 'Integritet',
       excellence: 'Excellens',
       innovation: 'Innovation',
-      service: 'Kundservice'
+      service: 'Kundservice',
+      customerFocus: 'Kundfokus',
+      integrityDesc: 'Vi arbetar med ärlighet och transparens i alla våra affärer.',
+      excellenceDesc: 'Vi strävar efter högsta standard i allt vi gör.',
+      customerFocusDesc: 'Dina behov och tillfredsställelse är vår högsta prioritet.'
+    },
+    achievements: {
+      experience: {
+        title: 'Års Erfarenhet',
+        description: 'Betjänar kunder med excellens'
+      },
+      clients: {
+        title: 'Nöjda Kunder',
+        description: 'Nöjda kunder över hela landet'
+      },
+      partners: {
+        title: 'Försäkringspartners',
+        description: 'Toppklassade försäkringsbolag'
+      },
+      support: {
+        title: 'Kundstöd',
+        description: 'Alltid här när du behöver oss'
+      }
     }
   },
 
@@ -220,6 +251,7 @@ export default {
     description: 'Upptäck vårt fullständiga utbud av försäkringstjänster designade för att skydda dig, din familj och ditt företag.',
     whyChooseUs: {
       title: 'Varför Välja Advensys?',
+      description: 'Vi kombinerar års erfarenhet med personlig service för att leverera de bästa försäkringslösningarna för våra kunder.',
       experience: {
         title: 'Års Erfarenhet',
         description: 'Över 15 års expertis inom försäkringsbranschen.'
@@ -236,6 +268,45 @@ export default {
         title: '24/7 Support',
         description: 'Dygnet-runt kundsupport för alla dina behov.'
       }
+    },
+    highlights: {
+      expertAdvice: 'Expertrådgivning',
+      competitiveRates: 'Konkurrenskraftiga Priser',
+      support: '24/7 Support'
+    },
+    featuresTitle: 'Vad som Ingår',
+    benefitsTitle: 'Varför Välja Denna Tjänst',
+    auto: {
+      features: {
+        collision: 'Kollisionstäckning',
+        liability: 'Ansvarsskydd',
+        support: '24/7 Skadestöd',
+        roadside: 'Vägassistans',
+        rental: 'Hyrbilsskydd',
+        glass: 'Glasreparationstäckning'
+      },
+      benefits: {
+        rates: 'Konkurrenskraftiga priser med flera rabatter',
+        discounts: 'Säker förare och flerpolicy-rabatter',
+        rewards: 'Program för olycksförlåtelse',
+        processing: 'Snabb och enkel skadehantering'
+      }
+    },
+    health: {
+      features: {
+        medical: 'Omfattande Medicinsk Täckning',
+        prescription: 'Receptbelagda Läkemedelstjänster',
+        preventive: 'Förebyggande Vårdtjänster',
+        emergency: 'Akutmottagningstäckning',
+        specialist: 'Tillgång till Specialistvard',
+        mental: 'Mental Hälsostöd'
+      },
+      benefits: {
+        network: 'Omfattande leverantörsnätverk nationellt',
+        preventiveCost: 'Kostnadsfria förebyggande vårdtjänster',
+        flexible: 'Flexibla självrisker och co-pay alternativ',
+        submission: 'Enkel online-skadeanmälan'
+      }
     }
   },
 
@@ -246,11 +317,36 @@ export default {
     intro: 'Advensys Insurance Finance har varit en ledande leverantör av omfattande försäkringslösningar i över 15 år. Vi är engagerade i att skydda det som betyder mest för våra kunder genom innovativa försäkringsprodukter och exceptionell kundservice.',
     ourStory: {
       title: 'Vår Berättelse',
-      content: 'Grundat 2008 började Advensys Insurance Finance med ett enkelt uppdrag: att tillhandahålla pålitliga, prisvärda försäkringslösningar till privatpersoner och företag. Idag har vi vuxit till att bli en av de mest betrodda försäkringsleverantörerna i regionen och betjänar tusentals nöjda kunder.'
+      paragraph1: 'Grundat 2008 började Advensys Insurance Finance med ett enkelt uppdrag: att tillhandahålla pålitliga, prisvärda försäkringslösningar till privatpersoner och företag över hela landet.',
+      paragraph2: 'Över åren har vi byggt starka relationer med ledande försäkringsbolag, vilket gör det möjligt för oss att erbjuda omfattande täckningsalternativ till konkurrenskraftiga priser. Vårt engagemang för excellens och kundtillfredsställelse har gjort oss till ett betrott namn inom försäkringsbranschen.',
+      paragraph3: 'Idag betjänar vi tusentals nöjda kunder nationellt, från privatpersoner som söker personligt skydd till företag som kräver omfattande kommersiell täckning. Vårt erfarna team fortsätter att anpassa sig till föränderliga marknadsbehov samtidigt som vi upprätthåller våra kärnvärderingar av integritet, service och tillförlitlighet.'
     },
-    ourTeam: {
-      title: 'Vårt Expertteam',
-      content: 'Vårt team består av högt kvalificerade försäkringsproffs, certifierade agenter och kundservicespecialister som är dedikerade till att ge dig bästa möjliga service och råd.'
+    ourValues: {
+      description: 'Vi tror på att bedriva verksamhet med högsta etiska standarder, alltid sätta våra kunders behov först och kontinuerligt förbättra våra tjänster för att överträffa förväntningarna.'
+    },
+    team: {
+      title: 'Vårt Ledningsteam',
+      subtitle: 'Möt proffsen som är dedikerade till din framgång',
+      ceo: {
+        name: 'John Smith',
+        position: 'VD och Grundare',
+        bio: 'Med över 20 års erfarenhet inom försäkringsbranschen grundade John Advensys med en vision att revolutionera hur försäkringstjänster levereras till kunder.'
+      },
+      director: {
+        name: 'Sarah Johnson',
+        position: 'Verksamhetsdirektör',
+        bio: 'Sarah bidrar med 15 års operativ excellens till vårt team och säkerställer smidiga processer och exceptionell kundupplevelse i alla kontaktpunkter.'
+      }
+    },
+    licenses: {
+      title: 'Licenser och Certifieringar',
+      description: 'Vi upprätthåller alla nödvändiga licenser och certifieringar för att tillhandahålla försäkringstjänster i flera stater, vilket säkerställer efterlevnad av branschregler och standarder.',
+      items: {
+        stateLicensed: 'Statslicensierade Agenter',
+        certified: 'Branschcertifierade Proffs',
+        bonded: 'Förbundna och Försäkrade Verksamheter',
+        accredited: 'Better Business Bureau Ackrediterad'
+      }
     }
   },
 
@@ -264,6 +360,17 @@ export default {
       visitUs: 'Besök Oss',
       callUs: 'Ring Oss',
       emailUs: 'Maila Oss'
+    },
+    officeHours: {
+      title: 'Kontorstider',
+      weekdays: 'Måndag - Fredag',
+      weekdaysTime: '09:00 - 18:00',
+      saturday: 'Lördag',
+      saturdayTime: '10:00 - 16:00',
+      sunday: 'Söndag',
+      closed: 'Stängt',
+      emergency: 'Akutstöd',
+      available247: 'Tillgängligt 24/7'
     }
   },
 
@@ -274,13 +381,39 @@ export default {
     description: 'Håll dig uppdaterad med de senaste utvecklingarna inom försäkringsbranschen, experttips och företagsnyheter.',
     categories: {
       all: 'Alla Nyheter',
-      industry: 'Branschnyheter',
-      tips: 'Försäkringstips',
-      company: 'Företagsnyheter',
-      regulation: 'Regleringar'
+      health: 'Sjukförsäkring',
+      auto: 'Bilförsäkring',
+      life: 'Livförsäkring',
+      business: 'Företagsförsäkring',
+      property: 'Egendomsförsäkring'
     },
+    filterByCategory: 'Filtrera efter Kategori',
+    readTime: '{{minutes}} min läsning',
+    byAuthor: 'Av {{author}}',
     searchPlaceholder: 'Sök nyhetsartiklar...',
     noResults: 'Inga artiklar hittades som matchar din sökning.',
-    loadMore: 'Ladda Fler Artiklar'
+    loadMore: 'Ladda Fler Artiklar',
+    articles: {
+      healthChanges: {
+        title: '2024 Års Sjukförsäkringsförändringar Du Behöver Veta',
+        excerpt: 'Viktiga uppdateringar av sjukförsäkringsregler och vad de betyder för dina täckningsalternativ i år.',
+        author: 'Dr. Emily Wilson'
+      },
+      autoTips: {
+        title: 'Topp 5 Sätt att Sänka Din Bilförsäkringspremie',
+        excerpt: 'Upptäck beprövade strategier för att minska dina bilförsäkringskostnader utan att offra täckningskvalitet.',
+        author: 'Mark Thompson'
+      },
+      lifeFamilies: {
+        title: 'Livförsäkringsplanering för Växande Familjer',
+        excerpt: 'Väsentliga överväganden för livförsäkring när du utökar din familj och planerar för framtiden.',
+        author: 'Sarah Davis'
+      },
+      businessTips: {
+        title: 'Småföretagsförsäkring: Guide till Väsentlig Täckning',
+        excerpt: 'Omfattande guide för att skydda ditt småföretag med rätta försäkringsalternativ.',
+        author: 'James Miller'
+      }
+    }
   }
 }

@@ -1,55 +1,58 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../../contexts/LanguageContext'
 import './About.css'
 
 const About = () => {
+  const { t } = useLanguage()
+  
   const achievements = [
     {
       icon: '/assets/strengths-1.svg',
       number: '15+',
-      title: 'Years Experience',
-      description: 'Serving clients with excellence'
+      title: t('about.achievements.experience.title'),
+      description: t('about.achievements.experience.description')
     },
     {
       icon: '/assets/strengths-2.svg',
       number: '10K+',
-      title: 'Happy Clients',
-      description: 'Satisfied customers nationwide'
+      title: t('about.achievements.clients.title'),
+      description: t('about.achievements.clients.description')
     },
     {
       icon: '/assets/strengths-3.svg',
       number: '50+',
-      title: 'Insurance Partners',
-      description: 'Top-rated insurance companies'
+      title: t('about.achievements.partners.title'),
+      description: t('about.achievements.partners.description')
     },
     {
       icon: '/assets/strengths-4.svg',
       number: '24/7',
-      title: 'Customer Support',
-      description: 'Always here when you need us'
+      title: t('about.achievements.support.title'),
+      description: t('about.achievements.support.description')
     }
   ]
 
   const teamValues = [
     {
       icon: '/assets/strengths-5.svg',
-      title: 'Integrity',
-      description: 'We operate with honesty and transparency in all our dealings.'
+      title: t('about.values.integrity'),
+      description: t('about.values.integrityDesc')
     },
     {
       icon: '/assets/strengths-6.svg',
-      title: 'Excellence',
-      description: 'We strive for the highest standards in everything we do.'
+      title: t('about.values.excellence'),
+      description: t('about.values.excellenceDesc')
     },
     {
       icon: '/assets/strengths-7.svg',
-      title: 'Customer Focus',
-      description: 'Your needs and satisfaction are our top priority.'
+      title: t('about.values.customerFocus'),
+      description: t('about.values.customerFocusDesc')
     },
     {
       icon: '/assets/strengths-8.svg',
-      title: 'Innovation',
-      description: 'We embrace new technologies to serve you better.'
+      title: t('about.values.innovation'),
+      description: t('about.values.innovationDesc')
     }
   ]
 
@@ -59,41 +62,38 @@ const About = () => {
         {/* Main About Content */}
         <div className="about-main">
           <div className="about-content">
-            <div className="section-badge">About Advensys</div>
+            <div className="section-badge">{t('about.title')}</div>
             <h2 className="section-title">
-              Your Trusted Partner in 
-              <span className="text-primary"> Insurance & Finance</span>
+              {t('about.heroTitle')} 
+              <span className="text-primary">{t('about.heroTitleHighlight')}</span>
             </h2>
             <p className="section-description">
-              With over 15 years of experience in the insurance industry, Advensys Insurance Finance 
-              has been helping individuals, families, and businesses protect what matters most to them. 
-              Our commitment to excellence and personalized service has made us a trusted name in 
-              insurance and financial solutions.
+              {t('about.heroDescription')}
             </p>
             
             <div className="about-highlights">
               <div className="highlight-item">
                 <img src="/assets/strengths-9.svg" alt="Licensed" />
                 <div>
-                  <h4>Fully Licensed & Certified</h4>
-                  <p>All our agents are certified professionals</p>
+                  <h4>{t('about.highlights.licensed.title')}</h4>
+                  <p>{t('about.highlights.licensed.description')}</p>
                 </div>
               </div>
               <div className="highlight-item">
                 <img src="/assets/strengths-10.svg" alt="Award" />
                 <div>
-                  <h4>Award-Winning Service</h4>
-                  <p>Recognized for outstanding customer service</p>
+                  <h4>{t('about.highlights.award.title')}</h4>
+                  <p>{t('about.highlights.award.description')}</p>
                 </div>
               </div>
             </div>
 
             <div className="about-actions">
               <Link to="/about" className="btn btn-primary">
-                Learn More About Us
+                {t('about.learnMoreBtn')}
               </Link>
               <Link to="/contact" className="btn btn-secondary">
-                Get In Touch
+                {t('common.contactUs')}
               </Link>
             </div>
           </div>
@@ -106,7 +106,7 @@ const About = () => {
             </div>
             <div className="experience-badge">
               <span className="experience-number">15+</span>
-              <span className="experience-text">Years of Excellence</span>
+              <span className="experience-text">{t('about.experienceBadge')}</span>
             </div>
           </div>
         </div>
@@ -132,9 +132,9 @@ const About = () => {
         {/* Our Values */}
         <div className="values-section">
           <div className="values-header text-center">
-            <h2 className="section-title">Our Core Values</h2>
+            <h2 className="section-title">{t('about.values.title')}</h2>
             <p className="section-subtitle">
-              The principles that guide us in serving our clients with excellence
+              {t('about.values.subtitle')}
             </p>
           </div>
 

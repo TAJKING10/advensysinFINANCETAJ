@@ -10,6 +10,7 @@ export default {
 
   // Common
   common: {
+    siteTitle: 'Advensys Insurance Finance',
     getQuote: 'Get Quote',
     learnMore: 'Learn More',
     contactUs: 'Contact Us',
@@ -22,7 +23,15 @@ export default {
     close: 'Close',
     back: 'Back',
     next: 'Next',
-    previous: 'Previous'
+    previous: 'Previous',
+    yes: 'Yes',
+    no: 'No',
+    save: 'Save',
+    cancel: 'Cancel',
+    edit: 'Edit',
+    delete: 'Delete',
+    view: 'View',
+    download: 'Download'
   },
 
   // Header
@@ -128,7 +137,29 @@ export default {
       integrity: 'Integrity',
       excellence: 'Excellence',
       innovation: 'Innovation',
-      service: 'Customer Service'
+      service: 'Customer Service',
+      customerFocus: 'Customer Focus',
+      integrityDesc: 'We operate with honesty and transparency in all our dealings.',
+      excellenceDesc: 'We strive for the highest standards in everything we do.',
+      customerFocusDesc: 'Your needs and satisfaction are our top priority.'
+    },
+    achievements: {
+      experience: {
+        title: 'Years Experience',
+        description: 'Serving clients with excellence'
+      },
+      clients: {
+        title: 'Happy Clients',
+        description: 'Satisfied customers nationwide'
+      },
+      partners: {
+        title: 'Insurance Partners',
+        description: 'Top-rated insurance companies'
+      },
+      support: {
+        title: 'Customer Support',
+        description: 'Always here when you need us'
+      }
     }
   },
 
@@ -220,6 +251,7 @@ export default {
     description: 'Discover our full range of insurance services designed to protect you, your family, and your business.',
     whyChooseUs: {
       title: 'Why Choose Advensys?',
+      description: 'We combine years of experience with personalized service to deliver the best insurance solutions for our clients.',
       experience: {
         title: 'Years of Experience',
         description: 'Over 15 years of expertise in the insurance industry.'
@@ -236,6 +268,45 @@ export default {
         title: '24/7 Support',
         description: 'Round-the-clock customer support for all your needs.'
       }
+    },
+    highlights: {
+      expertAdvice: 'Expert Advice',
+      competitiveRates: 'Competitive Rates',
+      support: '24/7 Support'
+    },
+    featuresTitle: 'What\'s Included',
+    benefitsTitle: 'Why Choose This Service',
+    auto: {
+      features: {
+        collision: 'Collision Coverage',
+        liability: 'Liability Protection',
+        support: '24/7 Claims Support',
+        roadside: 'Roadside Assistance',
+        rental: 'Rental Car Coverage',
+        glass: 'Glass Repair Coverage'
+      },
+      benefits: {
+        rates: 'Competitive rates with multiple discounts',
+        discounts: 'Safe driver and multi-policy discounts',
+        rewards: 'Accident forgiveness programs',
+        processing: 'Fast and easy claims processing'
+      }
+    },
+    health: {
+      features: {
+        medical: 'Comprehensive Medical Coverage',
+        prescription: 'Prescription Drug Benefits',
+        preventive: 'Preventive Care Services',
+        emergency: 'Emergency Room Coverage',
+        specialist: 'Specialist Care Access',
+        mental: 'Mental Health Support'
+      },
+      benefits: {
+        network: 'Extensive provider network nationwide',
+        preventiveCost: 'No-cost preventive care services',
+        flexible: 'Flexible deductible and co-pay options',
+        submission: 'Easy online claims submission'
+      }
     }
   },
 
@@ -246,11 +317,36 @@ export default {
     intro: 'Advensys Insurance Finance has been a leading provider of comprehensive insurance solutions for over 15 years. We are committed to protecting what matters most to our clients through innovative insurance products and exceptional customer service.',
     ourStory: {
       title: 'Our Story',
-      content: 'Founded in 2008, Advensys Insurance Finance began with a simple mission: to provide reliable, affordable insurance solutions to individuals and businesses. Today, we have grown to become one of the most trusted insurance providers in the region, serving thousands of satisfied clients.'
+      paragraph1: 'Founded in 2008, Advensys Insurance Finance began with a simple mission: to provide reliable, affordable insurance solutions to individuals and businesses across the nation.',
+      paragraph2: 'Over the years, we have built strong relationships with top insurance carriers, allowing us to offer comprehensive coverage options at competitive rates. Our commitment to excellence and customer satisfaction has made us a trusted name in the insurance industry.',
+      paragraph3: 'Today, we serve thousands of satisfied clients nationwide, from individuals seeking personal protection to businesses requiring comprehensive commercial coverage. Our experienced team continues to adapt to changing market needs while maintaining our core values of integrity, service, and reliability.'
     },
-    ourTeam: {
-      title: 'Our Expert Team',
-      content: 'Our team consists of highly qualified insurance professionals, certified agents, and customer service specialists who are dedicated to providing you with the best possible service and advice.'
+    ourValues: {
+      description: 'We believe in conducting business with the highest ethical standards, always putting our clients\' needs first, and continuously improving our services to exceed expectations.'
+    },
+    team: {
+      title: 'Our Leadership Team',
+      subtitle: 'Meet the professionals dedicated to your success',
+      ceo: {
+        name: 'John Smith',
+        position: 'CEO & Founder',
+        bio: 'With over 20 years of experience in the insurance industry, John founded Advensys with a vision to revolutionize how insurance services are delivered to clients.'
+      },
+      director: {
+        name: 'Sarah Johnson',
+        position: 'Operations Director',
+        bio: 'Sarah brings 15 years of operational excellence to our team, ensuring smooth processes and exceptional customer experience across all touchpoints.'
+      }
+    },
+    licenses: {
+      title: 'Licenses & Certifications',
+      description: 'We maintain all necessary licenses and certifications to provide insurance services across multiple states, ensuring compliance with industry regulations and standards.',
+      items: {
+        stateLicensed: 'State Licensed Agents',
+        certified: 'Industry Certified Professionals',
+        bonded: 'Bonded & Insured Operations',
+        accredited: 'Better Business Bureau Accredited'
+      }
     }
   },
 
@@ -264,6 +360,17 @@ export default {
       visitUs: 'Visit Us',
       callUs: 'Call Us',
       emailUs: 'Email Us'
+    },
+    officeHours: {
+      title: 'Office Hours',
+      weekdays: 'Monday - Friday',
+      weekdaysTime: '9:00 AM - 6:00 PM',
+      saturday: 'Saturday',
+      saturdayTime: '10:00 AM - 4:00 PM',
+      sunday: 'Sunday',
+      closed: 'Closed',
+      emergency: 'Emergency Support',
+      available247: '24/7 Available'
     }
   },
 
@@ -274,13 +381,39 @@ export default {
     description: 'Keep up with the latest developments in the insurance industry, expert tips, and company news.',
     categories: {
       all: 'All News',
-      industry: 'Industry News',
-      tips: 'Insurance Tips',
-      company: 'Company News',
-      regulation: 'Regulations'
+      health: 'Health Insurance',
+      auto: 'Auto Insurance', 
+      life: 'Life Insurance',
+      business: 'Business Insurance',
+      property: 'Property Insurance'
     },
+    filterByCategory: 'Filter by Category',
+    readTime: '{{minutes}} min read',
+    byAuthor: 'By {{author}}',
     searchPlaceholder: 'Search news articles...',
     noResults: 'No articles found matching your search.',
-    loadMore: 'Load More Articles'
+    loadMore: 'Load More Articles',
+    articles: {
+      healthChanges: {
+        title: '2024 Health Insurance Changes You Need to Know',
+        excerpt: 'Important updates to health insurance regulations and what they mean for your coverage options this year.',
+        author: 'Dr. Emily Wilson'
+      },
+      autoTips: {
+        title: 'Top 5 Ways to Lower Your Auto Insurance Premium',
+        excerpt: 'Discover proven strategies to reduce your car insurance costs without sacrificing coverage quality.',
+        author: 'Mark Thompson'
+      },
+      lifeFamilies: {
+        title: 'Life Insurance Planning for Growing Families',
+        excerpt: 'Essential considerations for life insurance when expanding your family and planning for the future.',
+        author: 'Sarah Davis'
+      },
+      businessTips: {
+        title: 'Small Business Insurance: Essential Coverage Guide',
+        excerpt: 'Comprehensive guide to protecting your small business with the right insurance coverage options.',
+        author: 'James Miller'
+      }
+    }
   }
 }

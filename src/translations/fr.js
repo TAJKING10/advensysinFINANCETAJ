@@ -10,6 +10,7 @@ export default {
 
   // Common
   common: {
+    siteTitle: 'Advensys Insurance Finance',
     getQuote: 'Obtenir un Devis',
     learnMore: 'En Savoir Plus',
     contactUs: 'Nous Contacter',
@@ -22,7 +23,15 @@ export default {
     close: 'Fermer',
     back: 'Retour',
     next: 'Suivant',
-    previous: 'Précédent'
+    previous: 'Précédent',
+    yes: 'Oui',
+    no: 'Non',
+    save: 'Enregistrer',
+    cancel: 'Annuler',
+    edit: 'Modifier',
+    delete: 'Supprimer',
+    view: 'Voir',
+    download: 'Télécharger'
   },
 
   // Header
@@ -128,7 +137,29 @@ export default {
       integrity: 'Intégrité',
       excellence: 'Excellence',
       innovation: 'Innovation',
-      service: 'Service Client'
+      service: 'Service Client',
+      customerFocus: 'Focus Client',
+      integrityDesc: 'Nous opérons avec honnêteté et transparence dans toutes nos transactions.',
+      excellenceDesc: 'Nous visons les plus hauts standards dans tout ce que nous faisons.',
+      customerFocusDesc: 'Vos besoins et votre satisfaction sont notre priorité absolue.'
+    },
+    achievements: {
+      experience: {
+        title: 'Années d\'Expérience',
+        description: 'Servir les clients avec excellence'
+      },
+      clients: {
+        title: 'Clients Satisfaits',
+        description: 'Clients satisfaits à travers le pays'
+      },
+      partners: {
+        title: 'Partenaires d\'Assurance',
+        description: 'Compagnies d\'assurance de premier plan'
+      },
+      support: {
+        title: 'Support Client',
+        description: 'Toujours là quand vous avez besoin de nous'
+      }
     }
   },
 
@@ -220,6 +251,7 @@ export default {
     description: 'Découvrez notre gamme complète de services d\'assurance conçus pour vous protéger, vous, votre famille et votre entreprise.',
     whyChooseUs: {
       title: 'Pourquoi Choisir Advensys ?',
+      description: 'Nous combinons des années d\'expérience avec un service personnalisé pour offrir les meilleures solutions d\'assurance à nos clients.',
       experience: {
         title: 'Années d\'Expérience',
         description: 'Plus de 15 ans d\'expertise dans l\'industrie de l\'assurance.'
@@ -236,6 +268,45 @@ export default {
         title: 'Support 24/7',
         description: 'Support client 24h/24 pour tous vos besoins.'
       }
+    },
+    highlights: {
+      expertAdvice: 'Conseils d\'Expert',
+      competitiveRates: 'Tarifs Compétitifs',
+      support: 'Support 24/7'
+    },
+    featuresTitle: 'Ce qui est Inclus',
+    benefitsTitle: 'Pourquoi Choisir ce Service',
+    auto: {
+      features: {
+        collision: 'Couverture Collision',
+        liability: 'Protection Responsabilité',
+        support: 'Support Réclamations 24/7',
+        roadside: 'Assistance Routière',
+        rental: 'Couverture Voiture de Location',
+        glass: 'Couverture Réparation Vitres'
+      },
+      benefits: {
+        rates: 'Tarifs compétitifs avec plusieurs rabais',
+        discounts: 'Rabais conducteur prudent et multi-polices',
+        rewards: 'Programmes de pardon d\'accidents',
+        processing: 'Traitement des réclamations rapide et facile'
+      }
+    },
+    health: {
+      features: {
+        medical: 'Couverture Médicale Complète',
+        prescription: 'Avantages Médicaments sur Ordonnance',
+        preventive: 'Services de Soins Préventifs',
+        emergency: 'Couverture Salle d\'Urgence',
+        specialist: 'Accès aux Soins Spécialisés',
+        mental: 'Support Santé Mentale'
+      },
+      benefits: {
+        network: 'Vaste réseau de fournisseurs à l\'échelle nationale',
+        preventiveCost: 'Services de soins préventifs sans coût',
+        flexible: 'Options flexibles de franchise et co-paiement',
+        submission: 'Soumission facile de réclamations en ligne'
+      }
     }
   },
 
@@ -246,11 +317,36 @@ export default {
     intro: 'Advensys Insurance Finance est un fournisseur leader de solutions d\'assurance complètes depuis plus de 15 ans. Nous nous engageons à protéger ce qui compte le plus pour nos clients grâce à des produits d\'assurance innovants et un service client exceptionnel.',
     ourStory: {
       title: 'Notre Histoire',
-      content: 'Fondée en 2008, Advensys Insurance Finance a commencé avec une mission simple : fournir des solutions d\'assurance fiables et abordables aux particuliers et aux entreprises. Aujourd\'hui, nous sommes devenus l\'un des fournisseurs d\'assurance les plus fiables de la région, servant des milliers de clients satisfaits.'
+      paragraph1: 'Fondée en 2008, Advensys Insurance Finance a commencé avec une mission simple : fournir des solutions d\'assurance fiables et abordables aux particuliers et aux entreprises à travers le pays.',
+      paragraph2: 'Au fil des années, nous avons établi des relations solides avec les principales compagnies d\'assurance, nous permettant d\'offrir des options de couverture complètes à des tarifs compétitifs. Notre engagement envers l\'excellence et la satisfaction client a fait de nous un nom de confiance dans l\'industrie de l\'assurance.',
+      paragraph3: 'Aujourd\'hui, nous servons des milliers de clients satisfaits à travers le pays, des particuliers recherchant une protection personnelle aux entreprises nécessitant une couverture commerciale complète. Notre équipe expérimentée continue de s\'adapter aux besoins changeants du marché tout en maintenant nos valeurs fondamentales d\'intégrité, de service et de fiabilité.'
     },
-    ourTeam: {
-      title: 'Notre Équipe d\'Experts',
-      content: 'Notre équipe se compose de professionnels de l\'assurance hautement qualifiés, d\'agents certifiés et de spécialistes du service client qui se consacrent à vous fournir le meilleur service et conseil possible.'
+    ourValues: {
+      description: 'Nous croyons en la conduite des affaires avec les plus hauts standards éthiques, en mettant toujours les besoins de nos clients en premier, et en améliorant continuellement nos services pour dépasser les attentes.'
+    },
+    team: {
+      title: 'Notre Équipe de Direction',
+      subtitle: 'Rencontrez les professionnels dédiés à votre succès',
+      ceo: {
+        name: 'John Smith',
+        position: 'PDG et Fondateur',
+        bio: 'Avec plus de 20 ans d\'expérience dans l\'industrie de l\'assurance, John a fondé Advensys avec une vision de révolutionner la façon dont les services d\'assurance sont livrés aux clients.'
+      },
+      director: {
+        name: 'Sarah Johnson',
+        position: 'Directrice des Opérations',
+        bio: 'Sarah apporte 15 ans d\'excellence opérationnelle à notre équipe, garantissant des processus fluides et une expérience client exceptionnelle à tous les points de contact.'
+      }
+    },
+    licenses: {
+      title: 'Licences et Certifications',
+      description: 'Nous maintenons toutes les licences et certifications nécessaires pour fournir des services d\'assurance dans plusieurs états, garantissant la conformité avec les réglementations et standards de l\'industrie.',
+      items: {
+        stateLicensed: 'Agents Agréés par l\'État',
+        certified: 'Professionnels Certifiés de l\'Industrie',
+        bonded: 'Opérations Cautionnées et Assurées',
+        accredited: 'Accrédité par le Better Business Bureau'
+      }
     }
   },
 
@@ -264,6 +360,17 @@ export default {
       visitUs: 'Visitez-nous',
       callUs: 'Appelez-nous',
       emailUs: 'Envoyez-nous un Email'
+    },
+    officeHours: {
+      title: 'Heures d\'Ouverture',
+      weekdays: 'Lundi - Vendredi',
+      weekdaysTime: '9h00 - 18h00',
+      saturday: 'Samedi',
+      saturdayTime: '10h00 - 16h00',
+      sunday: 'Dimanche',
+      closed: 'Fermé',
+      emergency: 'Support d\'Urgence',
+      available247: 'Disponible 24/7'
     }
   },
 
@@ -274,13 +381,39 @@ export default {
     description: 'Tenez-vous au courant des derniers développements de l\'industrie de l\'assurance, des conseils d\'experts et des nouvelles de l\'entreprise.',
     categories: {
       all: 'Toutes les Actualités',
-      industry: 'Actualités de l\'Industrie',
-      tips: 'Conseils d\'Assurance',
-      company: 'Actualités de l\'Entreprise',
-      regulation: 'Réglementations'
+      health: 'Assurance Santé',
+      auto: 'Assurance Auto',
+      life: 'Assurance Vie',
+      business: 'Assurance Entreprise',
+      property: 'Assurance Propriété'
     },
+    filterByCategory: 'Filtrer par Catégorie',
+    readTime: '{{minutes}} min de lecture',
+    byAuthor: 'Par {{author}}',
     searchPlaceholder: 'Rechercher des articles...',
     noResults: 'Aucun article trouvé correspondant à votre recherche.',
-    loadMore: 'Charger Plus d\'Articles'
+    loadMore: 'Charger Plus d\'Articles',
+    articles: {
+      healthChanges: {
+        title: 'Changements 2024 de l\'Assurance Santé que Vous Devez Connaître',
+        excerpt: 'Mises à jour importantes des réglementations sur l\'assurance santé et ce qu\'elles signifient pour vos options de couverture cette année.',
+        author: 'Dr. Emily Wilson'
+      },
+      autoTips: {
+        title: 'Top 5 des Façons de Réduire Votre Prime d\'Assurance Auto',
+        excerpt: 'Découvrez des stratégies éprouvées pour réduire vos coûts d\'assurance auto sans sacrifier la qualité de la couverture.',
+        author: 'Mark Thompson'
+      },
+      lifeFamilies: {
+        title: 'Planification d\'Assurance Vie pour les Familles Grandissantes',
+        excerpt: 'Considérations essentielles pour l\'assurance vie lors de l\'agrandissement de votre famille et la planification de l\'avenir.',
+        author: 'Sarah Davis'
+      },
+      businessTips: {
+        title: 'Assurance Petite Entreprise : Guide de Couverture Essentielle',
+        excerpt: 'Guide complet pour protéger votre petite entreprise avec les bonnes options de couverture d\'assurance.',
+        author: 'James Miller'
+      }
+    }
   }
 }

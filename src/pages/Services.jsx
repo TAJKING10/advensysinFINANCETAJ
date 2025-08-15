@@ -1,53 +1,56 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Services.css'
 
 const Services = () => {
+  const { t } = useLanguage()
+  
   const services = [
     {
       id: 'auto',
-      title: 'Auto Insurance',
-      description: 'Comprehensive vehicle protection with competitive rates and excellent customer service.',
+      title: t('services.items.autoInsurance.title'),
+      description: t('services.items.autoInsurance.description'),
       image: '/assets/category-1.png',
       features: [
-        'Collision and Comprehensive Coverage',
-        'Liability Protection',
-        '24/7 Claims Support',
-        'Roadside Assistance',
-        'Rental Car Coverage',
-        'Glass and Windshield Protection'
+        t('servicesPage.auto.features.collision'),
+        t('servicesPage.auto.features.liability'),
+        t('servicesPage.auto.features.support'),
+        t('servicesPage.auto.features.roadside'),
+        t('servicesPage.auto.features.rental'),
+        t('servicesPage.auto.features.glass')
       ],
       benefits: [
-        'Competitive rates from top insurers',
-        'Multi-car discounts available',
-        'Safe driver rewards',
-        'Fast claim processing'
+        t('servicesPage.auto.benefits.rates'),
+        t('servicesPage.auto.benefits.discounts'),
+        t('servicesPage.auto.benefits.rewards'),
+        t('servicesPage.auto.benefits.processing')
       ]
     },
     {
       id: 'health',
-      title: 'Health Insurance',
-      description: 'Protect your health and finances with our comprehensive medical insurance plans.',
+      title: t('services.items.healthInsurance.title'),
+      description: t('services.items.healthInsurance.description'),
       image: '/assets/category-2.png',
       features: [
-        'Medical Coverage',
-        'Prescription Drug Benefits',
-        'Preventive Care Services',
-        'Emergency Services',
-        'Specialist Consultations',
-        'Mental Health Support'
+        t('servicesPage.health.features.medical'),
+        t('servicesPage.health.features.prescription'),
+        t('servicesPage.health.features.preventive'),
+        t('servicesPage.health.features.emergency'),
+        t('servicesPage.health.features.specialist'),
+        t('servicesPage.health.features.mental')
       ],
       benefits: [
-        'Network of trusted healthcare providers',
-        'Preventive care at no extra cost',
-        'Flexible plan options',
-        'Easy claim submission'
+        t('servicesPage.health.benefits.network'),
+        t('servicesPage.health.benefits.preventiveCost'),
+        t('servicesPage.health.benefits.flexible'),
+        t('servicesPage.health.benefits.submission')
       ]
     },
     {
       id: 'life',
-      title: 'Life Insurance',
-      description: 'Secure your family\'s financial future with our comprehensive life insurance policies.',
+      title: t('services.items.lifeInsurance.title'),
+      description: t('services.items.lifeInsurance.description'),
       image: '/assets/category-3.png',
       features: [
         'Term Life Insurance',
@@ -132,9 +135,9 @@ const Services = () => {
       <section className="page-header">
         <div className="container">
           <div className="page-header-content">
-            <h1 className="page-title">Our Insurance Services</h1>
+            <h1 className="page-title">{t('servicesPage.title')}</h1>
             <p className="page-subtitle">
-              Comprehensive insurance solutions tailored to protect what matters most to you
+              {t('servicesPage.subtitle')}
             </p>
           </div>
         </div>
@@ -145,25 +148,23 @@ const Services = () => {
         <div className="container">
           <div className="services-overview">
             <div className="overview-content">
-              <h2 className="section-title">Why Choose Our Services?</h2>
+              <h2 className="section-title">{t('servicesPage.whyChooseUs.title')}</h2>
               <p className="section-description">
-                With over 15 years of experience, we provide personalized insurance solutions 
-                that offer comprehensive protection at competitive rates. Our expert team works 
-                with leading insurers to find the perfect coverage for your unique needs.
+                {t('servicesPage.whyChooseUs.description')}
               </p>
               
               <div className="overview-highlights">
                 <div className="highlight">
                   <img src="/assets/strengths-1.svg" alt="Expert Advice" />
-                  <span>Expert Advice</span>
+                  <span>{t('servicesPage.highlights.expertAdvice')}</span>
                 </div>
                 <div className="highlight">
                   <img src="/assets/strengths-2.svg" alt="Competitive Rates" />
-                  <span>Competitive Rates</span>
+                  <span>{t('servicesPage.highlights.competitiveRates')}</span>
                 </div>
                 <div className="highlight">
                   <img src="/assets/strengths-3.svg" alt="24/7 Support" />
-                  <span>24/7 Support</span>
+                  <span>{t('servicesPage.highlights.support')}</span>
                 </div>
               </div>
             </div>
@@ -185,7 +186,7 @@ const Services = () => {
                   <p className="service-description">{service.description}</p>
                   
                   <div className="service-features">
-                    <h3 className="features-title">Coverage Features:</h3>
+                    <h3 className="features-title">{t('servicesPage.featuresTitle')}</h3>
                     <ul className="features-list">
                       {service.features.map((feature, i) => (
                         <li key={i} className="feature-item">
@@ -197,7 +198,7 @@ const Services = () => {
                   </div>
 
                   <div className="service-benefits">
-                    <h3 className="benefits-title">Key Benefits:</h3>
+                    <h3 className="benefits-title">{t('servicesPage.benefitsTitle')}</h3>
                     <ul className="benefits-list">
                       {service.benefits.map((benefit, i) => (
                         <li key={i} className="benefit-item">
@@ -210,10 +211,10 @@ const Services = () => {
 
                   <div className="service-actions">
                     <Link to="/contact" className="btn btn-primary">
-                      Get Quote
+                      {t('common.getQuote')}
                     </Link>
                     <Link to="/contact" className="btn btn-secondary">
-                      Learn More
+                      {t('common.learnMore')}
                     </Link>
                   </div>
                 </div>
