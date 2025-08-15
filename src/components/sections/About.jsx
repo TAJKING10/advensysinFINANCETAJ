@@ -154,34 +154,34 @@ const About = () => {
         {/* Why Choose Us */}
         <div className="why-choose-us">
           <div className="why-content">
-            <h2 className="section-title">Why Choose Advensys?</h2>
+            <h2 className="section-title">{t('about.whyChoose.title')}</h2>
             <div className="why-reasons">
               <div className="reason">
                 <img src="/assets/strengths-11.svg" alt="Expertise" />
                 <div>
-                  <h4>Expert Knowledge</h4>
-                  <p>Our certified professionals have deep industry expertise to guide you to the best solutions.</p>
+                  <h4>{t('about.whyChoose.expertise.title')}</h4>
+                  <p>{t('about.whyChoose.expertise.description')}</p>
                 </div>
               </div>
               <div className="reason">
                 <img src="/assets/strengths-12.svg" alt="Personalized" />
                 <div>
-                  <h4>Personalized Service</h4>
-                  <p>We take time to understand your unique needs and provide tailored insurance solutions.</p>
+                  <h4>{t('about.whyChoose.personalized.title')}</h4>
+                  <p>{t('about.whyChoose.personalized.description')}</p>
                 </div>
               </div>
               <div className="reason">
                 <img src="/assets/strengths-13.svg" alt="Competitive" />
                 <div>
-                  <h4>Competitive Rates</h4>
-                  <p>We work with top insurers to find you the best coverage at the most competitive prices.</p>
+                  <h4>{t('about.whyChoose.competitive.title')}</h4>
+                  <p>{t('about.whyChoose.competitive.description')}</p>
                 </div>
               </div>
               <div className="reason">
                 <img src="/assets/strengths-14.svg" alt="Support" />
                 <div>
-                  <h4>Ongoing Support</h4>
-                  <p>Our relationship doesn't end at the sale. We provide ongoing support for all your needs.</p>
+                  <h4>{t('about.whyChoose.support.title')}</h4>
+                  <p>{t('about.whyChoose.support.description')}</p>
                 </div>
               </div>
             </div>

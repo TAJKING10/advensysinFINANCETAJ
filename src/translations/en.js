@@ -160,6 +160,40 @@ export default {
         title: 'Customer Support',
         description: 'Always here when you need us'
       }
+    },
+    heroTitle: 'Why Choose',
+    heroTitleHighlight: 'Advensys?',
+    heroDescription: 'With over 15 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
+    learnMoreBtn: 'Learn More',
+    experienceBadge: 'Years of Experience',
+    highlights: {
+      licensed: {
+        title: 'Licensed',
+        description: 'Fully licensed and certified professionals'
+      },
+      award: {
+        title: 'Award Winning',
+        description: 'Recognized for excellence in service'
+      }
+    },
+    whyChoose: {
+      title: 'Why Choose Advensys?',
+      expertise: {
+        title: 'Expert Knowledge',
+        description: 'Our certified professionals have deep industry expertise to guide you to the best solutions.'
+      },
+      personalized: {
+        title: 'Personalized Service',
+        description: 'We take time to understand your unique needs and provide tailored insurance solutions.'
+      },
+      competitive: {
+        title: 'Competitive Rates',
+        description: 'We work with top insurers to find you the best coverage at the most competitive prices.'
+      },
+      support: {
+        title: 'Ongoing Support',
+        description: 'Our relationship doesn\'t end at the sale. We provide ongoing support for all your needs.'
+      }
     }
   },
 
@@ -171,7 +205,22 @@ export default {
     readMore: 'Read Full Article',
     publishedOn: 'Published on',
     category: 'Category',
-    author: 'Author'
+    author: 'Author',
+    readTime: '{{minutes}} min read',
+    articles: {
+      healthInsurance2024: {
+        title: 'Understanding Health Insurance Changes for 2024',
+        excerpt: 'Important updates to health insurance policies that could affect your coverage and premiums.',
+        category: 'Health Insurance',
+        readTime: '5 min read'
+      },
+      autoInsuranceTips: {
+        title: 'Top 5 Tips for Choosing the Right Auto Insurance',
+        excerpt: 'Expert advice on selecting auto insurance that provides the best value and protection.',
+        category: 'Auto Insurance',
+        readTime: '4 min read'
+      }
+    }
   },
 
   // Contact Section
@@ -181,6 +230,7 @@ export default {
     description: 'Ready to get started? Contact our expert team for personalized insurance solutions.',
     form: {
       title: 'Send us a Message',
+      description: 'Fill out the form below and we\'ll get back to you within 24 hours.',
       firstName: 'First Name',
       lastName: 'Last Name',
       email: 'Email Address',
@@ -196,6 +246,7 @@ export default {
     },
     info: {
       title: 'Contact Information',
+      description: 'Get in touch with us through any of these convenient methods.',
       address: 'Address',
       phone: 'Phone',
       email: 'Email',

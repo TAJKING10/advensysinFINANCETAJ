@@ -68,7 +68,7 @@ const Contact = () => {
             <div className="form-header">
               <h3 className="form-title">{t('contact.form.title')}</h3>
               <p className="form-description">
-                Fill out the form below and we'll get back to you within 24 hours.
+                {t('contact.form.description')}
               </p>
             </div>
 
@@ -187,7 +187,7 @@ const Contact = () => {
             <div className="contact-info">
               <h3 className="contact-info-title">{t('contact.info.title')}</h3>
               <p className="contact-info-description">
-                Get in touch with us through any of these convenient methods.
+                {t('contact.info.description')}
               </p>
 
               <div className="contact-methods">

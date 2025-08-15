@@ -25,20 +25,22 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-12);
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--space-12) var(--space-8);
   align-items: start;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .footer-section:first-child {
-  max-width: 320px;
+  max-width: 100%;
+  padding-right: var(--space-4);
 }
 
 /* Company Info Section */
@@ -62,9 +64,10 @@
 .footer-description {
   color: var(--gray-300);
   line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
+  max-width: 100%;
 }
 
 .social-links {
@@ -110,11 +113,12 @@
 /* Section Titles */
 .footer-title {
   color: var(--gray-50);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-6);
   position: relative;
   letter-spacing: var(--letter-spacing-tight);
+  text-align: left;
 }
 
 .footer-title::after {
@@ -133,10 +137,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .footer-links li {
-  margin-bottom: var(--space-3);
+  margin: 0;
 }
 
 .footer-link {
@@ -146,8 +153,9 @@
   font-weight: var(--font-weight-normal);
   transition: var(--transition-all);
   display: inline-block;
-  padding: var(--space-1) 0;
+  padding: var(--space-2) 0;
   position: relative;
+  text-align: left;
 }
 
 .footer-link:hover {
@@ -174,14 +182,14 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-4);
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-4);
-  padding: var(--space-2);
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
   border-radius: var(--radius-lg);
   transition: var(--transition-all);
 }
@@ -243,7 +251,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-4);
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -256,7 +264,14 @@
 
 .footer-bottom-links {
   display: flex;
-  gap: var(--space-6);
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer-separator {
+  color: var(--gray-500);
+  font-size: var(--font-size-base);
+  user-select: none;
 }
 
 .footer-bottom-link {
@@ -277,14 +292,26 @@
 /* PREMIUM RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-10);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10) var(--space-6);
   }
   
   .footer-section:first-child {
     grid-column: 1 / -1;
     max-width: none;
-    text-align: center;
+    text-align: left;
+    margin-bottom: var(--space-6);
+    padding-right: 0;
+  }
+  
+  .footer-section:nth-child(2),
+  .footer-section:nth-child(3) {
+    text-align: left;
+  }
+  
+  .footer-section:nth-child(4) {
+    grid-column: 1 / -1;
+    text-align: left;
   }
 }
 
@@ -296,23 +323,40 @@
   .footer-grid {
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    text-align: center;
+  }
+  
+  .footer-section {
+    text-align: left;
   }
   
   .footer-section:first-child {
     text-align: center;
+    margin-bottom: var(--space-4);
+  }
+
+  .footer-title {
+    text-align: left;
+  }
+  
+  .footer-section:first-child .footer-title {
+    text-align: center;
   }
 
   .footer-title::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .footer-section:first-child .footer-title::after {
     left: 50%;
     transform: translateX(-50%);
   }
 
   .contact-item {
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
   }
 
   .social-links {
@@ -326,7 +370,7 @@
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
-    gap: var(--space-3);
+    gap: var(--space-4);
   }
 
   .footer-bottom-links {
@@ -368,6 +412,9 @@
 
   .footer-bottom-links {
     gap: var(--space-3);
+  }
+  
+  .footer-separator {
     font-size: var(--font-size-sm);
   }
   

@@ -118,6 +118,7 @@ const Footer = () => {
             </p>
             <div className="footer-bottom-links">
               <a href="#" className="footer-bottom-link">{t('footer.quickLinks.privacy')}</a>
+              <span className="footer-separator">|</span>
               <a href="#" className="footer-bottom-link">{t('footer.quickLinks.terms')}</a>
             </div>
           </div>

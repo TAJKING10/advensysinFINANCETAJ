@@ -160,6 +160,40 @@ export default {
         title: 'Support Client',
         description: 'Toujours là quand vous avez besoin de nous'
       }
+    },
+    heroTitle: 'Pourquoi Choisir',
+    heroTitleHighlight: 'Advensys?',
+    heroDescription: 'Avec plus de 15 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
+    learnMoreBtn: 'En Savoir Plus',
+    experienceBadge: 'Années d\'Expérience',
+    highlights: {
+      licensed: {
+        title: 'Agréé',
+        description: 'Professionnels entièrement agréés et certifiés'
+      },
+      award: {
+        title: 'Primé',
+        description: 'Reconnu pour l\'excellence du service'
+      }
+    },
+    whyChoose: {
+      title: 'Pourquoi Choisir Advensys?',
+      expertise: {
+        title: 'Expertise Professionnelle',
+        description: 'Nos professionnels certifiés ont une expertise approfondie de l\'industrie pour vous guider vers les meilleures solutions.'
+      },
+      personalized: {
+        title: 'Service Personnalisé',
+        description: 'Nous prenons le temps de comprendre vos besoins uniques et fournissons des solutions d\'assurance sur mesure.'
+      },
+      competitive: {
+        title: 'Tarifs Compétitifs',
+        description: 'Nous travaillons avec les meilleurs assureurs pour vous trouver la meilleure couverture aux prix les plus compétitifs.'
+      },
+      support: {
+        title: 'Support Continu',
+        description: 'Notre relation ne se termine pas à la vente. Nous fournissons un support continu pour tous vos besoins.'
+      }
     }
   },
 
@@ -171,7 +205,22 @@ export default {
     readMore: 'Lire l\'Article Complet',
     publishedOn: 'Publié le',
     category: 'Catégorie',
-    author: 'Auteur'
+    author: 'Auteur',
+    readTime: '{{minutes}} min de lecture',
+    articles: {
+      healthInsurance2024: {
+        title: 'Comprendre les Changements d\'Assurance Santé pour 2024',
+        excerpt: 'Mises à jour importantes des polices d\'assurance santé qui pourraient affecter votre couverture et vos primes.',
+        category: 'Assurance Santé',
+        readTime: '5 min de lecture'
+      },
+      autoInsuranceTips: {
+        title: 'Top 5 des Conseils pour Choisir la Bonne Assurance Auto',
+        excerpt: 'Conseils d\'experts pour sélectionner une assurance auto qui offre le meilleur rapport qualité-prix et protection.',
+        category: 'Assurance Auto',
+        readTime: '4 min de lecture'
+      }
+    }
   },
 
   // Contact Section
@@ -181,6 +230,7 @@ export default {
     description: 'Prêt à commencer ? Contactez notre équipe d\'experts pour des solutions d\'assurance personnalisées.',
     form: {
       title: 'Envoyez-nous un Message',
+      description: 'Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.',
       firstName: 'Prénom',
       lastName: 'Nom de Famille',
       email: 'Adresse Email',
@@ -196,6 +246,7 @@ export default {
     },
     info: {
       title: 'Informations de Contact',
+      description: 'Contactez-nous par l\'une de ces méthodes pratiques.',
       address: 'Adresse',
       phone: 'Téléphone',
       email: 'Email',

@@ -160,6 +160,40 @@ export default {
         title: 'Kundstöd',
         description: 'Alltid här när du behöver oss'
       }
+    },
+    heroTitle: 'Varför Välja',
+    heroTitleHighlight: 'Advensys?',
+    heroDescription: 'Med över 15 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.',
+    learnMoreBtn: 'Läs Mer',
+    experienceBadge: 'Års Erfarenhet',
+    highlights: {
+      licensed: {
+        title: 'Licensierad',
+        description: 'Fullt licensierade och certifierade proffs'
+      },
+      award: {
+        title: 'Prisbelönt',
+        description: 'Erkänd för excellens i service'
+      }
+    },
+    whyChoose: {
+      title: 'Varför Välja Advensys?',
+      expertise: {
+        title: 'Expertkunskap',
+        description: 'Våra certifierade proffs har djup branschexpertis för att guida dig till de bästa lösningarna.'
+      },
+      personalized: {
+        title: 'Personlig Service',
+        description: 'Vi tar tid att förstå dina unika behov och tillhandahåller skräddarsydda försäkringslösningar.'
+      },
+      competitive: {
+        title: 'Konkurrenskraftiga Priser',
+        description: 'Vi arbetar med toppförsäkrare för att hitta dig den bästa täckningen till de mest konkurrenskraftiga priserna.'
+      },
+      support: {
+        title: 'Pågående Support',
+        description: 'Vår relation slutar inte vid försäljningen. Vi tillhandahåller pågående support för alla dina behov.'
+      }
     }
   },
 
@@ -171,7 +205,22 @@ export default {
     readMore: 'Läs Hela Artikeln',
     publishedOn: 'Publicerad den',
     category: 'Kategori',
-    author: 'Författare'
+    author: 'Författare',
+    readTime: '{{minutes}} min läsning',
+    articles: {
+      healthInsurance2024: {
+        title: 'Förstå Hälsoförsäkringsförändringar för 2024',
+        excerpt: 'Viktiga uppdateringar av hälsoförsäkringspolicyer som kan påverka din täckning och premier.',
+        category: 'Hälsoförsäkring',
+        readTime: '5 min läsning'
+      },
+      autoInsuranceTips: {
+        title: 'Topp 5 Tips för att Välja Rätt Bilförsäkring',
+        excerpt: 'Expertråd om att välja bilförsäkring som ger bästa värde och skydd.',
+        category: 'Bilförsäkring',
+        readTime: '4 min läsning'
+      }
+    }
   },
 
   // Contact Section
@@ -181,6 +230,7 @@ export default {
     description: 'Redo att komma igång? Kontakta vårt expertteam för personliga försäkringslösningar.',
     form: {
       title: 'Skicka Oss ett Meddelande',
+      description: 'Fyll i formuläret nedan så återkommer vi till dig inom 24 timmar.',
       firstName: 'Förnamn',
       lastName: 'Efternamn',
       email: 'E-postadress',
@@ -196,6 +246,7 @@ export default {
     },
     info: {
       title: 'Kontaktinformation',
+      description: 'Kom i kontakt med oss genom någon av dessa bekväma metoder.',
       address: 'Adress',
       phone: 'Telefon',
       email: 'E-post',

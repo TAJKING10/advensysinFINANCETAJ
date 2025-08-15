@@ -8,22 +8,22 @@ const News = () => {
   const newsArticles = [
     {
       id: 1,
-      title: 'Understanding Health Insurance Changes for 2024',
-      excerpt: 'Important updates to health insurance policies that could affect your coverage and premiums.',
+      title: t('news.articles.healthInsurance2024.title'),
+      excerpt: t('news.articles.healthInsurance2024.excerpt'),
       image: '/assets/news-1.png',
       date: '2024-01-15',
-      category: 'Health Insurance',
-      readTime: '5 min read',
+      category: t('news.articles.healthInsurance2024.category'),
+      readTime: t('news.articles.healthInsurance2024.readTime'),
       link: '/news/health-insurance-2024'
     },
     {
       id: 2,
-      title: 'Top 5 Tips for Choosing the Right Auto Insurance',
-      excerpt: 'Expert advice on selecting auto insurance that provides the best value and protection.',
+      title: t('news.articles.autoInsuranceTips.title'),
+      excerpt: t('news.articles.autoInsuranceTips.excerpt'),
       image: '/assets/news-2.png',
       date: '2024-01-10',
-      category: 'Auto Insurance',
-      readTime: '4 min read',
+      category: t('news.articles.autoInsuranceTips.category'),
+      readTime: t('news.articles.autoInsuranceTips.readTime'),
       link: '/news/auto-insurance-tips'
     }
   ]
