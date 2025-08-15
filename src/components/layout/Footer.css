@@ -211,7 +211,7 @@
 
 /* Make phone icon blue */
 .contact-item:nth-child(2) .contact-icon {
-  filter: invert(27%) sepia(90%) saturate(1652%) hue-rotate(205deg) brightness(100%) contrast(90%);
+  filter: invert(1);
 }
 
 .contact-item:hover .contact-icon {
@@ -219,9 +219,9 @@
   filter: invert(1) sepia(1) saturate(2) hue-rotate(200deg);
 }
 
-/* Keep phone icon blue on hover */
+/* Keep phone icon white on hover */
 .contact-item:nth-child(2):hover .contact-icon {
-  filter: invert(27%) sepia(90%) saturate(1652%) hue-rotate(205deg) brightness(110%) contrast(100%);
+  filter: invert(1) sepia(1) saturate(2) hue-rotate(200deg);
 }
 
 .contact-item div {
@@ -243,6 +243,17 @@
 }
 
 .contact-item:hover p:first-child {
+  color: var(--primary-300);
+}
+
+/* Clickable links in contact items */
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.contact-item a:hover {
   color: var(--primary-300);
 }
 

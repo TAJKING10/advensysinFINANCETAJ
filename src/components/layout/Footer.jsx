@@ -84,13 +84,29 @@ const Footer = () => {
                 <div className="contact-item">
                   <img src="/assets/geo.svg" alt="Location" className="contact-icon" />
                   <div>
-                    <p>{currentLocationData?.address}</p>
+                    <p>
+                      <a 
+                        href={currentLocationData?.mapsUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style={{ color: 'inherit', textDecoration: 'underline' }}
+                      >
+                        {currentLocationData?.address}
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div className="contact-item">
-                  <img src="/assets/phone-2.svg" alt="Phone" className="contact-icon" />
+                  <img src="/assets/phone-3.svg" alt="Phone" className="contact-icon" />
                   <div>
-                    <p>{currentLocationData?.phone}</p>
+                    <p>
+                      <a 
+                        href={`tel:${currentLocationData?.phone}`} 
+                        style={{ color: 'inherit', textDecoration: 'none' }}
+                      >
+                        {currentLocationData?.phone}
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div className="contact-item">
