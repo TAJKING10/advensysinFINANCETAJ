@@ -134,6 +134,7 @@ export default {
     },
     values: {
       title: 'Our Values',
+      subtitle: 'The principles that guide everything we do and define who we are as a company.',
       integrity: 'Integrity',
       excellence: 'Excellence',
       innovation: 'Innovation',

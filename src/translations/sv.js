@@ -134,6 +134,7 @@ export default {
     },
     values: {
       title: 'Våra Värderingar',
+      subtitle: 'Principerna som styr allt vi gör och definierar vem vi är som företag.',
       integrity: 'Integritet',
       excellence: 'Excellens',
       innovation: 'Innovation',
