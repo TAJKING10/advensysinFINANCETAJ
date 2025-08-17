@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HiChevronDown, HiPhone, HiMenuAlt3, HiX } from "react-icons/hi";
+import { HiChevronDown, HiPhone, HiMenuAlt3, HiX, HiTranslate } from "react-icons/hi";
 import { FaQuoteLeft } from "react-icons/fa";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useLocation as useLocationContext } from "../../contexts/LocationContext";
@@ -136,21 +136,18 @@ const Header = () => {
             <div className="dropdown" ref={langRef}>
               <button
                 type="button"
-                className="sw__btn"
+                className="sw__btn sw__btn--language"
                 onClick={() => { setLangOpen(v => !v); setLocOpen(false); }}
                 aria-expanded={langOpen}
                 aria-haspopup="listbox"
                 aria-controls="lang-menu"
-                aria-label={t("header.languageSwitcher")}
+                aria-label={`Select language. Current: ${languages[currentLanguage]?.name || 'English'}`}
               >
-                <span className="sw__flag">
-                  {languages[currentLanguage]?.flag?.startsWith('/') || languages[currentLanguage]?.flag?.startsWith('http') ? (
-                    <img src={languages[currentLanguage].flag} alt={`${languages[currentLanguage].name} flag`} className="flag-img" />
-                  ) : (
-                    languages[currentLanguage]?.flag
-                  )}
+                <HiTranslate className="sw__icon" />
+                <span className="sw__text">
+                  <span className="sw__code">{languages[currentLanguage]?.code?.toUpperCase()}</span>
+                  <span className="sw__name">{languages[currentLanguage]?.name}</span>
                 </span>
-                <span className="sw__text">{languages[currentLanguage]?.code?.toUpperCase()}</span>
                 <HiChevronDown className={`sw__chev ${langOpen ? "is-open" : ""}`} />
               </button>
 
