@@ -6,7 +6,7 @@ export const locations = {
   sweden: {
     code: 'sweden',
     name: 'Sweden',
-    flag: '🇸🇪',
+    flag: '/assets/sweden emojie.png',
     currency: 'SEK',
     phone: '+46 72 529 81 26',
     email: 'contact@advensys-in-finance.com',
@@ -18,7 +18,7 @@ export const locations = {
   france: {
     code: 'france',
     name: 'France',
-    flag: '🇫🇷',
+    flag: '/assets/france emojie.png',
     currency: 'EUR',
     phone: '+33 6 98 21 44 46',
     email: 'contact@advensys-in-finance.com',
@@ -30,7 +30,7 @@ export const locations = {
   luxembourg: {
     code: 'luxembourg',
     name: 'Luxembourg',
-    flag: '🇱🇺',
+    flag: '/assets/luxenbourg emojie.png',
     currency: 'EUR',
     phone: '+352 661 11 22 60',
     email: 'contact@advensys-in-finance.com',

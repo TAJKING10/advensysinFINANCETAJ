@@ -3,9 +3,9 @@ import React, { createContext, useContext, useState, useEffect } from 'react'
 const LanguageContext = createContext()
 
 export const languages = {
-  en: { code: 'en', name: 'English', flag: '🇺🇸' },
-  fr: { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  sv: { code: 'sv', name: 'Svenska', flag: '🇸🇪' }
+  en: { code: 'en', name: 'English'},
+  fr: { code: 'fr', name: 'Français'},
+  sv: { code: 'sv', name: 'Svenska'}
 }
 
 export const useLanguage = () => {

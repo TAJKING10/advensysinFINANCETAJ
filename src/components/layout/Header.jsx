@@ -143,6 +143,13 @@ const Header = () => {
                 aria-controls="lang-menu"
                 aria-label={t("header.languageSwitcher")}
               >
+                <span className="sw__flag">
+                  {languages[currentLanguage]?.flag?.startsWith('/') || languages[currentLanguage]?.flag?.startsWith('http') ? (
+                    <img src={languages[currentLanguage].flag} alt={`${languages[currentLanguage].name} flag`} className="flag-img" />
+                  ) : (
+                    languages[currentLanguage]?.flag
+                  )}
+                </span>
                 <span className="sw__text">{languages[currentLanguage]?.code?.toUpperCase()}</span>
                 <HiChevronDown className={`sw__chev ${langOpen ? "is-open" : ""}`} />
               </button>
@@ -161,6 +168,13 @@ const Header = () => {
                         className={`sw__item sw__item--simple${isCurrent ? " is-current" : ""}`}
                         onClick={() => onChangeLanguage(lang.code)}
                       >
+                        <span className="sw__itemFlag">
+                          {lang.flag?.startsWith('/') || lang.flag?.startsWith('http') ? (
+                            <img src={lang.flag} alt={`${lang.name} flag`} className="flag-img" />
+                          ) : (
+                            lang.flag
+                          )}
+                        </span>
                         <span className="sw__itemCode">{String(lang.code || "").toUpperCase()}</span>
                         <span className="sw__itemText">{lang.name}</span>
                       </button>
@@ -181,7 +195,13 @@ const Header = () => {
                 aria-controls="loc-menu"
                 aria-label={t("header.locationSwitcher")}
               >
-                <span className="sw__flag">{currentLocationData?.flag}</span>
+                <span className="sw__flag">
+                  {currentLocationData?.flag?.startsWith('/') || currentLocationData?.flag?.startsWith('http') ? (
+                    <img src={currentLocationData.flag} alt={`${currentLocationData.name} flag`} className="flag-img" />
+                  ) : (
+                    currentLocationData?.flag
+                  )}
+                </span>
                 <span className="sw__text">{currentLocationData?.name}</span>
                 <HiChevronDown className={`sw__chev ${locOpen ? "is-open" : ""}`} />
               </button>
@@ -200,7 +220,13 @@ const Header = () => {
                         className={`sw__item sw__item--simple${isCurrent ? " is-current" : ""}`}
                         onClick={() => onChangeLocation(loc.code)}
                       >
-                        <span className="sw__itemFlag">{loc.flag}</span>
+                        <span className="sw__itemFlag">
+                          {loc.flag?.startsWith('/') || loc.flag?.startsWith('http') ? (
+                            <img src={loc.flag} alt={`${loc.name} flag`} className="flag-img" />
+                          ) : (
+                            loc.flag
+                          )}
+                        </span>
                         <span className="sw__itemText">{loc.name}</span>
                       </button>
                     );
@@ -293,7 +319,13 @@ const Header = () => {
                         className={`msw__btn${isCurrent ? " is-current" : ""}`}
                         onClick={() => onChangeLocation(loc.code)}
                       >
-                        <span className="msw__flag">{loc.flag}</span>
+                        <span className="msw__flag">
+                          {loc.flag?.startsWith('/') || loc.flag?.startsWith('http') ? (
+                            <img src={loc.flag} alt={`${loc.name} flag`} className="flag-img" />
+                          ) : (
+                            loc.flag
+                          )}
+                        </span>
                         <span>{loc.name}</span>
                       </button>
                     );

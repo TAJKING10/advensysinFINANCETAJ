@@ -71,7 +71,19 @@
   backdrop-filter:blur(10px); transition:all .2s ease;
 }
 .sw__btn:hover{ background:#fff; transform:translateY(-1px); }
-.sw__flag{ font-size:16px; }
+
+
+/* Flag image styles */
+.flag-img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+}
 .sw__text{ font-size:12px; text-transform:uppercase; letter-spacing:.4px; overflow:hidden; text-overflow:ellipsis; max-width:80px; }
 .sw__chev{ transition:transform .2s ease; opacity:.7; }
 .sw__chev.is-open{ transform:rotate(180deg); }
@@ -135,6 +147,9 @@
   font-size:16px; 
   line-height:1; 
   flex-shrink:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sw__itemCode{ 
@@ -219,7 +234,19 @@
 }
 .msw__btn:hover{ background:#fff; color:var(--g-700); }
 .msw__btn.is-current{ background:var(--primary-600); color:#fff; border-color:var(--primary-600); }
-.msw__flag{ font-size:14px; }
+.msw__flag{ 
+  font-size:14px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msw__flag .flag-img {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+}
 
 .mnav__cta{ width:100%; justify-content:center; }
 
