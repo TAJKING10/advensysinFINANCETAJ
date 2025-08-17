@@ -19,8 +19,8 @@ html {
 
 body {
   font-family: 'Barlow', sans-serif;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 135%;
   color: #00226E;
   background-color: #ffffff;
@@ -263,11 +263,11 @@ body {
 
 /* Font Families */
 .font-barlow { font-family: 'Barlow', sans-serif; }
-.font-body { font-family: 'Barlow', sans-serif; font-size: 25px; font-weight: bold; line-height: 135%; color: #00226E; }
-.font-nav { font-family: 'Barlow', sans-serif; font-size: 20px; line-height: 24px; font-weight: normal; }
+.font-body { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 500; line-height: 135%; color: #00226E; }
+.font-nav { font-family: 'Barlow', sans-serif; font-size: 16px; line-height: 20px; font-weight: normal; }
 .font-nav:hover { font-weight: bold; }
-.font-phone-large { font-family: 'Barlow', sans-serif; font-size: 25px; }
-.font-phone-small { font-family: 'Barlow', sans-serif; font-size: 14.4px; font-weight: 500; letter-spacing: 1px; }
+.font-phone-large { font-family: 'Barlow', sans-serif; font-size: 18px; }
+.font-phone-small { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 1px; }
 .font-form { font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 18px; color: #003ABD; font-weight: normal; }
 
 /* Font Weights */
@@ -339,7 +339,7 @@ body {
 
 h1, .h1 {
   font-family: 'Barlow', sans-serif;
-  font-size: clamp(60px, 7vw, 107px);
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: bold;
   letter-spacing: 1.5px;
   line-height: 1.2;
@@ -350,7 +350,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: 'Barlow', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1.5px;
   line-height: 1.5;
@@ -361,7 +361,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-family: 'Barlow', sans-serif;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 112.5%;
   color: #00226E;
@@ -635,8 +635,8 @@ h6, .h6 {
   gap: var(--space-2);
   padding: var(--space-3) var(--space-6);
   font-family: 'Barlow', sans-serif;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
   color: white;
   font-weight: var(--font-weight-medium);
   border-radius: var(--radius-lg);
@@ -671,8 +671,8 @@ h6, .h6 {
   background: linear-gradient(135deg, #FFC200 0%, #FF785E 100%);
   color: white;
   font-family: 'Barlow', sans-serif;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
   box-shadow: 0 2px 4px rgba(27, 54, 93, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   border: 1px solid #FF785E;
 }
@@ -1404,25 +1404,47 @@ body {
 /* Custom responsive breakpoints for design system */
 @media (max-width: 1620px) {
   body {
-    font-size: 20px;
+    font-size: 15px;
   }
   
   .font-body {
-    font-size: 20px;
+    font-size: 15px;
+  }
+  
+  h1, .h1 {
+    font-size: clamp(28px, 4vw, 42px);
+  }
+  
+  h2, .h2 {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 950px) {
   body {
-    font-size: 18px;
+    font-size: 14px;
   }
   
   .font-body {
-    font-size: 18px;
+    font-size: 14px;
   }
   
   h1, .h1 {
-    font-size: clamp(60px, 10vw, 80px);
+    font-size: clamp(24px, 6vw, 36px);
+  }
+  
+  h2, .h2 {
+    font-size: 20px;
+  }
+  
+  h3, .h3 {
+    font-size: 18px;
+  }
+  
+  .btn {
+    font-size: 14px;
+    line-height: 18px;
+    padding: var(--space-2) var(--space-4);
   }
 }
 
