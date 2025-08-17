@@ -134,11 +134,15 @@
 }
 
 .contact-info {
-  background-color: var(--white);
   padding: 2rem;
+}
+
+/* Contact section styling (not footer) */
+.contact-section .contact-info {
+  background-color: var(--bg-secondary);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-light);
-  border-left: 4px solid var(--primary-color);
+  box-shadow: var(--shadow-base);
+  border: 1px solid var(--border-primary);
 }
 
 .contact-info-title {
