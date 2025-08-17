@@ -1,5 +1,5 @@
-/* Import Premium Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Import Barlow Font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700;800;900&display=swap');
 
 /* Reset and Base Styles */
 *,
@@ -18,13 +18,13 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.7;
-  color: #1a202c;
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 135%;
+  color: #00226E;
   background-color: #ffffff;
   overflow-x: hidden;
-  font-weight: 400;
-  letter-spacing: -0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,20 +38,20 @@ body {
   --primary-200: #bfdbfe;
   --primary-300: #93c5fd;
   --primary-400: #60a5fa;
-  --primary-500: #1B365D;
-  --primary-600: #2C5282;
+  --primary-500: #00226E;
+  --primary-600: #003ABD;
   --primary-700: #1d4ed8;
   --primary-800: #1e40af;
   --primary-900: #1e3a8a;
   --primary-950: #172554;
 
-  /* Gold/Amber Accents */
+  /* Yellow/Orange Accents */
   --accent-50: #fffbeb;
   --accent-100: #fef3c7;
   --accent-200: #fde68a;
   --accent-300: #fcd34d;
-  --accent-400: #fbbf24;
-  --accent-500: #F59E0B;
+  --accent-400: #FFC200;
+  --accent-500: #FF785E;
   --accent-600: #D97706;
   --accent-700: #b45309;
   --accent-800: #92400e;
@@ -106,8 +106,8 @@ body {
   --warning: var(--warning-500);
 
   /* Text Colors */
-  --text-primary: var(--gray-900);
-  --text-secondary: var(--gray-600);
+  --text-primary: #00226E;
+  --text-secondary: #003ABD;
   --text-tertiary: var(--gray-500);
   --text-inverse: var(--gray-50);
   --text-disabled: var(--gray-400);
@@ -262,8 +262,13 @@ body {
 .text-7xl { font-size: var(--font-size-7xl); line-height: var(--line-height-tight); }
 
 /* Font Families */
-.font-inter { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-.font-poppins { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; }
+.font-barlow { font-family: 'Barlow', sans-serif; }
+.font-body { font-family: 'Barlow', sans-serif; font-size: 25px; font-weight: bold; line-height: 135%; color: #00226E; }
+.font-nav { font-family: 'Barlow', sans-serif; font-size: 20px; line-height: 24px; font-weight: normal; }
+.font-nav:hover { font-weight: bold; }
+.font-phone-large { font-family: 'Barlow', sans-serif; font-size: 25px; }
+.font-phone-small { font-family: 'Barlow', sans-serif; font-size: 14.4px; font-weight: 500; letter-spacing: 1px; }
+.font-form { font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 18px; color: #003ABD; font-weight: normal; }
 
 /* Font Weights */
 .font-light { font-weight: var(--font-weight-light); }
@@ -333,29 +338,33 @@ body {
 =================================== */
 
 h1, .h1 {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -0.02em;
-  line-height: var(--line-height-tight);
-  color: var(--text-primary);
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(60px, 7vw, 107px);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  color: #00226E;
+  text-transform: uppercase;
   margin-bottom: var(--space-6);
 }
 
 h2, .h2 {
-  font-size: clamp(24px, 3vw, 34px);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.01em;
-  line-height: var(--line-height-snug);
-  color: var(--text-primary);
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  color: #00226E;
+  text-transform: uppercase;
   margin-bottom: var(--space-4);
 }
 
 h3, .h3 {
-  font-size: clamp(18px, 2.2vw, 22px);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.005em;
-  line-height: var(--line-height-snug);
-  color: var(--gray-700);
+  font-family: 'Barlow', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 112.5%;
+  color: #00226E;
   margin-bottom: var(--space-3);
 }
 
@@ -625,10 +634,11 @@ h6, .h6 {
   justify-content: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-6);
-  font-family: inherit;
-  font-size: var(--font-size-base);
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: white;
   font-weight: var(--font-weight-medium);
-  line-height: 1;
   border-radius: var(--radius-lg);
   border: 2px solid transparent;
   cursor: pointer;
@@ -658,10 +668,13 @@ h6, .h6 {
 
 /* Primary Button */
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+  background: linear-gradient(135deg, #FFC200 0%, #FF785E 100%);
   color: white;
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+  line-height: 30px;
   box-shadow: 0 2px 4px rgba(27, 54, 93, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border: 1px solid var(--primary-600);
+  border: 1px solid #FF785E;
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -803,11 +816,11 @@ h6, .h6 {
 .form-select {
   width: 100%;
   padding: var(--space-4) var(--space-4);
-  font-family: inherit;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
-  color: var(--text-primary);
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #003ABD;
+  font-weight: normal;
   background-color: var(--bg-primary);
   border: 2px solid var(--border-primary);
   border-radius: var(--radius-lg);
@@ -1385,6 +1398,31 @@ body {
     max-width: var(--container-xl);
     padding-left: var(--space-8);
     padding-right: var(--space-8);
+  }
+}
+
+/* Custom responsive breakpoints for design system */
+@media (max-width: 1620px) {
+  body {
+    font-size: 20px;
+  }
+  
+  .font-body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .font-body {
+    font-size: 18px;
+  }
+  
+  h1, .h1 {
+    font-size: clamp(60px, 10vw, 80px);
   }
 }
 
