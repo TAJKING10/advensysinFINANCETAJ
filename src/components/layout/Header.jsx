@@ -249,10 +249,10 @@ const Header = () => {
             )}
 
             {/* CTA */}
-            <Link to="/contact" className="btn btn--primary hdr__cta">
+            <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn--primary hdr__cta" style={{ border: 'none', cursor: 'pointer' }}>
               <FaQuoteLeft />
               <span>{t("common.getQuote")}</span>
-            </Link>
+            </button>
 
             {/* Mobile toggle */}
             <button
@@ -340,7 +340,7 @@ const Header = () => {
             </li>
 
             <li className="mnav__item">
-              <button onClick={() => handleNavClick("/contact")} className="btn btn--primary mnav__cta" style={{ border: 'none', cursor: 'pointer' }}>
+              <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false); }} className="btn btn--primary mnav__cta" style={{ border: 'none', cursor: 'pointer' }}>
                 <FaQuoteLeft />
                 <span>{t("common.getQuote")}</span>
               </button>
