@@ -128,7 +128,11 @@ const Footer = () => {
                 <div className="contact-item">
                   <img src="/assets/site.svg" alt="Website" className="contact-icon" />
                   <div>
-                    <p>www.advensys-in-finance.com</p>
+                    <p>
+                      <a href="https://advensys-in-finance.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                        advensys-in-finance.com
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>

@@ -51,7 +51,7 @@ const Contact = () => {
     {
       icon: '/assets/site.svg',
       title: 'Website',
-      info: ['www.advensys-in-finance.com']
+      info: [{ text: 'advensys-in-finance.com', url: 'https://advensys-in-finance.com/' }]
     }
   ]
 
