@@ -99,7 +99,7 @@ const Services = () => {
               <div className="service-image">
                 <img src={service.image} alt={service.title} />
                 <div className="service-overlay">
-                  <button onClick={() => handleServiceClick(service.serviceId)} className="service-link" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <button onClick={() => { navigate('/about'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="service-link" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     {t('common.learnMore')}
                     <img src="/assets/arrow.svg" alt="" />
                   </button>
@@ -123,9 +123,9 @@ const Services = () => {
                   <button onClick={() => handleServiceClick(service.serviceId)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
                     {t('common.getQuote')}
                   </button>
-                  <Link to="/contact" className="service-contact">
+                  <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="service-contact" style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'underline' }}>
                     {t('common.contactUs')}
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -138,9 +138,9 @@ const Services = () => {
             <h3 className="cta-title">{t('services.cta.title')}</h3>
             <p className="cta-description">{t('services.cta.description')}</p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary btn-lg">
+              <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary btn-lg" style={{ border: 'none', cursor: 'pointer' }}>
                 {t('services.cta.button')}
-              </Link>
+              </button>
               <a href={`tel:${currentLocationData?.phone}`} className="cta-phone">
                 <img src="/assets/phone.svg" alt={t('header.phone')} />
                 <span>{t('services.cta.phone')} {currentLocationData?.phone}</span>

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import './About.css'
 
 const About = () => {
   const { t } = useLanguage()
+  const navigate = useNavigate()
   
   const achievements = [
     {
@@ -89,12 +90,12 @@ const About = () => {
             </div>
 
             <div className="about-actions">
-              <Link to="/about" className="btn btn-primary">
+              <button onClick={() => { navigate('/about'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
                 {t('about.learnMoreBtn')}
-              </Link>
-              <Link to="/contact" className="btn btn-secondary">
+              </button>
+              <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-secondary" style={{ border: 'none', cursor: 'pointer' }}>
                 {t('common.contactUs')}
-              </Link>
+              </button>
             </div>
           </div>
 

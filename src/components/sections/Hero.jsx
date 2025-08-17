@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import { HiChevronLeft, HiChevronRight, HiSparkles } from 'react-icons/hi'
 import './Hero.css'
@@ -7,6 +7,12 @@ import './Hero.css'
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const { t } = useLanguage()
+  const navigate = useNavigate()
+
+  const handleContactClick = () => {
+    navigate('/contact')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const slides = [
     {
@@ -79,12 +85,18 @@ const Hero = () => {
             <p className="hero-description">{currentSlideData.description}</p>
             
             <div className="hero-actions">
-              <Link to={currentSlideData.ctaLink} className="btn btn-primary btn-lg">
-                {currentSlideData.ctaText}
-              </Link>
-              <Link to="/about" className="btn btn-secondary btn-lg">
+              {currentSlideData.ctaLink === '/contact' ? (
+                <button onClick={handleContactClick} className="btn btn-primary btn-lg" style={{ border: 'none', cursor: 'pointer' }}>
+                  {currentSlideData.ctaText}
+                </button>
+              ) : (
+                <Link to={currentSlideData.ctaLink} className="btn btn-primary btn-lg">
+                  {currentSlideData.ctaText}
+                </Link>
+              )}
+              <button onClick={() => { navigate('/about'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-secondary btn-lg" style={{ border: 'none', cursor: 'pointer' }}>
                 {t('common.learnMore')}
-              </Link>
+              </button>
             </div>
 
             {/* Key Features */}
