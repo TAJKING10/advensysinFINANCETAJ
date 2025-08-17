@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import { useLocation } from '../../contexts/LocationContext'
 import './Footer.css'
@@ -8,6 +8,33 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
   const { t } = useLanguage()
   const { currentLocationData } = useLocation()
+  const navigate = useNavigate()
+
+  const handleQuickLinkClick = (path) => {
+    navigate(path)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleServiceClick = (service) => {
+    const serviceMap = {
+      'Auto Insurance': 'auto',
+      'Health Insurance': 'health', 
+      'Life Insurance': 'life',
+      'Business Insurance': 'business',
+      'Property Insurance': 'property',
+      'Financial Planning': 'financial'
+    }
+    const serviceId = serviceMap[service]
+    navigate('/services')
+    
+    // Scroll to specific service section after navigation
+    setTimeout(() => {
+      const element = document.getElementById(serviceId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
 
   const quickLinks = [
     { path: '/', label: t('footer.quickLinks.home') },
@@ -62,9 +89,13 @@ const Footer = () => {
               <ul className="footer-links">
                 {quickLinks.map((link) => (
                   <li key={link.path}>
-                    <Link to={link.path} className="footer-link">
+                    <button 
+                      onClick={() => handleQuickLinkClick(link.path)} 
+                      className="footer-link"
+                      style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
+                    >
                       {link.label}
-                    </Link>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -76,9 +107,13 @@ const Footer = () => {
               <ul className="footer-links">
                 {services.map((service) => (
                   <li key={service}>
-                    <Link to="/services" className="footer-link">
+                    <button 
+                      onClick={() => handleServiceClick(service)} 
+                      className="footer-link"
+                      style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', width: '100%' }}
+                    >
                       {service}
-                    </Link>
+                    </button>
                   </li>
                 ))}
               </ul>
