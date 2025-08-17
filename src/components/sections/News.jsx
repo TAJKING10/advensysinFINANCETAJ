@@ -1,10 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import './News.css'
 
 const News = () => {
   const { t } = useLanguage()
+  const navigate = useNavigate()
+
+  const handleReadMoreClick = (link) => {
+    navigate(link)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const newsArticles = [
     {
       id: 1,
@@ -65,10 +71,10 @@ const News = () => {
                 
                 <p className="news-excerpt">{article.excerpt}</p>
                 
-                <Link to={article.link} className="news-read-more">
+                <button onClick={() => handleReadMoreClick(article.link)} className="news-read-more" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   {t('common.readMore')}
                   <img src="/assets/arrow.svg" alt="" />
-                </Link>
+                </button>
               </div>
             </article>
           ))}
@@ -76,9 +82,9 @@ const News = () => {
 
         {/* View All Link */}
         <div className="news-actions text-center">
-          <Link to="/news" className="btn btn-primary">
+          <button onClick={() => handleReadMoreClick('/news')} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
             {t('common.readMore')}
-          </Link>
+          </button>
         </div>
       </div>
     </section>

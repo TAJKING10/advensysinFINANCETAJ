@@ -1,10 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
 import './News.css'
 
 const News = () => {
   const { t } = useLanguage()
+  const navigate = useNavigate()
+
+  const handleReadMoreClick = (link) => {
+    navigate(link)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   
   const newsArticles = [
     {
@@ -113,9 +119,9 @@ const News = () => {
                   <span className="author">{t('newsPage.byAuthor', { author: newsArticles[0].author })}</span>
                   <span className="read-time">{newsArticles[0].readTime}</span>
                 </div>
-                <Link to={`/news/${newsArticles[0].id}`} className="btn btn-primary">
+                <button onClick={() => handleReadMoreClick(`/news/${newsArticles[0].id}`)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
                   {t('news.readMore')}
-                </Link>
+                </button>
               </div>
               <div className="featured-image">
                 <img src={newsArticles[0].image} alt={newsArticles[0].title} />
@@ -159,17 +165,19 @@ const News = () => {
                   </div>
                   
                   <h3 className="news-title">
-                    <Link to={`/news/${article.id}`}>{article.title}</Link>
+                    <button onClick={() => handleReadMoreClick(`/news/${article.id}`)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, textAlign: 'left', color: 'inherit', fontSize: 'inherit', fontWeight: 'inherit' }}>
+                      {article.title}
+                    </button>
                   </h3>
                   
                   <p className="news-excerpt">{article.excerpt}</p>
                   
                   <div className="news-footer">
                     <span className="news-author">By {article.author}</span>
-                    <Link to={`/news/${article.id}`} className="news-read-more">
+                    <button onClick={() => handleReadMoreClick(`/news/${article.id}`)} className="news-read-more" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       {t('common.readMore')}
                       <img src="/assets/arrow.svg" alt="" />
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </article>
