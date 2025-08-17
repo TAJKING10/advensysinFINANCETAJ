@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../../contexts/LanguageContext'
 import { useLocation } from '../../contexts/LocationContext'
 import './Services.css'
@@ -7,6 +7,19 @@ import './Services.css'
 const Services = () => {
   const { t } = useLanguage()
   const { currentLocationData } = useLocation()
+  const navigate = useNavigate()
+
+  const handleServiceClick = (serviceId) => {
+    navigate('/services')
+    
+    // Scroll to specific service section after navigation
+    setTimeout(() => {
+      const element = document.getElementById(serviceId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
 
   const getServiceFeatures = (serviceType) => {
     const features = t(`services.items.${serviceType}.features`)
@@ -17,6 +30,7 @@ const Services = () => {
     {
       id: 1,
       type: 'autoInsurance',
+      serviceId: 'auto',
       title: t('services.items.autoInsurance.title'),
       description: t('services.items.autoInsurance.description'),
       image: '/assets/category-1.png',
@@ -25,6 +39,7 @@ const Services = () => {
     {
       id: 2,
       type: 'healthInsurance',
+      serviceId: 'health',
       title: t('services.items.healthInsurance.title'),
       description: t('services.items.healthInsurance.description'),
       image: '/assets/category-2.png',
@@ -33,6 +48,7 @@ const Services = () => {
     {
       id: 3,
       type: 'lifeInsurance',
+      serviceId: 'life',
       title: t('services.items.lifeInsurance.title'),
       description: t('services.items.lifeInsurance.description'),
       image: '/assets/category-3.png',
@@ -41,6 +57,7 @@ const Services = () => {
     {
       id: 4,
       type: 'businessInsurance',
+      serviceId: 'business',
       title: t('services.items.businessInsurance.title'),
       description: t('services.items.businessInsurance.description'),
       image: '/assets/category-4.png',
@@ -49,6 +66,7 @@ const Services = () => {
     {
       id: 5,
       type: 'propertyInsurance',
+      serviceId: 'property',
       title: t('services.items.propertyInsurance.title'),
       description: t('services.items.propertyInsurance.description'),
       image: '/assets/category-5.png',
@@ -57,6 +75,7 @@ const Services = () => {
     {
       id: 6,
       type: 'financialPlanning',
+      serviceId: 'financial',
       title: t('services.items.financialPlanning.title'),
       description: t('services.items.financialPlanning.description'),
       image: '/assets/category.png',
@@ -80,10 +99,10 @@ const Services = () => {
               <div className="service-image">
                 <img src={service.image} alt={service.title} />
                 <div className="service-overlay">
-                  <Link to={service.link} className="service-link">
+                  <button onClick={() => handleServiceClick(service.serviceId)} className="service-link" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     {t('common.learnMore')}
                     <img src="/assets/arrow.svg" alt="" />
-                  </Link>
+                  </button>
                 </div>
               </div>
               
@@ -101,9 +120,9 @@ const Services = () => {
                 </ul>
                 
                 <div className="service-actions">
-                  <Link to={service.link} className="btn btn-primary">
+                  <button onClick={() => handleServiceClick(service.serviceId)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
                     {t('common.getQuote')}
-                  </Link>
+                  </button>
                   <Link to="/contact" className="service-contact">
                     {t('common.contactUs')}
                   </Link>
