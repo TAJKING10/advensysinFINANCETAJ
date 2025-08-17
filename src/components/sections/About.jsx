@@ -157,28 +157,36 @@ const About = () => {
             <h2 className="section-title">{t('about.whyChoose.title')}</h2>
             <div className="why-reasons">
               <div className="reason">
-                <img src="/assets/strengths-11.svg" alt="Expertise" />
+                <div className="reason-icon">
+                  <span>🎯</span>
+                </div>
                 <div>
                   <h4>{t('about.whyChoose.expertise.title')}</h4>
                   <p>{t('about.whyChoose.expertise.description')}</p>
                 </div>
               </div>
               <div className="reason">
-                <img src="/assets/strengths-12.svg" alt="Personalized" />
+                <div className="reason-icon">
+                  <span>👤</span>
+                </div>
                 <div>
                   <h4>{t('about.whyChoose.personalized.title')}</h4>
                   <p>{t('about.whyChoose.personalized.description')}</p>
                 </div>
               </div>
               <div className="reason">
-                <img src="/assets/strengths-13.svg" alt="Competitive" />
+                <div className="reason-icon">
+                  <span>💰</span>
+                </div>
                 <div>
                   <h4>{t('about.whyChoose.competitive.title')}</h4>
                   <p>{t('about.whyChoose.competitive.description')}</p>
                 </div>
               </div>
               <div className="reason">
-                <img src="/assets/strengths-14.svg" alt="Support" />
+                <div className="reason-icon">
+                  <span>🛡️</span>
+                </div>
                 <div>
                   <h4>{t('about.whyChoose.support.title')}</h4>
                   <p>{t('about.whyChoose.support.description')}</p>

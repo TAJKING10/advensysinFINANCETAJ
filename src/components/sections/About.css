@@ -318,10 +318,19 @@
   box-shadow: var(--shadow-medium);
 }
 
-.reason img {
+.reason-icon {
   width: 40px;
   height: 40px;
-  filter: hue-rotate(120deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-light);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.reason-icon span {
+  font-size: 20px;
 }
 
 .reason h4 {
