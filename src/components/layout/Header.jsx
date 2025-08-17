@@ -13,6 +13,7 @@ const Header = () => {
   const [locOpen, setLocOpen] = useState(false);
 
   const routerLoc = useLocation();
+
   const { t, changeLanguage, currentLanguage, languages } = useLanguage();
   const {
     changeLocation: changeLocationContext,
@@ -21,11 +22,11 @@ const Header = () => {
     currentLocationData,
   } = useLocationContext();
 
-  // Refs for dropdown outside-click
+  // Refs for precise outside-click handling
   const langRef = useRef(null);
   const locRef = useRef(null);
 
-  // Elevate header on scroll
+  /* ---------- Scroll elevation ---------- */
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
     onScroll();
@@ -33,21 +34,21 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close overlays on route change
+  /* ---------- Close overlays on route change ---------- */
   useEffect(() => {
     setIsMenuOpen(false);
     setLangOpen(false);
     setLocOpen(false);
   }, [routerLoc.pathname]);
 
-  // Lock body scroll when mobile menu open
+  /* ---------- Lock body scroll with mobile drawer ---------- */
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = isMenuOpen ? "hidden" : prev || "";
     return () => (document.body.style.overflow = prev || "");
   }, [isMenuOpen]);
 
-  // Close dropdowns on outside click
+  /* ---------- Outside click for dropdowns ---------- */
   useEffect(() => {
     if (!langOpen && !locOpen) return;
     const onClick = (e) => {
@@ -62,7 +63,7 @@ const Header = () => {
     };
   }, [langOpen, locOpen]);
 
-  // Escape closes everything
+  /* ---------- Escape closes everything ---------- */
   const onKey = useCallback((e) => {
     if (e.key === "Escape") {
       setLangOpen(false);
@@ -75,6 +76,7 @@ const Header = () => {
     return () => document.removeEventListener("keydown", onKey);
   }, [onKey]);
 
+  /* ---------- Nav items ---------- */
   const navItems = [
     { path: "/", label: t("nav.home"), icon: "🏠" },
     { path: "/about", label: t("nav.about"), icon: "ℹ️" },
@@ -83,13 +85,16 @@ const Header = () => {
     { path: "/contact", label: t("nav.contact"), icon: "📞" },
   ];
 
+  /* ---------- Normalized change handlers ---------- */
   const changeLang = (code) => {
-    changeLanguage(code);
+    const safe = String(code || "").toLowerCase();
+    changeLanguage(safe);
     setLangOpen(false);
   };
 
   const changeLoc = (code) => {
-    changeLocationContext(code);
+    const safe = String(code || "").toLowerCase();
+    changeLocationContext(safe);
     setLocOpen(false);
   };
 
@@ -137,6 +142,7 @@ const Header = () => {
                 aria-expanded={langOpen}
                 aria-haspopup="listbox"
                 aria-controls="lang-menu"
+                aria-label={t("header.languageSwitcher")}
               >
                 <span className="sw__flag">{languages[currentLanguage]?.flag}</span>
                 <span className="sw__text">{languages[currentLanguage]?.code?.toUpperCase()}</span>
@@ -145,19 +151,28 @@ const Header = () => {
 
               {langOpen && (
                 <div id="lang-menu" className="sw__menu" role="listbox">
-                  {Object.values(languages).map((lang) => (
-                    <button
-                      key={lang.code}
-                      type="button"
-                      role="option"
-                      aria-selected={currentLanguage === lang.code}
-                      className={`sw__item${currentLanguage === lang.code ? " is-current" : ""}`}
-                      onClick={() => changeLang(lang.code)}
-                    >
-                      <span className="sw__itemFlag">{lang.flag}</span>
-                      <span className="sw__itemText">{lang.name}</span>
-                    </button>
-                  ))}
+                  {Object.values(languages).map((lang) => {
+                    const code = String(lang.code || "").toUpperCase();
+                    const isCurrent = currentLanguage === (lang.code || "").toLowerCase();
+                    return (
+                      <button
+                        key={lang.code}
+                        type="button"
+                        role="option"
+                        aria-selected={isCurrent}
+                        className={`sw__item${isCurrent ? " is-current" : ""}`}
+                        onClick={() => changeLang(lang.code)}
+                      >
+                        <span className="sw__cell sw__cell--code">
+                          <span className="sw__itemFlag">{lang.flag}</span>
+                          <span className="sw__itemCode">{code}</span>
+                        </span>
+                        <span className="sw__cell sw__cell--name">
+                          <span className="sw__itemText">{lang.name}</span>
+                        </span>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -171,6 +186,7 @@ const Header = () => {
                 aria-expanded={locOpen}
                 aria-haspopup="listbox"
                 aria-controls="loc-menu"
+                aria-label={t("header.locationSwitcher")}
               >
                 <span className="sw__flag">{currentLocationData?.flag}</span>
                 <span className="sw__text">{currentLocationData?.name}</span>
@@ -179,19 +195,27 @@ const Header = () => {
 
               {locOpen && (
                 <div id="loc-menu" className="sw__menu" role="listbox">
-                  {Object.values(locations).map((loc) => (
-                    <button
-                      key={loc.code}
-                      type="button"
-                      role="option"
-                      aria-selected={currentLocation === loc.code}
-                      className={`sw__item${currentLocation === loc.code ? " is-current" : ""}`}
-                      onClick={() => changeLoc(loc.code)}
-                    >
-                      <span className="sw__itemFlag">{loc.flag}</span>
-                      <span className="sw__itemText">{loc.name}</span>
-                    </button>
-                  ))}
+                  {Object.values(locations).map((loc) => {
+                    const isCurrent = currentLocation === (loc.code || "").toLowerCase();
+                    return (
+                      <button
+                        key={loc.code}
+                        type="button"
+                        role="option"
+                        aria-selected={isCurrent}
+                        className={`sw__item${isCurrent ? " is-current" : ""}`}
+                        onClick={() => changeLoc(loc.code)}
+                      >
+                        <span className="sw__cell sw__cell--code">
+                          <span className="sw__itemFlag">{loc.flag}</span>
+                          <span className="sw__itemCode">{String(loc.code || "").toUpperCase()}</span>
+                        </span>
+                        <span className="sw__cell sw__cell--name">
+                          <span className="sw__itemText">{loc.name}</span>
+                        </span>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -252,11 +276,11 @@ const Header = () => {
                     <button
                       key={lang.code}
                       type="button"
-                      className={`msw__btn${currentLanguage === lang.code ? " is-current" : ""}`}
+                      className={`msw__btn${currentLanguage === (lang.code || "").toLowerCase() ? " is-current" : ""}`}
                       onClick={() => changeLang(lang.code)}
                     >
                       <span className="msw__flag">{lang.flag}</span>
-                      <span>{lang.code.toUpperCase()}</span>
+                      <span>{String(lang.code || "").toUpperCase()}</span>
                     </button>
                   ))}
                 </div>
@@ -269,7 +293,7 @@ const Header = () => {
                     <button
                       key={loc.code}
                       type="button"
-                      className={`msw__btn${currentLocation === loc.code ? " is-current" : ""}`}
+                      className={`msw__btn${currentLocation === (loc.code || "").toLowerCase() ? " is-current" : ""}`}
                       onClick={() => changeLoc(loc.code)}
                     >
                       <span className="msw__flag">{loc.flag}</span>
