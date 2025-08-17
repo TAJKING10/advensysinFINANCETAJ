@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
+import { useLocation } from '../contexts/LocationContext'
 import './Services.css'
 
 const Services = () => {
   const { t } = useLanguage()
+  const { currentLocationData } = useLocation()
   
   const services = [
     {
@@ -241,9 +243,9 @@ const Services = () => {
                 <Link to="/contact" className="btn btn-primary btn-lg">
                   {t('servicesPage.cta.button')}
                 </Link>
-                <a href="tel:+1234567890" className="cta-phone">
+                <a href={`tel:${currentLocationData?.phone}`} className="cta-phone">
                   <img src="/assets/phone.svg" alt="Phone" />
-                  <span>{t('servicesPage.cta.phone')}</span>
+                  <span>Call: {currentLocationData?.phone}</span>
                 </a>
               </div>
             </div>
