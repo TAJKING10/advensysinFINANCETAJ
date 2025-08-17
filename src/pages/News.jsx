@@ -9,47 +9,58 @@ const News = () => {
   const newsArticles = [
     {
       id: 1,
-      title: t('newsPage.articles.healthChanges.title'),
-      excerpt: t('newsPage.articles.healthChanges.excerpt'),
+      title: '2024 Health Insurance Changes You Need to Know',
+      excerpt: 'Important updates to health insurance regulations and what they mean for your coverage options this year.',
       content: 'Full article content would go here...',
       image: '/assets/news-1.png',
       date: '2024-01-15',
-      category: t('newsPage.categories.health'),
-      readTime: t('newsPage.readTime', { minutes: '5' }),
-      author: t('newsPage.articles.healthChanges.author')
+      category: 'Health Insurance',
+      readTime: '5 min read',
+      author: 'Dr. Emily Wilson'
     },
     {
       id: 2,
-      title: t('newsPage.articles.autoTips.title'),
-      excerpt: t('newsPage.articles.autoTips.excerpt'),
+      title: 'Top 5 Ways to Lower Your Auto Insurance Premium',
+      excerpt: 'Discover proven strategies to reduce your car insurance costs without sacrificing coverage quality.',
       content: 'Full article content would go here...',
       image: '/assets/news-2.png',
       date: '2024-01-10',
-      category: t('newsPage.categories.auto'),
-      readTime: t('newsPage.readTime', { minutes: '4' }),
-      author: t('newsPage.articles.autoTips.author')
+      category: 'Auto Insurance',
+      readTime: '4 min read',
+      author: 'Mark Thompson'
     },
     {
       id: 3,
-      title: t('newsPage.articles.lifeFamilies.title'),
-      excerpt: t('newsPage.articles.lifeFamilies.excerpt'),
+      title: 'Life Insurance Planning for Growing Families',
+      excerpt: 'Essential considerations for life insurance when expanding your family and planning for the future.',
       content: 'Full article content would go here...',
       image: '/assets/hero-1.png',
       date: '2024-01-05',
-      category: t('newsPage.categories.life'),
-      readTime: t('newsPage.readTime', { minutes: '6' }),
-      author: t('newsPage.articles.lifeFamilies.author')
+      category: 'Life Insurance',
+      readTime: '6 min read',
+      author: 'Sarah Davis'
     },
     {
       id: 4,
-      title: t('newsPage.articles.businessTips.title'),
-      excerpt: t('newsPage.articles.businessTips.excerpt'),
+      title: 'Small Business Insurance: Essential Coverage Guide',
+      excerpt: 'Comprehensive guide to protecting your business with the right insurance coverage options.',
       content: 'Full article content would go here...',
       image: '/assets/hero-2.png',
       date: '2023-12-28',
-      category: t('newsPage.categories.business'),
-      readTime: t('newsPage.readTime', { minutes: '7' }),
-      author: t('newsPage.articles.businessTips.author')
+      category: 'Business Insurance',
+      readTime: '7 min read',
+      author: 'John Martinez'
+    },
+    {
+      id: 5,
+      title: 'Property Insurance: Protecting Your Most Valuable Assets',
+      excerpt: 'Understanding property insurance coverage options to safeguard your home and belongings from unexpected events.',
+      content: 'Full article content would go here...',
+      image: '/assets/news-3.png',
+      date: '2023-12-20',
+      category: 'Property Insurance',
+      readTime: '8 min read',
+      author: 'Lisa Chen'
     }
   ]
 
