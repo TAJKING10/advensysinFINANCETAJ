@@ -18,11 +18,12 @@ const Footer = () => {
   ]
 
   const services = [
-    t('footer.services.auto'),
-    t('footer.services.health'),
-    t('footer.services.life'),
-    t('footer.services.business'),
-    t('footer.services.home')
+    'Auto Insurance',
+    'Health Insurance',
+    'Life Insurance',
+    'Business Insurance',
+    'Property Insurance',
+    'Financial Planning'
   ]
 
   return (
