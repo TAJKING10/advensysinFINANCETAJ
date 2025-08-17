@@ -233,7 +233,7 @@ const Contact = () => {
                   <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                     <img src="/assets/facebook.png" alt="Facebook" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
-                  <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                  <a href="https://wa.me/46725298126?text=Hello%20Advensys%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote." target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                     <img src="/assets/whatsapp.png" alt="WhatsApp" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
                   <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok">
