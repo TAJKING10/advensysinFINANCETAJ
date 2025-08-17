@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useLocation as useLocationContext } from "../../contexts/LocationContext";
-import { HiChevronDown, HiPhone } from "react-icons/hi";
+import { HiChevronDown, HiPhone, HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaQuoteLeft } from "react-icons/fa";
 import "./Header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
+  const [hoveredNavItem, setHoveredNavItem] = useState(null);
 
   const location = useLocation();
   const { t, changeLanguage, currentLanguage, languages } = useLanguage();
@@ -21,9 +24,14 @@ const Header = () => {
     currentLocationData,
   } = useLocationContext();
 
-  // Scroll listener (adds elevated style)
+  // Enhanced scroll listener with scroll progress
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      setIsScrolled(currentScrollY > 20);
+    };
+    
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -32,23 +40,26 @@ const Header = () => {
   // Close mobile menu on route change
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsLanguageDropdownOpen(false);
+    setIsLocationDropdownOpen(false);
   }, [location.pathname]);
 
-  // Close dropdowns when clicking outside
+  // Enhanced outside click detection
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (!e.target.closest(".language-switcher-container")) {
+      if (!e.target.closest(".dropdown-container")) {
         setIsLanguageDropdownOpen(false);
-      }
-      if (!e.target.closest(".location-switcher-container")) {
         setIsLocationDropdownOpen(false);
       }
     };
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
+    
+    if (isLanguageDropdownOpen || isLocationDropdownOpen) {
+      document.addEventListener("click", handleClickOutside, true);
+      return () => document.removeEventListener("click", handleClickOutside, true);
+    }
+  }, [isLanguageDropdownOpen, isLocationDropdownOpen]);
 
-  // Close things on Escape for a11y
+  // Enhanced keyboard navigation
   const onKeyDown = useCallback((e) => {
     if (e.key === "Escape") {
       setIsMenuOpen(false);
@@ -56,18 +67,26 @@ const Header = () => {
       setIsLocationDropdownOpen(false);
     }
   }, []);
+
   useEffect(() => {
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [onKeyDown]);
 
-  const toggleMenu = () => setIsMenuOpen((v) => !v);
-  const toggleLanguageDropdown = () => {
-    setIsLanguageDropdownOpen((v) => !v);
+  // Enhanced toggle functions
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
+    setIsLanguageDropdownOpen(false);
     setIsLocationDropdownOpen(false);
   };
+
+  const toggleLanguageDropdown = () => {
+    setIsLanguageDropdownOpen(prev => !prev);
+    setIsLocationDropdownOpen(false);
+  };
+
   const toggleLocationDropdown = () => {
-    setIsLocationDropdownOpen((v) => !v);
+    setIsLocationDropdownOpen(prev => !prev);
     setIsLanguageDropdownOpen(false);
   };
 
@@ -82,212 +101,489 @@ const Header = () => {
   };
 
   const navItems = [
-    { path: "/", label: t("nav.home") },
-    { path: "/about", label: t("nav.about") },
-    { path: "/services", label: t("nav.services") },
-    { path: "/news", label: t("nav.news") },
-    { path: "/contact", label: t("nav.contact") },
+    { path: "/", label: t("nav.home"), icon: "🏠" },
+    { path: "/about", label: t("nav.about"), icon: "ℹ️" },
+    { path: "/services", label: t("nav.services"), icon: "🛡️" },
+    { path: "/news", label: t("nav.news"), icon: "📰" },
+    { path: "/contact", label: t("nav.contact"), icon: "📞" },
   ];
 
+  // Animation variants
+  const headerVariants = {
+    initial: { y: -100, opacity: 0 },
+    animate: { 
+      y: 0, 
+      opacity: 1,
+      transition: { 
+        type: "spring", 
+        stiffness: 100, 
+        damping: 20,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const navItemVariants = {
+    initial: { opacity: 0, y: -20 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { type: "spring", stiffness: 200, damping: 25 }
+    }
+  };
+
+  const dropdownVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.95, 
+      y: -10,
+      transition: { duration: 0.2 }
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1, 
+      y: 0,
+      transition: { 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 30 
+      }
+    }
+  };
+
+  const mobileMenuVariants = {
+    closed: { 
+      opacity: 0, 
+      height: 0,
+      transition: { duration: 0.3, ease: "easeInOut" }
+    },
+    open: { 
+      opacity: 1, 
+      height: "auto",
+      transition: { duration: 0.3, ease: "easeInOut" }
+    }
+  };
+
+  const logoVariants = {
+    initial: { scale: 0.8, opacity: 0 },
+    animate: { 
+      scale: 1, 
+      opacity: 1,
+      transition: { type: "spring", stiffness: 200, damping: 20 }
+    },
+    hover: { 
+      scale: 1.05,
+      transition: { type: "spring", stiffness: 400, damping: 15 }
+    }
+  };
+
   return (
-    <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
+    <motion.header 
+      className={`header ${isScrolled ? "header-scrolled" : ""}`}
+      variants={headerVariants}
+      initial="initial"
+      animate="animate"
+      style={{
+        "--scroll-progress": Math.min(scrollY / 100, 1)
+      }}
+    >
+      {/* Enhanced background with scroll effects */}
+      <div className="header-background" />
+      
       <div className="container">
         <div className="header-content">
-          {/* Logo */}
-          <Link to="/" className="logo-link" aria-label="Advensys Home">
-            {/* Update the src to match your asset path */}
-            <img src="/assets/logo.svg" alt="Advensys In-Finance" className="logo" />
-          </Link>
+          {/* Enhanced Logo */}
+          <motion.div
+            variants={logoVariants}
+            whileHover="hover"
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link to="/" className="logo-link" aria-label="Advensys Home">
+              <motion.img 
+                src="/assets/logo.svg" 
+                alt="Advensys In-Finance" 
+                className="logo"
+                layoutId="logo"
+              />
+            </Link>
+          </motion.div>
 
-          {/* Desktop Navigation */}
+          {/* Enhanced Desktop Navigation */}
           <nav className="nav-desktop" aria-label="Main navigation">
-            <ul className="nav-list">
-              {navItems.map((item) => {
-                const active = location.pathname === item.path;
+            <div className="nav-background" />
+            <motion.ul className="nav-list">
+              {navItems.map((item, index) => {
+                const isActive = location.pathname === item.path;
                 return (
-                  <li key={item.path} className="nav-item">
-                    <Link to={item.path} className={`nav-link ${active ? "active" : ""}`}>
-                      {item.label}
+                  <motion.li 
+                    key={item.path} 
+                    className="nav-item"
+                    variants={navItemVariants}
+                    onMouseEnter={() => setHoveredNavItem(item.path)}
+                    onMouseLeave={() => setHoveredNavItem(null)}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ y: 0, scale: 0.98 }}
+                  >
+                    <Link 
+                      to={item.path} 
+                      className={`nav-link ${isActive ? "active" : ""}`}
+                    >
+                      <motion.span 
+                        className="nav-icon"
+                        animate={{
+                          scale: hoveredNavItem === item.path ? 1.2 : 1,
+                          rotate: hoveredNavItem === item.path ? 10 : 0
+                        }}
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      >
+                        {item.icon}
+                      </motion.span>
+                      <span className="nav-text">{item.label}</span>
+                      
+                      {/* Active indicator */}
+                      {isActive && (
+                        <motion.div
+                          className="nav-active-indicator"
+                          layoutId="activeIndicator"
+                          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        />
+                      )}
+                      
+                      {/* Hover indicator */}
+                      {hoveredNavItem === item.path && !isActive && (
+                        <motion.div
+                          className="nav-hover-indicator"
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          exit={{ scale: 0 }}
+                          transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                        />
+                      )}
                     </Link>
-                  </li>
+                  </motion.li>
                 );
               })}
-            </ul>
+            </motion.ul>
           </nav>
 
-          {/* Actions */}
+          {/* Enhanced Actions */}
           <div className="header-actions">
-            {/* Language */}
-            <div className="language-switcher-container">
-              <button
+            {/* Enhanced Language Switcher */}
+            <div className="dropdown-container language-switcher-container">
+              <motion.button
                 type="button"
-                className="language-switcher"
+                className="switcher-btn language-switcher"
                 onClick={toggleLanguageDropdown}
                 aria-haspopup="listbox"
                 aria-expanded={isLanguageDropdownOpen}
                 aria-label={t("header.languageSwitcher")}
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <span className="switcher-flag">{languages[currentLanguage]?.flag}</span>
+                <motion.span 
+                  className="switcher-flag"
+                  animate={{ rotate: isLanguageDropdownOpen ? 15 : 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  {languages[currentLanguage]?.flag}
+                </motion.span>
                 <span className="switcher-text">
                   {languages[currentLanguage]?.code?.toUpperCase()}
                 </span>
-                <HiChevronDown className={`switcher-arrow ${isLanguageDropdownOpen ? "open" : ""}`} />
-              </button>
+                <motion.div
+                  animate={{ rotate: isLanguageDropdownOpen ? 180 : 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <HiChevronDown className="switcher-arrow" />
+                </motion.div>
+              </motion.button>
 
-              {isLanguageDropdownOpen && (
-                <div className="switcher-dropdown" role="listbox">
-                  {Object.values(languages).map((lang) => (
-                    <button
-                      key={lang.code}
-                      type="button"
-                      role="option"
-                      className={`dropdown-item ${currentLanguage === lang.code ? "active" : ""}`}
-                      onClick={() => handleLanguageChange(lang.code)}
-                    >
-                      <span className="dropdown-flag">{lang.flag}</span>
-                      <span className="dropdown-text">{lang.name}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
+              <AnimatePresence>
+                {isLanguageDropdownOpen && (
+                  <motion.div 
+                    className="switcher-dropdown" 
+                    role="listbox"
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                  >
+                    {Object.values(languages).map((lang, index) => (
+                      <motion.button
+                        key={lang.code}
+                        type="button"
+                        role="option"
+                        className={`dropdown-item ${currentLanguage === lang.code ? "active" : ""}`}
+                        onClick={() => handleLanguageChange(lang.code)}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ 
+                          opacity: 1, 
+                          x: 0,
+                          transition: { delay: index * 0.05 }
+                        }}
+                        whileHover={{ x: 5, backgroundColor: "rgba(27, 54, 93, 0.05)" }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <span className="dropdown-flag">{lang.flag}</span>
+                        <span className="dropdown-text">{lang.name}</span>
+                      </motion.button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Location */}
-            <div className="location-switcher-container">
-              <button
+            {/* Enhanced Location Switcher */}
+            <div className="dropdown-container location-switcher-container">
+              <motion.button
                 type="button"
-                className="location-switcher"
+                className="switcher-btn location-switcher"
                 onClick={toggleLocationDropdown}
                 aria-haspopup="listbox"
                 aria-expanded={isLocationDropdownOpen}
                 aria-label={t("header.locationSwitcher")}
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <span className="switcher-flag">{currentLocationData?.flag}</span>
+                <motion.span 
+                  className="switcher-flag"
+                  animate={{ rotate: isLocationDropdownOpen ? 15 : 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  {currentLocationData?.flag}
+                </motion.span>
                 <span className="switcher-text">{currentLocationData?.name}</span>
-                <HiChevronDown className={`switcher-arrow ${isLocationDropdownOpen ? "open" : ""}`} />
-              </button>
+                <motion.div
+                  animate={{ rotate: isLocationDropdownOpen ? 180 : 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <HiChevronDown className="switcher-arrow" />
+                </motion.div>
+              </motion.button>
 
-              {isLocationDropdownOpen && (
-                <div className="switcher-dropdown" role="listbox">
-                  {Object.values(locations).map((loc) => (
-                    <button
-                      key={loc.code}
-                      type="button"
-                      role="option"
-                      className={`dropdown-item ${currentLocation === loc.code ? "active" : ""}`}
-                      onClick={() => handleLocationChange(loc.code)}
-                    >
-                      <span className="dropdown-flag">{loc.flag}</span>
-                      <span className="dropdown-text">{loc.name}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
+              <AnimatePresence>
+                {isLocationDropdownOpen && (
+                  <motion.div 
+                    className="switcher-dropdown" 
+                    role="listbox"
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                  >
+                    {Object.values(locations).map((loc, index) => (
+                      <motion.button
+                        key={loc.code}
+                        type="button"
+                        role="option"
+                        className={`dropdown-item ${currentLocation === loc.code ? "active" : ""}`}
+                        onClick={() => handleLocationChange(loc.code)}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ 
+                          opacity: 1, 
+                          x: 0,
+                          transition: { delay: index * 0.05 }
+                        }}
+                        whileHover={{ x: 5, backgroundColor: "rgba(27, 54, 93, 0.05)" }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <span className="dropdown-flag">{loc.flag}</span>
+                        <span className="dropdown-text">{loc.name}</span>
+                      </motion.button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Phone */}
+            {/* Enhanced Phone Link */}
             {currentLocationData?.phone && (
-              <div className="contact-info">
+              <motion.div 
+                className="contact-info"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <a
                   className="contact-link"
                   href={`tel:${currentLocationData.phone}`}
                   aria-label={t("common.callUs")}
                 >
-                  <HiPhone />
+                  <motion.div
+                    animate={{ rotate: [0, 15, -15, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 5 }}
+                  >
+                    <HiPhone />
+                  </motion.div>
                   <span>{currentLocationData.phone}</span>
                 </a>
-              </div>
+              </motion.div>
             )}
 
-            {/* CTA */}
-            <Link to="/contact" className="btn btn-primary">
-              <FaQuoteLeft />
-              {t("common.getQuote")}
-            </Link>
+            {/* Enhanced CTA Button */}
+            <motion.div
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+            >
+              <Link to="/contact" className="btn btn-primary cta-button">
+                <motion.div
+                  animate={{ 
+                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ 
+                    duration: 3, 
+                    repeat: Infinity, 
+                    repeatDelay: 4,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <FaQuoteLeft />
+                </motion.div>
+                <span>{t("common.getQuote")}</span>
+                <div className="btn-shimmer" />
+              </Link>
+            </motion.div>
 
-            {/* Mobile toggle */}
-            <button
+            {/* Enhanced Mobile Menu Toggle */}
+            <motion.button
               type="button"
               className="mobile-menu-toggle"
               onClick={toggleMenu}
               aria-label="Toggle mobile menu"
               aria-controls="mobile-nav"
               aria-expanded={isMenuOpen}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span className={`hamburger ${isMenuOpen ? "open" : ""}`}>
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </button>
+              <motion.div
+                animate={{ rotate: isMenuOpen ? 90 : 0 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              >
+                {isMenuOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+              </motion.div>
+            </motion.button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        <nav id="mobile-nav" className={`nav-mobile ${isMenuOpen ? "open" : ""}`} aria-label="Mobile">
-          <ul className="nav-mobile-list">
-            {navItems.map((item) => {
-              const active = location.pathname === item.path;
-              return (
-                <li key={item.path} className="nav-mobile-item">
-                  <Link
-                    to={item.path}
-                    className={`nav-mobile-link ${active ? "active" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
+        {/* Enhanced Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.nav 
+              id="mobile-nav" 
+              className="nav-mobile"
+              aria-label="Mobile navigation"
+              variants={mobileMenuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              <motion.ul 
+                className="nav-mobile-list"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1, staggerChildren: 0.05 }}
+              >
+                {navItems.map((item, index) => {
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <motion.li 
+                      key={item.path} 
+                      className="nav-mobile-item"
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={{ 
+                        opacity: 1, 
+                        x: 0,
+                        transition: { delay: index * 0.1 }
+                      }}
+                      whileHover={{ x: 10 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Link
+                        to={item.path}
+                        className={`nav-mobile-link ${isActive ? "active" : ""}`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <span className="nav-mobile-icon">{item.icon}</span>
+                        <span>{item.label}</span>
+                      </Link>
+                    </motion.li>
+                  );
+                })}
+
+                {/* Mobile Switchers */}
+                <motion.li 
+                  className="nav-mobile-item nav-mobile-switchers"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <div className="mobile-switcher-group">
+                    <span className="mobile-switcher-label">{t("header.languageSwitcher")}:</span>
+                    <div className="mobile-switcher-options">
+                      {Object.values(languages).map((lang) => (
+                        <motion.button
+                          key={lang.code}
+                          type="button"
+                          className={`mobile-switcher-btn ${currentLanguage === lang.code ? "active" : ""}`}
+                          onClick={() => handleLanguageChange(lang.code)}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <span className="mobile-switcher-flag">{lang.flag}</span>
+                          <span>{lang.code.toUpperCase()}</span>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mobile-switcher-group">
+                    <span className="mobile-switcher-label">{t("header.locationSwitcher")}:</span>
+                    <div className="mobile-switcher-options">
+                      {Object.values(locations).map((loc) => (
+                        <motion.button
+                          key={loc.code}
+                          type="button"
+                          className={`mobile-switcher-btn ${currentLocation === loc.code ? "active" : ""}`}
+                          onClick={() => handleLocationChange(loc.code)}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <span className="mobile-switcher-flag">{loc.flag}</span>
+                          <span>{loc.name}</span>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+                </motion.li>
+
+                {/* Mobile CTA */}
+                <motion.li 
+                  className="nav-mobile-item"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-
-            {/* Mobile switchers */}
-            <li className="nav-mobile-item nav-mobile-switchers">
-              <div className="mobile-switcher-group">
-                <span className="mobile-switcher-label">{t("header.languageSwitcher")}:</span>
-                <div className="mobile-switcher-options">
-                  {Object.values(languages).map((lang) => (
-                    <button
-                      key={lang.code}
-                      type="button"
-                      className={`mobile-switcher-btn ${currentLanguage === lang.code ? "active" : ""}`}
-                      onClick={() => handleLanguageChange(lang.code)}
+                    <Link 
+                      to="/contact" 
+                      className="btn btn-primary btn-mobile" 
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      <span className="mobile-switcher-flag">{lang.flag}</span>
-                      <span>{lang.code.toUpperCase()}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mobile-switcher-group">
-                <span className="mobile-switcher-label">{t("header.locationSwitcher")}:</span>
-                <div className="mobile-switcher-options">
-                  {Object.values(locations).map((loc) => (
-                    <button
-                      key={loc.code}
-                      type="button"
-                      className={`mobile-switcher-btn ${currentLocation === loc.code ? "active" : ""}`}
-                      onClick={() => handleLocationChange(loc.code)}
-                    >
-                      <span className="mobile-switcher-flag">{loc.flag}</span>
-                      <span>{loc.name}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </li>
-
-            <li className="nav-mobile-item">
-              <Link to="/contact" className="btn btn-primary btn-mobile" onClick={() => setIsMenuOpen(false)}>
-                <FaQuoteLeft />
-                {t("common.getQuote")}
-              </Link>
-            </li>
-          </ul>
-        </nav>
+                      <FaQuoteLeft />
+                      <span>{t("common.getQuote")}</span>
+                    </Link>
+                  </motion.div>
+                </motion.li>
+              </motion.ul>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

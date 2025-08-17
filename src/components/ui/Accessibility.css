@@ -1,0 +1,753 @@
+/* ================================
+   WORLD-CLASS ACCESSIBILITY SYSTEM
+   WCAG 2.1 AA/AAA Compliant
+=================================== */
+
+/* ================================
+   Screen Reader & Assistive Tech
+=================================== */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Show sr-only content when focused */
+.sr-only:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  border: inherit !important;
+}
+
+/* ================================
+   Skip Links
+=================================== */
+
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: var(--space-4);
+  z-index: var(--z-toast);
+  padding: var(--space-3) var(--space-6);
+  background: var(--primary-600);
+  color: white;
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--primary-700);
+  box-shadow: var(--shadow-xl);
+  transition: all 0.2s ease-in-out;
+  font-size: var(--font-size-base);
+  line-height: 1;
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 
+    var(--shadow-2xl),
+    0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.skip-link:hover:focus {
+  background: var(--primary-700);
+  border-color: var(--primary-800);
+}
+
+/* ================================
+   Live Regions
+=================================== */
+
+.live-region {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Make live regions visible in development */
+[data-debug="true"] .live-region {
+  position: static;
+  width: auto;
+  height: auto;
+  background: var(--warning-100);
+  border: 2px solid var(--warning-500);
+  padding: var(--space-2);
+  margin: var(--space-2) 0;
+  border-radius: var(--radius-base);
+}
+
+/* ================================
+   Landmarks
+=================================== */
+
+.landmark {
+  position: relative;
+}
+
+/* Visual indicator for landmarks in development */
+[data-debug="true"] .landmark::before {
+  content: attr(role);
+  position: absolute;
+  top: -24px;
+  left: 0;
+  background: var(--primary-600);
+  color: white;
+  padding: 2px 6px;
+  font-size: 10px;
+  border-radius: var(--radius-base);
+  font-family: monospace;
+  z-index: 1000;
+}
+
+/* ================================
+   Keyboard Navigation
+=================================== */
+
+.keyboard-navigable {
+  position: relative;
+}
+
+/* Enhanced focus indicators */
+.keyboard-navigable *:focus-visible,
+*:focus-visible {
+  outline: 3px solid var(--primary-400);
+  outline-offset: 2px;
+  border-radius: var(--radius-base);
+  transition: outline 0.15s ease-in-out;
+}
+
+/* Custom focus styles for interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--primary-400);
+  outline-offset: 2px;
+  box-shadow: 
+    0 0 0 1px white,
+    0 0 0 4px var(--primary-400);
+}
+
+/* Focus styles for card-like interactive elements */
+.card:focus-visible,
+.service-card:focus-visible {
+  outline: 3px solid var(--primary-400);
+  outline-offset: 2px;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 0 1px white,
+    0 0 0 4px var(--primary-400),
+    var(--shadow-xl);
+}
+
+/* ================================
+   High Contrast Mode Support
+=================================== */
+
+.high-contrast-mode {
+  --primary-500: #0000ff;
+  --primary-600: #0000cc;
+  --primary-700: #000099;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f0f0;
+  --border-primary: #000000;
+  --error-500: #ff0000;
+  --success-500: #008000;
+  --warning-500: #ff8800;
+}
+
+.high-contrast-mode .card,
+.high-contrast-mode .btn,
+.high-contrast-mode .input-group {
+  border: 2px solid #000000;
+}
+
+.high-contrast-mode .btn-primary {
+  background: #0000ff;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+.high-contrast-mode .btn-secondary {
+  background: #ffffff;
+  border-color: #000000;
+  color: #000000;
+}
+
+/* ================================
+   Reduced Motion Support
+=================================== */
+
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Keep essential animations for UI feedback */
+.reduced-motion button:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.reduced-motion input:focus,
+.reduced-motion button:focus,
+.reduced-motion a:focus {
+  transition: box-shadow 0.15s ease;
+}
+
+/* ================================
+   Tooltip Accessibility
+=================================== */
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  background: var(--gray-900);
+  color: white;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  max-width: 200px;
+  text-align: center;
+  word-wrap: break-word;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-top {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-left {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-right {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--gray-900);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-top .tooltip-arrow {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-top: none;
+  border-left: none;
+}
+
+.tooltip-bottom .tooltip-arrow {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom: none;
+  border-right: none;
+}
+
+.tooltip-left .tooltip-arrow {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border-left: none;
+  border-bottom: none;
+}
+
+.tooltip-right .tooltip-arrow {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: none;
+  border-top: none;
+}
+
+/* ================================
+   Error Boundary
+=================================== */
+
+.error-boundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12);
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--error-50) 0%,
+    var(--error-100) 100%
+  );
+  border: 2px solid var(--error-200);
+  border-radius: var(--radius-2xl);
+  margin: var(--space-8);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-boundary h2 {
+  color: var(--error-700);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.error-boundary p {
+  color: var(--error-600);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  max-width: 400px;
+}
+
+/* ================================
+   Progress Indicator
+=================================== */
+
+.progress-container {
+  width: 100%;
+  margin-bottom: var(--space-4);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.progress-value {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--primary-500) 0%,
+    var(--primary-600) 100%
+  );
+  border-radius: var(--radius-full);
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: progress-shimmer 2s infinite;
+}
+
+@keyframes progress-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ================================
+   Accessible Modal
+=================================== */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: var(--z-modal-backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.modal {
+  position: relative;
+  background: var(--bg-primary);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-2xl);
+  border: 1px solid var(--border-primary);
+  max-width: 500px;
+  max-height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--border-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--primary-rgb), 0.02) 0%,
+    transparent 100%
+  );
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: var(--error-100);
+  border-color: var(--error-300);
+  color: var(--error-600);
+}
+
+.modal-close:focus-visible {
+  outline: 2px solid var(--error-400);
+  outline-offset: 2px;
+}
+
+.modal-content {
+  padding: var(--space-6);
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ================================
+   Color Contrast Checker (Dev Tool)
+=================================== */
+
+.contrast-checker {
+  position: relative;
+}
+
+.contrast-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: var(--space-1) var(--space-2);
+  font-size: 10px;
+  font-family: monospace;
+  border-radius: var(--radius-base);
+  display: flex;
+  gap: var(--space-2);
+  z-index: 1000;
+}
+
+.contrast-info .compliant {
+  color: #00ff00;
+}
+
+.contrast-info .non-compliant {
+  color: #ff0000;
+}
+
+/* ================================
+   ARIA Live Region Styling
+=================================== */
+
+[aria-live] {
+  position: relative;
+}
+
+/* Visual indicator for live regions in development */
+[data-debug="true"] [aria-live]::after {
+  content: 'LIVE: ' attr(aria-live);
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background: var(--warning-500);
+  color: white;
+  padding: 2px 6px;
+  font-size: 8px;
+  border-radius: var(--radius-base);
+  font-family: monospace;
+  z-index: 1000;
+}
+
+/* ================================
+   Form Accessibility Enhancements
+=================================== */
+
+/* Required field indicators */
+[required]::after {
+  content: ' *';
+  color: var(--error-500);
+}
+
+/* Invalid field styling */
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: var(--error-500);
+  box-shadow: inset 0 1px 0 rgba(239, 68, 68, 0.1);
+}
+
+/* Valid field styling */
+input:valid,
+textarea:valid,
+select:valid {
+  border-color: var(--success-500);
+  box-shadow: inset 0 1px 0 rgba(5, 150, 105, 0.1);
+}
+
+/* Focus styles for form elements */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-500);
+  box-shadow: 
+    inset 0 1px 0 rgba(var(--primary-rgb), 0.1),
+    0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+/* ================================
+   Print Accessibility
+=================================== */
+
+@media print {
+  .skip-link,
+  .tooltip,
+  .modal-backdrop,
+  .live-region {
+    display: none !important;
+  }
+  
+  /* Ensure sufficient contrast in print */
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  /* Show link URLs in print */
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: smaller;
+  }
+  
+  /* Ensure headings are visible */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+    font-weight: bold;
+  }
+}
+
+/* ================================
+   Dark Mode Accessibility
+=================================== */
+
+@media (prefers-color-scheme: dark) {
+  .tooltip {
+    background: var(--gray-100);
+    color: var(--gray-900);
+    border-color: var(--gray-300);
+  }
+  
+  .tooltip-arrow {
+    background: var(--gray-100);
+    border-color: var(--gray-300);
+  }
+  
+  .modal {
+    background: var(--gray-900);
+    border-color: var(--gray-700);
+  }
+  
+  .modal-header {
+    border-color: var(--gray-700);
+  }
+  
+  .error-boundary {
+    background: linear-gradient(
+      135deg,
+      rgba(127, 29, 29, 0.3) 0%,
+      rgba(153, 27, 27, 0.2) 100%
+    );
+    border-color: var(--error-600);
+  }
+}
+
+/* ================================
+   Animation Preferences
+=================================== */
+
+/* Respect animation preferences */
+@media (prefers-reduced-motion: reduce) {
+  .progress-fill::after {
+    animation: none;
+  }
+  
+  .tooltip {
+    transition: none;
+  }
+  
+  .modal,
+  .modal-backdrop {
+    transition: none;
+  }
+}
+
+/* ================================
+   Interactive Element Sizing
+=================================== */
+
+/* Ensure minimum touch target size (44px) */
+button,
+a,
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"],
+input[type="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exception for text inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  min-height: 44px;
+  min-width: auto;
+}
+
+/* ================================
+   Text Spacing and Readability
+=================================== */
+
+/* Ensure adequate line spacing */
+p, li, td, th {
+  line-height: 1.5;
+}
+
+/* Ensure adequate letter spacing */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+}
+
+/* Ensure adequate word spacing */
+.text-body {
+  word-spacing: 0.16em;
+}
+
+/* Ensure adequate paragraph spacing */
+p + p {
+  margin-top: 1em;
+}
+
+/* ================================
+   Error and Success States
+=================================== */
+
+/* Error state styling */
+.error-state {
+  border: 2px solid var(--error-500);
+  background: var(--error-50);
+  color: var(--error-700);
+}
+
+/* Success state styling */
+.success-state {
+  border: 2px solid var(--success-500);
+  background: var(--success-50);
+  color: var(--success-700);
+}
+
+/* Warning state styling */
+.warning-state {
+  border: 2px solid var(--warning-500);
+  background: var(--warning-50);
+  color: var(--warning-700);
+}
