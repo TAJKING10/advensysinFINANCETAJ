@@ -213,6 +213,13 @@ const Contact = () => {
                             >
                               {info.text}
                             </a>
+                          ) : item.title === t('contact.info.email') ? (
+                            <a 
+                              href={`mailto:${info}`}
+                              style={{ color: 'inherit', textDecoration: 'none' }}
+                            >
+                              {info}
+                            </a>
                           ) : (
                             info
                           )}

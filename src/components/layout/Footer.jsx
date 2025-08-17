@@ -118,7 +118,11 @@ const Footer = () => {
                 <div className="contact-item">
                   <img src="/assets/email-2.svg" alt="Email" className="contact-icon" />
                   <div>
-                    <p>{currentLocationData?.email}</p>
+                    <p>
+                      <a href={`mailto:${currentLocationData?.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                        {currentLocationData?.email}
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div className="contact-item">
