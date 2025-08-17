@@ -184,33 +184,6 @@ const News = () => {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="section">
-        <div className="container">
-          <div className="newsletter-signup">
-            <div className="newsletter-content">
-              <h2 className="newsletter-title">{t('newsPage.newsletter.title')}</h2>
-              <p className="newsletter-description">
-                {t('newsPage.newsletter.description')}
-              </p>
-              <form className="newsletter-form">
-                <input 
-                  type="email" 
-                  placeholder={t('newsPage.newsletter.placeholder')} 
-                  className="newsletter-input"
-                  required
-                />
-                <button type="submit" className="btn btn-primary">
-                  {t('newsPage.newsletter.subscribe')}
-                </button>
-              </form>
-            </div>
-            <div className="newsletter-image">
-              <img src="/assets/form.png" alt="Newsletter" />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
