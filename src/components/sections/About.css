@@ -209,14 +209,30 @@
 
 /* Values Section */
 .values-section {
-  background-color: var(--background-light);
-  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  padding: 4rem 0;
   border-radius: var(--radius-xl);
   margin-bottom: 4rem;
+  position: relative;
+  border: 1px solid var(--border-primary);
 }
 
 .values-header {
   margin-bottom: 3rem;
+}
+
+.values-header .section-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.values-header .section-subtitle {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
 }
 
 .values-grid {
@@ -226,28 +242,48 @@
 }
 
 .value-card {
-  background-color: var(--white);
+  background-color: var(--bg-primary);
   padding: 2rem;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   text-align: center;
-  box-shadow: var(--shadow-light);
-  transition: all var(--transition-base);
+  box-shadow: var(--shadow-base);
+  border: 1px solid var(--border-primary);
+  transition: var(--transition-all);
+  position: relative;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 
 .value-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-medium);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-200);
 }
 
 .value-icon {
   width: 70px;
   height: 70px;
-  margin: 0 auto 1.5rem;
+  margin: 1rem auto 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   border-radius: var(--radius-full);
+  transition: var(--transition-transform);
+  box-shadow: var(--shadow-sm);
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.05);
 }
 
 .value-icon img {
