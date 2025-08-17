@@ -22,11 +22,11 @@ const Header = () => {
     currentLocationData,
   } = useLocationContext();
 
-  // Refs for precise outside-click handling
+  // Refs for outside-click handling
   const langRef = useRef(null);
   const locRef = useRef(null);
 
-  /* ---------- Scroll elevation ---------- */
+  /* Elevate on scroll */
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
     onScroll();
@@ -34,21 +34,21 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* ---------- Close overlays on route change ---------- */
+  /* Close overlays on route change */
   useEffect(() => {
     setIsMenuOpen(false);
     setLangOpen(false);
     setLocOpen(false);
   }, [routerLoc.pathname]);
 
-  /* ---------- Lock body scroll with mobile drawer ---------- */
+  /* Body scroll lock for mobile menu */
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = isMenuOpen ? "hidden" : prev || "";
     return () => (document.body.style.overflow = prev || "");
   }, [isMenuOpen]);
 
-  /* ---------- Outside click for dropdowns ---------- */
+  /* Close dropdowns on outside click */
   useEffect(() => {
     if (!langOpen && !locOpen) return;
     const onClick = (e) => {
@@ -63,7 +63,7 @@ const Header = () => {
     };
   }, [langOpen, locOpen]);
 
-  /* ---------- Escape closes everything ---------- */
+  /* Escape closes everything */
   const onKey = useCallback((e) => {
     if (e.key === "Escape") {
       setLangOpen(false);
@@ -76,7 +76,7 @@ const Header = () => {
     return () => document.removeEventListener("keydown", onKey);
   }, [onKey]);
 
-  /* ---------- Nav items ---------- */
+  /* Nav items */
   const navItems = [
     { path: "/", label: t("nav.home"), icon: "🏠" },
     { path: "/about", label: t("nav.about"), icon: "ℹ️" },
@@ -85,14 +85,13 @@ const Header = () => {
     { path: "/contact", label: t("nav.contact"), icon: "📞" },
   ];
 
-  /* ---------- Normalized change handlers ---------- */
-  const changeLang = (code) => {
+  /* Normalized change handlers */
+  const onChangeLanguage = (code) => {
     const safe = String(code || "").toLowerCase();
     changeLanguage(safe);
     setLangOpen(false);
   };
-
-  const changeLoc = (code) => {
+  const onChangeLocation = (code) => {
     const safe = String(code || "").toLowerCase();
     changeLocationContext(safe);
     setLocOpen(false);
@@ -133,12 +132,12 @@ const Header = () => {
 
           {/* Actions */}
           <div className="hdr__actions">
-            {/* Language */}
+            {/* Language switcher */}
             <div className="dropdown" ref={langRef}>
               <button
-                className="sw__btn"
                 type="button"
-                onClick={() => { setLangOpen((v) => !v); setLocOpen(false); }}
+                className="sw__btn"
+                onClick={() => { setLangOpen(v => !v); setLocOpen(false); }}
                 aria-expanded={langOpen}
                 aria-haspopup="listbox"
                 aria-controls="lang-menu"
@@ -152,8 +151,8 @@ const Header = () => {
               {langOpen && (
                 <div id="lang-menu" className="sw__menu" role="listbox">
                   {Object.values(languages).map((lang) => {
-                    const code = String(lang.code || "").toUpperCase();
-                    const isCurrent = currentLanguage === (lang.code || "").toLowerCase();
+                    const codeLC = String(lang.code || "").toLowerCase();
+                    const isCurrent = currentLanguage === codeLC;
                     return (
                       <button
                         key={lang.code}
@@ -161,14 +160,16 @@ const Header = () => {
                         role="option"
                         aria-selected={isCurrent}
                         className={`sw__item${isCurrent ? " is-current" : ""}`}
-                        onClick={() => changeLang(lang.code)}
+                        onClick={() => onChangeLanguage(lang.code)}
                       >
+                        {/* fixed left cell: flag + ISO code */}
                         <span className="sw__cell sw__cell--code">
                           <span className="sw__itemFlag">{lang.flag}</span>
-                          <span className="sw__itemCode">{code}</span>
+                          <span className="sw__itemCode">{String(lang.code || "").toUpperCase()}</span>
                         </span>
+                        {/* flexible right cell: name (single) */}
                         <span className="sw__cell sw__cell--name">
-                          <span className="sw__itemText">{lang.name}</span>
+                          <span className="sw__itemText">{lang.nativeName || lang.name}</span>
                         </span>
                       </button>
                     );
@@ -177,12 +178,12 @@ const Header = () => {
               )}
             </div>
 
-            {/* Location */}
+            {/* Location switcher */}
             <div className="dropdown" ref={locRef}>
               <button
-                className="sw__btn"
                 type="button"
-                onClick={() => { setLocOpen((v) => !v); setLangOpen(false); }}
+                className="sw__btn"
+                onClick={() => { setLocOpen(v => !v); setLangOpen(false); }}
                 aria-expanded={locOpen}
                 aria-haspopup="listbox"
                 aria-controls="loc-menu"
@@ -196,7 +197,8 @@ const Header = () => {
               {locOpen && (
                 <div id="loc-menu" className="sw__menu" role="listbox">
                   {Object.values(locations).map((loc) => {
-                    const isCurrent = currentLocation === (loc.code || "").toLowerCase();
+                    const codeLC = String(loc.code || "").toLowerCase();
+                    const isCurrent = currentLocation === codeLC;
                     return (
                       <button
                         key={loc.code}
@@ -204,7 +206,7 @@ const Header = () => {
                         role="option"
                         aria-selected={isCurrent}
                         className={`sw__item${isCurrent ? " is-current" : ""}`}
-                        onClick={() => changeLoc(loc.code)}
+                        onClick={() => onChangeLocation(loc.code)}
                       >
                         <span className="sw__cell sw__cell--code">
                           <span className="sw__itemFlag">{loc.flag}</span>
@@ -241,7 +243,7 @@ const Header = () => {
               aria-label="Toggle mobile menu"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-nav"
-              onClick={() => { setIsMenuOpen((v) => !v); setLangOpen(false); setLocOpen(false); }}
+              onClick={() => { setIsMenuOpen(v => !v); setLangOpen(false); setLocOpen(false); }}
             >
               {isMenuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
             </button>
@@ -268,38 +270,47 @@ const Header = () => {
               );
             })}
 
+            {/* Mobile switchers */}
             <li className="mnav__item mnav__switchers">
               <div className="msw">
                 <div className="msw__label">{t("header.languageSwitcher")}</div>
                 <div className="msw__options">
-                  {Object.values(languages).map((lang) => (
-                    <button
-                      key={lang.code}
-                      type="button"
-                      className={`msw__btn${currentLanguage === (lang.code || "").toLowerCase() ? " is-current" : ""}`}
-                      onClick={() => changeLang(lang.code)}
-                    >
-                      <span className="msw__flag">{lang.flag}</span>
-                      <span>{String(lang.code || "").toUpperCase()}</span>
-                    </button>
-                  ))}
+                  {Object.values(languages).map((lang) => {
+                    const codeLC = String(lang.code || "").toLowerCase();
+                    const isCurrent = currentLanguage === codeLC;
+                    return (
+                      <button
+                        key={lang.code}
+                        type="button"
+                        className={`msw__btn${isCurrent ? " is-current" : ""}`}
+                        onClick={() => onChangeLanguage(lang.code)}
+                      >
+                        <span className="msw__flag">{lang.flag}</span>
+                        <span>{String(lang.code || "").toUpperCase()}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div className="msw">
                 <div className="msw__label">{t("header.locationSwitcher")}</div>
                 <div className="msw__options">
-                  {Object.values(locations).map((loc) => (
-                    <button
-                      key={loc.code}
-                      type="button"
-                      className={`msw__btn${currentLocation === (loc.code || "").toLowerCase() ? " is-current" : ""}`}
-                      onClick={() => changeLoc(loc.code)}
-                    >
-                      <span className="msw__flag">{loc.flag}</span>
-                      <span>{loc.name}</span>
-                    </button>
-                  ))}
+                  {Object.values(locations).map((loc) => {
+                    const codeLC = String(loc.code || "").toLowerCase();
+                    const isCurrent = currentLocation === codeLC;
+                    return (
+                      <button
+                        key={loc.code}
+                        type="button"
+                        className={`msw__btn${isCurrent ? " is-current" : ""}`}
+                        onClick={() => onChangeLocation(loc.code)}
+                      >
+                        <span className="msw__flag">{loc.flag}</span>
+                        <span>{loc.name}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </li>
