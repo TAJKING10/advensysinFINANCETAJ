@@ -1,127 +1,147 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { useLanguage } from '../../contexts/LanguageContext'
-import { useLocation as useLocationContext } from '../../contexts/LocationContext'
-import { HiChevronDown, HiPhone, HiSparkles } from 'react-icons/hi'
-import { FaQuoteLeft } from 'react-icons/fa'
-import './Header.css'
+import React, { useState, useEffect, useCallback } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { useLocation as useLocationContext } from "../../contexts/LocationContext";
+import { HiChevronDown, HiPhone } from "react-icons/hi";
+import { FaQuoteLeft } from "react-icons/fa";
+import "./Header.css";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
-  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false)
-  const location = useLocation()
-  const { t, changeLanguage, currentLanguage, languages } = useLanguage()
-  const { changeLocation: changeLocationContext, currentLocation, locations, currentLocationData } = useLocationContext()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
 
-  // Handle scroll effect
+  const location = useLocation();
+  const { t, changeLanguage, currentLanguage, languages } = useLanguage();
+  const {
+    changeLocation: changeLocationContext,
+    currentLocation,
+    locations,
+    currentLocationData,
+  } = useLocationContext();
+
+  // Scroll listener (adds elevated style)
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Close mobile menu when route changes
+  // Close mobile menu on route change
   useEffect(() => {
-    setIsMenuOpen(false)
-  }, [location])
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.language-switcher-container')) {
-        setIsLanguageDropdownOpen(false)
+    const handleClickOutside = (e) => {
+      if (!e.target.closest(".language-switcher-container")) {
+        setIsLanguageDropdownOpen(false);
       }
-      if (!event.target.closest('.location-switcher-container')) {
-        setIsLocationDropdownOpen(false)
+      if (!e.target.closest(".location-switcher-container")) {
+        setIsLocationDropdownOpen(false);
       }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  // Close things on Escape for a11y
+  const onKeyDown = useCallback((e) => {
+    if (e.key === "Escape") {
+      setIsMenuOpen(false);
+      setIsLanguageDropdownOpen(false);
+      setIsLocationDropdownOpen(false);
     }
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [onKeyDown]);
 
-    document.addEventListener('click', handleClickOutside)
-    return () => document.removeEventListener('click', handleClickOutside)
-  }, [])
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
+  const toggleMenu = () => setIsMenuOpen((v) => !v);
   const toggleLanguageDropdown = () => {
-    setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
-    setIsLocationDropdownOpen(false)
-  }
-
+    setIsLanguageDropdownOpen((v) => !v);
+    setIsLocationDropdownOpen(false);
+  };
   const toggleLocationDropdown = () => {
-    setIsLocationDropdownOpen(!isLocationDropdownOpen)
-    setIsLanguageDropdownOpen(false)
-  }
+    setIsLocationDropdownOpen((v) => !v);
+    setIsLanguageDropdownOpen(false);
+  };
 
-  const handleLanguageChange = (languageCode) => {
-    changeLanguage(languageCode)
-    setIsLanguageDropdownOpen(false)
-  }
+  const handleLanguageChange = (code) => {
+    changeLanguage(code);
+    setIsLanguageDropdownOpen(false);
+  };
 
-  const handleLocationChange = (locationCode) => {
-    changeLocationContext(locationCode)
-    setIsLocationDropdownOpen(false)
-  }
+  const handleLocationChange = (code) => {
+    changeLocationContext(code);
+    setIsLocationDropdownOpen(false);
+  };
 
   const navItems = [
-    { path: '/', label: t('nav.home') },
-    { path: '/about', label: t('nav.about') },
-    { path: '/services', label: t('nav.services') },
-    { path: '/news', label: t('nav.news') },
-    { path: '/contact', label: t('nav.contact') }
-  ]
+    { path: "/", label: t("nav.home") },
+    { path: "/about", label: t("nav.about") },
+    { path: "/services", label: t("nav.services") },
+    { path: "/news", label: t("nav.news") },
+    { path: "/contact", label: t("nav.contact") },
+  ];
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
       <div className="container">
         <div className="header-content">
           {/* Logo */}
-          <Link to="/" className="logo-link">
-            <img src="/assets/logo.svg" alt="Advensys Insurance Finance" className="logo" />
+          <Link to="/" className="logo-link" aria-label="Advensys Home">
+            {/* Update the src to match your asset path */}
+            <img src="/assets/logo.svg" alt="Advensys In-Finance" className="logo" />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="nav-desktop">
+          <nav className="nav-desktop" aria-label="Main navigation">
             <ul className="nav-list">
-              {navItems.map((item) => (
-                <li key={item.path} className="nav-item">
-                  <Link
-                    to={item.path}
-                    className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const active = location.pathname === item.path;
+                return (
+                  <li key={item.path} className="nav-item">
+                    <Link to={item.path} className={`nav-link ${active ? "active" : ""}`}>
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
-          {/* Header Actions */}
+          {/* Actions */}
           <div className="header-actions">
-            {/* Language Switcher */}
+            {/* Language */}
             <div className="language-switcher-container">
               <button
+                type="button"
                 className="language-switcher"
                 onClick={toggleLanguageDropdown}
-                aria-label={t('header.languageSwitcher')}
+                aria-haspopup="listbox"
                 aria-expanded={isLanguageDropdownOpen}
+                aria-label={t("header.languageSwitcher")}
               >
                 <span className="switcher-flag">{languages[currentLanguage]?.flag}</span>
-                <span className="switcher-text">{languages[currentLanguage]?.code?.toUpperCase()}</span>
-                <HiChevronDown className={`switcher-arrow ${isLanguageDropdownOpen ? 'open' : ''}`} />
+                <span className="switcher-text">
+                  {languages[currentLanguage]?.code?.toUpperCase()}
+                </span>
+                <HiChevronDown className={`switcher-arrow ${isLanguageDropdownOpen ? "open" : ""}`} />
               </button>
+
               {isLanguageDropdownOpen && (
-                <div className="switcher-dropdown">
+                <div className="switcher-dropdown" role="listbox">
                   {Object.values(languages).map((lang) => (
                     <button
                       key={lang.code}
-                      className={`dropdown-item ${currentLanguage === lang.code ? 'active' : ''}`}
+                      type="button"
+                      role="option"
+                      className={`dropdown-item ${currentLanguage === lang.code ? "active" : ""}`}
                       onClick={() => handleLanguageChange(lang.code)}
                     >
                       <span className="dropdown-flag">{lang.flag}</span>
@@ -132,24 +152,29 @@ const Header = () => {
               )}
             </div>
 
-            {/* Location Switcher */}
+            {/* Location */}
             <div className="location-switcher-container">
               <button
+                type="button"
                 className="location-switcher"
                 onClick={toggleLocationDropdown}
-                aria-label={t('header.locationSwitcher')}
+                aria-haspopup="listbox"
                 aria-expanded={isLocationDropdownOpen}
+                aria-label={t("header.locationSwitcher")}
               >
                 <span className="switcher-flag">{currentLocationData?.flag}</span>
                 <span className="switcher-text">{currentLocationData?.name}</span>
-                <HiChevronDown className={`switcher-arrow ${isLocationDropdownOpen ? 'open' : ''}`} />
+                <HiChevronDown className={`switcher-arrow ${isLocationDropdownOpen ? "open" : ""}`} />
               </button>
+
               {isLocationDropdownOpen && (
-                <div className="switcher-dropdown">
+                <div className="switcher-dropdown" role="listbox">
                   {Object.values(locations).map((loc) => (
                     <button
                       key={loc.code}
-                      className={`dropdown-item ${currentLocation === loc.code ? 'active' : ''}`}
+                      type="button"
+                      role="option"
+                      className={`dropdown-item ${currentLocation === loc.code ? "active" : ""}`}
                       onClick={() => handleLocationChange(loc.code)}
                     >
                       <span className="dropdown-flag">{loc.flag}</span>
@@ -160,28 +185,36 @@ const Header = () => {
               )}
             </div>
 
-            {/* Contact Info */}
-            <div className="contact-info">
-              <a href={`tel:${currentLocationData?.phone}`} className="contact-link">
-                <HiPhone />
-                <span>{currentLocationData?.phone}</span>
-              </a>
-            </div>
+            {/* Phone */}
+            {currentLocationData?.phone && (
+              <div className="contact-info">
+                <a
+                  className="contact-link"
+                  href={`tel:${currentLocationData.phone}`}
+                  aria-label={t("common.callUs")}
+                >
+                  <HiPhone />
+                  <span>{currentLocationData.phone}</span>
+                </a>
+              </div>
+            )}
 
-            {/* Get Quote Button */}
+            {/* CTA */}
             <Link to="/contact" className="btn btn-primary">
               <FaQuoteLeft />
-              {t('common.getQuote')}
+              {t("common.getQuote")}
             </Link>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile toggle */}
             <button
+              type="button"
               className="mobile-menu-toggle"
               onClick={toggleMenu}
-              aria-label="Toggle Mobile Menu"
+              aria-label="Toggle mobile menu"
+              aria-controls="mobile-nav"
               aria-expanded={isMenuOpen}
             >
-              <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
+              <span className={`hamburger ${isMenuOpen ? "open" : ""}`}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -191,28 +224,33 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <nav className={`nav-mobile ${isMenuOpen ? 'open' : ''}`}>
+        <nav id="mobile-nav" className={`nav-mobile ${isMenuOpen ? "open" : ""}`} aria-label="Mobile">
           <ul className="nav-mobile-list">
-            {navItems.map((item) => (
-              <li key={item.path} className="nav-mobile-item">
-                <Link
-                  to={item.path}
-                  className={`nav-mobile-link ${location.pathname === item.path ? 'active' : ''}`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const active = location.pathname === item.path;
+              return (
+                <li key={item.path} className="nav-mobile-item">
+                  <Link
+                    to={item.path}
+                    className={`nav-mobile-link ${active ? "active" : ""}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+
+            {/* Mobile switchers */}
             <li className="nav-mobile-item nav-mobile-switchers">
-              {/* Mobile Language Switcher */}
               <div className="mobile-switcher-group">
-                <span className="mobile-switcher-label">{t('header.languageSwitcher')}:</span>
+                <span className="mobile-switcher-label">{t("header.languageSwitcher")}:</span>
                 <div className="mobile-switcher-options">
                   {Object.values(languages).map((lang) => (
                     <button
                       key={lang.code}
-                      className={`mobile-switcher-btn ${currentLanguage === lang.code ? 'active' : ''}`}
+                      type="button"
+                      className={`mobile-switcher-btn ${currentLanguage === lang.code ? "active" : ""}`}
                       onClick={() => handleLanguageChange(lang.code)}
                     >
                       <span className="mobile-switcher-flag">{lang.flag}</span>
@@ -221,15 +259,15 @@ const Header = () => {
                   ))}
                 </div>
               </div>
-              
-              {/* Mobile Location Switcher */}
+
               <div className="mobile-switcher-group">
-                <span className="mobile-switcher-label">{t('header.locationSwitcher')}:</span>
+                <span className="mobile-switcher-label">{t("header.locationSwitcher")}:</span>
                 <div className="mobile-switcher-options">
                   {Object.values(locations).map((loc) => (
                     <button
                       key={loc.code}
-                      className={`mobile-switcher-btn ${currentLocation === loc.code ? 'active' : ''}`}
+                      type="button"
+                      className={`mobile-switcher-btn ${currentLocation === loc.code ? "active" : ""}`}
                       onClick={() => handleLocationChange(loc.code)}
                     >
                       <span className="mobile-switcher-flag">{loc.flag}</span>
@@ -239,17 +277,18 @@ const Header = () => {
                 </div>
               </div>
             </li>
+
             <li className="nav-mobile-item">
-              <Link to="/contact" className="btn btn-primary btn-mobile">
+              <Link to="/contact" className="btn btn-primary btn-mobile" onClick={() => setIsMenuOpen(false)}>
                 <FaQuoteLeft />
-                {t('common.getQuote')}
+                {t("common.getQuote")}
               </Link>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
