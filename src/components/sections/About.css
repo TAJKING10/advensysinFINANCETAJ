@@ -209,12 +209,8 @@
 
 /* Values Section */
 .values-section {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
   padding: 4rem 0;
-  border-radius: var(--radius-xl);
   margin-bottom: 4rem;
-  position: relative;
-  border: 1px solid var(--border-primary);
 }
 
 .values-header {
@@ -237,59 +233,43 @@
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .value-card {
   background-color: var(--bg-primary);
   padding: 2rem;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-base);
-  border: 1px solid var(--border-primary);
-  transition: var(--transition-all);
-  position: relative;
-}
-
-.value-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-light);
+  transition: var(--transition-base);
 }
 
 .value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-200);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
 }
 
 .value-icon {
-  width: 70px;
-  height: 70px;
-  margin: 1rem auto 1.5rem;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background-color: var(--background-light);
   border-radius: var(--radius-full);
-  transition: var(--transition-transform);
-  box-shadow: var(--shadow-sm);
-}
-
-.value-card:hover .value-icon {
-  transform: scale(1.05);
 }
 
 .value-icon img {
-  width: 35px;
-  height: 35px;
-  filter: brightness(0) invert(1);
+  width: 30px;
+  height: 30px;
+  filter: hue-rotate(200deg);
 }
 
 .value-title {
@@ -419,6 +399,7 @@
 
   .values-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 1.5rem;
   }
 
