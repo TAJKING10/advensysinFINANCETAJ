@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiChevronDown, HiPhone, HiMenuAlt3, HiX, HiTranslate } from "react-icons/hi";
 import { FaQuoteLeft } from "react-icons/fa";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -13,6 +13,7 @@ const Header = () => {
   const [locOpen, setLocOpen] = useState(false);
 
   const routerLoc = useLocation();
+  const navigate = useNavigate();
 
   const { t, changeLanguage, currentLanguage, languages } = useLanguage();
   const {
@@ -21,6 +22,12 @@ const Header = () => {
     locations,
     currentLocationData,
   } = useLocationContext();
+
+  const handleNavClick = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false); // Close mobile menu if open
+  };
 
   // Refs for outside-click handling
   const langRef = useRef(null);
@@ -102,9 +109,9 @@ const Header = () => {
       <div className="hdr__container">
         <div className="hdr__row">
           {/* Logo */}
-          <Link to="/" className="hdr__logoLink" aria-label="Advensys Home">
+          <button onClick={() => handleNavClick("/")} className="hdr__logoLink" aria-label="Advensys Home" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
             <img src="/assets/logo.svg" alt="Advensys In-Finance" className="hdr__logo" />
-          </Link>
+          </button>
 
           {/* Desktop nav */}
           <nav className="nav" aria-label="Main">
@@ -114,15 +121,16 @@ const Header = () => {
                   const active = routerLoc.pathname === item.path;
                   return (
                     <li key={item.path} className="nav__item">
-                      <Link
-                        to={item.path}
+                      <button
+                        onClick={() => handleNavClick(item.path)}
                         className={`nav__link${active ? " is-active" : ""}`}
                         aria-current={active ? "page" : undefined}
+                        style={{ background: 'none', border: 'none', cursor: 'pointer' }}
                       >
                         <span className="nav__icon" aria-hidden="true">{item.icon}</span>
                         <span className="nav__text">{item.label}</span>
                         {active && <span className="nav__activePill" aria-hidden="true" />}
-                      </Link>
+                      </button>
                     </li>
                   );
                 })}
@@ -267,15 +275,15 @@ const Header = () => {
               const active = routerLoc.pathname === item.path;
               return (
                 <li key={item.path} className="mnav__item">
-                  <Link
-                    to={item.path}
+                  <button
+                    onClick={() => handleNavClick(item.path)}
                     className={`mnav__link${active ? " is-active" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
                     aria-current={active ? "page" : undefined}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left' }}
                   >
                     <span className="mnav__icon">{item.icon}</span>
                     <span>{item.label}</span>
-                  </Link>
+                  </button>
                 </li>
               );
             })}
@@ -332,10 +340,10 @@ const Header = () => {
             </li>
 
             <li className="mnav__item">
-              <Link to="/contact" className="btn btn--primary mnav__cta" onClick={() => setIsMenuOpen(false)}>
+              <button onClick={() => handleNavClick("/contact")} className="btn btn--primary mnav__cta" style={{ border: 'none', cursor: 'pointer' }}>
                 <FaQuoteLeft />
                 <span>{t("common.getQuote")}</span>
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
