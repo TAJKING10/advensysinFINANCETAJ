@@ -238,10 +238,29 @@
   transform: translateY(-2px);
 }
 
+.social-link:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
 .social-link img {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1);
+  transition: var(--transition-transform);
+  opacity: 1;
+  object-fit: contain;
+  display: block;
+  border-radius: 2px;
+  background: transparent;
+}
+
+/* Ensure PNG icons are visible against blue background */
+.contact-section .social-link img[src$=".png"] {
+  filter: brightness(1.2) contrast(1.1) saturate(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Map */
