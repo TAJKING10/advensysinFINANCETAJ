@@ -245,14 +245,15 @@
   padding: 2rem;
   border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-medium);
+  border: 2px solid var(--border-primary);
   transition: var(--transition-base);
 }
 
 .value-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-300);
 }
 
 .value-icon {
