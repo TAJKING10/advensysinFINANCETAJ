@@ -131,19 +131,19 @@ const About = () => {
               
               <div className="licenses-list">
                 <div className="license-item">
-                  <img src="/assets/strengths-4.svg" alt="State Licensed" />
+                  <img src="/assets/strengths-1.svg" alt="State Licensed" />
                   <span>{t('aboutPage.licenses.items.stateLicensed')}</span>
                 </div>
                 <div className="license-item">
-                  <img src="/assets/strengths-5.svg" alt="Certified" />
+                  <img src="/assets/strengths-2.svg" alt="Certified" />
                   <span>{t('aboutPage.licenses.items.certified')}</span>
                 </div>
                 <div className="license-item">
-                  <img src="/assets/strengths-6.svg" alt="Bonded" />
+                  <img src="/assets/strengths-3.svg" alt="Bonded" />
                   <span>{t('aboutPage.licenses.items.bonded')}</span>
                 </div>
                 <div className="license-item">
-                  <img src="/assets/strengths-7.svg" alt="Accredited" />
+                  <img src="/assets/strengths-4.svg" alt="Accredited" />
                   <span>{t('aboutPage.licenses.items.accredited')}</span>
                 </div>
               </div>

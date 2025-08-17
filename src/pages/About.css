@@ -206,9 +206,23 @@
 }
 
 .license-item img {
-  width: 30px;
-  height: 30px;
-  filter: hue-rotate(120deg);
+  width: 40px;
+  height: 40px;
+  filter: hue-rotate(200deg) brightness(1.1) contrast(1.1);
+  transition: var(--transition-all);
+  padding: 8px;
+  background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--primary-300);
+  box-shadow: 0 2px 4px rgba(0, 34, 110, 0.1);
+}
+
+.license-item:hover img {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, var(--primary-200), var(--primary-300));
+  filter: hue-rotate(200deg) brightness(1.2) contrast(1.2);
+  border-color: var(--primary-400);
+  box-shadow: 0 4px 8px rgba(0, 34, 110, 0.2);
 }
 
 .license-item span {
@@ -306,7 +320,8 @@
   }
 
   .license-item img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
   }
 }
