@@ -200,7 +200,7 @@ const NewsDetail = () => {
 
         <p>Property insurance isn't just about compliance with mortgage requirements - it's about protecting your family's financial security and peace of mind.</p>
       `,
-      image: '/assets/news-3.png',
+      image: '/assets/about-1.png',
       date: '2023-12-20',
       category: 'Property Insurance',
       readTime: '8 min read',

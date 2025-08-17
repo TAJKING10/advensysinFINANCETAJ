@@ -56,7 +56,7 @@ const News = () => {
       title: 'Property Insurance: Protecting Your Most Valuable Assets',
       excerpt: 'Understanding property insurance coverage options to safeguard your home and belongings from unexpected events.',
       content: 'Full article content would go here...',
-      image: '/assets/news-3.png',
+      image: '/assets/about-1.png',
       date: '2023-12-20',
       category: 'Property Insurance',
       readTime: '8 min read',
