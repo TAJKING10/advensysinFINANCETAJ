@@ -132,7 +132,7 @@ const Header = () => {
 
           {/* Actions */}
           <div className="hdr__actions">
-            {/* Language switcher */}
+            {/* Language switcher - Only language codes + names */}
             <div className="dropdown" ref={langRef}>
               <button
                 type="button"
@@ -143,7 +143,6 @@ const Header = () => {
                 aria-controls="lang-menu"
                 aria-label={t("header.languageSwitcher")}
               >
-                <span className="sw__flag">{languages[currentLanguage]?.flag}</span>
                 <span className="sw__text">{languages[currentLanguage]?.code?.toUpperCase()}</span>
                 <HiChevronDown className={`sw__chev ${langOpen ? "is-open" : ""}`} />
               </button>
@@ -159,18 +158,11 @@ const Header = () => {
                         type="button"
                         role="option"
                         aria-selected={isCurrent}
-                        className={`sw__item${isCurrent ? " is-current" : ""}`}
+                        className={`sw__item sw__item--simple${isCurrent ? " is-current" : ""}`}
                         onClick={() => onChangeLanguage(lang.code)}
                       >
-                        {/* fixed left cell: flag + ISO code */}
-                        <span className="sw__cell sw__cell--code">
-                          <span className="sw__itemFlag">{lang.flag}</span>
-                          <span className="sw__itemCode">{String(lang.code || "").toUpperCase()}</span>
-                        </span>
-                        {/* flexible right cell: name (single) */}
-                        <span className="sw__cell sw__cell--name">
-                          <span className="sw__itemText">{lang.nativeName || lang.name}</span>
-                        </span>
+                        <span className="sw__itemCode">{String(lang.code || "").toUpperCase()}</span>
+                        <span className="sw__itemText">{lang.name}</span>
                       </button>
                     );
                   })}
@@ -178,7 +170,7 @@ const Header = () => {
               )}
             </div>
 
-            {/* Location switcher */}
+            {/* Location switcher - Only flags + country names */}
             <div className="dropdown" ref={locRef}>
               <button
                 type="button"
@@ -205,16 +197,11 @@ const Header = () => {
                         type="button"
                         role="option"
                         aria-selected={isCurrent}
-                        className={`sw__item${isCurrent ? " is-current" : ""}`}
+                        className={`sw__item sw__item--simple${isCurrent ? " is-current" : ""}`}
                         onClick={() => onChangeLocation(loc.code)}
                       >
-                        <span className="sw__cell sw__cell--code">
-                          <span className="sw__itemFlag">{loc.flag}</span>
-                          <span className="sw__itemCode">{String(loc.code || "").toUpperCase()}</span>
-                        </span>
-                        <span className="sw__cell sw__cell--name">
-                          <span className="sw__itemText">{loc.name}</span>
-                        </span>
+                        <span className="sw__itemFlag">{loc.flag}</span>
+                        <span className="sw__itemText">{loc.name}</span>
                       </button>
                     );
                   })}
@@ -270,7 +257,7 @@ const Header = () => {
               );
             })}
 
-            {/* Mobile switchers */}
+            {/* Mobile switchers - simplified */}
             <li className="mnav__item mnav__switchers">
               <div className="msw">
                 <div className="msw__label">{t("header.languageSwitcher")}</div>
@@ -285,8 +272,8 @@ const Header = () => {
                         className={`msw__btn${isCurrent ? " is-current" : ""}`}
                         onClick={() => onChangeLanguage(lang.code)}
                       >
-                        <span className="msw__flag">{lang.flag}</span>
                         <span>{String(lang.code || "").toUpperCase()}</span>
+                        <span>{lang.name}</span>
                       </button>
                     );
                   })}

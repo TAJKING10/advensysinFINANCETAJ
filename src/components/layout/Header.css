@@ -80,7 +80,7 @@
 .sw__menu{
   position:absolute;
   top:calc(100% + 10px);
-  left:0;                       /* anchor to the button’s left */
+  left:0;                       /* anchor to the button's left */
   z-index:var(--z-dd);
   background:#fff;
   border:1px solid rgba(148,163,184,.18);
@@ -89,15 +89,14 @@
   padding:6px;
 
   /* adaptive sizing */
-  min-width:260px;
-  max-width:320px;
+  min-width:180px;
+  max-width:280px;
   width:max-content;
 }
 
-/* Rows: fixed left column (flag + code + UPPERCASE name), flexible right column (readable name) */
+/* Simplified row layout for new design */
 .sw__item{
-  display:grid;
-  grid-template-columns:150px 1fr;    /* 150px prevents "LUXEMBOURG" from wrapping */
+  display:flex;
   align-items:center;
   gap:12px;
   margin:2px 0;
@@ -111,33 +110,49 @@
   border-radius:12px;
   white-space:nowrap;
   transition:background .15s ease, box-shadow .15s ease;
+  width:100%;
 }
+
+/* Simple layout for language and location dropdowns */
+.sw__item--simple{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  justify-content:flex-start;
+}
+
 .sw__item:hover{ background:rgba(37,99,235,.06); }
 
-/* Current item: subtle row + strong left pill */
+/* Current item: subtle row highlight */
 .sw__item.is-current{
   background:rgba(37,99,235,.08);
   box-shadow:inset 0 0 0 1px rgba(37,99,235,.12);
   color:inherit;
 }
-.sw__item.is-current .sw__cell--code{
-  background:linear-gradient(135deg,var(--primary-600),var(--primary-700));
-  color:#fff;
-  border-radius:10px;
-  padding:8px 10px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.15);
+
+/* Item content styles */
+.sw__itemFlag{ 
+  font-size:16px; 
+  line-height:1; 
+  flex-shrink:0;
 }
 
-/* Cells & text */
-.sw__cell{ display:inline-flex; align-items:center; gap:8px; min-width:0; }
-.sw__cell--code{ padding-left:4px; }
-.sw__cell--name{ min-width:0; }
-.sw__itemFlag{ font-size:16px; line-height:1; }
-.sw__itemCode{ font-size:11px; font-weight:800; letter-spacing:.35px; opacity:.9; }
-.sw__itemNameUpper{ font-size:12px; font-weight:700; letter-spacing:.3px; text-transform:uppercase; }
+.sw__itemCode{ 
+  font-size:12px; 
+  font-weight:700; 
+  letter-spacing:.35px; 
+  flex-shrink:0;
+  min-width:24px;
+}
+
 .sw__itemText{
-  font-size:14px; font-weight:500; color:inherit;
-  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-size:14px; 
+  font-weight:500; 
+  color:inherit;
+  overflow:hidden; 
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+  flex:1;
 }
 
 /* Phone + CTA */
@@ -197,4 +212,41 @@
 .msw__label{ font-weight:600; color:var(--g-700); margin-bottom:6px; font-size:14px; }
 .msw__options{ display:flex; gap:8px; flex-wrap:wrap; }
 .msw__btn{
-  display:flex; a
+  display:flex; align-items:center; gap:6px; padding:8px 12px;
+  background:rgba(255,255,255,.8); border:1px solid rgba(148,163,184,.18);
+  border-radius:10px; font-size:12px; font-weight:500; color:var(--g-600);
+  transition:all .15s ease; cursor:pointer;
+}
+.msw__btn:hover{ background:#fff; color:var(--g-700); }
+.msw__btn.is-current{ background:var(--primary-600); color:#fff; border-color:var(--primary-600); }
+.msw__flag{ font-size:14px; }
+
+.mnav__cta{ width:100%; justify-content:center; }
+
+/* ======= Responsive ======= */
+@media (max-width: 1024px) {
+  .nav{ display:none; }
+  .hdr__burger{ display:flex; }
+  .hdr__actions{ gap:8px; }
+}
+
+@media (max-width: 768px) {
+  .hdr__container{ padding:0 12px; }
+  .hdr__row{ min-height:70px; gap:8px; }
+  .hdr__logo{ height:36px; }
+  .hdr__actions{ gap:6px; }
+  
+  .sw__btn{ min-width:72px; padding:6px 10px; }
+  .sw__text{ font-size:11px; max-width:60px; }
+  
+  .hdr__phone{ padding:6px 10px; font-size:12px; }
+  .hdr__phone svg{ width:14px; height:14px; }
+  
+  .btn{ padding:8px 12px; font-size:12px; }
+}
+
+@media (max-width: 480px) {
+  .hdr__phone{ display:none; }
+  .sw__btn{ min-width:64px; padding:6px 8px; }
+  .sw__text{ max-width:48px; }
+}
