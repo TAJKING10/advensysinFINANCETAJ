@@ -243,7 +243,7 @@ const Services = () => {
                 <Link to="/contact" className="btn btn-primary btn-lg">
                   {t('servicesPage.cta.button')}
                 </Link>
-                <a href={`tel:${currentLocationData?.phone}`} className="cta-phone">
+                <a href={`tel:${currentLocationData?.phone?.replace(/\s/g, '')}`} className="cta-phone">
                   <img src="/assets/phone.svg" alt="Phone" />
                   <span>Call: {currentLocationData?.phone}</span>
                 </a>
