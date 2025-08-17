@@ -5,7 +5,8 @@
       "Bash(mkdir:*)",
       "Bash(xcopy:*)",
       "Bash(copy img*.* publicassets)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": [],

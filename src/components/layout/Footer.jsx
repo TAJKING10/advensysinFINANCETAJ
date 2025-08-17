@@ -40,11 +40,17 @@ const Footer = () => {
                 {t('footer.description')}
               </p>
               <div className="social-links">
-                <a href="#" className="social-link" aria-label="Facebook">
-                  <img src="/assets/Facebook.svg" alt="Facebook" />
+                <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+                  <img src="/assets/linkedin.png" alt="LinkedIn" onError={(e) => {e.target.style.display = 'none'}} />
                 </a>
-                <a href="#" className="social-link" aria-label="WhatsApp">
-                  <img src="/assets/whatapp.svg" alt="WhatsApp" />
+                <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                  <img src="/assets/facebook.png" alt="Facebook" onError={(e) => {e.target.style.display = 'none'}} />
+                </a>
+                <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                  <img src="/assets/whatsapp.png" alt="WhatsApp" onError={(e) => {e.target.style.display = 'none'}} />
+                </a>
+                <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok">
+                  <img src="/assets/tiktok.png" alt="TikTok" onError={(e) => {e.target.style.display = 'none'}} />
                 </a>
               </div>
             </div>
