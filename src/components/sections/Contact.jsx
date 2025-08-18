@@ -234,7 +234,7 @@ const Contact = () => {
               <div className="contact-social">
                 <h4 className="contact-social-title">{t('contact.info.followUs')}</h4>
                 <div className="social-links">
-                  <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/company/advensys-insurance-finance/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                     <img src="/assets/linkedin.png" alt="LinkedIn" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
                   <a href="https://www.facebook.com/share/1AwuTkaKbP/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
@@ -243,7 +243,7 @@ const Contact = () => {
                   <a href="https://wa.me/46725298126?text=Hello%20Advensys%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote." target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                     <img src="/assets/whatsapp.png" alt="WhatsApp" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
-                  <a href="https://www.linkedin.com/company/advensys-international-trading/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok">
+                  <a href="https://www.linkedin.com/company/advensys-insurance-finance/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok">
                     <img src="/assets/tiktok.png" alt="TikTok" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
                 </div>
