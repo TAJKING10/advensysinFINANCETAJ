@@ -83,20 +83,17 @@ const Services = () => {
     }
   ]
 
-  // Filter videos based on country selection for service-related videos
+  // Filter videos based on language selection
   const getFilteredVideos = (videos) => {
-    const country = currentLocationData?.country?.toLowerCase()
+    const { currentLanguage } = useLanguage()
     
-    if (country === 'france') {
-      // Show only French videos for France
+    if (currentLanguage === 'fr') {
+      // Show only French videos when French is selected
       return videos.filter(video => video.id.endsWith('-fr'))
-    } else if (country === 'sweden' || country === 'luxembourg') {
-      // Show only English videos for Sweden and Luxembourg
+    } else {
+      // Show English videos for English and Swedish (or any other language)
       return videos.filter(video => video.id.endsWith('-en'))
     }
-    
-    // Default: show both languages
-    return videos
   }
 
   const mainServices = [
