@@ -192,6 +192,8 @@ const Footer = () => {
               >
                 Legal Information
               </button>
+              <span className="footer-separator">|</span>
+              <span className="orias-auth">Authorization ORIAS/LPS: 21003660</span>
             </div>
           </div>
         </div>
