@@ -378,43 +378,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Additional Financial Education Section */}
-      <section id="additional-education" className="section bg-light">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-title">Additional Financial Education</h2>
-            <p className="section-subtitle">
-              More educational resources to help you make informed financial decisions
-            </p>
-          </div>
-
-          <div className="videos-grid">
-            {financialEducationVideos
-              .filter(video => !mainServices.some(service => 
-                service.relatedVideos && service.relatedVideos.some(relVideo => relVideo.id === video.id)
-              ))
-              .map(video => (
-                <div key={video.id} className="video-item">
-                  <h3 className="video-title">{video.title}</h3>
-                  <div className="video-wrapper">
-                    <div className="youtube-video">
-                      <iframe
-                        src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                        title={video.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="video-player"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="section">
         <div className="container">
