@@ -80,44 +80,44 @@ const About = () => {
       </section>
 
       {/* Leadership Team */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-title">{t('aboutPage.team.title')}</h2>
-            <p className="section-subtitle">
-              {t('aboutPage.team.subtitle')}
-            </p>
-          </div>
+{/*       <section className="section"> */}
+{/*         <div className="container"> */}
+{/*           <div className="section-header text-center"> */}
+{/*             <h2 className="section-title">{t('aboutPage.team.title')}</h2> */}
+{/*             <p className="section-subtitle"> */}
+{/*               {t('aboutPage.team.subtitle')} */}
+{/*             </p> */}
+{/*           </div> */}
 
-          <div className="team-grid">
-            <div className="team-member">
-              <div className="team-photo">
-                <img src="/assets/hero-1.png" alt="John Smith" />
-              </div>
-              <div className="team-info">
-                <h3 className="team-name">{t('aboutPage.team.ceo.name')}</h3>
-                <p className="team-position">{t('aboutPage.team.ceo.position')}</p>
-                <p className="team-bio">
-                  {t('aboutPage.team.ceo.bio')}
-                </p>
-              </div>
-            </div>
+{/*           <div className="team-grid"> */}
+{/*             <div className="team-member"> */}
+{/*               <div className="team-photo"> */}
+{/*                 <img src="/assets/hero-1.png" alt="John Smith" /> */}
+{/*               </div> */}
+{/*               <div className="team-info"> */}
+{/*                 <h3 className="team-name">{t('aboutPage.team.ceo.name')}</h3> */}
+{/*                 <p className="team-position">{t('aboutPage.team.ceo.position')}</p> */}
+{/*                 <p className="team-bio"> */}
+{/*                   {t('aboutPage.team.ceo.bio')} */}
+{/*                 </p> */}
+{/*               </div> */}
+{/*             </div> */}
 
-            <div className="team-member">
-              <div className="team-photo">
-                <img src="/assets/hero-2.png" alt="Sarah Johnson" />
-              </div>
-              <div className="team-info">
-                <h3 className="team-name">{t('aboutPage.team.director.name')}</h3>
-                <p className="team-position">{t('aboutPage.team.director.position')}</p>
-                <p className="team-bio">
-                  {t('aboutPage.team.director.bio')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+{/*             <div className="team-member"> */}
+{/*               <div className="team-photo"> */}
+{/*                 <img src="/assets/hero-2.png" alt="Sarah Johnson" /> */}
+{/*               </div> */}
+{/*               <div className="team-info"> */}
+{/*                 <h3 className="team-name">{t('aboutPage.team.director.name')}</h3> */}
+{/*                 <p className="team-position">{t('aboutPage.team.director.position')}</p> */}
+{/*                 <p className="team-bio"> */}
+{/*                   {t('aboutPage.team.director.bio')} */}
+{/*                 </p> */}
+{/*               </div> */}
+{/*             </div> */}
+{/*           </div> */}
+{/*         </div> */}
+{/*       </section> */}
 
       {/* Licenses and Certifications */}
       <section className="section bg-light">
