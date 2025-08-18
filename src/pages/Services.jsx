@@ -62,13 +62,29 @@ const Services = () => {
     }
   ]
 
+  // Filter videos based on country selection for service-related videos
+  const getFilteredVideos = (videos) => {
+    const country = currentLocationData?.country?.toLowerCase()
+    
+    if (country === 'france') {
+      // Show only French videos for France
+      return videos.filter(video => video.id.endsWith('-fr'))
+    } else if (country === 'sweden' || country === 'luxembourg') {
+      // Show only English videos for Sweden and Luxembourg
+      return videos.filter(video => video.id.endsWith('-en'))
+    }
+    
+    // Default: show both languages
+    return videos
+  }
+
   const mainServices = [
     {
       id: 'insurance',
       title: 'Insurance Services',
       shortDescription: 'Comprehensive insurance solutions tailored to your needs',
       image: '/assets/category-1.png',
-      relatedVideos: [
+      relatedVideos: getFilteredVideos([
         {
           id: 'bpmi-en',
           title: 'Borrower Paid Mortgage Insurance',
@@ -79,7 +95,7 @@ const Services = () => {
           title: 'Assurance Solde Restant Dû',
           youtubeId: '1wGVUPcAtaA'
         }
-      ],
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: 'At Advensys Insurance Finance, we provide comprehensive insurance solutions that protect what matters most to you. Our experienced team works with leading insurance carriers to offer competitive rates and comprehensive coverage.',
         services: [
@@ -103,7 +119,7 @@ const Services = () => {
       title: 'Dedicated Life Insurance',
       shortDescription: 'Specialized life insurance products for financial security',
       image: '/assets/category-2.png',
-      relatedVideos: [
+      relatedVideos: getFilteredVideos([
         {
           id: 'bpmi-en',
           title: 'Borrower Paid Mortgage Insurance',
@@ -114,7 +130,7 @@ const Services = () => {
           title: 'Assurance Solde Restant Dû',
           youtubeId: '1wGVUPcAtaA'
         }
-      ],
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: 'Our dedicated life insurance services focus exclusively on providing comprehensive life insurance solutions that ensure your loved ones are financially protected when they need it most.',
         services: [
@@ -138,7 +154,7 @@ const Services = () => {
       title: 'Investment Adviser',
       shortDescription: 'Professional investment advisory for wealth building',
       image: '/assets/category-3.png',
-      relatedVideos: [
+      relatedVideos: getFilteredVideos([
         {
           id: 'welcome-en',
           title: 'Welcome to Advensys In-Finance',
@@ -149,7 +165,7 @@ const Services = () => {
           title: 'Bonjour et Bienvenue chez Advensys In-Finance',
           youtubeId: 'amwQlWwkaMs'
         }
-      ],
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: 'As registered investment advisers, we provide personalized investment guidance and portfolio management services designed to help you achieve your financial goals through disciplined, research-driven strategies.',
         services: [
@@ -173,7 +189,7 @@ const Services = () => {
       title: 'Broker in Bank',
       shortDescription: 'Banking intermediary services for optimal solutions',
       image: '/assets/category-4.png',
-      relatedVideos: [
+      relatedVideos: getFilteredVideos([
         {
           id: 'mortgage-en',
           title: 'Mortgage Loan',
@@ -183,18 +199,8 @@ const Services = () => {
           id: 'mortgage-fr',
           title: 'Prêt Immobilier',
           youtubeId: 'ohNkwTvkRGU'
-        },
-        {
-          id: 'savings-en',
-          title: 'House Savings Plan',
-          youtubeId: 'UPXZ5q-XFe0'
-        },
-        {
-          id: 'savings-fr',
-          title: 'Épargne Logement',
-          youtubeId: 'cVq9gvJN6IE'
         }
-      ],
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: 'As licensed banking intermediaries, we bridge the gap between you and financial institutions to secure the best banking products and services with optimal terms and conditions.',
         services: [
@@ -218,7 +224,7 @@ const Services = () => {
       title: 'Private Pension Plan',
       shortDescription: 'Luxembourg pension plans with tax advantages',
       image: '/assets/category-5.png',
-      relatedVideos: [
+      relatedVideos: getFilteredVideos([
         {
           id: 'pension-en',
           title: 'Private Pension Plan',
@@ -229,7 +235,7 @@ const Services = () => {
           title: 'Prévoyance Vieillesse',
           youtubeId: '_nxRWgmeFLU'
         }
-      ],
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: 'Luxembourg private pension plans offer unparalleled advantages for retirement planning, combining political stability, robust regulatory framework, and significant tax benefits for optimal retirement security.',
         services: [
