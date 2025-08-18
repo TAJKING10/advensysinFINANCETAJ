@@ -272,12 +272,8 @@ const NewsDetail = () => {
           
           <div className="article-footer">
             <div className="share-section">
-              <h4>Share this article</h4>
-              <div className="share-buttons">
-                <button className="share-btn facebook">Facebook</button>
-                <button className="share-btn twitter">Twitter</button>
-                <button className="share-btn linkedin">LinkedIn</button>
-              </div>
+
+
             </div>
             
             <Link to="/news" className="btn btn-primary">Back to News</Link>
@@ -285,33 +281,33 @@ const NewsDetail = () => {
         </div>
       </section>
 
-      <section className="related-articles">
-        <div className="container">
-          <h3>Related Articles</h3>
-          <div className="related-grid">
-            {newsArticles
-              .filter(relatedArticle => 
-                relatedArticle.id !== article.id && 
-                relatedArticle.category === article.category
-              )
-              .slice(0, 3)
-              .map(relatedArticle => (
-                <div key={relatedArticle.id} className="related-card">
-                  <img src={relatedArticle.image} alt={relatedArticle.title} />
-                  <div className="related-content">
-                    <h4>
-                      <Link to={`/news/${relatedArticle.id}`}>
-                        {relatedArticle.title}
-                      </Link>
-                    </h4>
-                    <p>{relatedArticle.excerpt}</p>
-                    <span className="related-date">{formatDate(relatedArticle.date)}</span>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
-      </section>
+{/*       <section className="related-articles"> */}
+{/*         <div className="container"> */}
+{/*           <h3>Related Articles</h3> */}
+{/*           <div className="related-grid"> */}
+{/*             {newsArticles */}
+{/*               .filter(relatedArticle =>  */}
+{/*                 relatedArticle.id !== article.id &&  */}
+{/*                 relatedArticle.category === article.category */}
+{/*               ) */}
+{/*               .slice(0, 3) */}
+{/*               .map(relatedArticle => ( */}
+{/*                 <div key={relatedArticle.id} className="related-card"> */}
+{/*                   <img src={relatedArticle.image} alt={relatedArticle.title} /> */}
+{/*                   <div className="related-content"> */}
+{/*                     <h4> */}
+{/*                       <Link to={`/news/${relatedArticle.id}`}> */}
+{/*                         {relatedArticle.title} */}
+{/*                       </Link> */}
+{/*                     </h4> */}
+{/*                     <p>{relatedArticle.excerpt}</p> */}
+{/*                     <span className="related-date">{formatDate(relatedArticle.date)}</span> */}
+{/*                   </div> */}
+{/*                 </div> */}
+{/*               ))} */}
+{/*           </div> */}
+{/*         </div> */}
+{/*       </section> */}
     </div>
   )
 }
