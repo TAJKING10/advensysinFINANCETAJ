@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useLocation } from '../contexts/LocationContext'
 import './Services.css'
@@ -7,7 +7,28 @@ import './Services.css'
 const Services = () => {
   const { t } = useLanguage()
   const { currentLocationData } = useLocation()
+  const [searchParams] = useSearchParams()
   const [expandedServices, setExpandedServices] = useState(new Set())
+
+  // Auto-expand service if specified in URL parameters
+  useEffect(() => {
+    const serviceId = searchParams.get('service')
+    if (serviceId) {
+      setExpandedServices(prev => {
+        const newSet = new Set(prev)
+        newSet.add(serviceId)
+        return newSet
+      })
+      
+      // Scroll to the service after a short delay
+      setTimeout(() => {
+        const element = document.getElementById(`service-${serviceId}`)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+  }, [searchParams])
 
   const financialEducationVideos = [
     {
@@ -294,7 +315,7 @@ const Services = () => {
 
           <div className="services-list">
             {mainServices.map(service => (
-              <div key={service.id} className={`service-item ${expandedServices.has(service.id) ? 'expanded' : ''}`}>
+              <div key={service.id} id={`service-${service.id}`} className={`service-item ${expandedServices.has(service.id) ? 'expanded' : ''}`}>
                 <div className="service-summary" onClick={() => toggleService(service.id)}>
                   <div className="service-image">
                     <img src={service.image} alt={service.title} />
