@@ -180,9 +180,7 @@ const Footer = () => {
               {t('footer.copyright')}
             </p>
             <div className="footer-bottom-links">
-              <a href="#" className="footer-bottom-link">{t('footer.quickLinks.privacy')}</a>
-              <span className="footer-separator">|</span>
-              <a href="#" className="footer-bottom-link">{t('footer.quickLinks.terms')}</a>
+              <Link to="/legal" className="footer-bottom-link">Legal Information</Link>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import News from './pages/News'
 import NewsDetail from './pages/NewsDetail'
+import Legal from './components/pages/Legal'
 import './styles/App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/news" element={<News />} />
               <Route path="/news/:id" element={<NewsDetail />} />
+              <Route path="/legal" element={<Legal />} />
             </Routes>
           </main>
           <Footer />
