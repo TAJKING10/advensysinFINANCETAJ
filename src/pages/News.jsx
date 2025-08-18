@@ -11,72 +11,73 @@ const News = () => {
     navigate(link)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
   
   const newsArticles = [
     {
       id: 1,
-      title: '2024 Health Insurance Changes You Need to Know',
-      excerpt: 'Important updates to health insurance regulations and what they mean for your coverage options this year.',
+      title: 'Private Pension Plan Benefits for Your Retirement',
+      excerpt: 'Discover how our Luxembourg private pension plans offer tax advantages and regulatory security for your retirement planning.',
       content: 'Full article content would go here...',
-      image: '/assets/news-1.png',
+      image: '/assets/category-5.png',
       date: '2024-01-15',
-      category: 'Health Insurance',
+      category: 'Private Pension Plan',
       readTime: '5 min read',
-      author: 'Dr. Emily Wilson'
+      author: 'Financial Planning Team'
     },
     {
       id: 2,
-      title: 'Top 5 Ways to Lower Your Auto Insurance Premium',
-      excerpt: 'Discover proven strategies to reduce your car insurance costs without sacrificing coverage quality.',
+      title: 'Professional Investment Advisory Services',
+      excerpt: 'Learn about our comprehensive investment advisory services designed to help you build wealth and achieve your financial goals.',
       content: 'Full article content would go here...',
-      image: '/assets/news-2.png',
+      image: '/assets/category-3.png',
       date: '2024-01-10',
-      category: 'Auto Insurance',
+      category: 'Investment Adviser',
       readTime: '4 min read',
-      author: 'Mark Thompson'
+      author: 'Investment Team'
     },
     {
       id: 3,
-      title: 'Life Insurance Planning for Growing Families',
-      excerpt: 'Essential considerations for life insurance when expanding your family and planning for the future.',
+      title: 'Broker in Bank Services: Your Financial Bridge',
+      excerpt: 'Discover how our banking intermediary services help you secure the best banking products and services with optimal terms.',
       content: 'Full article content would go here...',
-      image: '/assets/hero-1.png',
+      image: '/assets/category-4.png',
       date: '2024-01-05',
-      category: 'Life Insurance',
+      category: 'Broker in Bank',
       readTime: '6 min read',
-      author: 'Sarah Davis'
+      author: 'Banking Solutions Team'
     },
     {
       id: 4,
-      title: 'Small Business Insurance: Essential Coverage Guide',
-      excerpt: 'Comprehensive guide to protecting your business with the right insurance coverage options.',
+      title: 'Dedicated Life Insurance: Protecting Your Legacy',
+      excerpt: 'Explore our specialized life insurance products designed to provide comprehensive financial security for your loved ones.',
       content: 'Full article content would go here...',
-      image: '/assets/hero-2.png',
+      image: '/assets/category-2.png',
       date: '2023-12-28',
-      category: 'Business Insurance',
+      category: 'Dedicated Life Insurance',
       readTime: '7 min read',
-      author: 'John Martinez'
+      author: 'Life Insurance Specialists'
     },
     {
       id: 5,
-      title: 'Property Insurance: Protecting Your Most Valuable Assets',
-      excerpt: 'Understanding property insurance coverage options to safeguard your home and belongings from unexpected events.',
+      title: 'Comprehensive Insurance Services for Complete Protection',
+      excerpt: 'Understanding our full range of insurance solutions tailored to protect what matters most to you and your family.',
       content: 'Full article content would go here...',
-      image: '/assets/about-1.png',
+      image: '/assets/category-1.png',
       date: '2023-12-20',
-      category: 'Property Insurance',
+      category: 'Insurance Services',
       readTime: '8 min read',
-      author: 'Lisa Chen'
+      author: 'Insurance Advisory Team'
     }
   ]
 
   const categories = [
-    { key: 'All', label: t('newsPage.categories.all') },
-    { key: 'Health Insurance', label: t('newsPage.categories.health') },
-    { key: 'Auto Insurance', label: t('newsPage.categories.auto') },
-    { key: 'Life Insurance', label: t('newsPage.categories.life') },
-    { key: 'Business Insurance', label: t('newsPage.categories.business') },
-    { key: 'Property Insurance', label: t('newsPage.categories.property') }
+    { key: 'All', label: 'All Services' },
+    { key: 'Private Pension Plan', label: 'Private Pension Plan' },
+    { key: 'Investment Adviser', label: 'Investment Adviser' },
+    { key: 'Broker in Bank', label: 'Broker in Bank' },
+    { key: 'Dedicated Life Insurance', label: 'Dedicated Life Insurance' },
+    { key: 'Insurance Services', label: 'Insurance Services' }
   ]
   const [selectedCategory, setSelectedCategory] = React.useState('All')
 
@@ -119,8 +120,8 @@ const News = () => {
                   <span className="author">{t('newsPage.byAuthor', { author: newsArticles[0].author })}</span>
                   <span className="read-time">{newsArticles[0].readTime}</span>
                 </div>
-                <button onClick={() => handleReadMoreClick(`/news/${newsArticles[0].id}`)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
-                  {t('news.readMore')}
+                <button onClick={() => handleReadMoreClick(`/news/1`)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
+                  Read More
                 </button>
               </div>
               <div className="featured-image">
@@ -175,7 +176,7 @@ const News = () => {
                   <div className="news-footer">
                     <span className="news-author">By {article.author}</span>
                     <button onClick={() => handleReadMoreClick(`/news/${article.id}`)} className="news-read-more" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      {t('common.readMore')}
+                      Read More
                       <img src="/assets/arrow.svg" alt="" />
                     </button>
                   </div>
