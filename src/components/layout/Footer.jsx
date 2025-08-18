@@ -36,6 +36,11 @@ const Footer = () => {
     }, 100)
   }
 
+  const handleLegalClick = () => {
+    navigate('/legal')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const quickLinks = [
     { path: '/', label: t('footer.quickLinks.home') },
     { path: '/about', label: t('footer.quickLinks.about') },
@@ -180,7 +185,13 @@ const Footer = () => {
               {t('footer.copyright')}
             </p>
             <div className="footer-bottom-links">
-              <Link to="/legal" className="footer-bottom-link">Legal Information</Link>
+              <button 
+                onClick={handleLegalClick} 
+                className="footer-bottom-link"
+                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', textDecoration: 'underline' }}
+              >
+                Legal Information
+              </button>
             </div>
           </div>
         </div>
