@@ -14,23 +14,23 @@ const News = () => {
   const newsArticles = [
     {
       id: 1,
-      title: t('news.articles.healthInsurance2024.title'),
-      excerpt: t('news.articles.healthInsurance2024.excerpt'),
-      image: '/assets/news-1.png',
+      title: 'Private Pension Plan Benefits for Your Retirement',
+      excerpt: 'Discover how our Luxembourg private pension plans offer tax advantages and regulatory security for your retirement planning.',
+      image: '/assets/category-5.png',
       date: '2024-01-15',
-      category: t('news.articles.healthInsurance2024.category'),
-      readTime: t('news.articles.healthInsurance2024.readTime'),
-      link: '/news/health-insurance-2024'
+      category: 'Private Pension Plan',
+      readTime: '5 min read',
+      link: '/news/1'
     },
     {
       id: 2,
-      title: t('news.articles.autoInsuranceTips.title'),
-      excerpt: t('news.articles.autoInsuranceTips.excerpt'),
-      image: '/assets/news-2.png',
+      title: 'Professional Investment Advisory Services',
+      excerpt: 'Learn about our comprehensive investment advisory services designed to help you build wealth and achieve your financial goals.',
+      image: '/assets/category-3.png',
       date: '2024-01-10',
-      category: t('news.articles.autoInsuranceTips.category'),
-      readTime: t('news.articles.autoInsuranceTips.readTime'),
-      link: '/news/auto-insurance-tips'
+      category: 'Investment Adviser',
+      readTime: '4 min read',
+      link: '/news/2'
     }
   ]
 
