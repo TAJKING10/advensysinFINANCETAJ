@@ -41,12 +41,16 @@ const Contact = () => {
     {
       icon: '/assets/phone-2.svg',
       title: t('contact.info.phone'),
-      info: ['+33 6 98 21 44 46 (Paris)', '+352 661 11 22 60 (Luxembourg)', '+46 72 529 81 26 (Stockholm)']
+      info: [
+        { text: '+33 6 98 21 44 46 (Paris)', url: 'tel:+33698214446', type: 'phone' },
+        { text: '+352 661 11 22 60 (Luxembourg)', url: 'https://wa.me/352661112260?text=Hello%20Advensys%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.', type: 'whatsapp' },
+        { text: '+46 72 529 81 26 (Stockholm)', url: 'tel:+46725298126', type: 'phone' }
+      ]
     },
     {
       icon: '/assets/email-2.svg',
       title: t('contact.info.email'),
-      info: ['contact@advensys-in-finance.com']
+      info: [{ text: 'contact@advensys-in-finance.com', url: 'mailto:contact@advensys-in-finance.com', type: 'email' }]
     },
     {
       icon: '/assets/site.svg',
@@ -207,21 +211,16 @@ const Contact = () => {
                           {typeof info === 'object' && info.url ? (
                             <a 
                               href={info.url} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
+                              target={info.type === 'whatsapp' ? '_blank' : '_self'}
+                              rel={info.type === 'whatsapp' ? 'noopener noreferrer' : undefined}
                               style={{ color: 'inherit', textDecoration: 'underline' }}
                             >
                               {info.text}
                             </a>
-                          ) : item.title === t('contact.info.email') ? (
-                            <a 
-                              href={`mailto:${info}`}
-                              style={{ color: 'inherit', textDecoration: 'none' }}
-                            >
-                              {info}
-                            </a>
                           ) : (
-                            info
+                            <span style={{ textDecoration: 'underline' }}>
+                              {typeof info === 'object' ? info.text : info}
+                            </span>
                           )}
                         </p>
                       ))}
