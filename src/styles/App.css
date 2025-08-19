@@ -50,6 +50,154 @@ main {
   }
 }
 
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  .App {
+    padding-top: 60px; /* Account for fixed header */
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  main {
+    padding: 0;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all sections have proper mobile padding */
+  .section {
+    padding: 30px 0;
+    width: 100%;
+  }
+  
+  .container {
+    padding: 0 16px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Page headers mobile styling */
+  .page-header {
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+  }
+  
+  .page-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  
+  /* Button improvements for mobile */
+  .btn {
+    min-height: 48px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-lg {
+    min-height: 52px;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  /* Fix any layout issues */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Ensure text doesn't overflow */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding-top: 56px;
+  }
+  
+  .container {
+    padding: 0 12px;
+  }
+  
+  .section {
+    padding: 24px 0;
+  }
+  
+  .page-header {
+    padding: 24px 0;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  /* Larger touch targets for touch devices */
+  .btn,
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .btn:hover,
+  button:hover {
+    transform: none;
+  }
+  
+  /* Better form control sizing for touch */
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
 /* Accessibility improvements */
 .sr-only {
   position: absolute;

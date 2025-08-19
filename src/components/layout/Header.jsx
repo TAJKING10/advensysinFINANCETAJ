@@ -339,6 +339,19 @@ const Header = () => {
               </div>
             </li>
 
+            {/* Mobile phone number */}
+            {currentLocationData?.phone && (
+              <li className="mnav__item mnav__phone">
+                <a href={`tel:${currentLocationData.phone.replace(/\s/g, '')}`} className="mnav__phone-link">
+                  <HiPhone />
+                  <div className="mnav__phone-info">
+                    <span className="mnav__phone-label">Call Us</span>
+                    <span className="mnav__phone-number">{currentLocationData.phone}</span>
+                  </div>
+                </a>
+              </li>
+            )}
+
             <li className="mnav__item">
               <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false); }} className="btn btn--primary mnav__cta" style={{ border: 'none', cursor: 'pointer' }}>
                 <FaQuoteLeft />
