@@ -14,19 +14,25 @@ const Services = () => {
   useEffect(() => {
     const serviceId = searchParams.get('service')
     if (serviceId) {
+      // First expand the service
       setExpandedServices(prev => {
         const newSet = new Set(prev)
         newSet.add(serviceId)
         return newSet
       })
       
-      // Scroll to the service after a short delay
+      // Then scroll to the service after allowing time for DOM update
       setTimeout(() => {
         const element = document.getElementById(`service-${serviceId}`)
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          // Scroll with more padding from top for better visibility
+          element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'nearest'
+          })
         }
-      }, 100)
+      }, 300)
     }
   }, [searchParams])
 

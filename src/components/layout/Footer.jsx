@@ -17,23 +17,17 @@ const Footer = () => {
 
   const handleServiceClick = (service) => {
     const serviceMap = {
-      'Auto Insurance': 'auto',
-      'Health Insurance': 'health', 
-      'Life Insurance': 'life',
-      'Business Insurance': 'business',
-      'Property Insurance': 'property',
-      'Financial Planning': 'financial'
+      'Insurance Services': 'insurance',
+      'Dedicated Life Insurance': 'dedicated-life-insurance',
+      'Investment Adviser': 'investment-adviser',
+      'Broker in Bank': 'broker-in-bank',
+      'Private Pension Plan': 'private-pension-plan'
     }
     const serviceId = serviceMap[service]
-    navigate('/services')
-    
-    // Scroll to specific service section after navigation
-    setTimeout(() => {
-      const element = document.getElementById(serviceId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }, 100)
+    if (serviceId) {
+      // Navigate to services page with service parameter
+      navigate(`/services?service=${serviceId}`)
+    }
   }
 
   const handleLegalClick = () => {
@@ -50,12 +44,11 @@ const Footer = () => {
   ]
 
   const services = [
-    'Auto Insurance',
-    'Health Insurance',
-    'Life Insurance',
-    'Business Insurance',
-    'Property Insurance',
-    'Financial Planning'
+    'Insurance Services',
+    'Dedicated Life Insurance',
+    'Investment Adviser',
+    'Broker in Bank',
+    'Private Pension Plan'
   ]
 
   return (
