@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useLanguage } from '../../contexts/LanguageContext'
 import { useLocation } from '../../contexts/LocationContext'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 const Contact = () => {
@@ -11,23 +12,64 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
 
+  // Initialize EmailJS
+  React.useEffect(() => {
+    try {
+      emailjs.init('UIyCerW0Z_0KhzuE4')
+      console.log('EmailJS initialized successfully')
+    } catch (error) {
+      console.error('EmailJS initialization failed:', error)
+    }
+  }, [])
+
   const onSubmit = async (data) => {
     setIsSubmitting(true)
+    setSubmitMessage('')
     
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      console.log('Form data:', data)
-      setSubmitMessage(t('contact.form.success'))
+      console.log('Submitting form with data:', data)
+      
+      // EmailJS configuration with your correct credentials
+      const serviceId = 'service_f0zpdwx'
+      const templateId = 'template_bwldyv1'
+      
+      // Prepare template parameters
+      const templateParams = {
+        to_name: 'Advensys Team',
+        from_name: `${data.firstName} ${data.lastName}`,
+        from_email: data.email,
+        phone: data.phone || 'Not provided',
+        service: data.service || 'Not specified',
+        message: data.message,
+        reply_to: data.email
+      }
+      
+      console.log('Sending email with params:', templateParams)
+      
+      // Send email using EmailJS
+      const response = await emailjs.send(serviceId, templateId, templateParams)
+      
+      console.log('EmailJS Response:', response)
+      
+      setSubmitMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.')
       reset()
     } catch (error) {
-      setSubmitMessage(t('contact.form.error'))
+      console.error('EmailJS Error Details:', error)
+      let errorMessage = 'Sorry, there was an error sending your message. Please try again.'
+      
+      if (error.text) {
+        errorMessage += ` Error: ${error.text}`
+      } else if (error.message) {
+        errorMessage += ` Error: ${error.message}`
+      }
+      
+      setSubmitMessage(errorMessage)
     }
     
     setIsSubmitting(false)
     
-    // Clear message after 5 seconds
-    setTimeout(() => setSubmitMessage(''), 5000)
+    // Clear message after 8 seconds
+    setTimeout(() => setSubmitMessage(''), 8000)
   }
 
   const handleMapClick = () => {
