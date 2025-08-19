@@ -101,12 +101,18 @@ const Services = () => {
                 <p className="service-description">{service.description}</p>
                 
                 <ul className="service-features">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="service-feature">
-                      <img src="/assets/strengths-1.svg" alt="" className="feature-icon" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
+                  {service.features.map((feature, index) => {
+                    const [title, description] = feature.split(' - ');
+                    return (
+                      <li key={index} className="service-feature">
+                        <div className="feature-icon"></div>
+                        <div className="feature-text">
+                          <span className="feature-title">{title}</span>
+                          {description && <span className="feature-description"> — {description}</span>}
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
                 
                 <div className="service-actions">
