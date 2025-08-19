@@ -194,12 +194,13 @@ const Contact = () => {
                 <label htmlFor="service" className="form-label">{t('contact.form.service')}</label>
                 <select id="service" className="form-input" {...register('service')}>
                   <option value="">{t('contact.form.selectService')}</option>
-                  <option value="auto">{t('services.items.autoInsurance.title')}</option>
-                  <option value="health">{t('services.items.healthInsurance.title')}</option>
-                  <option value="life">{t('services.items.lifeInsurance.title')}</option>
-                  <option value="business">{t('services.items.businessInsurance.title')}</option>
-                  <option value="property">{t('services.items.propertyInsurance.title')}</option>
-                  <option value="financial">{t('services.items.financialPlanning.title')}</option>
+                  <option value="life">Life Insurance</option>
+                  <option value="dedicatedLife">Dedicated Life Insurance</option>
+                  <option value="privatePension">Private Pension Plan</option>
+                  <option value="brokerInBank">Broker in Bank Services</option>
+                  <option value="investmentAdviser">Investment Adviser</option>
+                  <option value="financialPlanning">Financial Planning</option>
+                  <option value="generalInsurance">General Insurance Services</option>
                 </select>
               </div>
 
