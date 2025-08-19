@@ -217,6 +217,23 @@ const Contact = () => {
                 )}
               </div>
 
+              <div className="form-group">
+                <div className="robot-verification">
+                  <label className="robot-checkbox">
+                    <input
+                      type="checkbox"
+                      id="robotVerification"
+                      {...register('robotVerification', { required: 'Please verify that you are not a robot' })}
+                      className={errors.robotVerification ? 'error' : ''}
+                    />
+                    <span className="robot-text">I'm not a robot</span>
+                  </label>
+                  {errors.robotVerification && (
+                    <span className="error-message">{errors.robotVerification.message}</span>
+                  )}
+                </div>
+              </div>
+
               <button
                 type="submit"
                 className="btn btn-primary btn-lg form-submit"
