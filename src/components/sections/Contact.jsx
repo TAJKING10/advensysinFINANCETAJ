@@ -30,7 +30,7 @@ const Contact = () => {
       console.log('Submitting form with data:', data)
       
       // EmailJS configuration with your correct credentials
-      const serviceId = 'service_f0zpdwx'
+      const serviceId = 'service_5cdb6bg'
       const templateId = 'template_bwldyv1'
       
       // Prepare template parameters
