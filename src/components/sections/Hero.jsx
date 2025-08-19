@@ -159,7 +159,7 @@ const Hero = () => {
             <span className="stat-label">{t('hero.stats.clients')}</span>
           </div>
           <div className="hero-stat">
-            <span className="stat-number">15+</span>
+            <span className="stat-number">18+</span>
             <span className="stat-label">{t('hero.stats.experience')}</span>
           </div>
           <div className="hero-stat">

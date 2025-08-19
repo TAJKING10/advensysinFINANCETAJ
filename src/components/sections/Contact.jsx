@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { useLocation } from '../../contexts/LocationContext'
 import './Contact.css'
 
 const Contact = () => {
   const { t } = useLanguage()
+  const { currentLocationData } = useLocation()
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
@@ -26,6 +28,12 @@ const Contact = () => {
     
     // Clear message after 5 seconds
     setTimeout(() => setSubmitMessage(''), 5000)
+  }
+
+  const handleMapClick = () => {
+    if (currentLocationData?.mapsUrl) {
+      window.open(currentLocationData.mapsUrl, '_blank', 'noopener,noreferrer')
+    }
   }
 
   const contactInfo = [
@@ -247,8 +255,14 @@ const Contact = () => {
             </div>
 
             {/* Map */}
-            <div className="contact-map">
-              <img src="/assets/map.png" alt="Our Location" />
+            <div className="contact-map" onClick={handleMapClick} style={{ cursor: 'pointer' }}>
+              <img src="/assets/map.png" alt="Our Location - Click to open in Google Maps" />
+              <div className="map-overlay">
+                <div className="map-click-hint">
+                  <img src="/assets/geo.svg" alt="Location" style={{ width: '24px', height: '24px', filter: 'brightness(0) invert(1)' }} />
+                  <span>Click to open in Google Maps</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

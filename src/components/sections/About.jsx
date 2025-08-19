@@ -10,7 +10,7 @@ const About = () => {
   const achievements = [
     {
       icon: '/assets/strengths-1.svg',
-      number: '15+',
+      number: '18+',
       title: t('about.achievements.experience.title'),
       description: t('about.achievements.experience.description')
     },
@@ -106,7 +106,7 @@ const About = () => {
               <img src="/assets/about-3.png" alt="Meeting" className="about-img-3" />
             </div>
             <div className="experience-badge">
-              <span className="experience-number">15+</span>
+              <span className="experience-number">18+</span>
               <span className="experience-text">{t('about.experienceBadge')}</span>
             </div>
           </div>
