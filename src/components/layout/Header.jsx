@@ -120,11 +120,16 @@ const Header = () => {
             {isMenuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
           </button>
 
-          {/* Company Title */}
-          <div className="hdr__title">
-            <button onClick={() => handleNavClick("/")} className="hdr__titleBtn" aria-label="Advensys Home">
-              Advensys
+          {/* Logo + Company Title */}
+          <div className="hdr__brand">
+            <button onClick={() => handleNavClick("/")} className="hdr__logoLink" aria-label="Advensys Home" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+              <img src="/assets/logo.svg" alt="Advensys In-Finance" className="hdr__logo" />
             </button>
+            <div className="hdr__title">
+              <button onClick={() => handleNavClick("/")} className="hdr__titleBtn" aria-label="Advensys Home">
+                Advensys
+              </button>
+            </div>
           </div>
 
           {/* Desktop nav - Hidden on mobile */}
