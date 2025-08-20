@@ -108,12 +108,26 @@ const Header = () => {
     <header className={`hdr ${isScrolled ? "hdr--scrolled" : ""}`}>
       <div className="hdr__container">
         <div className="hdr__row">
-          {/* Logo */}
-          <button onClick={() => handleNavClick("/")} className="hdr__logoLink" aria-label="Advensys Home" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-            <img src="/assets/logo.svg" alt="Advensys In-Finance" className="hdr__logo" />
+          {/* Mobile hamburger menu - Left side */}
+          <button
+            type="button"
+            className="hdr__burger"
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav"
+            onClick={() => { setIsMenuOpen(v => !v); setLangOpen(false); setLocOpen(false); }}
+          >
+            {isMenuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
           </button>
 
-          {/* Desktop nav */}
+          {/* Company Title */}
+          <div className="hdr__title">
+            <button onClick={() => handleNavClick("/")} className="hdr__titleBtn" aria-label="Advensys Home">
+              Advensys
+            </button>
+          </div>
+
+          {/* Desktop nav - Hidden on mobile */}
           <nav className="nav" aria-label="Main">
             <div className="nav__capsule" role="tablist" aria-orientation="horizontal">
               <ul className="nav__list">
@@ -138,7 +152,7 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Actions */}
+          {/* Actions - Right side */}
           <div className="hdr__actions">
             {/* Language switcher - Only language codes + names */}
             <div className="dropdown" ref={langRef}>
@@ -248,22 +262,10 @@ const Header = () => {
               </a>
             )}
 
-            {/* CTA */}
+            {/* CTA - Hidden on mobile */}
             <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn--primary hdr__cta" style={{ border: 'none', cursor: 'pointer' }}>
               <FaQuoteLeft />
               <span>{t("common.getQuote")}</span>
-            </button>
-
-            {/* Mobile toggle */}
-            <button
-              type="button"
-              className="hdr__burger"
-              aria-label="Toggle mobile menu"
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-nav"
-              onClick={() => { setIsMenuOpen(v => !v); setLangOpen(false); setLocOpen(false); }}
-            >
-              {isMenuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
             </button>
           </div>
         </div>
