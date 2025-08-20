@@ -349,11 +349,11 @@
 
 /* ======= Responsive ======= */
 @media (min-width: 769px) {
-  /* Desktop: Hide hamburger, show desktop nav and full brand */
+  /* Desktop: Hide hamburger and title, show desktop nav and logo only */
   .hdr__burger{ display:none; }
   .nav{ display:flex; }
   .hdr__brand{ flex:0 0 auto; }
-  .hdr__title{ display:flex; }
+  .hdr__title{ display:none; }
   .hdr__phone{ display:flex; }
   .hdr__cta{ display:inline-flex; }
 }
