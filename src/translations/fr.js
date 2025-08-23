@@ -76,14 +76,125 @@ export default {
 
   // Services Section
   services: {
-    title: 'Nos Services d\'Assurance',
-    subtitle: 'Solutions d\'assurance complètes adaptées pour protéger ce qui compte le plus pour vous',
-    description: 'Nous offrons une large gamme de services d\'assurance et financiers pour protéger ce qui compte le plus pour vous.',
+    title: 'Nos Services Financiers',
+    subtitle: 'Solutions financières complètes adaptées pour protéger et développer votre patrimoine',
+    description: 'Nous offrons une gamme complète de services financiers et d\'assurance pour sécuriser votre avenir.',
+    mainServicesTitle: 'Nos Services Principaux',
+    mainServicesSubtitle: 'Services financiers professionnels conçus pour répondre à vos besoins spécifiques',
+    pageTitle: 'Nos Services',
+    pageSubtitle: 'Solutions financières complètes et ressources éducatives pour votre réussite financière',
+    overview: 'Aperçu',
+    educationalVideos: 'Vidéos Éducatives',
+    ourServicesInclude: 'Nos Services Comprennent :',
+    keyBenefits: 'Avantages Clés :',
+    readyToStart: 'Prêt à Commencer ?',
+    showLess: 'Voir Moins',
+    learnMore: 'En Savoir Plus',
+    contactToday: 'Contactez-nous aujourd\'hui',
+    getQuote: 'Obtenir un Devis',
+    callNow: 'Appeler Maintenant',
     cta: {
-      title: 'Besoin d\'Aide pour Choisir la Bonne Couverture ?',
-      description: 'Nos experts en assurance sont là pour vous aider à trouver la couverture parfaite pour vos besoins et votre budget.',
+      title: 'Besoin d\'Aide pour Choisir la Bonne Solution ?',
+      description: 'Nos experts financiers sont là pour vous aider à trouver la solution parfaite pour vos besoins et votre budget.',
       button: 'Consultation Gratuite',
       phone: 'Appelez :'
+    },
+    mainServices: {
+      insurance: {
+        title: 'Services d\'Assurance',
+        shortDescription: 'Solutions d\'assurance complètes adaptées à vos besoins',
+        overview: 'Chez Advensys Insurance Finance, nous fournissons des solutions d\'assurance complètes qui protègent ce qui compte le plus pour vous. Notre équipe expérimentée travaille avec les principales compagnies d\'assurance pour offrir des tarifs compétitifs et une couverture complète.',
+        services: [
+          'Assurance Vie - Options temporaires, entières, universelles et variables',
+          'Assurance Santé - Plans individuels, familiaux et de groupe',
+          'Assurance Propriété - Propriétaires, locataires et biens commerciaux',
+          'Assurance Entreprise - Responsabilité, compensation des travailleurs et protection cyber',
+          'Assurance Auto - Protection complète et couverture des véhicules'
+        ],
+        benefits: [
+          'Conseils d\'experts de professionnels d\'assurance agréés',
+          'Tarifs compétitifs de multiples compagnies d\'assurance',
+          'Support complet pour les réclamations et plaidoyer',
+          'Révisions et mises à jour régulières des polices',
+          'Recommandations de couverture personnalisées'
+        ]
+      },
+      dedicatedLifeInsurance: {
+        title: 'Assurance Vie Dédiée',
+        shortDescription: 'Produits d\'assurance vie spécialisés pour la sécurité financière',
+        overview: 'Nos services d\'assurance vie dédiés se concentrent exclusivement sur la fourniture de solutions d\'assurance vie complètes qui garantissent que vos proches sont financièrement protégés quand ils en ont le plus besoin.',
+        services: [
+          'Assurance Vie Temporaire - Options de 10, 20 ou 30 ans avec primes nivelées',
+          'Assurance Vie Entière - Couverture à vie avec accumulation de valeur de rachat',
+          'Assurance Vie Universelle - Primes flexibles et prestations de décès ajustables',
+          'Assurance Vie Variable - Croissance de la valeur de rachat liée aux investissements',
+          'Assurance Vie de Groupe - Plans d\'assurance vie parrainés par l\'employeur'
+        ],
+        benefits: [
+          'Expertise spécialisée dans les produits d\'assurance vie',
+          'Analyse personnalisée des besoins et recommandations de couverture',
+          'Fonctionnalités avancées comme les prestations de vie et planification successorale',
+          'Stratégies de création de richesse avec avantages fiscaux',
+          'Gestion et support continus des polices'
+        ]
+      },
+      investmentAdviser: {
+        title: 'Conseiller en Investissement',
+        shortDescription: 'Conseil professionnel en investissement pour la création de patrimoine',
+        overview: 'En tant que conseillers en investissement agréés, nous fournissons des conseils d\'investissement personnalisés et des services de gestion de portefeuille conçus pour vous aider à atteindre vos objectifs financiers grâce à des stratégies disciplinées et basées sur la recherche.',
+        services: [
+          'Gestion de Portefeuille - Portefeuilles d\'investissement personnalisés et allocation d\'actifs',
+          'Planification d\'Investissement - Stratégies basées sur les objectifs et planification de retraite',
+          'Recherche et Analyse - Recherche de marché et diligence raisonnable d\'investissement',
+          'Gestion de Patrimoine - Services pour fortunés et institutionnels',
+          'Investissement Fiscalement Efficace - Stratégies pour minimiser l\'impact fiscal'
+        ],
+        benefits: [
+          'Standard fiduciaire - nous agissons dans votre meilleur intérêt',
+          'Approche personnalisée adaptée à vos objectifs',
+          'Structure de frais transparente sans coûts cachés',
+          'Surveillance continue du portefeuille et ajustements',
+          'Focus à long terme avec approche d\'investissement disciplinée'
+        ]
+      },
+      brokerInBank: {
+        title: 'Courtier en Banque',
+        shortDescription: 'Services d\'intermédiation bancaire pour des solutions optimales',
+        overview: 'En tant qu\'intermédiaires bancaires agréés, nous comblons le fossé entre vous et les institutions financières pour sécuriser les meilleurs produits et services bancaires avec des termes et conditions optimaux.',
+        services: [
+          'Courtage de Prêts - Hypothèques, prêts personnels, commerciaux et d\'entreprise',
+          'Services Bancaires - Banque d\'affaires, solutions internationales, gestion de trésorerie',
+          'Solutions de Crédit - Lignes de crédit, cartes de crédit, prêts sur actifs',
+          'Banque Spécialisée - Banque privée, solutions offshore, comptes multi-devises',
+          'Financement Commercial - Lettres de crédit, financement de factures et affacturage'
+        ],
+        benefits: [
+          'Vaste réseau de partenaires bancaires et d\'institutions',
+          'Négociation des meilleures conditions et taux d\'intérêt compétitifs',
+          'Guidance experte à travers des processus bancaires complexes',
+          'Services de recherche et de comparaison qui font gagner du temps',
+          'Conformité réglementaire et licence professionnelle'
+        ]
+      },
+      privatePensionPlan: {
+        title: 'Plan de Pension Privé',
+        shortDescription: 'Plans de pension luxembourgeois avec avantages fiscaux',
+        overview: 'Les plans de pension privés luxembourgeois offrent des avantages inégalés pour la planification de retraite, combinant stabilité politique, cadre réglementaire robuste et avantages fiscaux significatifs pour une sécurité de retraite optimale.',
+        services: [
+          'Plans SEPCAV - Fonds d\'investissement spécialisés avec flexibilité maximale',
+          'Pension d\'Assurance Vie Luxembourg - Protection retraite et vie combinée',
+          'Régimes de Pension d\'Entreprise - Plans parrainés par l\'employeur avec avantages fiscaux',
+          'Planification Internationale de Pension - Solutions transfrontalières et expatriés',
+          'Optimisation de Pension - Stratégies de retraite fiscalement efficaces'
+        ],
+        benefits: [
+          'Avantages fiscaux luxembourgeois et sécurité réglementaire',
+          'Portabilité de pension à l\'échelle de l\'UE et mobilité internationale',
+          'Flexibilité d\'investissement avec options multi-devises',
+          'Protection forte des créanciers et ségrégation des actifs',
+          'Gestion professionnelle et accès institutionnel'
+        ]
+      }
     },
     items: {
       autoInsurance: {
@@ -202,24 +313,71 @@ export default {
   news: {
     title: 'Dernières Actualités',
     subtitle: 'Restez Informé',
-    description: 'Tenez-vous au courant des dernières nouvelles et perspectives de l\'industrie de l\'assurance.',
-    readMore: 'Lire l\'Article Complet',
+    description: 'Tenez-vous au courant des dernières nouvelles et perspectives de l\'industrie financière.',
+    readMore: 'Lire Plus',
+    readFullArticle: 'Lire l\'Article Complet',
     publishedOn: 'Publié le',
     category: 'Catégorie',
     author: 'Auteur',
+    byAuthor: 'Par {{author}}',
     readTime: '{{minutes}} min de lecture',
+    backToNews: 'Retour aux Actualités',
+    viewAllNews: 'Voir Toutes les Actualités',
+    articleNotFound: 'Article Non Trouvé',
+    articleNotFoundText: 'L\'article que vous recherchez n\'existe pas.',
+    noArticlesInCategory: 'Aucun article trouvé dans cette catégorie.',
+    home: 'Accueil',
+    newsTitle: 'Actualités',
+    shareArticle: 'Partager l\'Article',
+    relatedArticles: 'Articles Connexes',
+    categories: {
+      all: 'Tous les Services',
+      privatePension: 'Plan de Pension Privé',
+      investment: 'Conseiller en Investissement',
+      banking: 'Courtier en Banque',
+      lifeInsurance: 'Assurance Vie Dédiée',
+      insurance: 'Services d\'Assurance'
+    },
     articles: {
-      healthInsurance2024: {
-        title: 'Comprendre les Changements d\'Assurance Santé pour 2024',
-        excerpt: 'Mises à jour importantes des polices d\'assurance santé qui pourraient affecter votre couverture et vos primes.',
-        category: 'Assurance Santé',
-        readTime: '5 min de lecture'
+      privatePension: {
+        title: 'Avantages du Plan de Pension Privé pour Votre Retraite',
+        excerpt: 'Découvrez comment nos plans de pension privés luxembourgeois offrent des avantages fiscaux et une sécurité réglementaire pour votre planification de retraite.',
+        category: 'Plan de Pension Privé',
+        readTime: '5 min de lecture',
+        author: 'Équipe de Planification Financière',
+        authorBio: 'Notre équipe de planification financière se spécialise dans les solutions de pension luxembourgeoises et la planification de retraite internationale.'
       },
-      autoInsuranceTips: {
-        title: 'Top 5 des Conseils pour Choisir la Bonne Assurance Auto',
-        excerpt: 'Conseils d\'experts pour sélectionner une assurance auto qui offre le meilleur rapport qualité-prix et protection.',
-        category: 'Assurance Auto',
-        readTime: '4 min de lecture'
+      investment: {
+        title: 'Services Professionnels de Conseil en Investissement',
+        excerpt: 'Apprenez-en davantage sur nos services complets de conseil en investissement conçus pour vous aider à créer de la richesse et atteindre vos objectifs financiers.',
+        category: 'Conseiller en Investissement',
+        readTime: '4 min de lecture',
+        author: 'Équipe d\'Investissement',
+        authorBio: 'Notre équipe de conseil en investissement est composée de professionnels expérimentés avec une expertise en gestion de portefeuille et planification financière.'
+      },
+      banking: {
+        title: 'Services Courtier en Banque : Votre Pont Financier',
+        excerpt: 'Découvrez comment nos services d\'intermédiaire bancaire vous aident à sécuriser les meilleurs produits et services bancaires avec des conditions optimales.',
+        category: 'Courtier en Banque',
+        readTime: '6 min de lecture',
+        author: 'Équipe Solutions Bancaires',
+        authorBio: 'Notre équipe de solutions bancaires est composée d\'intermédiaires bancaires agréés avec une vaste expérience dans les services financiers.'
+      },
+      lifeInsurance: {
+        title: 'Assurance Vie Dédiée : Protéger Votre Héritage',
+        excerpt: 'Explorez nos produits d\'assurance vie spécialisés conçus pour fournir une sécurité financière complète à vos proches.',
+        category: 'Assurance Vie Dédiée',
+        readTime: '7 min de lecture',
+        author: 'Spécialistes en Assurance Vie',
+        authorBio: 'Nos spécialistes en assurance vie ont une vaste expérience dans tous les types de produits d\'assurance vie et les stratégies de planification successorale.'
+      },
+      insurance: {
+        title: 'Services d\'Assurance Complets pour une Protection Complète',
+        excerpt: 'Comprendre notre gamme complète de solutions d\'assurance adaptées pour protéger ce qui compte le plus pour vous et votre famille.',
+        category: 'Services d\'Assurance',
+        readTime: '8 min de lecture',
+        author: 'Équipe Conseil en Assurance',
+        authorBio: 'Notre équipe de conseil en assurance est composée de professionnels agréés avec une expertise dans toutes les principales catégories d\'assurance.'
       }
     }
   },
@@ -498,16 +656,16 @@ export default {
 
   // News Page
   newsPage: {
-    title: 'Actualités et Perspectives sur l\'Assurance',
+    title: 'Actualités et Perspectives Financières',
     subtitle: 'Restez Informé avec les Dernières Mises à Jour de l\'Industrie',
-    description: 'Tenez-vous au courant des derniers développements de l\'industrie de l\'assurance, des conseils d\'experts et des nouvelles de l\'entreprise.',
+    description: 'Tenez-vous au courant des derniers développements de l\'industrie financière, des conseils d\'experts et des nouvelles de l\'entreprise.',
     categories: {
-      all: 'Toutes les Actualités',
-      health: 'Assurance Santé',
-      auto: 'Assurance Auto',
-      life: 'Assurance Vie',
-      business: 'Assurance Entreprise',
-      property: 'Assurance Propriété'
+      all: 'Tous les Services',
+      privatePension: 'Plan de Pension Privé',
+      investment: 'Conseiller en Investissement',
+      banking: 'Courtier en Banque',
+      lifeInsurance: 'Assurance Vie Dédiée',
+      insurance: 'Services d\'Assurance'
     },
     filterByCategory: 'Filtrer par Catégorie',
     readTime: '{{minutes}} min de lecture',
@@ -517,31 +675,9 @@ export default {
     loadMore: 'Charger Plus d\'Articles',
     newsletter: {
       title: 'Restez à Jour',
-      description: 'Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles d\'assurance, conseils et mises à jour directement dans votre boîte de réception.',
+      description: 'Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles financières, conseils et mises à jour directement dans votre boîte de réception.',
       placeholder: 'Entrez votre adresse email',
       subscribe: 'S\'abonner'
-    },
-    articles: {
-      healthChanges: {
-        title: 'Changements 2024 de l\'Assurance Santé que Vous Devez Connaître',
-        excerpt: 'Mises à jour importantes des réglementations sur l\'assurance santé et ce qu\'elles signifient pour vos options de couverture cette année.',
-        author: 'Dr. Emily Wilson'
-      },
-      autoTips: {
-        title: 'Top 5 des Façons de Réduire Votre Prime d\'Assurance Auto',
-        excerpt: 'Découvrez des stratégies éprouvées pour réduire vos coûts d\'assurance auto sans sacrifier la qualité de la couverture.',
-        author: 'Mark Thompson'
-      },
-      lifeFamilies: {
-        title: 'Planification d\'Assurance Vie pour les Familles Grandissantes',
-        excerpt: 'Considérations essentielles pour l\'assurance vie lors de l\'agrandissement de votre famille et la planification de l\'avenir.',
-        author: 'Sarah Davis'
-      },
-      businessTips: {
-        title: 'Assurance Petite Entreprise : Guide de Couverture Essentielle',
-        excerpt: 'Guide complet pour protéger votre petite entreprise avec les bonnes options de couverture d\'assurance.',
-        author: 'James Miller'
-      }
     }
   }
 }

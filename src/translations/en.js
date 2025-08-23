@@ -76,14 +76,125 @@ export default {
 
   // Services Section
   services: {
-    title: 'Our Insurance Services',
-    subtitle: 'Comprehensive insurance solutions tailored to protect what matters most to you',
-    description: 'We offer a wide range of insurance and financial services to protect what matters most to you.',
+    title: 'Our Financial Services',
+    subtitle: 'Comprehensive financial solutions designed to protect and grow your wealth',
+    description: 'We offer a complete range of financial and insurance services to secure your future.',
+    mainServicesTitle: 'Our Main Services',
+    mainServicesSubtitle: 'Professional financial services designed to meet your specific needs',
+    pageTitle: 'Our Services',
+    pageSubtitle: 'Comprehensive financial solutions and educational resources for your financial success',
+    overview: 'Overview',
+    educationalVideos: 'Educational Videos',
+    ourServicesInclude: 'Our Services Include:',
+    keyBenefits: 'Key Benefits:',
+    readyToStart: 'Ready to Get Started?',
+    showLess: 'Show Less',
+    learnMore: 'Learn More',
+    contactToday: 'Contact us today',
+    getQuote: 'Get Quote',
+    callNow: 'Call Now',
     cta: {
-      title: 'Need Help Choosing the Right Coverage?',
-      description: 'Our insurance experts are here to help you find the perfect coverage for your needs and budget.',
+      title: 'Need Help Choosing the Right Solution?',
+      description: 'Our financial experts are here to help you find the perfect solution for your needs and budget.',
       button: 'Get Free Consultation',
       phone: 'Call:'
+    },
+    mainServices: {
+      insurance: {
+        title: 'Insurance Services',
+        shortDescription: 'Comprehensive insurance solutions tailored to your needs',
+        overview: 'At Advensys Insurance Finance, we provide comprehensive insurance solutions that protect what matters most to you. Our experienced team works with leading insurance carriers to offer competitive rates and comprehensive coverage.',
+        services: [
+          'Life Insurance - Term, Whole, Universal, and Variable life options',
+          'Health Insurance - Individual, family, and group health plans',
+          'Property Insurance - Homeowners, renters, and commercial property',
+          'Business Insurance - Liability, workers compensation, and cyber protection',
+          'Auto Insurance - Comprehensive vehicle protection and coverage'
+        ],
+        benefits: [
+          'Expert guidance from licensed insurance professionals',
+          'Competitive rates from multiple insurance carriers',
+          'Comprehensive claims support and advocacy',
+          'Regular policy reviews and updates',
+          'Personalized coverage recommendations'
+        ]
+      },
+      dedicatedLifeInsurance: {
+        title: 'Dedicated Life Insurance',
+        shortDescription: 'Specialized life insurance products for financial security',
+        overview: 'Our dedicated life insurance services focus exclusively on providing comprehensive life insurance solutions that ensure your loved ones are financially protected when they need it most.',
+        services: [
+          'Term Life Insurance - 10, 20, or 30-year term options with level premiums',
+          'Whole Life Insurance - Lifetime coverage with cash value accumulation',
+          'Universal Life Insurance - Flexible premiums and adjustable death benefits',
+          'Variable Life Insurance - Investment-linked cash value growth',
+          'Group Life Insurance - Employer-sponsored life insurance plans'
+        ],
+        benefits: [
+          'Specialized expertise in life insurance products',
+          'Personalized needs analysis and coverage recommendations',
+          'Advanced features like living benefits and estate planning',
+          'Tax-advantaged wealth building strategies',
+          'Ongoing policy management and support'
+        ]
+      },
+      investmentAdviser: {
+        title: 'Investment Adviser',
+        shortDescription: 'Professional investment advisory for wealth building',
+        overview: 'As registered investment advisers, we provide personalized investment guidance and portfolio management services designed to help you achieve your financial goals through disciplined, research-driven strategies.',
+        services: [
+          'Portfolio Management - Customized investment portfolios and asset allocation',
+          'Investment Planning - Goal-based strategies and retirement planning',
+          'Research & Analysis - Market research and investment due diligence',
+          'Wealth Management - High net worth and institutional services',
+          'Tax-Efficient Investing - Strategies to minimize tax impact'
+        ],
+        benefits: [
+          'Fiduciary standard - we act in your best interests',
+          'Personalized approach tailored to your goals',
+          'Transparent fee structure with no hidden costs',
+          'Continuous portfolio monitoring and adjustments',
+          'Long-term focus with disciplined investment approach'
+        ]
+      },
+      brokerInBank: {
+        title: 'Broker in Bank',
+        shortDescription: 'Banking intermediary services for optimal solutions',
+        overview: 'As licensed banking intermediaries, we bridge the gap between you and financial institutions to secure the best banking products and services with optimal terms and conditions.',
+        services: [
+          'Loan Brokerage - Mortgages, personal, business, and commercial lending',
+          'Banking Services - Business banking, international solutions, treasury management',
+          'Credit Solutions - Lines of credit, credit cards, asset-based lending',
+          'Specialized Banking - Private banking, offshore solutions, multi-currency accounts',
+          'Trade Finance - Letters of credit, invoice financing, and factoring'
+        ],
+        benefits: [
+          'Extensive network of banking partners and institutions',
+          'Negotiated best terms and competitive interest rates',
+          'Expert guidance through complex banking processes',
+          'Time-saving research and comparison services',
+          'Regulatory compliance and professional licensing'
+        ]
+      },
+      privatePensionPlan: {
+        title: 'Private Pension Plan',
+        shortDescription: 'Luxembourg pension plans with tax advantages',
+        overview: 'Luxembourg private pension plans offer unparalleled advantages for retirement planning, combining political stability, robust regulatory framework, and significant tax benefits for optimal retirement security.',
+        services: [
+          'SEPCAV Plans - Specialized investment funds with maximum flexibility',
+          'Luxembourg Life Insurance Pension - Combined retirement and life protection',
+          'Corporate Pension Schemes - Employer-sponsored plans with tax advantages',
+          'International Pension Planning - Cross-border and expat solutions',
+          'Pension Optimization - Tax-efficient retirement strategies'
+        ],
+        benefits: [
+          'Luxembourg tax advantages and regulatory security',
+          'EU-wide pension portability and international mobility',
+          'Investment flexibility with multi-currency options',
+          'Strong creditor protection and asset segregation',
+          'Professional management and institutional access'
+        ]
+      }
     },
     items: {
       autoInsurance: {
@@ -202,24 +313,71 @@ export default {
   news: {
     title: 'Latest News',
     subtitle: 'Stay Updated',
-    description: 'Keep up with the latest news and insights from the insurance industry.',
-    readMore: 'Read Full Article',
+    description: 'Keep up with the latest news and insights from the financial industry.',
+    readMore: 'Read More',
+    readFullArticle: 'Read Full Article',
     publishedOn: 'Published on',
     category: 'Category',
     author: 'Author',
+    byAuthor: 'By {{author}}',
     readTime: '{{minutes}} min read',
+    backToNews: 'Back to News',
+    viewAllNews: 'View All News',
+    articleNotFound: 'Article Not Found',
+    articleNotFoundText: 'The article you\'re looking for doesn\'t exist.',
+    noArticlesInCategory: 'No articles found in this category.',
+    home: 'Home',
+    newsTitle: 'News',
+    shareArticle: 'Share Article',
+    relatedArticles: 'Related Articles',
+    categories: {
+      all: 'All Services',
+      privatePension: 'Private Pension Plan',
+      investment: 'Investment Adviser',
+      banking: 'Broker in Bank',
+      lifeInsurance: 'Dedicated Life Insurance',
+      insurance: 'Insurance Services'
+    },
     articles: {
-      healthInsurance2024: {
-        title: 'Understanding Health Insurance Changes for 2024',
-        excerpt: 'Important updates to health insurance policies that could affect your coverage and premiums.',
-        category: 'Health Insurance',
-        readTime: '5 min read'
+      privatePension: {
+        title: 'Private Pension Plan Benefits for Your Retirement',
+        excerpt: 'Discover how our Luxembourg private pension plans offer tax advantages and regulatory security for your retirement planning.',
+        category: 'Private Pension Plan',
+        readTime: '5 min read',
+        author: 'Financial Planning Team',
+        authorBio: 'Our financial planning team specializes in Luxembourg pension solutions and international retirement planning.'
       },
-      autoInsuranceTips: {
-        title: 'Top 5 Tips for Choosing the Right Auto Insurance',
-        excerpt: 'Expert advice on selecting auto insurance that provides the best value and protection.',
-        category: 'Auto Insurance',
-        readTime: '4 min read'
+      investment: {
+        title: 'Professional Investment Advisory Services',
+        excerpt: 'Learn about our comprehensive investment advisory services designed to help you build wealth and achieve your financial goals.',
+        category: 'Investment Adviser',
+        readTime: '4 min read',
+        author: 'Investment Team',
+        authorBio: 'Our investment advisory team consists of experienced professionals with expertise in portfolio management and financial planning.'
+      },
+      banking: {
+        title: 'Broker in Bank Services: Your Financial Bridge',
+        excerpt: 'Discover how our banking intermediary services help you secure the best banking products and services with optimal terms.',
+        category: 'Broker in Bank',
+        readTime: '6 min read',
+        author: 'Banking Solutions Team',
+        authorBio: 'Our banking solutions team consists of licensed banking intermediaries with extensive experience in financial services.'
+      },
+      lifeInsurance: {
+        title: 'Dedicated Life Insurance: Protecting Your Legacy',
+        excerpt: 'Explore our specialized life insurance products designed to provide comprehensive financial security for your loved ones.',
+        category: 'Dedicated Life Insurance',
+        readTime: '7 min read',
+        author: 'Life Insurance Specialists',
+        authorBio: 'Our life insurance specialists have extensive experience in all types of life insurance products and estate planning strategies.'
+      },
+      insurance: {
+        title: 'Comprehensive Insurance Services for Complete Protection',
+        excerpt: 'Understanding our full range of insurance solutions tailored to protect what matters most to you and your family.',
+        category: 'Insurance Services',
+        readTime: '8 min read',
+        author: 'Insurance Advisory Team',
+        authorBio: 'Our insurance advisory team consists of licensed professionals with expertise across all major insurance categories.'
       }
     }
   },
@@ -498,16 +656,16 @@ export default {
 
   // News Page
   newsPage: {
-    title: 'Insurance News & Insights',
+    title: 'Financial News & Insights',
     subtitle: 'Stay Informed with the Latest Industry Updates',
-    description: 'Keep up with the latest developments in the insurance industry, expert tips, and company news.',
+    description: 'Keep up with the latest developments in the financial industry, expert tips, and company news.',
     categories: {
-      all: 'All News',
-      health: 'Health Insurance',
-      auto: 'Auto Insurance', 
-      life: 'Life Insurance',
-      business: 'Business Insurance',
-      property: 'Property Insurance'
+      all: 'All Services',
+      privatePension: 'Private Pension Plan',
+      investment: 'Investment Adviser',
+      banking: 'Broker in Bank',
+      lifeInsurance: 'Dedicated Life Insurance',
+      insurance: 'Insurance Services'
     },
     filterByCategory: 'Filter by Category',
     readTime: '{{minutes}} min read',
@@ -517,31 +675,9 @@ export default {
     loadMore: 'Load More Articles',
     newsletter: {
       title: 'Stay Updated',
-      description: 'Subscribe to our newsletter to receive the latest insurance news, tips, and updates directly in your inbox.',
+      description: 'Subscribe to our newsletter to receive the latest financial news, tips, and updates directly in your inbox.',
       placeholder: 'Enter your email address',
       subscribe: 'Subscribe'
-    },
-    articles: {
-      healthChanges: {
-        title: '2024 Health Insurance Changes You Need to Know',
-        excerpt: 'Important updates to health insurance regulations and what they mean for your coverage options this year.',
-        author: 'Dr. Emily Wilson'
-      },
-      autoTips: {
-        title: 'Top 5 Ways to Lower Your Auto Insurance Premium',
-        excerpt: 'Discover proven strategies to reduce your car insurance costs without sacrificing coverage quality.',
-        author: 'Mark Thompson'
-      },
-      lifeFamilies: {
-        title: 'Life Insurance Planning for Growing Families',
-        excerpt: 'Essential considerations for life insurance when expanding your family and planning for the future.',
-        author: 'Sarah Davis'
-      },
-      businessTips: {
-        title: 'Small Business Insurance: Essential Coverage Guide',
-        excerpt: 'Comprehensive guide to protecting your small business with the right insurance coverage options.',
-        author: 'James Miller'
-      }
     }
   }
 }

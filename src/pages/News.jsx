@@ -16,68 +16,68 @@ const News = () => {
   const newsArticles = [
     {
       id: 1,
-      title: 'Private Pension Plan Benefits for Your Retirement',
-      excerpt: 'Discover how our Luxembourg private pension plans offer tax advantages and regulatory security for your retirement planning.',
+      title: t('news.articles.privatePension.title'),
+      excerpt: t('news.articles.privatePension.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/category-5.png',
       date: '2024-01-15',
-      category: 'Private Pension Plan',
-      readTime: '5 min read',
-      author: 'Financial Planning Team'
+      category: t('news.categories.privatePension'),
+      readTime: t('news.articles.privatePension.readTime'),
+      author: t('news.articles.privatePension.author')
     },
     {
       id: 2,
-      title: 'Professional Investment Advisory Services',
-      excerpt: 'Learn about our comprehensive investment advisory services designed to help you build wealth and achieve your financial goals.',
+      title: t('news.articles.investment.title'),
+      excerpt: t('news.articles.investment.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/category-3.png',
       date: '2024-01-10',
-      category: 'Investment Adviser',
-      readTime: '4 min read',
-      author: 'Investment Team'
+      category: t('news.categories.investment'),
+      readTime: t('news.articles.investment.readTime'),
+      author: t('news.articles.investment.author')
     },
     {
       id: 3,
-      title: 'Broker in Bank Services: Your Financial Bridge',
-      excerpt: 'Discover how our banking intermediary services help you secure the best banking products and services with optimal terms.',
+      title: t('news.articles.banking.title'),
+      excerpt: t('news.articles.banking.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/category-4.png',
       date: '2024-01-05',
-      category: 'Broker in Bank',
-      readTime: '6 min read',
-      author: 'Banking Solutions Team'
+      category: t('news.categories.banking'),
+      readTime: t('news.articles.banking.readTime'),
+      author: t('news.articles.banking.author')
     },
     {
       id: 4,
-      title: 'Dedicated Life Insurance: Protecting Your Legacy',
-      excerpt: 'Explore our specialized life insurance products designed to provide comprehensive financial security for your loved ones.',
+      title: t('news.articles.lifeInsurance.title'),
+      excerpt: t('news.articles.lifeInsurance.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/category-2.png',
       date: '2023-12-28',
-      category: 'Dedicated Life Insurance',
-      readTime: '7 min read',
-      author: 'Life Insurance Specialists'
+      category: t('news.categories.lifeInsurance'),
+      readTime: t('news.articles.lifeInsurance.readTime'),
+      author: t('news.articles.lifeInsurance.author')
     },
     {
       id: 5,
-      title: 'Comprehensive Insurance Services for Complete Protection',
-      excerpt: 'Understanding our full range of insurance solutions tailored to protect what matters most to you and your family.',
+      title: t('news.articles.insurance.title'),
+      excerpt: t('news.articles.insurance.excerpt'),
       content: 'Full article content would go here...',
       image: '/assets/category-1.png',
       date: '2023-12-20',
-      category: 'Insurance Services',
-      readTime: '8 min read',
-      author: 'Insurance Advisory Team'
+      category: t('news.categories.insurance'),
+      readTime: t('news.articles.insurance.readTime'),
+      author: t('news.articles.insurance.author')
     }
   ]
 
   const categories = [
-    { key: 'All', label: 'All Services' },
-    { key: 'Private Pension Plan', label: 'Private Pension Plan' },
-    { key: 'Investment Adviser', label: 'Investment Adviser' },
-    { key: 'Broker in Bank', label: 'Broker in Bank' },
-    { key: 'Dedicated Life Insurance', label: 'Dedicated Life Insurance' },
-    { key: 'Insurance Services', label: 'Insurance Services' }
+    { key: 'All', label: t('news.categories.all') },
+    { key: t('news.categories.privatePension'), label: t('news.categories.privatePension') },
+    { key: t('news.categories.investment'), label: t('news.categories.investment') },
+    { key: t('news.categories.banking'), label: t('news.categories.banking') },
+    { key: t('news.categories.lifeInsurance'), label: t('news.categories.lifeInsurance') },
+    { key: t('news.categories.insurance'), label: t('news.categories.insurance') }
   ]
   const [selectedCategory, setSelectedCategory] = React.useState('All')
 
@@ -121,7 +121,7 @@ const News = () => {
                   <span className="read-time">{newsArticles[0].readTime}</span>
                 </div>
                 <button onClick={() => handleReadMoreClick(`/news/1`)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
-                  Read More
+                  {t('news.readMore')}
                 </button>
               </div>
               <div className="featured-image">
@@ -174,9 +174,9 @@ const News = () => {
                   <p className="news-excerpt">{article.excerpt}</p>
                   
                   <div className="news-footer">
-                    <span className="news-author">By {article.author}</span>
+                    <span className="news-author">{t('news.byAuthor', { author: article.author })}</span>
                     <button onClick={() => handleReadMoreClick(`/news/${article.id}`)} className="news-read-more" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      Read More
+                      {t('news.readMore')}
                       <img src="/assets/arrow.svg" alt="" />
                     </button>
                   </div>
@@ -187,7 +187,7 @@ const News = () => {
 
           {filteredArticles.length === 0 && (
             <div className="no-articles">
-              <p>No articles found in this category.</p>
+              <p>{t('news.noArticlesInCategory')}</p>
             </div>
           )}
         </div>

@@ -14,22 +14,22 @@ const News = () => {
   const newsArticles = [
     {
       id: 1,
-      title: 'Private Pension Plan Benefits for Your Retirement',
-      excerpt: 'Discover how our Luxembourg private pension plans offer tax advantages and regulatory security for your retirement planning.',
+      title: t('news.articles.privatePension.title'),
+      excerpt: t('news.articles.privatePension.excerpt'),
       image: '/assets/category-5.png',
       date: '2024-01-15',
-      category: 'Private Pension Plan',
-      readTime: '5 min read',
+      category: t('news.categories.privatePension'),
+      readTime: t('news.articles.privatePension.readTime'),
       link: '/news/1'
     },
     {
       id: 2,
-      title: 'Professional Investment Advisory Services',
-      excerpt: 'Learn about our comprehensive investment advisory services designed to help you build wealth and achieve your financial goals.',
+      title: t('news.articles.investment.title'),
+      excerpt: t('news.articles.investment.excerpt'),
       image: '/assets/category-3.png',
       date: '2024-01-10',
-      category: 'Investment Adviser',
-      readTime: '4 min read',
+      category: t('news.categories.investment'),
+      readTime: t('news.articles.investment.readTime'),
       link: '/news/2'
     }
   ]
@@ -83,7 +83,7 @@ const News = () => {
         {/* View All Link */}
         <div className="news-actions text-center">
           <button onClick={() => handleReadMoreClick('/news')} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
-            {t('common.readMore')}
+{t('news.viewAllNews')}
           </button>
         </div>
       </div>

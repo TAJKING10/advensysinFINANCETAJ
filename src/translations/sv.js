@@ -76,14 +76,125 @@ export default {
 
   // Services Section
   services: {
-    title: 'Våra Försäkringstjänster',
-    subtitle: 'Omfattande försäkringslösningar skräddarsydda för att skydda det som betyder mest för dig',
-    description: 'Vi erbjuder ett brett utbud av försäkrings- och finansiella tjänster för att skydda det som betyder mest för dig.',
+    title: 'Våra Finansiella Tjänster',
+    subtitle: 'Omfattande finansiella lösningar designade för att skydda och utveckla din förmögenhet',
+    description: 'Vi erbjuder ett komplett utbud av finansiella och försäkringstjänster för att säkra din framtid.',
+    mainServicesTitle: 'Våra Huvudtjänster',
+    mainServicesSubtitle: 'Professionella finansiella tjänster designade för att möta dina specifika behov',
+    pageTitle: 'Våra Tjänster',
+    pageSubtitle: 'Omfattande finansiella lösningar och utbildningsresurser för din finansiella framgång',
+    overview: 'Översikt',
+    educationalVideos: 'Utbildningsvideor',
+    ourServicesInclude: 'Våra Tjänster Inkluderar:',
+    keyBenefits: 'Nyckelförmåner:',
+    readyToStart: 'Redo att Börja?',
+    showLess: 'Visa Mindre',
+    learnMore: 'Läs Mer',
+    contactToday: 'Kontakta oss idag',
+    getQuote: 'Få Offert',
+    callNow: 'Ring Nu',
     cta: {
-      title: 'Behöver Hjälp att Välja Rätt Täckning?',
-      description: 'Våra försäkringsexperter är här för att hjälpa dig hitta den perfekta täckningen för dina behov och budget.',
+      title: 'Behöver Hjälp att Välja Rätt Lösning?',
+      description: 'Våra finansiella experter är här för att hjälpa dig hitta den perfekta lösningen för dina behov och budget.',
       button: 'Gratis Konsultation',
       phone: 'Ring:'
+    },
+    mainServices: {
+      insurance: {
+        title: 'Försäkringstjänster',
+        shortDescription: 'Omfattande försäkringslösningar skräddarsydda för dina behov',
+        overview: 'På Advensys Insurance Finance tillhandahåller vi omfattande försäkringslösningar som skyddar det som betyder mest för dig. Vårt erfarna team arbetar med ledande försäkringsbolag för att erbjuda konkurrenskraftiga priser och omfattande täckning.',
+        services: [
+          'Livförsäkring - Termin, Hel, Universell och Variabel livsalternativ',
+          'Hälsoförsäkring - Individuella, familje- och grupphälsoplaner',
+          'Egendomsförsäkring - Husmägare, hyresgäster och kommersiell egendom',
+          'Företagsförsäkring - Ansvar, arbetsskadeersättning och cyberskydd',
+          'Bilförsäkring - Omfattande fordonsskydd och täckning'
+        ],
+        benefits: [
+          'Expertvbägledning från licensierade försäkringsproffs',
+          'Konkurrenskraftiga priser från flera försäkringsbolag',
+          'Omfattande skadestöd och försvar',
+          'Regelbundna policygenomgångar och uppdateringar',
+          'Personliga täckningsrekommendationer'
+        ]
+      },
+      dedicatedLifeInsurance: {
+        title: 'Dedikerad Livförsäkring',
+        shortDescription: 'Specialiserade livförsäkringsprodukter för finansiell säkerhet',
+        overview: 'Våra dedikerade livförsäkringstjänster fokuserar uteslutande på att tillhandahålla omfattande livförsäkringslösningar som säkerställer att dina nära och kära är finansiellt skyddade när de behöver det mest.',
+        services: [
+          'Terminslivförsäkring - 10, 20 eller 30-års terminsalternativ med nivåpremier',
+          'Hel Livförsäkring - Livstid täckning med kontantvärdeackumulation',
+          'Universell Livförsäkring - Flexibla premier och justerbara dödsförmåner',
+          'Variabel Livförsäkring - Investeringslänkad kontantvärdetillväxt',
+          'Grupplivförsäkring - Arbetsgivarsponsrade livförsäkringsplaner'
+        ],
+        benefits: [
+          'Specialiserad expertis inom livförsäkringsprodukter',
+          'Personlig behovsanalys och täckningsrekommendationer',
+          'Avancerade funktioner som levande förmåner och dödsboplanering',
+          'Skattefördelaktiga förmögenhetsbyggande strategier',
+          'Pågående policyförvaltning och stöd'
+        ]
+      },
+      investmentAdviser: {
+        title: 'Investeringsrådgivare',
+        shortDescription: 'Professionell investeringsrådgivning för förmögenhetsbyggande',
+        overview: 'Som registrerade investeringsrådgivare tillhandahåller vi personlig investeringsvbägledning och portföljförvaltningstjänster designade för att hjälpa dig uppnå dina finansiella mål genom disciplinerade, forskningsdrivna strategier.',
+        services: [
+          'Portföljförvaltning - Anpassade investeringsportföljer och tillgångsallokering',
+          'Investeringsplanering - Målbaserade strategier och pensionsplanering',
+          'Forskning & Analys - Marknadsforskning och investeringsdue diligence',
+          'Förmögenhetsförvaltning - Högförmögna och institutionella tjänster',
+          'Skatteeffektiv Investering - Strategier för att minimera skattepåverkan'
+        ],
+        benefits: [
+          'Fiduciary standard - vi agerar i ditt bästa intresse',
+          'Personlig approach anpassad till dina mål',
+          'Transparent avgiftsstruktur utan dolda kostnader',
+          'Kontinuerlig portföljövervakning och justeringar',
+          'Långsiktigt fokus med disciplinerad investeringsmetod'
+        ]
+      },
+      brokerInBank: {
+        title: 'Bankmaklärare',
+        shortDescription: 'Bankmellanhands tjänster för optimala lösningar',
+        overview: 'Som licensierade bankmellanhander överbrygg vi klyftan mellan dig och finansiella institutioner för att säkra de bästa bankprodukterna och tjänsterna med optimala villkor.',
+        services: [
+          'Lånembalning - Hypotekslån, personliga, affärs- och kommersiella lån',
+          'Banktjänster - Affärsbank, internationella lösningar, treasury management',
+          'Kreditlösningar - Kreditlinjer, kreditkort, tillgångsbaserade lån',
+          'Specialiserad Bank - Privatbank, offshore lösningar, multivalutakonton',
+          'Handelsfinansiering - Remburs, fakturafinansiering och factoring'
+        ],
+        benefits: [
+          'Omfattande nätverk av bankpartners och institutioner',
+          'Förhandlade bästa villkor och konkurrenskraftiga räntor',
+          'Expertvbägledning genom komplexa bankprocesser',
+          'Tidsbesparande forsknings- och jämförelsetjänster',
+          'Regulatorisk efterlevnad och professionell licensiering'
+        ]
+      },
+      privatePensionPlan: {
+        title: 'Privat Pensionsplan',
+        shortDescription: 'Luxemburgska pensionsplaner med skatteförmåner',
+        overview: 'Luxemburgska privata pensionsplaner erbjuder oförlikneliga fördelar för pensionsplanering, som kombinerar politisk stabilitet, robust regulatoriskt ramverk och betydande skatteförmåner för optimal pensionssäkerhet.',
+        services: [
+          'SEPCAV-planer - Specialiserade investeringsfonder med maximal flexibilitet',
+          'Luxemburg Livförsäkringspension - Kombinerad pensions- och livskydd',
+          'Företagspensionsscheman - Arbetsgivarsponsrade planer med skattefördelar',
+          'Internationell Pensionsplanering - Gränsöverskridande och expat lösningar',
+          'Pensionsoptimering - Skatteeffektiva pensionsstrategier'
+        ],
+        benefits: [
+          'Luxemburgs skattefördelar och regulatorisk säkerhet',
+          'EU-omfattande pensionsportabilitet och internationell mobilitet',
+          'Investeringsflexibilitet med multivalutaalternativ',
+          'Starkt borpänarskydd och tillgångsseparation',
+          'Professionell förvaltning och institutionell åtkomst'
+        ]
+      }
     },
     items: {
       autoInsurance: {
@@ -202,24 +313,71 @@ export default {
   news: {
     title: 'Senaste Nyheterna',
     subtitle: 'Håll Dig Uppdaterad',
-    description: 'Håll dig uppdaterad med de senaste nyheterna och insikterna från försäkringsbranschen.',
-    readMore: 'Läs Hela Artikeln',
+    description: 'Håll dig uppdaterad med de senaste nyheterna och insikterna från finansbranschen.',
+    readMore: 'Läs Mer',
+    readFullArticle: 'Läs Hela Artikeln',
     publishedOn: 'Publicerad den',
     category: 'Kategori',
     author: 'Författare',
+    byAuthor: 'Av {{author}}',
     readTime: '{{minutes}} min läsning',
+    backToNews: 'Tillbaka till Nyheter',
+    viewAllNews: 'Visa Alla Nyheter',
+    articleNotFound: 'Artikel Hittades Inte',
+    articleNotFoundText: 'Artikeln du letar efter finns inte.',
+    noArticlesInCategory: 'Inga artiklar hittades i denna kategori.',
+    home: 'Hem',
+    newsTitle: 'Nyheter',
+    shareArticle: 'Dela Artikel',
+    relatedArticles: 'Relaterade Artiklar',
+    categories: {
+      all: 'Alla Tjänster',
+      privatePension: 'Privat Pensionsplan',
+      investment: 'Investeringsrådgivare',
+      banking: 'Bankmaklärare',
+      lifeInsurance: 'Dedikerad Livförsäkring',
+      insurance: 'Försäkringstjänster'
+    },
     articles: {
-      healthInsurance2024: {
-        title: 'Förstå Hälsoförsäkringsförändringar för 2024',
-        excerpt: 'Viktiga uppdateringar av hälsoförsäkringspolicyer som kan påverka din täckning och premier.',
-        category: 'Hälsoförsäkring',
-        readTime: '5 min läsning'
+      privatePension: {
+        title: 'Privat Pensionsplan Förmåner för Din Pension',
+        excerpt: 'Upptäck hur våra luxemburgska privata pensionsplaner erbjuder skatteförmåner och regulatorisk säkerhet för din pensionsplanering.',
+        category: 'Privat Pensionsplan',
+        readTime: '5 min läsning',
+        author: 'Finansiella Planeringsteamet',
+        authorBio: 'Vårt finansiella planeringsteam specialiserar sig på luxemburgska pensionslösningar och internationell pensionsplanering.'
       },
-      autoInsuranceTips: {
-        title: 'Topp 5 Tips för att Välja Rätt Bilförsäkring',
-        excerpt: 'Expertråd om att välja bilförsäkring som ger bästa värde och skydd.',
-        category: 'Bilförsäkring',
-        readTime: '4 min läsning'
+      investment: {
+        title: 'Professionella Investeringsrådgivningstjänster',
+        excerpt: 'Lär dig om våra omfattande investeringsrådgivningstjänster designade för att hjälpa dig bygga förmögenhet och uppnå dina finansiella mål.',
+        category: 'Investeringsrådgivare',
+        readTime: '4 min läsning',
+        author: 'Investeringsteamet',
+        authorBio: 'Vårt investeringsrådgivningsteam består av erfarna proffs med expertis inom portföljförvaltning och finansiell planering.'
+      },
+      banking: {
+        title: 'Bankmaklärartjänster: Din Finansiella Bro',
+        excerpt: 'Upptäck hur våra bankmellanhands tjänster hjälper dig säkra de bästa bankprodukterna och tjänsterna med optimala villkor.',
+        category: 'Bankmaklärare',
+        readTime: '6 min läsning',
+        author: 'Banklösningsteamet',
+        authorBio: 'Vårt banklösningsteam består av licensierade bankmellanhander med omfattande erfarenhet inom finansiella tjänster.'
+      },
+      lifeInsurance: {
+        title: 'Dedikerad Livförsäkring: Skydda Ditt Arv',
+        excerpt: 'Utforska våra specialiserade livförsäkringsprodukter designade för att ge omfattande finansiell säkerhet för dina nära och kära.',
+        category: 'Dedikerad Livförsäkring',
+        readTime: '7 min läsning',
+        author: 'Livförsäkringsspecialister',
+        authorBio: 'Våra livförsäkringsspecialister har omfattande erfarenhet av alla typer av livförsäkringsprodukter och dödsboplaneringsstrategier.'
+      },
+      insurance: {
+        title: 'Omfattande Försäkringstjänster för Komplett Skydd',
+        excerpt: 'Förstå vårt fullständiga utbud av försäkringslösningar skräddarsydda för att skydda det som betyder mest för dig och din familj.',
+        category: 'Försäkringstjänster',
+        readTime: '8 min läsning',
+        author: 'Försäkringsrkådgivningsteamet',
+        authorBio: 'Vårt försäkringsrkådgivningsteam består av licensierade proffs med expertis inom alla viktiga försäkringskategorier.'
       }
     }
   },
@@ -498,16 +656,16 @@ export default {
 
   // News Page
   newsPage: {
-    title: 'Försäkringsnyheter & Insikter',
+    title: 'Finansnyheter & Insikter',
     subtitle: 'Håll Dig Informerad med Senaste Branschuppdateringar',
-    description: 'Håll dig uppdaterad med de senaste utvecklingarna inom försäkringsbranschen, experttips och företagsnyheter.',
+    description: 'Håll dig uppdaterad med de senaste utvecklingarna inom finansbranschen, experttips och företagsnyheter.',
     categories: {
-      all: 'Alla Nyheter',
-      health: 'Sjukförsäkring',
-      auto: 'Bilförsäkring',
-      life: 'Livförsäkring',
-      business: 'Företagsförsäkring',
-      property: 'Egendomsförsäkring'
+      all: 'Alla Tjänster',
+      privatePension: 'Privat Pensionsplan',
+      investment: 'Investeringsrådgivare',
+      banking: 'Bankmaklärare',
+      lifeInsurance: 'Dedikerad Livförsäkring',
+      insurance: 'Försäkringstjänster'
     },
     filterByCategory: 'Filtrera efter Kategori',
     readTime: '{{minutes}} min läsning',
@@ -517,31 +675,9 @@ export default {
     loadMore: 'Ladda Fler Artiklar',
     newsletter: {
       title: 'Håll Dig Uppdaterad',
-      description: 'Prenumerera på vårt nyhetsbrev för att få de senaste försäkringsnyheterna, tipsen och uppdateringarna direkt i din inkorg.',
+      description: 'Prenumerera på vårt nyhetsbrev för att få de senaste finansnyheterna, tipsen och uppdateringarna direkt i din inkorg.',
       placeholder: 'Ange din e-postadress',
       subscribe: 'Prenumerera'
-    },
-    articles: {
-      healthChanges: {
-        title: '2024 Års Sjukförsäkringsförändringar Du Behöver Veta',
-        excerpt: 'Viktiga uppdateringar av sjukförsäkringsregler och vad de betyder för dina täckningsalternativ i år.',
-        author: 'Dr. Emily Wilson'
-      },
-      autoTips: {
-        title: 'Topp 5 Sätt att Sänka Din Bilförsäkringspremie',
-        excerpt: 'Upptäck beprövade strategier för att minska dina bilförsäkringskostnader utan att offra täckningskvalitet.',
-        author: 'Mark Thompson'
-      },
-      lifeFamilies: {
-        title: 'Livförsäkringsplanering för Växande Familjer',
-        excerpt: 'Väsentliga överväganden för livförsäkring när du utökar din familj och planerar för framtiden.',
-        author: 'Sarah Davis'
-      },
-      businessTips: {
-        title: 'Småföretagsförsäkring: Guide till Väsentlig Täckning',
-        excerpt: 'Omfattande guide för att skydda ditt småföretag med rätta försäkringsalternativ.',
-        author: 'James Miller'
-      }
     }
   }
 }

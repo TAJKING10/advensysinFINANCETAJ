@@ -13,63 +13,38 @@ const Services = () => {
   const services = [
     {
       id: 'insurance',
-      title: 'Insurance Services',
-      description: 'Comprehensive insurance solutions tailored to protect what matters most to you',
+      title: t('services.mainServices.insurance.title'),
+      description: t('services.mainServices.insurance.shortDescription'),
       image: '/assets/category-1.png',
-      features: [
-        'Life Insurance - Term, Whole, Universal options',
-        'Health Insurance - Individual, family, group plans',
-        'Property Insurance - Homeowners, renters, commercial',
-        'Auto Insurance - Comprehensive vehicle protection'
-      ]
+      features: t('services.mainServices.insurance.services')
     },
     {
       id: 'dedicated-life-insurance',
-      title: 'Dedicated Life Insurance',
-      description: 'Specialized life insurance products for comprehensive financial security',
+      title: t('services.mainServices.dedicatedLifeInsurance.title'),
+      description: t('services.mainServices.dedicatedLifeInsurance.shortDescription'),
       image: '/assets/category-2.png',
-      features: [
-        'Term Life Insurance - 10, 20, 30-year options',
-        'Whole Life Insurance - Lifetime coverage with cash value',
-        'Universal Life Insurance - Flexible premiums and benefits',
-        'Group Life Insurance - Employer-sponsored plans'
-      ]
+      features: t('services.mainServices.dedicatedLifeInsurance.services')
     },
     {
       id: 'investment-adviser',
-      title: 'Investment Adviser',
-      description: 'Professional investment advisory services for wealth building and growth',
+      title: t('services.mainServices.investmentAdviser.title'),
+      description: t('services.mainServices.investmentAdviser.shortDescription'),
       image: '/assets/category-3.png',
-      features: [
-        'Portfolio Management - Customized investment strategies',
-        'Investment Planning - Goal-based retirement planning',
-        'Wealth Management - High net worth services',
-        'Tax-Efficient Investing - Minimize tax impact'
-      ]
+      features: t('services.mainServices.investmentAdviser.services')
     },
     {
       id: 'broker-in-bank',
-      title: 'Broker in Bank',
-      description: 'Banking intermediary services for optimal financial solutions',
+      title: t('services.mainServices.brokerInBank.title'),
+      description: t('services.mainServices.brokerInBank.shortDescription'),
       image: '/assets/category-4.png',
-      features: [
-        'Loan Brokerage - Mortgages, personal, business lending',
-        'Banking Services - International solutions, treasury',
-        'Credit Solutions - Lines of credit, asset-based lending',
-        'Trade Finance - Letters of credit, factoring'
-      ]
+      features: t('services.mainServices.brokerInBank.services')
     },
     {
       id: 'private-pension-plan',
-      title: 'Private Pension Plan',
-      description: 'Luxembourg pension plans with tax advantages and regulatory security',
+      title: t('services.mainServices.privatePensionPlan.title'),
+      description: t('services.mainServices.privatePensionPlan.shortDescription'),
       image: '/assets/category-5.png',
-      features: [
-        'SEPCAV Plans - Maximum investment flexibility',
-        'Luxembourg Life Insurance Pension - Combined benefits',
-        'Corporate Pension Schemes - Employer-sponsored plans',
-        'International Pension Planning - Cross-border solutions'
-      ]
+      features: t('services.mainServices.privatePensionPlan.services')
     }
   ]
 
@@ -78,8 +53,8 @@ const Services = () => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center">
-          <h2 className="section-title">Our Main Services</h2>
-          <p className="section-subtitle">Professional financial services designed to meet your specific needs</p>
+          <h2 className="section-title">{t('services.mainServicesTitle')}</h2>
+          <p className="section-subtitle">{t('services.mainServicesSubtitle')}</p>
         </div>
 
         {/* Services Grid */}
@@ -90,7 +65,7 @@ const Services = () => {
                 <img src={service.image} alt={service.title} />
                 <div className="service-overlay">
                   <button onClick={() => { navigate(`/services?service=${service.id}`); }} className="service-link" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    Learn More
+                    {t('services.learnMore')}
                     <img src="/assets/arrow.svg" alt="" />
                   </button>
                 </div>
@@ -111,10 +86,10 @@ const Services = () => {
                 
                 <div className="service-actions">
                   <button onClick={() => { navigate(`/services?service=${service.id}`); }} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
-                    Get Quote
+                    {t('services.getQuote')}
                   </button>
                   <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="service-contact" style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'underline' }}>
-                    Contact Us
+                    {t('common.contactUs')}
                   </button>
                 </div>
               </div>
@@ -125,15 +100,15 @@ const Services = () => {
         {/* Call to Action */}
         <div className="services-cta">
           <div className="cta-content">
-            <h3 className="cta-title">Ready to Get Started?</h3>
-            <p className="cta-description">Contact us today to discuss your financial needs and find the perfect solution for you.</p>
+            <h3 className="cta-title">{t('services.readyToStart')}</h3>
+            <p className="cta-description">{t('services.contactToday')} to discuss your financial needs and find the perfect solution for you.</p>
             <div className="cta-actions">
               <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary btn-lg" style={{ border: 'none', cursor: 'pointer' }}>
-                Contact Us Today
+                {t('common.contactUs')} Today
               </button>
               <a href={`tel:${currentLocationData?.phone}`} className="cta-phone">
                 <img src="/assets/phone.svg" alt="Phone" />
-                <span>Call: {currentLocationData?.phone}</span>
+                <span>{t('services.cta.phone')} {currentLocationData?.phone}</span>
               </a>
             </div>
           </div>

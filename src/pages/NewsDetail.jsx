@@ -10,8 +10,8 @@ const NewsDetail = () => {
   const newsArticles = [
     {
       id: 1,
-      title: 'Private Pension Plan Benefits for Your Retirement',
-      excerpt: 'Discover how our Luxembourg private pension plans offer tax advantages and regulatory security for your retirement planning.',
+      title: t('news.articles.privatePension.title'),
+      excerpt: t('news.articles.privatePension.excerpt'),
       content: `
         <h2>Luxembourg Private Pension Plans: Your Path to Secure Retirement</h2>
         <p>Luxembourg has established itself as a premier destination for private pension planning, offering unparalleled advantages for retirement security through its robust regulatory framework and significant tax benefits.</p>
@@ -54,15 +54,15 @@ const NewsDetail = () => {
       `,
       image: '/assets/category-5.png',
       date: '2024-01-15',
-      category: 'Private Pension Plan',
-      readTime: '5 min read',
-      author: 'Financial Planning Team',
-      authorBio: 'Our financial planning team specializes in Luxembourg pension solutions and international retirement planning.'
+      category: t('news.categories.privatePension'),
+      readTime: t('news.articles.privatePension.readTime'),
+      author: t('news.articles.privatePension.author'),
+      authorBio: t('news.articles.privatePension.authorBio')
     },
     {
       id: 2,
-      title: 'Professional Investment Advisory Services',
-      excerpt: 'Learn about our comprehensive investment advisory services designed to help you build wealth and achieve your financial goals.',
+      title: t('news.articles.investment.title'),
+      excerpt: t('news.articles.investment.excerpt'),
       content: `
         <h2>Professional Investment Guidance for Your Financial Success</h2>
         <p>As registered investment advisers, we provide personalized investment guidance and portfolio management services designed to help you achieve your financial goals through disciplined, research-driven strategies.</p>
@@ -111,15 +111,15 @@ const NewsDetail = () => {
       `,
       image: '/assets/category-3.png',
       date: '2024-01-10',
-      category: 'Investment Adviser',
-      readTime: '4 min read',
-      author: 'Investment Team',
-      authorBio: 'Our investment advisory team consists of experienced professionals with expertise in portfolio management and financial planning.'
+      category: t('news.categories.investment'),
+      readTime: t('news.articles.investment.readTime'),
+      author: t('news.articles.investment.author'),
+      authorBio: t('news.articles.investment.authorBio')
     },
     {
       id: 3,
-      title: 'Broker in Bank Services: Your Financial Bridge',
-      excerpt: 'Discover how our banking intermediary services help you secure the best banking products and services with optimal terms.',
+      title: t('news.articles.banking.title'),
+      excerpt: t('news.articles.banking.excerpt'),
       content: `
         <h2>Bridging You to Optimal Banking Solutions</h2>
         <p>As licensed banking intermediaries, we bridge the gap between you and financial institutions to secure the best banking products and services with optimal terms and conditions.</p>
@@ -176,15 +176,15 @@ const NewsDetail = () => {
       `,
       image: '/assets/category-4.png',
       date: '2024-01-05',
-      category: 'Broker in Bank',
-      readTime: '6 min read',
-      author: 'Banking Solutions Team',
-      authorBio: 'Our banking solutions team consists of licensed banking intermediaries with extensive experience in financial services.'
+      category: t('news.categories.banking'),
+      readTime: t('news.articles.banking.readTime'),
+      author: t('news.articles.banking.author'),
+      authorBio: t('news.articles.banking.authorBio')
     },
     {
       id: 4,
-      title: 'Dedicated Life Insurance: Protecting Your Legacy',
-      excerpt: 'Explore our specialized life insurance products designed to provide comprehensive financial security for your loved ones.',
+      title: t('news.articles.lifeInsurance.title'),
+      excerpt: t('news.articles.lifeInsurance.excerpt'),
       content: `
         <h2>Comprehensive Life Insurance Solutions for Every Need</h2>
         <p>Our dedicated life insurance services focus exclusively on providing comprehensive life insurance solutions that ensure your loved ones are financially protected when they need it most.</p>
@@ -266,15 +266,15 @@ const NewsDetail = () => {
       `,
       image: '/assets/category-2.png',
       date: '2023-12-28',
-      category: 'Dedicated Life Insurance',
-      readTime: '7 min read',
-      author: 'Life Insurance Specialists',
-      authorBio: 'Our life insurance specialists have extensive experience in all types of life insurance products and estate planning strategies.'
+      category: t('news.categories.lifeInsurance'),
+      readTime: t('news.articles.lifeInsurance.readTime'),
+      author: t('news.articles.lifeInsurance.author'),
+      authorBio: t('news.articles.lifeInsurance.authorBio')
     },
     {
       id: 5,
-      title: 'Comprehensive Insurance Services for Complete Protection',
-      excerpt: 'Understanding our full range of insurance solutions tailored to protect what matters most to you and your family.',
+      title: t('news.articles.insurance.title'),
+      excerpt: t('news.articles.insurance.excerpt'),
       content: `
         <h2>Complete Protection for All Your Insurance Needs</h2>
         <p>At Advensys Insurance Finance, we provide comprehensive insurance solutions that protect what matters most to you. Our experienced team works with leading insurance carriers to offer competitive rates and comprehensive coverage across all major insurance categories.</p>
@@ -361,10 +361,10 @@ const NewsDetail = () => {
       `,
       image: '/assets/category-1.png',
       date: '2023-12-20',
-      category: 'Insurance Services',
-      readTime: '8 min read',
-      author: 'Insurance Advisory Team',
-      authorBio: 'Our insurance advisory team consists of licensed professionals with expertise across all major insurance categories.'
+      category: t('news.categories.insurance'),
+      readTime: t('news.articles.insurance.readTime'),
+      author: t('news.articles.insurance.author'),
+      authorBio: t('news.articles.insurance.authorBio')
     }
   ]
 
@@ -375,9 +375,9 @@ const NewsDetail = () => {
       <div className="news-detail-page">
         <div className="container">
           <div className="article-not-found">
-            <h1>Article Not Found</h1>
-            <p>The article you're looking for doesn't exist.</p>
-            <Link to="/news" className="btn btn-primary">Back to News</Link>
+            <h1>{t('news.articleNotFound')}</h1>
+            <p>{t('news.articleNotFoundText')}</p>
+            <Link to="/news" className="btn btn-primary">{t('news.backToNews')}</Link>
           </div>
         </div>
       </div>
@@ -394,9 +394,9 @@ const NewsDetail = () => {
       <section className="article-header">
         <div className="container">
           <nav className="breadcrumb">
-            <Link to="/">Home</Link>
+            <Link to="/">{t('news.home')}</Link>
             <span>/</span>
-            <Link to="/news">News</Link>
+            <Link to="/news">{t('news.newsTitle')}</Link>
             <span>/</span>
             <span>{article.title}</span>
           </nav>
@@ -412,7 +412,7 @@ const NewsDetail = () => {
           
           <div className="author-info">
             <div className="author-details">
-              <h4 className="author-name">By {article.author}</h4>
+              <h4 className="author-name">{t('news.byAuthor', { author: article.author })}</h4>
               <p className="author-bio">{article.authorBio}</p>
             </div>
           </div>
@@ -435,7 +435,7 @@ const NewsDetail = () => {
 
             </div>
             
-            <Link to="/news" className="btn btn-primary">Back to News</Link>
+            <Link to="/news" className="btn btn-primary">{t('news.backToNews')}</Link>
           </div>
         </div>
       </section>
