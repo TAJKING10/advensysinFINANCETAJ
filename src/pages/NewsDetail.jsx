@@ -72,12 +72,12 @@ const NewsDetail = () => {
         <ul>
           <li>Transparent fee structures with no hidden costs</li>
           <li>Objective investment recommendations</li>
-          <li>Ongoing portfolio monitoring and optimization</li>
+          <li>Ongoing investment monitoring and optimization</li>
           <li>Regular communication about your investments</li>
         </ul>
 
-        <h3>Comprehensive Portfolio Management</h3>
-        <p>Our portfolio management services include customized investment portfolios tailored to your risk tolerance, time horizon, and financial objectives:</p>
+        <h3>Comprehensive Investment Strategy</h3>
+        <p>Our investment services include customized strategies tailored to your risk tolerance, time horizon, and financial objectives:</p>
         
         <h4>Asset Allocation Strategy</h4>
         <p>We develop strategic asset allocation models based on your individual circumstances, ensuring optimal diversification across asset classes and geographic regions.</p>

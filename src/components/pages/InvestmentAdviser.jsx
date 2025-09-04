@@ -26,7 +26,7 @@ const InvestmentAdviser = () => {
           <section className="service-overview">
             <h2>Your Partner in Wealth Building</h2>
             <p>
-              As registered investment advisers, we provide personalized investment guidance and portfolio management services 
+              As registered investment advisers, we provide personalized investment guidance 
               designed to help you achieve your financial goals. Our disciplined approach combines comprehensive financial 
               planning with sophisticated investment strategies to build and preserve your wealth over time.
             </p>

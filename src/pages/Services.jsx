@@ -110,14 +110,14 @@ const Services = () => {
       image: '/assets/category-1.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'bpmi-en',
-          title: 'Borrower Paid Mortgage Insurance',
-          youtubeId: '7ltogxhD6Xs'
+          id: 'welcome-en',
+          title: 'Welcome to Advensys In-Finance',
+          youtubeId: 'rrtUkqn9gqo'
         },
         {
-          id: 'bpmi-fr',
-          title: 'Assurance Solde Restant Dû',
-          youtubeId: '1wGVUPcAtaA'
+          id: 'welcome-fr',
+          title: 'Bonjour et Bienvenue chez Advensys In-Finance',
+          youtubeId: 'amwQlWwkaMs'
         }
       ]).slice(0, 1),
       details: {
@@ -133,14 +133,14 @@ const Services = () => {
       image: '/assets/category-2.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'pension-en',
-          title: 'Private Pension Plan',
-          youtubeId: 'VIcqJ0WuaoY'
+          id: 'bpmi-en',
+          title: 'Borrower Paid Mortgage Insurance',
+          youtubeId: '7ltogxhD6Xs'
         },
         {
-          id: 'pension-fr',
-          title: 'Prévoyance Vieillesse',
-          youtubeId: '_nxRWgmeFLU'
+          id: 'bpmi-fr',
+          title: 'Assurance Solde Restant Dû',
+          youtubeId: '1wGVUPcAtaA'
         }
       ]).slice(0, 1),
       details: {
@@ -156,14 +156,14 @@ const Services = () => {
       image: '/assets/category-3.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'welcome-en',
-          title: 'Welcome to Advensys In-Finance',
-          youtubeId: 'rrtUkqn9gqo'
+          id: 'savings-en',
+          title: 'House Savings Plan',
+          youtubeId: 'UPXZ5q-XFe0'
         },
         {
-          id: 'welcome-fr',
-          title: 'Bonjour et Bienvenue chez Advensys In-Finance',
-          youtubeId: 'amwQlWwkaMs'
+          id: 'savings-fr',
+          title: 'Épargne Logement',
+          youtubeId: 'cVq9gvJN6IE'
         }
       ]).slice(0, 1),
       details: {

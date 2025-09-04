@@ -141,7 +141,7 @@ export default {
       investmentAdviser: {
         title: 'Conseiller en Investissement',
         shortDescription: 'Conseil professionnel en investissement pour la création de patrimoine',
-        overview: 'En tant que conseillers en investissement agréés, nous fournissons des conseils d\'investissement personnalisés et des services de gestion de portefeuille conçus pour vous aider à atteindre vos objectifs financiers grâce à des stratégies disciplinées et basées sur la recherche.',
+        overview: 'En tant que conseillers en investissement agréés, nous fournissons des conseils d\'investissement personnalisés conçus pour vous aider à atteindre vos objectifs financiers grâce à des stratégies disciplinées et basées sur la recherche.',
         services: [
           'Planification d\'Investissement - Stratégies basées sur les objectifs et planification de retraite',
           'Recherche et Analyse - Recherche de marché et diligence raisonnable d\'investissement',
@@ -352,7 +352,7 @@ export default {
         category: 'Conseiller en Investissement',
         readTime: '4 min de lecture',
         author: 'Équipe d\'Investissement',
-        authorBio: 'Notre équipe de conseil en investissement est composée de professionnels expérimentés avec une expertise en gestion de portefeuille et planification financière.'
+        authorBio: 'Notre équipe de conseil en investissement est composée de professionnels expérimentés avec une expertise en planification financière.'
       },
       banking: {
         title: 'Services Courtier en Banque : Votre Pont Financier',
@@ -591,17 +591,32 @@ export default {
 
   // About Page
   aboutPage: {
-    title: 'À Propos d\'Advensys Insurance Finance',
-    subtitle: 'Votre Partenaire d\'Assurance de Confiance Depuis 2008',
-    intro: 'Advensys Insurance Finance est un fournisseur leader de solutions d\'assurance complètes depuis plus de 15 ans. Nous nous engageons à protéger ce qui compte le plus pour nos clients grâce à des produits d\'assurance innovants et un service client exceptionnel.',
+    title: 'À Propos d\'Advensys in Finance',
+    subtitle: 'Votre Partenaire Financier de Confiance',
+    intro: 'Advensys in Finance est un fournisseur leader de solutions financières complètes. Nous nous engageons à protéger ce qui compte le plus pour nos clients grâce à des produits financiers innovants et un service client exceptionnel.',
     ourStory: {
       title: 'Notre Histoire',
-      paragraph1: 'Fondée en 2008, Advensys Insurance Finance a commencé avec une mission simple : fournir des solutions d\'assurance fiables et abordables aux particuliers et aux entreprises à travers le pays.',
-      paragraph2: 'Au fil des années, nous avons établi des relations solides avec les principales compagnies d\'assurance, nous permettant d\'offrir des options de couverture complètes à des tarifs compétitifs. Notre engagement envers l\'excellence et la satisfaction client a fait de nous un nom de confiance dans l\'industrie de l\'assurance.',
-      paragraph3: 'Aujourd\'hui, nous servons des milliers de clients satisfaits à travers le pays, des particuliers recherchant une protection personnelle aux entreprises nécessitant une couverture commerciale complète. Notre équipe expérimentée continue de s\'adapter aux besoins changeants du marché tout en maintenant nos valeurs fondamentales d\'intégrité, de service et de fiabilité.'
+      paragraph1: 'Advensys in Finance a commencé avec une mission simple : fournir des solutions financières fiables et abordables aux particuliers et aux entreprises à travers l\'Europe.',
+      paragraph2: 'Nous avons établi des relations solides avec les principales institutions financières, nous permettant d\'offrir des options de couverture complètes à des tarifs compétitifs. Notre engagement envers l\'excellence et la satisfaction client a fait de nous un nom de confiance dans l\'industrie financière.',
+      paragraph3: 'Aujourd\'hui, nous servons des milliers de clients satisfaits à travers l\'Europe, des particuliers recherchant une protection personnelle aux entreprises nécessitant une couverture financière complète. Notre équipe expérimentée continue de s\'adapter aux besoins changeants du marché tout en maintenant nos valeurs fondamentales d\'intégrité, de service et de fiabilité.'
     },
     ourValues: {
       description: 'Nous croyons en la conduite des affaires avec les plus hauts standards éthiques, en mettant toujours les besoins de nos clients en premier, et en améliorant continuellement nos services pour dépasser les attentes.'
+    },
+    strengths: {
+      title: 'Nos Forces',
+      item1: {
+        title: 'Expertise Financière',
+        description: 'Notre équipe de conseillers financiers expérimentés possède une connaissance approfondie de l\'industrie et s\'engage à fournir des solutions personnalisées pour répondre à vos besoins spécifiques.'
+      },
+      item2: {
+        title: 'Service Client Exceptionnel',
+        description: 'Nous nous engageons à offrir un service client de premier ordre, en veillant à ce que chaque interaction soit traitée avec professionnalisme, respect et attention aux détails.'
+      },
+      item3: {
+        title: 'Solutions Innovantes',
+        description: 'Nous restons à la pointe de l\'industrie financière, en adoptant les dernières technologies et approches pour offrir des solutions innovantes qui répondent aux défis financiers d\'aujourd\'hui.'
+      }
     },
     team: {
       title: 'Notre Équipe de Direction',
@@ -609,7 +624,7 @@ export default {
       ceo: {
         name: 'John Smith',
         position: 'PDG et Fondateur',
-        bio: 'Avec plus de 20 ans d\'expérience dans l\'industrie de l\'assurance, John a fondé Advensys avec une vision de révolutionner la façon dont les services d\'assurance sont livrés aux clients.'
+        bio: 'Avec plus de 20 ans d\'expérience dans l\'industrie financière, John a fondé Advensys avec une vision de révolutionner la façon dont les services financiers sont livrés aux clients.'
       },
       director: {
         name: 'Sarah Johnson',
@@ -619,12 +634,12 @@ export default {
     },
     licenses: {
       title: 'Licences et Certifications',
-      description: 'Nous maintenons toutes les licences et certifications nécessaires pour fournir des services d\'assurance dans plusieurs états, garantissant la conformité avec les réglementations et standards de l\'industrie.',
+      description: 'Nous maintenons toutes les licences et certifications nécessaires pour fournir des services financiers dans plusieurs pays européens, garantissant la conformité avec les réglementations et standards de l\'industrie.',
       items: {
-        stateLicensed: 'Agents Agréés par l\'État',
-        certified: 'Professionnels Certifiés de l\'Industrie',
+        stateLicensed: 'Conseillers Financiers Agréés',
+        certified: 'Professionnels Certifiés de l\'Industrie Financière',
         bonded: 'Opérations Cautionnées et Assurées',
-        accredited: 'Accrédité par le Better Business Bureau'
+        accredited: 'Accrédité par les Autorités Financières Européennes'
       }
     }
   },
@@ -643,7 +658,7 @@ export default {
     officeHours: {
       title: 'Heures d\'Ouverture',
       weekdays: 'Lundi - Vendredi',
-      weekdaysTime: '9h00 - 17h30',
+      weekdaysTime: '9h00 - 17h30 uniquement',
       saturday: 'Samedi',
       saturdayTime: 'Fermé',
       sunday: 'Dimanche',

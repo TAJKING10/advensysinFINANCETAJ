@@ -591,17 +591,32 @@ export default {
 
   // About Page
   aboutPage: {
-    title: 'Om Advensys Insurance Finance',
-    subtitle: 'Din Betrodda Försäkringspartner Sedan 2008',
-    intro: 'Advensys Insurance Finance har varit en ledande leverantör av omfattande försäkringslösningar i över 15 år. Vi är engagerade i att skydda det som betyder mest för våra kunder genom innovativa försäkringsprodukter och exceptionell kundservice.',
+    title: 'Om Advensys in Finance',
+    subtitle: 'Din Betrodda Finansiella Partner',
+    intro: 'Advensys in Finance är en ledande leverantör av omfattande finansiella lösningar. Vi är engagerade i att skydda det som betyder mest för våra kunder genom innovativa finansiella produkter och exceptionell kundservice.',
     ourStory: {
       title: 'Vår Berättelse',
-      paragraph1: 'Grundat 2008 började Advensys Insurance Finance med ett enkelt uppdrag: att tillhandahålla pålitliga, prisvärda försäkringslösningar till privatpersoner och företag över hela landet.',
-      paragraph2: 'Över åren har vi byggt starka relationer med ledande försäkringsbolag, vilket gör det möjligt för oss att erbjuda omfattande täckningsalternativ till konkurrenskraftiga priser. Vårt engagemang för excellens och kundtillfredsställelse har gjort oss till ett betrott namn inom försäkringsbranschen.',
-      paragraph3: 'Idag betjänar vi tusentals nöjda kunder nationellt, från privatpersoner som söker personligt skydd till företag som kräver omfattande kommersiell täckning. Vårt erfarna team fortsätter att anpassa sig till föränderliga marknadsbehov samtidigt som vi upprätthåller våra kärnvärderingar av integritet, service och tillförlitlighet.'
+      paragraph1: 'Advensys in Finance började med ett enkelt uppdrag: att tillhandahålla pålitliga, prisvärda finansiella lösningar till privatpersoner och företag över hela Europa.',
+      paragraph2: 'Vi har byggt starka relationer med ledande finansiella institutioner, vilket gör det möjligt för oss att erbjuda omfattande täckningsalternativ till konkurrenskraftiga priser. Vårt engagemang för excellens och kundtillfredsställelse har gjort oss till ett betrott namn inom finansbranschen.',
+      paragraph3: 'Idag betjänar vi tusentals nöjda kunder över hela Europa, från privatpersoner som söker personligt skydd till företag som kräver omfattande finansiell täckning. Vårt erfarna team fortsätter att anpassa sig till föränderliga marknadsbehov samtidigt som vi upprätthåller våra kärnvärderingar av integritet, service och tillförlitlighet.'
     },
     ourValues: {
       description: 'Vi tror på att bedriva verksamhet med högsta etiska standarder, alltid sätta våra kunders behov först och kontinuerligt förbättra våra tjänster för att överträffa förväntningarna.'
+    },
+    strengths: {
+      title: 'Våra Styrkor',
+      item1: {
+        title: 'Finansiell Expertis',
+        description: 'Vårt team av erfarna finansiella rådgivare har djupgående branschkunskap och är engagerade i att leverera skräddarsydda lösningar för att möta dina specifika behov.'
+      },
+      item2: {
+        title: 'Exceptionell Kundservice',
+        description: 'Vi är dedikerade till att leverera förstklassig kundservice, säkerställa att varje interaktion hanteras med professionalism, respekt och uppmärksamhet på detaljer.'
+      },
+      item3: {
+        title: 'Innovativa Lösningar',
+        description: 'Vi håller oss i framkant av finansbranschen, antar de senaste teknologierna och metoderna för att erbjuda innovativa lösningar som möter dagens finansiella utmaningar.'
+      }
     },
     team: {
       title: 'Vårt Ledningsteam',
@@ -609,7 +624,7 @@ export default {
       ceo: {
         name: 'John Smith',
         position: 'VD och Grundare',
-        bio: 'Med över 20 års erfarenhet inom försäkringsbranschen grundade John Advensys med en vision att revolutionera hur försäkringstjänster levereras till kunder.'
+        bio: 'Med över 20 års erfarenhet inom finansbranschen grundade John Advensys med en vision att revolutionera hur finansiella tjänster levereras till kunder.'
       },
       director: {
         name: 'Sarah Johnson',
@@ -619,12 +634,12 @@ export default {
     },
     licenses: {
       title: 'Licenser och Certifieringar',
-      description: 'Vi upprätthåller alla nödvändiga licenser och certifieringar för att tillhandahålla försäkringstjänster i flera stater, vilket säkerställer efterlevnad av branschregler och standarder.',
+      description: 'Vi upprätthåller alla nödvändiga licenser och certifieringar för att tillhandahålla finansiella tjänster i flera europeiska länder, vilket säkerställer efterlevnad av branschregler och standarder.',
       items: {
-        stateLicensed: 'Statslicensierade Agenter',
-        certified: 'Branschcertifierade Proffs',
+        stateLicensed: 'Licensierade Finansiella Rådgivare',
+        certified: 'Certifierade Finansbranschproffs',
         bonded: 'Förbundna och Försäkrade Verksamheter',
-        accredited: 'Better Business Bureau Ackrediterad'
+        accredited: 'Ackrediterad av Europeiska Finansmyndigheter'
       }
     }
   },
@@ -643,7 +658,7 @@ export default {
     officeHours: {
       title: 'Kontorstider',
       weekdays: 'Måndag - Fredag',
-      weekdaysTime: '09:00 - 17:30',
+      weekdaysTime: '09:00 - 17:30 endast',
       saturday: 'Lördag',
       saturdayTime: 'Stängt',
       sunday: 'Söndag',

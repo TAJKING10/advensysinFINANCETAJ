@@ -591,17 +591,32 @@ export default {
 
   // About Page
   aboutPage: {
-    title: 'About Advensys Insurance Finance',
-    subtitle: 'Your Trusted Insurance Partner Since 2008',
-    intro: 'Advensys Insurance Finance has been a leading provider of comprehensive insurance solutions for over 15 years. We are committed to protecting what matters most to our clients through innovative insurance products and exceptional customer service.',
+    title: 'About Advensys in Finance',
+    subtitle: 'Your Trusted Financial Partner',
+    intro: 'Advensys in Finance is a leading provider of comprehensive financial solutions. We are committed to protecting what matters most to our clients through innovative financial products and exceptional customer service.',
     ourStory: {
       title: 'Our Story',
-      paragraph1: 'Founded in 2008, Advensys Insurance Finance began with a simple mission: to provide reliable, affordable insurance solutions to individuals and businesses across the nation.',
-      paragraph2: 'Over the years, we have built strong relationships with top insurance carriers, allowing us to offer comprehensive coverage options at competitive rates. Our commitment to excellence and customer satisfaction has made us a trusted name in the insurance industry.',
-      paragraph3: 'Today, we serve thousands of satisfied clients nationwide, from individuals seeking personal protection to businesses requiring comprehensive commercial coverage. Our experienced team continues to adapt to changing market needs while maintaining our core values of integrity, service, and reliability.'
+      paragraph1: 'Advensys in Finance began with a simple mission: to provide reliable, affordable financial solutions to individuals and businesses across Europe.',
+      paragraph2: 'We have built strong relationships with top financial institutions, allowing us to offer comprehensive coverage options at competitive rates. Our commitment to excellence and customer satisfaction has made us a trusted name in the financial industry.',
+      paragraph3: 'Today, we serve thousands of satisfied clients across Europe, from individuals seeking personal protection to businesses requiring comprehensive commercial coverage. Our experienced team continues to adapt to changing market needs while maintaining our core values of integrity, service, and reliability.'
     },
     ourValues: {
-      description: 'We believe in conducting business with the highest ethical standards, always putting our clients\' needs first, and continuously improving our services to exceed expectations.'
+      description: 'We believe in conducting business with the highest ethical standards, always putting our clients\'s needs first, and continuously improving our services to exceed expectations.'
+    },
+    strengths: {
+      title: 'Our Strengths',
+      item1: {
+        title: 'Expert Financial Advisors',
+        description: 'Our team consists of certified financial professionals with years of experience in the industry.'
+      },
+      item2: {
+        title: 'Personalized Solutions',
+        description: 'We create customized financial plans tailored to your specific needs and goals.'
+      },
+      item3: {
+        title: 'Comprehensive Services',
+        description: 'From insurance to investments, we offer a full range of financial services under one roof.'
+      }
     },
     team: {
       title: 'Our Leadership Team',
@@ -643,7 +658,7 @@ export default {
     officeHours: {
       title: 'Office Hours',
       weekdays: 'Monday - Friday',
-      weekdaysTime: '9:00 AM - 5:30 PM',
+      weekdaysTime: '9:00 - 17:30 only',
       saturday: 'Saturday',
       saturdayTime: 'Closed',
       sunday: 'Sunday',

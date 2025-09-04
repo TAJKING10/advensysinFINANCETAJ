@@ -74,7 +74,7 @@ const DedicatedLifeInsurance = () => {
                 <ul>
                   <li>Investment-linked cash value growth</li>
                   <li>Multiple investment options</li>
-                  <li>Professional portfolio management</li>
+                  <li>Professional investment oversight</li>
                   <li>Tax-advantaged investment growth</li>
                   <li>Flexible death benefit options</li>
                 </ul>

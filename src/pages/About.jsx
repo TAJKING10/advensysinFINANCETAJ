@@ -42,38 +42,45 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
+      {/* Our Strengths */}
       <section className="section bg-light">
         <div className="container">
-          <div className="mvv-grid">
-            <div className="mvv-card">
-              <div className="mvv-icon">
-                <img src="/assets/strengths-1.svg" alt="Mission" />
+          <h2 className="section-title">{t('aboutPage.strengths.title')}</h2>
+          <div className="strengths-grid">
+            <div className="strength-item">
+              <div className="strength-icon">
+                <img src="/assets/strengths-1.svg" alt="Strength 1" />
               </div>
-              <h3 className="mvv-title">{t('about.mission.title')}</h3>
-              <p className="mvv-description">
-                {t('about.mission.description')}
-              </p>
+              <div className="strength-content">
+                <h3 className="strength-title">{t('aboutPage.strengths.item1.title')}</h3>
+                <p className="strength-description">
+                  {t('aboutPage.strengths.item1.description')}
+                </p>
+              </div>
             </div>
 
-            <div className="mvv-card">
-              <div className="mvv-icon">
-                <img src="/assets/strengths-2.svg" alt="Vision" />
+            <div className="strength-item">
+              <div className="strength-icon">
+                <img src="/assets/strengths-2.svg" alt="Strength 2" />
               </div>
-              <h3 className="mvv-title">{t('about.vision.title')}</h3>
-              <p className="mvv-description">
-                {t('about.vision.description')}
-              </p>
+              <div className="strength-content">
+                <h3 className="strength-title">{t('aboutPage.strengths.item2.title')}</h3>
+                <p className="strength-description">
+                  {t('aboutPage.strengths.item2.description')}
+                </p>
+              </div>
             </div>
 
-            <div className="mvv-card">
-              <div className="mvv-icon">
-                <img src="/assets/strengths-3.svg" alt="Values" />
+            <div className="strength-item">
+              <div className="strength-icon">
+                <img src="/assets/strengths-3.svg" alt="Strength 3" />
               </div>
-              <h3 className="mvv-title">{t('about.values.title')}</h3>
-              <p className="mvv-description">
-                {t('aboutPage.ourValues.description')}
-              </p>
+              <div className="strength-content">
+                <h3 className="strength-title">{t('aboutPage.strengths.item3.title')}</h3>
+                <p className="strength-description">
+                  {t('aboutPage.strengths.item3.description')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
