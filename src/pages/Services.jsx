@@ -133,14 +133,14 @@ const Services = () => {
       image: '/assets/category-2.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'bpmi-en',
-          title: 'Borrower Paid Mortgage Insurance',
-          youtubeId: '7ltogxhD6Xs'
+          id: 'pension-en',
+          title: 'Private Pension Plan',
+          youtubeId: 'VIcqJ0WuaoY'
         },
         {
-          id: 'bpmi-fr',
-          title: 'Assurance Solde Restant Dû',
-          youtubeId: '1wGVUPcAtaA'
+          id: 'pension-fr',
+          title: 'Prévoyance Vieillesse',
+          youtubeId: '_nxRWgmeFLU'
         }
       ]).slice(0, 1),
       details: {

@@ -72,11 +72,7 @@ const Contact = () => {
     setTimeout(() => setSubmitMessage(''), 8000)
   }
 
-  const handleMapClick = () => {
-    if (currentLocationData?.mapsUrl) {
-      window.open(currentLocationData.mapsUrl, '_blank', 'noopener,noreferrer')
-    }
-  }
+  // Map click handler removed as per requirements
 
   const contactInfo = [
     {
@@ -304,8 +300,11 @@ const Contact = () => {
                   <a href="https://www.linkedin.com/company/advensys-insurance-finance/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                     <img src="/assets/linkedin.png" alt="LinkedIn" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
-                  <a href="https://www.facebook.com/share/1AwuTkaKbP/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                  <a href="https://www.facebook.com/advensysinsurancefinance" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                     <img src="/assets/facebook.png" alt="Facebook" onError={(e) => {e.target.style.display = 'none'}} />
+                  </a>
+                  <a href="https://www.youtube.com/@advensysinsurancefinance" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube">
+                    <img src="/assets/youtube.png" alt="YouTube" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
                   <a href="https://wa.me/352661112260?text=Hello%20Advensys%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote." target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                     <img src="/assets/whatsapp.png" alt="WhatsApp" onError={(e) => {e.target.style.display = 'none'}} />
@@ -314,16 +313,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map */}
-            <div className="contact-map" onClick={handleMapClick} style={{ cursor: 'pointer' }}>
-              <img src="/assets/map.png" alt="Our Location - Click to open in Google Maps" />
-              <div className="map-overlay">
-                <div className="map-click-hint">
-                  <img src="/assets/geo.svg" alt="Location" style={{ width: '24px', height: '24px', filter: 'brightness(0) invert(1)' }} />
-                  <span>Click to open in Google Maps</span>
-                </div>
-              </div>
-            </div>
+            {/* Map section removed as per requirements */}
           </div>
         </div>
       </div>

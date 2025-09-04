@@ -143,7 +143,6 @@ export default {
         shortDescription: 'Conseil professionnel en investissement pour la création de patrimoine',
         overview: 'En tant que conseillers en investissement agréés, nous fournissons des conseils d\'investissement personnalisés et des services de gestion de portefeuille conçus pour vous aider à atteindre vos objectifs financiers grâce à des stratégies disciplinées et basées sur la recherche.',
         services: [
-          'Gestion de Portefeuille - Portefeuilles d\'investissement personnalisés et allocation d\'actifs',
           'Planification d\'Investissement - Stratégies basées sur les objectifs et planification de retraite',
           'Recherche et Analyse - Recherche de marché et diligence raisonnable d\'investissement',
           'Gestion de Patrimoine - Services pour fortunés et institutionnels',
@@ -644,13 +643,13 @@ export default {
     officeHours: {
       title: 'Heures d\'Ouverture',
       weekdays: 'Lundi - Vendredi',
-      weekdaysTime: '9h00 - 18h00',
+      weekdaysTime: '9h00 - 17h30',
       saturday: 'Samedi',
-      saturdayTime: '10h00 - 16h00',
+      saturdayTime: 'Fermé',
       sunday: 'Dimanche',
       closed: 'Fermé',
       emergency: 'Support d\'Urgence',
-      available247: 'Disponible 24/7'
+      available247: 'Non Disponible'
     }
   },
 

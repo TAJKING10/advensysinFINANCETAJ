@@ -143,7 +143,6 @@ export default {
         shortDescription: 'Professional investment advisory for wealth building',
         overview: 'As registered investment advisers, we provide personalized investment guidance and portfolio management services designed to help you achieve your financial goals through disciplined, research-driven strategies.',
         services: [
-          'Portfolio Management - Customized investment portfolios and asset allocation',
           'Investment Planning - Goal-based strategies and retirement planning',
           'Research & Analysis - Market research and investment due diligence',
           'Wealth Management - High net worth and institutional services',
@@ -644,13 +643,13 @@ export default {
     officeHours: {
       title: 'Office Hours',
       weekdays: 'Monday - Friday',
-      weekdaysTime: '9:00 AM - 6:00 PM',
+      weekdaysTime: '9:00 AM - 5:30 PM',
       saturday: 'Saturday',
-      saturdayTime: '10:00 AM - 4:00 PM',
+      saturdayTime: 'Closed',
       sunday: 'Sunday',
       closed: 'Closed',
       emergency: 'Emergency Support',
-      available247: '24/7 Available'
+      available247: 'Not Available'
     }
   },
 

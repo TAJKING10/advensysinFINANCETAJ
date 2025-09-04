@@ -76,20 +76,17 @@ const Services = () => {
                 <p className="service-description">{service.description}</p>
                 
                 <ul className="service-features">
-                  {service.features.map((feature, index) => (
+                  {Array.isArray(service.features) ? service.features.map((feature, index) => (
                     <li key={index} className="service-feature">
                       <img src="/assets/strengths-1.svg" alt="" className="feature-icon" />
                       <span>{feature}</span>
                     </li>
-                  ))}
+                  )) : null}
                 </ul>
                 
                 <div className="service-actions">
-                  <button onClick={() => { navigate(`/services?service=${service.id}`); }} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
+                  <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
                     {t('services.getQuote')}
-                  </button>
-                  <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="service-contact" style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'underline' }}>
-                    {t('common.contactUs')}
                   </button>
                 </div>
               </div>

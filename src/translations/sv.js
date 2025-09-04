@@ -143,7 +143,6 @@ export default {
         shortDescription: 'Professionell investeringsrådgivning för förmögenhetsbyggande',
         overview: 'Som registrerade investeringsrådgivare tillhandahåller vi personlig investeringsvbägledning och portföljförvaltningstjänster designade för att hjälpa dig uppnå dina finansiella mål genom disciplinerade, forskningsdrivna strategier.',
         services: [
-          'Portföljförvaltning - Anpassade investeringsportföljer och tillgångsallokering',
           'Investeringsplanering - Målbaserade strategier och pensionsplanering',
           'Forskning & Analys - Marknadsforskning och investeringsdue diligence',
           'Förmögenhetsförvaltning - Högförmögna och institutionella tjänster',
@@ -644,13 +643,13 @@ export default {
     officeHours: {
       title: 'Kontorstider',
       weekdays: 'Måndag - Fredag',
-      weekdaysTime: '09:00 - 18:00',
+      weekdaysTime: '09:00 - 17:30',
       saturday: 'Lördag',
-      saturdayTime: '10:00 - 16:00',
+      saturdayTime: 'Stängt',
       sunday: 'Söndag',
       closed: 'Stängt',
       emergency: 'Akutstöd',
-      available247: 'Tillgängligt 24/7'
+      available247: 'Ej Tillgängligt'
     }
   },
 

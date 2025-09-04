@@ -69,8 +69,11 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/company/advensys-insurance-finance/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                   <img src="/assets/linkedin.png" alt="LinkedIn" onError={(e) => {e.target.style.display = 'none'}} />
                 </a>
-                <a href="https://www.facebook.com/share/1AwuTkaKbP/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com/advensysinsurancefinance" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                   <img src="/assets/facebook.png" alt="Facebook" onError={(e) => {e.target.style.display = 'none'}} />
+                </a>
+                <a href="https://www.youtube.com/@advensysinsurancefinance" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube">
+                  <img src="/assets/youtube.png" alt="YouTube" onError={(e) => {e.target.style.display = 'none'}} />
                 </a>
                 <a href="https://wa.me/352661112260?text=Hello%20Advensys%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote." target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                   <img src="/assets/whatsapp.png" alt="WhatsApp" onError={(e) => {e.target.style.display = 'none'}} />

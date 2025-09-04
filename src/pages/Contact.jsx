@@ -34,7 +34,7 @@ const Contact = () => {
                   <span className="day">{t('contactPage.officeHours.weekdays')}</span>
                   <span className="time">{t('contactPage.officeHours.weekdaysTime')}</span>
                 </div>
-                <div className="hours-item">
+                <div className="hours-item closed">
                   <span className="day">{t('contactPage.officeHours.saturday')}</span>
                   <span className="time">{t('contactPage.officeHours.saturdayTime')}</span>
                 </div>
@@ -42,7 +42,7 @@ const Contact = () => {
                   <span className="day">{t('contactPage.officeHours.sunday')}</span>
                   <span className="time">{t('contactPage.officeHours.closed')}</span>
                 </div>
-                <div className="hours-item emergency">
+                <div className="hours-item closed">
                   <span className="day">{t('contactPage.officeHours.emergency')}</span>
                   <span className="time">{t('contactPage.officeHours.available247')}</span>
                 </div>

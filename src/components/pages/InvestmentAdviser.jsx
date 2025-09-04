@@ -37,17 +37,6 @@ const InvestmentAdviser = () => {
             
             <div className="detail-grid">
               <div className="detail-item">
-                <h3>Portfolio Management</h3>
-                <ul>
-                  <li>Customized investment portfolios</li>
-                  <li>Asset allocation strategies</li>
-                  <li>Risk management and diversification</li>
-                  <li>Regular portfolio rebalancing</li>
-                  <li>Performance monitoring and reporting</li>
-                </ul>
-              </div>
-
-              <div className="detail-item">
                 <h3>Investment Planning</h3>
                 <ul>
                   <li>Goal-based investment strategies</li>
