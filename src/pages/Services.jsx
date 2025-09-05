@@ -80,7 +80,6 @@ const Services = () => {
       },
       investmentAdviser: {
         en: [
-          'Portfolio Management - Customized investment portfolios and asset allocation',
           'Investment Planning - Goal-based strategies and retirement planning',
           'Research & Analysis - Market research and investment due diligence',
           'Wealth Management - High net worth and institutional services',
