@@ -300,7 +300,7 @@ const Contact = () => {
                   <a href="https://www.linkedin.com/company/advensys-insurance-finance/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                     <img src="/assets/linkedin.png" alt="LinkedIn" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
-                  <a href="https://www.facebook.com/advensysinfinance" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                  <a href="https://www.facebook.com/advensysif" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                     <img src="/assets/facebook.png" alt="Facebook" onError={(e) => {e.target.style.display = 'none'}} />
                   </a>
                   <a href="https://www.youtube.com/@advensysinsurancefinance" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube">

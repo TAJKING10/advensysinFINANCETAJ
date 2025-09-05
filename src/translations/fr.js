@@ -319,7 +319,6 @@ export default {
         shortDescription: 'Conseil professionnel en investissement pour la création de patrimoine',
         overview: 'En tant que conseillers en investissement agréés, nous fournissons des conseils d\'investissement personnalisés et des services de gestion de portefeuille conçus pour vous aider à atteindre vos objectifs financiers grâce à des stratégies disciplinées et basées sur la recherche.',
         services: [
-          'Gestion de Portefeuille - Portefeuilles d\'investissement personnalisés et allocation d\'actifs',
           'Planification d\'Investissement - Stratégies basées sur les objectifs et planification de retraite',
           'Recherche et Analyse - Recherche de marché et diligence raisonnable d\'investissement',
           'Gestion de Patrimoine - Services pour fortunés et institutionnels',

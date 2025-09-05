@@ -319,7 +319,6 @@ export default {
         shortDescription: 'Professional investment advisory for wealth building',
         overview: 'As registered investment advisers, we provide personalized investment guidance and portfolio management services designed to help you achieve your financial goals through disciplined, research-driven strategies.',
         services: [
-          'Portfolio Management - Customized investment portfolios and asset allocation',
           'Investment Planning - Goal-based strategies and retirement planning',
           'Research & Analysis - Market research and investment due diligence',
           'Wealth Management - High net worth and institutional services',

@@ -396,14 +396,14 @@ const Services = () => {
       image: '/assets/category-2.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'bpmi-en',
-          title: 'Borrower Paid Mortgage Insurance',
-          youtubeId: '7ltogxhD6Xs'
+          id: 'welcome-en',
+          title: 'Welcome to Advensys In-Finance - Life Insurance',
+          youtubeId: 'rrtUkqn9gqo'
         },
         {
-          id: 'bpmi-fr',
-          title: 'Assurance Solde Restant Dû',
-          youtubeId: '1wGVUPcAtaA'
+          id: 'welcome-fr',
+          title: 'Bonjour et Bienvenue chez Advensys In-Finance - Assurance Vie',
+          youtubeId: 'amwQlWwkaMs'
         }
       ]).slice(0, 1), // Only show one video
       details: {

@@ -319,7 +319,6 @@ export default {
         shortDescription: 'Professionell investeringsrådgivning för förmögenhetsbyggande',
         overview: 'Som registrerade investeringsrådgivare tillhandahåller vi personlig investeringsvägledning och portföljförvaltningstjänster designade för att hjälpa dig uppnå dina finansiella mål genom disciplinerade, forskningsdrivna strategier.',
         services: [
-          'Portföljförvaltning - Anpassade investeringsportföljer och tillgångsallokering',
           'Investeringsplanering - Målbaserade strategier och pensionsplanering',
           'Forskning & Analys - Marknadsforskning och investeringsdue diligence',
           'Förmögenhetsförvaltning - Högförmögna och institutionella tjänster',
