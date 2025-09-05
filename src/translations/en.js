@@ -93,6 +93,107 @@ export default {
     contactToday: 'Contact us today',
     getQuote: 'Get Quote',
     callNow: 'Call Now',
+    contactUsToday: 'Contact Us Today',
+    ctaDescription: 'Contact us today to discuss your financial needs and find the perfect solution for you.',
+    call: 'Call',
+    contactForService: 'Contact us today to discuss your {{service}} needs and get a personalized quote.',
+    backToServices: 'Back to Services',
+    completeProtection: 'Complete Insurance Protection',
+    insuranceDescription: 'At Advensys Insurance Finance, we understand that insurance is about more than just policies—it\'s about peace of mind. Our comprehensive insurance services are designed to protect you, your family, and your assets from life\'s unexpected challenges.',
+    ourInsuranceSolutions: 'Our Insurance Solutions',
+    protectingFamily: 'Protecting Your Family\'s Future',
+    specializedProducts: 'Specialized Life Insurance Products',
+    whyChooseService: 'Why Choose Our Dedicated Life Insurance Service',
+    advancedFeatures: 'Advanced Life Insurance Features',
+    lifeInsuranceProcess: 'Our Life Insurance Process',
+    secureFamily: 'Secure Your Family\'s Financial Future',
+    takeAction: 'Every day without life insurance is a day your family is at financial risk. Take action today to protect what matters most.',
+    applyNow: 'Apply Now',
+    askQuestion: 'Ask a Question',
+    wealthBuildingPartner: 'Your Partner in Wealth Building',
+    whyChooseInsuranceServices: 'Why Choose Our Insurance Services',
+    ourProcess: 'Our Process',
+    readyToProtect: 'Ready to Protect What Matters Most?',
+    insuranceExpertsHelp: 'Our insurance experts are ready to help you find the right coverage for your needs. Contact us today to get started.',
+    insuranceTypes: {
+      lifeInsurance: {
+        title: 'Life Insurance',
+        term: 'Term, Whole, Universal, and Variable life options',
+        whole: 'Whole Life Insurance',
+        universal: 'Universal Life Insurance',
+        variable: 'Variable Life Insurance',
+        group: 'Group Life Insurance'
+      },
+      healthInsurance: {
+        title: 'Health Insurance',
+        term: 'Individual, family, and group health plans',
+        individual: 'Individual Health Insurance',
+        employer: 'Employer-Sponsored Health Plans',
+        supplemental: 'Supplemental Health Insurance',
+        dental: 'Dental & Vision Insurance',
+        international: 'International Health Coverage'
+      },
+      propertyInsurance: {
+        title: 'Property Insurance',
+        term: 'Homeowners, renters, and commercial property',
+        homeowners: 'Homeowners Insurance',
+        renters: 'Renters Insurance',
+        condominium: 'Condominium Insurance',
+        personal: 'Personal Property Coverage',
+        liability: 'Personal Liability Protection'
+      },
+      businessInsurance: {
+        title: 'Business Insurance',
+        term: 'Liability, workers compensation, and cyber protection',
+        general: 'General Liability Insurance',
+        professional: 'Professional Liability Insurance',
+        commercial: 'Commercial Property Insurance',
+        workers: 'Workers Compensation Insurance',
+        cyber: 'Cyber Liability Insurance'
+      }
+    },
+    benefits: {
+      expertGuidance: {
+        title: 'Expert Guidance',
+        description: 'Our experienced insurance professionals provide personalized advice to help you choose the right coverage for your unique situation.'
+      },
+      competitiveRates: {
+        title: 'Competitive Rates',
+        description: 'We work with multiple insurance carriers to find you the best coverage at the most competitive rates available.'
+      },
+      claimsSupport: {
+        title: 'Claims Support',
+        description: 'When you need to file a claim, our team is here to guide you through the process and advocate for your interests.'
+      },
+      regularReviews: {
+        title: 'Regular Reviews',
+        description: 'We regularly review your coverage to ensure it continues to meet your changing needs and life circumstances.'
+      }
+    },
+    process: {
+      assessment: {
+        title: 'Assessment',
+        description: 'We evaluate your current situation, risks, and coverage needs through a comprehensive consultation.'
+      },
+      recommendation: {
+        title: 'Recommendation',
+        description: 'Our team develops personalized insurance recommendations based on your specific needs and budget.'
+      },
+      implementation: {
+        title: 'Implementation',
+        description: 'We help you select and implement the right insurance policies with the best carriers for your situation.'
+      },
+      ongoingSupport: {
+        title: 'Ongoing Support',
+        description: 'Our relationship continues with regular reviews, claims assistance, and adjustments as your needs change.'
+      }
+    },
+    comprehensiveInvestmentServices: 'Comprehensive Investment Services',
+    whyChooseInvestmentServices: 'Why Choose Our Investment Advisory Services',
+    investmentPhilosophy: 'Our Investment Philosophy',
+    investmentAdvisoryProcess: 'Our Investment Advisory Process',
+    buildWealthToday: 'Start Building Your Wealth Today',
+    takeControlFinancialFuture: 'Take control of your financial future with professional investment advisory services. Contact us to schedule your consultation.',
     cta: {
       title: 'Need Help Choosing the Right Solution?',
       description: 'Our financial experts are here to help you find the perfect solution for your needs and budget.',

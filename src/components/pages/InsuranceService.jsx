@@ -1,147 +1,141 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../../contexts/LanguageContext'
 import './ServicePages.css'
 
 const InsuranceService = () => {
+  const { t } = useLanguage()
   return (
     <div className="service-page">
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">
           <Link to="/services" className="back-link">
-            ← Back to Services
+            ← {t('services.backToServices')}
           </Link>
         </div>
 
         {/* Page Header */}
         <header className="service-header">
-          <h1>Insurance Services</h1>
+          <h1>{t('services.mainServices.insurance.title')}</h1>
           <p className="service-intro">
-            Comprehensive insurance solutions tailored to protect what matters most to you
+            {t('services.mainServices.insurance.overview')}
           </p>
         </header>
 
         {/* Main Content */}
         <article className="service-content">
           <section className="service-overview">
-            <h2>Complete Insurance Protection</h2>
+            <h2>{t('services.completeProtection')}</h2>
             <p>
-              At Advensys Insurance Finance, we understand that insurance is about more than just policies—it's about 
-              peace of mind. Our comprehensive insurance services are designed to protect you, your family, and your 
-              assets from life's unexpected challenges.
+              {t('services.insuranceDescription')}
             </p>
           </section>
 
           <section className="service-details">
-            <h2>Our Insurance Solutions</h2>
+            <h2>{t('services.ourInsuranceSolutions')}</h2>
             
             <div className="detail-grid">
               <div className="detail-item">
-                <h3>Life Insurance</h3>
+                <h3>{t('services.insuranceTypes.lifeInsurance.title')}</h3>
                 <ul>
-                  <li>Term life insurance for temporary coverage needs</li>
-                  <li>Whole life insurance for permanent protection</li>
-                  <li>Universal life insurance with flexible premiums</li>
-                  <li>Variable life insurance with investment options</li>
-                  <li>Group life insurance for businesses</li>
+                  <li>{t('services.insuranceTypes.lifeInsurance.term')}</li>
+                  <li>{t('services.insuranceTypes.lifeInsurance.whole')}</li>
+                  <li>{t('services.insuranceTypes.lifeInsurance.universal')}</li>
+                  <li>{t('services.insuranceTypes.lifeInsurance.variable')}</li>
+                  <li>{t('services.insuranceTypes.lifeInsurance.group')}</li>
                 </ul>
               </div>
 
               <div className="detail-item">
-                <h3>Health Insurance</h3>
+                <h3>{t('services.insuranceTypes.healthInsurance.title')}</h3>
                 <ul>
-                  <li>Individual and family health plans</li>
-                  <li>Employer-sponsored group health insurance</li>
-                  <li>Supplemental health coverage</li>
-                  <li>Dental and vision insurance</li>
-                  <li>International health coverage</li>
+                  <li>{t('services.insuranceTypes.healthInsurance.individual')}</li>
+                  <li>{t('services.insuranceTypes.healthInsurance.employer')}</li>
+                  <li>{t('services.insuranceTypes.healthInsurance.supplemental')}</li>
+                  <li>{t('services.insuranceTypes.healthInsurance.dental')}</li>
+                  <li>{t('services.insuranceTypes.healthInsurance.international')}</li>
                 </ul>
               </div>
 
               <div className="detail-item">
-                <h3>Property Insurance</h3>
+                <h3>{t('services.insuranceTypes.propertyInsurance.title')}</h3>
                 <ul>
-                  <li>Homeowners insurance protection</li>
-                  <li>Renters insurance coverage</li>
-                  <li>Condominium insurance</li>
-                  <li>Personal property protection</li>
-                  <li>Liability coverage for property owners</li>
+                  <li>{t('services.insuranceTypes.propertyInsurance.homeowners')}</li>
+                  <li>{t('services.insuranceTypes.propertyInsurance.renters')}</li>
+                  <li>{t('services.insuranceTypes.propertyInsurance.condominium')}</li>
+                  <li>{t('services.insuranceTypes.propertyInsurance.personal')}</li>
+                  <li>{t('services.insuranceTypes.propertyInsurance.liability')}</li>
                 </ul>
               </div>
 
               <div className="detail-item">
-                <h3>Business Insurance</h3>
+                <h3>{t('services.insuranceTypes.businessInsurance.title')}</h3>
                 <ul>
-                  <li>General liability insurance</li>
-                  <li>Professional liability coverage</li>
-                  <li>Commercial property insurance</li>
-                  <li>Workers' compensation</li>
-                  <li>Cyber liability protection</li>
+                  <li>{t('services.insuranceTypes.businessInsurance.general')}</li>
+                  <li>{t('services.insuranceTypes.businessInsurance.professional')}</li>
+                  <li>{t('services.insuranceTypes.businessInsurance.commercial')}</li>
+                  <li>{t('services.insuranceTypes.businessInsurance.workers')}</li>
+                  <li>{t('services.insuranceTypes.businessInsurance.cyber')}</li>
                 </ul>
               </div>
             </div>
           </section>
 
           <section className="service-benefits">
-            <h2>Why Choose Our Insurance Services</h2>
+            <h2>{t('services.whyChooseInsuranceServices')}</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
-                <h3>Expert Guidance</h3>
-                <p>Our experienced insurance professionals provide personalized advice to help you choose the right coverage for your unique situation.</p>
+                <h3>{t('services.benefits.expertGuidance.title')}</h3>
+                <p>{t('services.benefits.expertGuidance.description')}</p>
               </div>
               <div className="benefit-card">
-                <h3>Competitive Rates</h3>
-                <p>We work with multiple insurance carriers to find you the best coverage at the most competitive rates available.</p>
+                <h3>{t('services.benefits.competitiveRates.title')}</h3>
+                <p>{t('services.benefits.competitiveRates.description')}</p>
               </div>
               <div className="benefit-card">
-                <h3>Claims Support</h3>
-                <p>When you need to file a claim, our team is here to guide you through the process and advocate for your interests.</p>
+                <h3>{t('services.benefits.claimsSupport.title')}</h3>
+                <p>{t('services.benefits.claimsSupport.description')}</p>
               </div>
               <div className="benefit-card">
-                <h3>Regular Reviews</h3>
-                <p>We regularly review your coverage to ensure it continues to meet your changing needs and life circumstances.</p>
+                <h3>{t('services.benefits.regularReviews.title')}</h3>
+                <p>{t('services.benefits.regularReviews.description')}</p>
               </div>
             </div>
           </section>
 
           <section className="service-process">
-            <h2>Our Process</h2>
+            <h2>{t('services.ourProcess')}</h2>
             <div className="process-steps">
-              <div className="step">
+              <div className="process-step">
                 <div className="step-number">1</div>
-                <h3>Assessment</h3>
-                <p>We evaluate your current situation, risks, and insurance needs through a comprehensive consultation.</p>
+                <h3>{t('services.process.assessment.title')}</h3>
+                <p>{t('services.process.assessment.description')}</p>
               </div>
-              <div className="step">
+              <div className="process-step">
                 <div className="step-number">2</div>
-                <h3>Recommendation</h3>
-                <p>Based on our assessment, we recommend insurance solutions that provide optimal protection at competitive rates.</p>
+                <h3>{t('services.process.recommendation.title')}</h3>
+                <p>{t('services.process.recommendation.description')}</p>
               </div>
-              <div className="step">
+              <div className="process-step">
                 <div className="step-number">3</div>
-                <h3>Implementation</h3>
-                <p>We help you implement your insurance plan, handling all paperwork and ensuring smooth policy activation.</p>
+                <h3>{t('services.process.implementation.title')}</h3>
+                <p>{t('services.process.implementation.description')}</p>
               </div>
-              <div className="step">
+              <div className="process-step">
                 <div className="step-number">4</div>
-                <h3>Ongoing Support</h3>
-                <p>We provide continuous support, regular reviews, and assistance with claims throughout your policy term.</p>
+                <h3>{t('services.process.ongoingSupport.title')}</h3>
+                <p>{t('services.process.ongoingSupport.description')}</p>
               </div>
             </div>
           </section>
 
-          <section className="service-cta">
-            <h2>Ready to Protect What Matters Most?</h2>
-            <p>
-              Don't wait until it's too late. Contact us today to discuss your insurance needs and get a personalized quote.
-            </p>
+          <section className="cta-section">
+            <h2>{t('services.readyToProtect')}</h2>
+            <p>{t('services.insuranceExpertsHelp')}</p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary btn-lg">
-                Apply Now
-              </Link>
-              <Link to="/contact" className="btn btn-secondary btn-lg">
-                Ask a Question
-              </Link>
+              <Link to="/contact" className="cta-button primary">{t('services.applyNow')}</Link>
+              <Link to="/contact" className="cta-button secondary">{t('services.askQuestion')}</Link>
             </div>
           </section>
         </article>

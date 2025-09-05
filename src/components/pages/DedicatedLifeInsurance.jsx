@@ -1,43 +1,43 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './ServicePages.css'
+import { useLanguage } from '../../contexts/LanguageContext'
 
 const DedicatedLifeInsurance = () => {
+  const { t } = useLanguage()
   return (
     <div className="service-page">
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">
           <Link to="/services" className="back-link">
-            ← Back to Services
+            ← {t('services.backToServices')}
           </Link>
         </div>
 
         {/* Page Header */}
         <header className="service-header">
-          <h1>Dedicated Life Insurance</h1>
+          <h1>{t('services.mainServices.dedicatedLifeInsurance.title')}</h1>
           <p className="service-intro">
-            Specialized life insurance solutions designed to provide financial security and peace of mind for you and your loved ones
+            {t('services.mainServices.dedicatedLifeInsurance.shortDescription')}
           </p>
         </header>
 
         {/* Main Content */}
         <article className="service-content">
           <section className="service-overview">
-            <h2>Protecting Your Family's Future</h2>
+            <h2>{t('services.protectingFamily')}</h2>
             <p>
-              Life insurance is one of the most important financial decisions you can make for your family's future. 
-              Our dedicated life insurance services focus exclusively on providing comprehensive life insurance solutions 
-              that ensure your loved ones are financially protected when they need it most.
+              {t('services.mainServices.dedicatedLifeInsurance.overview')}
             </p>
           </section>
 
           <section className="service-details">
-            <h2>Specialized Life Insurance Products</h2>
+            <h2>{t('services.specializedProducts')}</h2>
             
             <div className="detail-grid">
               <div className="detail-item">
-                <h3>Term Life Insurance</h3>
+                <h3>{t('services.insuranceTypes.lifeInsurance.term')}</h3>
                 <ul>
                   <li>10, 20, or 30-year term options</li>
                   <li>Level premium guarantee</li>
@@ -48,7 +48,7 @@ const DedicatedLifeInsurance = () => {
               </div>
 
               <div className="detail-item">
-                <h3>Whole Life Insurance</h3>
+                <h3>{t('services.insuranceTypes.lifeInsurance.whole')}</h3>
                 <ul>
                   <li>Lifetime coverage guarantee</li>
                   <li>Cash value accumulation</li>
@@ -59,7 +59,7 @@ const DedicatedLifeInsurance = () => {
               </div>
 
               <div className="detail-item">
-                <h3>Universal Life Insurance</h3>
+                <h3>{t('services.insuranceTypes.lifeInsurance.universal')}</h3>
                 <ul>
                   <li>Flexible premium payments</li>
                   <li>Adjustable death benefit options</li>
@@ -70,7 +70,7 @@ const DedicatedLifeInsurance = () => {
               </div>
 
               <div className="detail-item">
-                <h3>Variable Life Insurance</h3>
+                <h3>{t('services.insuranceTypes.lifeInsurance.variable')}</h3>
                 <ul>
                   <li>Investment-linked cash value growth</li>
                   <li>Multiple investment options</li>
@@ -83,7 +83,7 @@ const DedicatedLifeInsurance = () => {
           </section>
 
           <section className="service-benefits">
-            <h2>Why Choose Our Dedicated Life Insurance Service</h2>
+            <h2>{t('services.whyChooseService')}</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 <h3>Specialized Expertise</h3>
@@ -105,7 +105,7 @@ const DedicatedLifeInsurance = () => {
           </section>
 
           <section className="service-features">
-            <h2>Advanced Life Insurance Features</h2>
+            <h2>{t('services.advancedFeatures')}</h2>
             <div className="features-list">
               <div className="feature">
                 <h3>Living Benefits</h3>
@@ -127,7 +127,7 @@ const DedicatedLifeInsurance = () => {
           </section>
 
           <section className="service-process">
-            <h2>Our Life Insurance Process</h2>
+            <h2>{t('services.lifeInsuranceProcess')}</h2>
             <div className="process-steps">
               <div className="step">
                 <div className="step-number">1</div>
@@ -153,16 +153,16 @@ const DedicatedLifeInsurance = () => {
           </section>
 
           <section className="service-cta">
-            <h2>Secure Your Family's Financial Future</h2>
+            <h2>{t('services.secureFamily')}</h2>
             <p>
-              Every day without life insurance is a day your family is at financial risk. Take action today to protect what matters most.
+              {t('services.takeAction')}
             </p>
             <div className="cta-buttons">
               <Link to="/contact" className="btn btn-primary btn-lg">
-                Apply Now
+                {t('services.applyNow')}
               </Link>
               <Link to="/contact" className="btn btn-secondary btn-lg">
-                Ask a Question
+                {t('services.askQuestion')}
               </Link>
             </div>
           </section>

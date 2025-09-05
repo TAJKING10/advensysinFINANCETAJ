@@ -1,11 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install)",
-      "Bash(mkdir:*)",
-      "Bash(xcopy:*)",
-      "Bash(copy img*.* publicassets)",
-      "Bash(cp:*)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\pages/**)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\components\\pages/**)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\components\\pages/**)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\components\\pages/**)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\translations/**)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\translations/**)",
+      "Read(/C:\\Users\\Toufi\\AndroidStudioProjects\\advensysinFINANCETAJ11\\src\\translations/**)",
+      "Bash(npm run build:*)",
       "Bash(npm run dev:*)"
     ],
     "deny": [],

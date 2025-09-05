@@ -93,6 +93,107 @@ export default {
     contactToday: 'Contactez-nous aujourd\'hui',
     getQuote: 'Obtenir un Devis',
     callNow: 'Appeler Maintenant',
+    contactUsToday: 'Contactez-Nous Aujourd\'hui',
+    ctaDescription: 'Contactez-nous aujourd\'hui pour discuter de vos besoins financiers et trouver la solution parfaite pour vous.',
+    call: 'Appelez',
+    contactForService: 'Contactez-nous aujourd\'hui pour discuter de vos besoins en {{service}} et obtenir un devis personnalisé.',
+    backToServices: 'Retour aux Services',
+    completeProtection: 'Protection d\'Assurance Complète',
+    insuranceDescription: 'Chez Advensys Insurance Finance, nous comprenons que l\'assurance est plus que de simples polices—c\'est une tranquillité d\'esprit. Nos services d\'assurance complets sont conçus pour vous protéger, vous, votre famille et vos actifs des défis inattendus de la vie.',
+    ourInsuranceSolutions: 'Nos Solutions d\'Assurance',
+    protectingFamily: 'Protéger l\'Avenir de Votre Famille',
+    specializedProducts: 'Produits d\'Assurance Vie Spécialisés',
+    whyChooseService: 'Pourquoi Choisir Notre Service d\'Assurance Vie Dédiée',
+    advancedFeatures: 'Fonctionnalités Avancées d\'Assurance Vie',
+    lifeInsuranceProcess: 'Notre Processus d\'Assurance Vie',
+    secureFamily: 'Sécurisez l\'Avenir Financier de Votre Famille',
+    takeAction: 'Chaque jour sans assurance vie est un jour où votre famille est exposée à un risque financier. Agissez aujourd\'hui pour protéger ce qui compte le plus.',
+    applyNow: 'Postuler Maintenant',
+    askQuestion: 'Poser une Question',
+    wealthBuildingPartner: 'Votre Partenaire dans la Construction de Patrimoine',
+    whyChooseInsuranceServices: 'Pourquoi Choisir Nos Services d\'Assurance',
+    ourProcess: 'Notre Processus',
+    readyToProtect: 'Prêt à Protéger ce qui Compte le Plus ?',
+    insuranceExpertsHelp: 'Nos experts en assurance sont prêts à vous aider à trouver la couverture adaptée à vos besoins. Contactez-nous dès aujourd\'hui pour commencer.',
+    insuranceTypes: {
+      lifeInsurance: {
+        title: 'Assurance Vie',
+        term: 'Options d\'assurance vie temporaire, entière, universelle et variable',
+        whole: 'Assurance Vie Entière',
+        universal: 'Assurance Vie Universelle',
+        variable: 'Assurance Vie Variable',
+        group: 'Assurance Vie Collective'
+      },
+      healthInsurance: {
+        title: 'Assurance Santé',
+        term: 'Plans de santé individuels, familiaux et collectifs',
+        individual: 'Assurance Santé Individuelle',
+        employer: 'Plans de Santé Sponsorisés par l\'Employeur',
+        supplemental: 'Assurance Santé Complémentaire',
+        dental: 'Assurance Dentaire et Vision',
+        international: 'Couverture Santé Internationale'
+      },
+      propertyInsurance: {
+        title: 'Assurance Habitation',
+        term: 'Propriétaires, locataires et biens commerciaux',
+        homeowners: 'Assurance Propriétaire',
+        renters: 'Assurance Locataire',
+        condominium: 'Assurance Copropriété',
+        personal: 'Couverture des Biens Personnels',
+        liability: 'Protection de Responsabilité Personnelle'
+      },
+      businessInsurance: {
+        title: 'Assurance Entreprise',
+        term: 'Responsabilité civile, indemnisation des travailleurs et protection cyber',
+        general: 'Assurance Responsabilité Civile Générale',
+        professional: 'Assurance Responsabilité Professionnelle',
+        commercial: 'Assurance Propriété Commerciale',
+        workers: 'Assurance Indemnisation des Travailleurs',
+        cyber: 'Assurance Responsabilité Cyber'
+      }
+    },
+    benefits: {
+      expertGuidance: {
+        title: 'Conseils d\'Experts',
+        description: 'Nos professionnels expérimentés en assurance fournissent des conseils personnalisés pour vous aider à choisir la couverture adaptée à votre situation unique.'
+      },
+      competitiveRates: {
+        title: 'Tarifs Compétitifs',
+        description: 'Nous travaillons avec plusieurs assureurs pour vous trouver la meilleure couverture aux tarifs les plus compétitifs disponibles.'
+      },
+      claimsSupport: {
+        title: 'Assistance aux Réclamations',
+        description: 'Lorsque vous devez déposer une réclamation, notre équipe est là pour vous guider tout au long du processus et défendre vos intérêts.'
+      },
+      regularReviews: {
+        title: 'Révisions Régulières',
+        description: 'Nous révisons régulièrement votre couverture pour nous assurer qu\'elle continue de répondre à vos besoins changeants et aux circonstances de votre vie.'
+      }
+    },
+    process: {
+      assessment: {
+        title: 'Évaluation',
+        description: 'Nous évaluons votre situation actuelle, vos risques et vos besoins de couverture grâce à une consultation complète.'
+      },
+      recommendation: {
+        title: 'Recommandation',
+        description: 'Notre équipe développe des recommandations d\'assurance personnalisées en fonction de vos besoins spécifiques et de votre budget.'
+      },
+      implementation: {
+        title: 'Mise en Œuvre',
+        description: 'Nous vous aidons à sélectionner et à mettre en place les polices d\'assurance adaptées avec les meilleurs assureurs pour votre situation.'
+      },
+      ongoingSupport: {
+        title: 'Support Continu',
+        description: 'Notre relation se poursuit avec des révisions régulières, une assistance pour les réclamations et des ajustements à mesure que vos besoins évoluent.'
+      }
+    },
+    comprehensiveInvestmentServices: 'Services d\'Investissement Complets',
+    whyChooseInvestmentServices: 'Pourquoi Choisir Nos Services de Conseil en Investissement',
+    investmentPhilosophy: 'Notre Philosophie d\'Investissement',
+    investmentAdvisoryProcess: 'Notre Processus de Conseil en Investissement',
+    buildWealthToday: 'Commencez à Construire Votre Patrimoine Aujourd\'hui',
+    takeControlFinancialFuture: 'Prenez le contrôle de votre avenir financier avec des services professionnels de conseil en investissement. Contactez-nous pour planifier votre consultation.',
     cta: {
       title: 'Besoin d\'Aide pour Choisir la Bonne Solution ?',
       description: 'Nos experts financiers sont là pour vous aider à trouver la solution parfaite pour vos besoins et votre budget.',

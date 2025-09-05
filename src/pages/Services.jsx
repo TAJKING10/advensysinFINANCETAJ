@@ -110,20 +110,32 @@ const Services = () => {
       image: '/assets/category-1.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'welcome-en',
-          title: 'Welcome to Advensys In-Finance',
-          youtubeId: 'rrtUkqn9gqo'
+          id: 'bpmi-en',
+          title: 'Borrower Paid Mortgage Insurance',
+          youtubeId: '7ltogxhD6Xs'
         },
         {
-          id: 'welcome-fr',
-          title: 'Bonjour et Bienvenue chez Advensys In-Finance',
-          youtubeId: 'amwQlWwkaMs'
+          id: 'bpmi-fr',
+          title: 'Assurance Solde Restant Dû',
+          youtubeId: '1wGVUPcAtaA'
         }
-      ]).slice(0, 1),
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.insurance.overview'),
-        services: t('services.mainServices.insurance.services'),
-        benefits: t('services.mainServices.insurance.benefits')
+        services: [
+          'Life Insurance - Term, Whole, Universal, and Variable life options',
+          'Health Insurance - Individual, family, and group health plans',
+          'Property Insurance - Homeowners, renters, and commercial property',
+          'Business Insurance - Liability, workers compensation, and cyber protection',
+          'Auto Insurance - Comprehensive vehicle protection and coverage'
+        ],
+        benefits: [
+          'Expert guidance from licensed insurance professionals',
+          'Competitive rates from multiple insurance carriers',
+          'Comprehensive claims support and advocacy',
+          'Regular policy reviews and updates',
+          'Personalized coverage recommendations'
+        ]
       }
     },
     {
@@ -142,11 +154,23 @@ const Services = () => {
           title: 'Assurance Solde Restant Dû',
           youtubeId: '1wGVUPcAtaA'
         }
-      ]).slice(0, 1),
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.dedicatedLifeInsurance.overview'),
-        services: t('services.mainServices.dedicatedLifeInsurance.services'),
-        benefits: t('services.mainServices.dedicatedLifeInsurance.benefits')
+        services: [
+          'Term Life Insurance - 10, 20, or 30-year term options with level premiums',
+          'Whole Life Insurance - Lifetime coverage with cash value accumulation',
+          'Universal Life Insurance - Flexible premiums and adjustable death benefits',
+          'Variable Life Insurance - Investment-linked cash value growth',
+          'Group Life Insurance - Employer-sponsored life insurance plans'
+        ],
+        benefits: [
+          'Specialized expertise in life insurance products',
+          'Personalized needs analysis and coverage recommendations',
+          'Advanced features like living benefits and estate planning',
+          'Tax-advantaged wealth building strategies',
+          'Ongoing policy management and support'
+        ]
       }
     },
     {
@@ -156,20 +180,32 @@ const Services = () => {
       image: '/assets/category-3.png',
       relatedVideos: getFilteredVideos([
         {
-          id: 'savings-en',
-          title: 'House Savings Plan',
-          youtubeId: 'UPXZ5q-XFe0'
+          id: 'welcome-en',
+          title: 'Welcome to Advensys In-Finance',
+          youtubeId: 'rrtUkqn9gqo'
         },
         {
-          id: 'savings-fr',
-          title: 'Épargne Logement',
-          youtubeId: 'cVq9gvJN6IE'
+          id: 'welcome-fr',
+          title: 'Bonjour et Bienvenue chez Advensys In-Finance',
+          youtubeId: 'amwQlWwkaMs'
         }
-      ]).slice(0, 1),
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.investmentAdviser.overview'),
-        services: t('services.mainServices.investmentAdviser.services'),
-        benefits: t('services.mainServices.investmentAdviser.benefits')
+        services: [
+          'Portfolio Management - Customized investment portfolios and asset allocation',
+          'Investment Planning - Goal-based strategies and retirement planning',
+          'Research & Analysis - Market research and investment due diligence',
+          'Wealth Management - High net worth and institutional services',
+          'Tax-Efficient Investing - Strategies to minimize tax impact'
+        ],
+        benefits: [
+          'Fiduciary standard - we act in your best interests',
+          'Personalized approach tailored to your goals',
+          'Transparent fee structure with no hidden costs',
+          'Continuous portfolio monitoring and adjustments',
+          'Long-term focus with disciplined investment approach'
+        ]
       }
     },
     {
@@ -188,11 +224,23 @@ const Services = () => {
           title: 'Prêt Immobilier',
           youtubeId: 'ohNkwTvkRGU'
         }
-      ]).slice(0, 1),
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.brokerInBank.overview'),
-        services: t('services.mainServices.brokerInBank.services'),
-        benefits: t('services.mainServices.brokerInBank.benefits')
+        services: [
+          'Loan Brokerage - Mortgages, personal, business, and commercial lending',
+          'Banking Services - Business banking, international solutions, treasury management',
+          'Credit Solutions - Lines of credit, credit cards, asset-based lending',
+          'Specialized Banking - Private banking, offshore solutions, multi-currency accounts',
+          'Trade Finance - Letters of credit, invoice financing, and factoring'
+        ],
+        benefits: [
+          'Extensive network of banking partners and institutions',
+          'Negotiated best terms and competitive interest rates',
+          'Expert guidance through complex banking processes',
+          'Time-saving research and comparison services',
+          'Regulatory compliance and professional licensing'
+        ]
       }
     },
     {
@@ -211,11 +259,23 @@ const Services = () => {
           title: 'Prévoyance Vieillesse',
           youtubeId: '_nxRWgmeFLU'
         }
-      ]).slice(0, 1),
+      ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.privatePensionPlan.overview'),
-        services: t('services.mainServices.privatePensionPlan.services'),
-        benefits: t('services.mainServices.privatePensionPlan.benefits')
+        services: [
+          'SEPCAV Plans - Specialized investment funds with maximum flexibility',
+          'Luxembourg Life Insurance Pension - Combined retirement and life protection',
+          'Corporate Pension Schemes - Employer-sponsored plans with tax advantages',
+          'International Pension Planning - Cross-border and expat solutions',
+          'Pension Optimization - Tax-efficient retirement strategies'
+        ],
+        benefits: [
+          'Luxembourg tax advantages and regulatory security',
+          'EU-wide pension portability and international mobility',
+          'Investment flexibility with multi-currency options',
+          'Strong creditor protection and asset segregation',
+          'Professional management and institutional access'
+        ]
       }
     }
   ]
@@ -327,13 +387,13 @@ const Services = () => {
 
                     <div className="service-cta">
                       <h4>{t('services.readyToStart')}</h4>
-                      <p>{t('services.contactToday')} to discuss your {service.title.toLowerCase()} needs and get a personalized quote.</p>
+                      <p>Contact us today to discuss your {service.title.toLowerCase()} needs and get a personalized quote.</p>
                       <div className="cta-buttons">
                         <Link to="/contact" className="btn btn-primary">
                           {t('common.contactUs')}
                         </Link>
                         <Link to="/contact" className="btn btn-secondary">
-                          {t('services.getQuote')}
+                          {t('common.getQuote')}
                         </Link>
                         <a href={`tel:${currentLocationData?.phone?.replace(/\s/g, '')}`} className="btn btn-outline">
                           {t('services.callNow')}
@@ -355,15 +415,15 @@ const Services = () => {
             <div className="cta-content text-center">
               <h2 className="cta-title">{t('services.readyToStart')}</h2>
               <p className="cta-description">
-                {t('services.contactToday')} to discuss your financial needs and find the perfect solution for you.
+                {t('services.ctaDescription')}
               </p>
               <div className="cta-actions">
                 <Link to="/contact" className="btn btn-primary btn-lg">
-                  {t('common.contactUs')} Today
+                  {t('services.contactUsToday')}
                 </Link>
                 <a href={`tel:${currentLocationData?.phone?.replace(/\s/g, '')}`} className="cta-phone">
                   <img src="/assets/phone.svg" alt="Phone" />
-                  <span>{t('services.cta.phone')} {currentLocationData?.phone}</span>
+                  <span>{t('services.call')}: {currentLocationData?.phone}</span>
                 </a>
               </div>
             </div>

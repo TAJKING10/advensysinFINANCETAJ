@@ -93,6 +93,107 @@ export default {
     contactToday: 'Kontakta oss idag',
     getQuote: 'Få Offert',
     callNow: 'Ring Nu',
+    contactUsToday: 'Kontakta Oss Idag',
+    ctaDescription: 'Kontakta oss idag för att diskutera dina finansiella behov och hitta den perfekta lösningen för dig.',
+    call: 'Ring',
+    contactForService: 'Kontakta oss idag för att diskutera dina behov av {{service}} och få en personlig offert.',
+    backToServices: 'Tillbaka till Tjänster',
+    completeProtection: 'Komplett Försäkringsskydd',
+    insuranceDescription: 'På Advensys Insurance Finance förstår vi att försäkring handlar om mer än bara policyer—det handlar om sinnesro. Våra omfattande försäkringstjänster är utformade för att skydda dig, din familj och dina tillgångar från livets oväntade utmaningar.',
+    ourInsuranceSolutions: 'Våra Försäkringslösningar',
+    protectingFamily: 'Skydda Din Familjs Framtid',
+    specializedProducts: 'Specialiserade Livförsäkringsprodukter',
+    whyChooseService: 'Varför Välja Vår Dedikerade Livförsäkringstjänst',
+    advancedFeatures: 'Avancerade Livförsäkringsfunktioner',
+    lifeInsuranceProcess: 'Vår Livförsäkringsprocess',
+    secureFamily: 'Säkra Din Familjs Ekonomiska Framtid',
+    takeAction: 'Varje dag utan livförsäkring är en dag då din familj utsätts för ekonomisk risk. Agera idag för att skydda det som betyder mest.',
+    applyNow: 'Ansök Nu',
+    askQuestion: 'Ställ en Fråga',
+    wealthBuildingPartner: 'Din Partner i Förmögenhetsuppbyggnad',
+    whyChooseInsuranceServices: 'Varför Välja Våra Försäkringstjänster',
+    ourProcess: 'Vår Process',
+    readyToProtect: 'Redo att Skydda Det Som Betyder Mest?',
+    insuranceExpertsHelp: 'Våra försäkringsexperter är redo att hjälpa dig hitta rätt skydd för dina behov. Kontakta oss idag för att komma igång.',
+    insuranceTypes: {
+      lifeInsurance: {
+        title: 'Livförsäkring',
+        term: 'Tids-, hel-, universal- och variabla livsalternativ',
+        whole: 'Hela Livförsäkring',
+        universal: 'Universell Livförsäkring',
+        variable: 'Variabel Livförsäkring',
+        group: 'Grupplivförsäkring'
+      },
+      healthInsurance: {
+        title: 'Sjukförsäkring',
+        term: 'Individuella, familje- och gruppsjukvårdsplaner',
+        individual: 'Individuell Sjukförsäkring',
+        employer: 'Arbetsgivarsponsrade Sjukvårdsplaner',
+        supplemental: 'Kompletterande Sjukförsäkring',
+        dental: 'Tandvårds- och Synförsäkring',
+        international: 'Internationellt Sjukvårdsskydd'
+      },
+      propertyInsurance: {
+        title: 'Egendomsförsäkring',
+        term: 'Husägare, hyresgäster och kommersiella fastigheter',
+        homeowners: 'Hemförsäkring för Husägare',
+        renters: 'Hemförsäkring för Hyresgäster',
+        condominium: 'Bostadsrättsförsäkring',
+        personal: 'Personlig Egendomsskydd',
+        liability: 'Personligt Ansvarsskydd'
+      },
+      businessInsurance: {
+        title: 'Företagsförsäkring',
+        term: 'Ansvarsförsäkring, arbetsskadeersättning och cyberskydd',
+        general: 'Allmän Ansvarsförsäkring',
+        professional: 'Professionell Ansvarsförsäkring',
+        commercial: 'Kommersiell Fastighetsförsäkring',
+        workers: 'Arbetsskadeförsäkring',
+        cyber: 'Cyberansvarsförsäkring'
+      }
+    },
+    benefits: {
+      expertGuidance: {
+        title: 'Expertvägledning',
+        description: 'Våra erfarna försäkringsspecialister ger personlig rådgivning för att hjälpa dig välja rätt skydd för din unika situation.'
+      },
+      competitiveRates: {
+        title: 'Konkurrenskraftiga Priser',
+        description: 'Vi samarbetar med flera försäkringsbolag för att hitta det bästa skyddet till de mest konkurrenskraftiga priserna.'
+      },
+      claimsSupport: {
+        title: 'Skadestöd',
+        description: 'När du behöver anmäla en skada finns vårt team här för att guida dig genom processen och företräda dina intressen.'
+      },
+      regularReviews: {
+        title: 'Regelbundna Granskningar',
+        description: 'Vi granskar regelbundet ditt skydd för att säkerställa att det fortsätter att möta dina förändrade behov och livssituation.'
+      }
+    },
+    process: {
+      assessment: {
+        title: 'Bedömning',
+        description: 'Vi utvärderar din nuvarande situation, risker och skyddsbehov genom en omfattande konsultation.'
+      },
+      recommendation: {
+        title: 'Rekommendation',
+        description: 'Vårt team utvecklar personliga försäkringsrekommendationer baserade på dina specifika behov och budget.'
+      },
+      implementation: {
+        title: 'Implementering',
+        description: 'Vi hjälper dig att välja och implementera rätt försäkringspolicyer med de bästa försäkringsbolagen för din situation.'
+      },
+      ongoingSupport: {
+        title: 'Löpande Support',
+        description: 'Vår relation fortsätter med regelbundna granskningar, skadehjälp och justeringar när dina behov förändras.'
+      }
+    },
+    comprehensiveInvestmentServices: 'Omfattande Investeringstjänster',
+    whyChooseInvestmentServices: 'Varför Välja Våra Investeringsrådgivningstjänster',
+    investmentPhilosophy: 'Vår Investeringsfilosofi',
+    investmentAdvisoryProcess: 'Vår Investeringsrådgivningsprocess',
+    buildWealthToday: 'Börja Bygga Din Förmögenhet Idag',
+    takeControlFinancialFuture: 'Ta kontroll över din ekonomiska framtid med professionella investeringsrådgivningstjänster. Kontakta oss för att boka din konsultation.',
     cta: {
       title: 'Behöver Hjälp att Välja Rätt Lösning?',
       description: 'Våra finansiella experter är här för att hjälpa dig hitta den perfekta lösningen för dina behov och budget.',

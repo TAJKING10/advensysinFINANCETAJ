@@ -1,39 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './ServicePages.css'
+import { useLanguage } from '../../contexts/LanguageContext'
 
 const InvestmentAdviser = () => {
+  const { t } = useLanguage()
   return (
     <div className="service-page">
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">
           <Link to="/services" className="back-link">
-            ← Back to Services
+            ← {t('services.backToServices')}
           </Link>
         </div>
 
         {/* Page Header */}
         <header className="service-header">
-          <h1>Investment Adviser</h1>
+          <h1>{t('services.mainServices.investmentAdviser.title')}</h1>
           <p className="service-intro">
-            Professional investment advisory services to help you build, manage, and grow your wealth for long-term financial success
+            {t('services.mainServices.investmentAdviser.shortDescription')}
           </p>
         </header>
 
         {/* Main Content */}
         <article className="service-content">
           <section className="service-overview">
-            <h2>Your Partner in Wealth Building</h2>
+            <h2>{t('services.wealthBuildingPartner')}</h2>
             <p>
-              As registered investment advisers, we provide personalized investment guidance 
-              designed to help you achieve your financial goals. Our disciplined approach combines comprehensive financial 
-              planning with sophisticated investment strategies to build and preserve your wealth over time.
+              {t('services.mainServices.investmentAdviser.overview')}
             </p>
           </section>
 
           <section className="service-details">
-            <h2>Comprehensive Investment Services</h2>
+            <h2>{t('services.comprehensiveInvestmentServices')}</h2>
             
             <div className="detail-grid">
               <div className="detail-item">
@@ -72,7 +72,7 @@ const InvestmentAdviser = () => {
           </section>
 
           <section className="service-benefits">
-            <h2>Why Choose Our Investment Advisory Services</h2>
+            <h2>{t('services.whyChooseInvestmentServices')}</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 <h3>Fiduciary Standard</h3>
@@ -94,7 +94,7 @@ const InvestmentAdviser = () => {
           </section>
 
           <section className="investment-philosophy">
-            <h2>Our Investment Philosophy</h2>
+            <h2>{t('services.investmentPhilosophy')}</h2>
             <div className="philosophy-points">
               <div className="philosophy-point">
                 <h3>Disciplined Approach</h3>
@@ -115,8 +115,8 @@ const InvestmentAdviser = () => {
             </div>
           </section>
 
-          <section className="service-process">
-            <h2>Our Investment Advisory Process</h2>
+          <section className="investment-process">
+            <h2>{t('services.investmentAdvisoryProcess')}</h2>
             <div className="process-steps">
               <div className="step">
                 <div className="step-number">1</div>
@@ -142,18 +142,18 @@ const InvestmentAdviser = () => {
           </section>
 
           <section className="service-cta">
-            <h2>Start Building Your Wealth Today</h2>
+            <h2>{t('services.buildWealthToday')}</h2>
             <p>
-              Take control of your financial future with professional investment advisory services. Contact us to schedule your consultation.
-            </p>
+                {t('services.takeControlFinancialFuture')}
+              </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary btn-lg">
-                Apply Now
-              </Link>
-              <Link to="/contact" className="btn btn-secondary btn-lg">
-                Ask a Question
-              </Link>
-            </div>
+                <Link to="/contact" className="btn btn-primary btn-lg">
+                  {t('services.applyNow')}
+                </Link>
+                <Link to="/contact" className="btn btn-secondary btn-lg">
+                  {t('services.askQuestion')}
+                </Link>
+              </div>
           </section>
         </article>
       </div>
