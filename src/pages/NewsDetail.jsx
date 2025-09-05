@@ -410,12 +410,6 @@ const NewsDetail = () => {
           <h1 className="article-title">{article.title}</h1>
           <p className="article-excerpt">{article.excerpt}</p>
           
-          <div className="author-info">
-            <div className="author-details">
-              <h4 className="author-name">{t('news.byAuthor', { author: article.author })}</h4>
-              <p className="author-bio">{article.authorBio}</p>
-            </div>
-          </div>
         </div>
       </section>
 

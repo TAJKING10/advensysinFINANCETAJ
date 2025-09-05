@@ -117,7 +117,6 @@ const News = () => {
                 <h2 className="featured-title">{newsArticles[0].title}</h2>
                 <p className="featured-excerpt">{newsArticles[0].excerpt}</p>
                 <div className="featured-author-info">
-                  <span className="author">{t('newsPage.byAuthor', { author: newsArticles[0].author })}</span>
                   <span className="read-time">{newsArticles[0].readTime}</span>
                 </div>
                 <button onClick={() => handleReadMoreClick(`/news/1`)} className="btn btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
@@ -174,7 +173,6 @@ const News = () => {
                   <p className="news-excerpt">{article.excerpt}</p>
                   
                   <div className="news-footer">
-                    <span className="news-author">{t('news.byAuthor', { author: article.author })}</span>
                     <button onClick={() => handleReadMoreClick(`/news/${article.id}`)} className="news-read-more" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       {t('news.readMore')}
                       <img src="/assets/arrow.svg" alt="" />
