@@ -54,6 +54,98 @@ const Services = () => {
           'Företagsförsäkring - Ansvar, arbetsskadeersättning och cyberskydd',
           'Bilförsäkring - Omfattande fordonsskydd och täckning'
         ]
+      },
+      dedicatedLifeInsurance: {
+        en: [
+          'Term Life Insurance - 10, 20, or 30-year term options with level premiums',
+          'Whole Life Insurance - Lifetime coverage with cash value accumulation',
+          'Universal Life Insurance - Flexible premiums and adjustable death benefits',
+          'Variable Life Insurance - Investment-linked cash value growth',
+          'Group Life Insurance - Employer-sponsored life insurance plans'
+        ],
+        fr: [
+          'Assurance Vie Temporaire - Options de 10, 20 ou 30 ans avec primes nivelées',
+          'Assurance Vie Entière - Couverture à vie avec accumulation de valeur de rachat',
+          'Assurance Vie Universelle - Primes flexibles et prestations de décès ajustables',
+          'Assurance Vie Variable - Croissance de la valeur de rachat liée aux investissements',
+          'Assurance Vie de Groupe - Plans d\'assurance vie parrainés par l\'employeur'
+        ],
+        sv: [
+          'Terminslivförsäkring - 10, 20 eller 30-års terminsalternativ med nivåpremier',
+          'Hel Livförsäkring - Livstid täckning med kontantvärdeackumulation',
+          'Universell Livförsäkring - Flexibla premier och justerbara dödsförmåner',
+          'Variabel Livförsäkring - Investeringslänkad kontantvärdetillväxt',
+          'Grupplivförsäkring - Arbetsgivarsponsrade livförsäkringsplaner'
+        ]
+      },
+      investmentAdviser: {
+        en: [
+          'Portfolio Management - Customized investment portfolios and asset allocation',
+          'Investment Planning - Goal-based strategies and retirement planning',
+          'Research & Analysis - Market research and investment due diligence',
+          'Wealth Management - High net worth and institutional services',
+          'Tax-Efficient Investing - Strategies to minimize tax impact'
+        ],
+        fr: [
+          'Gestion de Portefeuille - Portefeuilles d\'investissement personnalisés et allocation d\'actifs',
+          'Planification d\'Investissement - Stratégies basées sur les objectifs et planification de retraite',
+          'Recherche et Analyse - Recherche de marché et diligence raisonnable d\'investissement',
+          'Gestion de Patrimoine - Services pour fortunés et institutionnels',
+          'Investissement Fiscalement Efficace - Stratégies pour minimiser l\'impact fiscal'
+        ],
+        sv: [
+          'Portföljförvaltning - Anpassade investeringsportföljer och tillgångsallokering',
+          'Investeringsplanering - Målbaserade strategier och pensionsplanering',
+          'Forskning & Analys - Marknadsforskning och investeringsdue diligence',
+          'Förmögenhetsförvaltning - Högförmögna och institutionella tjänster',
+          'Skatteeffektiv Investering - Strategier för att minimera skattepåverkan'
+        ]
+      },
+      brokerInBank: {
+        en: [
+          'Loan Brokerage - Mortgages, personal, business, and commercial lending',
+          'Banking Services - Business banking, international solutions, treasury management',
+          'Credit Solutions - Lines of credit, credit cards, asset-based lending',
+          'Specialized Banking - Private banking, offshore solutions, multi-currency accounts',
+          'Trade Finance - Letters of credit, invoice financing, and factoring'
+        ],
+        fr: [
+          'Courtage de Prêts - Hypothèques, prêts personnels, commerciaux et d\'entreprise',
+          'Services Bancaires - Banque d\'affaires, solutions internationales, gestion de trésorerie',
+          'Solutions de Crédit - Lignes de crédit, cartes de crédit, prêts sur actifs',
+          'Banque Spécialisée - Banque privée, solutions offshore, comptes multi-devises',
+          'Financement Commercial - Lettres de crédit, financement de factures et affacturage'
+        ],
+        sv: [
+          'Lånemäkling - Hypotekslån, personliga, affärs- och kommersiella lån',
+          'Banktjänster - Affärsbank, internationella lösningar, treasury management',
+          'Kreditlösningar - Kreditlinjer, kreditkort, tillgångsbaserade lån',
+          'Specialiserad Bank - Privatbank, offshore lösningar, multivalutakonton',
+          'Handelsfinansiering - Remburs, fakturafinansiering och factoring'
+        ]
+      },
+      privatePensionPlan: {
+        en: [
+          'SEPCAV Plans - Specialized investment funds with maximum flexibility',
+          'Luxembourg Life Insurance Pension - Combined retirement and life protection',
+          'Corporate Pension Schemes - Employer-sponsored plans with tax advantages',
+          'International Pension Planning - Cross-border and expat solutions',
+          'Pension Optimization - Tax-efficient retirement strategies'
+        ],
+        fr: [
+          'Plans SEPCAV - Fonds d\'investissement spécialisés avec flexibilité maximale',
+          'Pension d\'Assurance Vie Luxembourg - Protection retraite et vie combinée',
+          'Régimes de Pension d\'Entreprise - Plans parrainés par l\'employeur avec avantages fiscaux',
+          'Planification Internationale de Pension - Solutions transfrontalières et expatriés',
+          'Optimisation de Pension - Stratégies de retraite fiscalement efficaces'
+        ],
+        sv: [
+          'SEPCAV-planer - Specialiserade investeringsfonder med maximal flexibilitet',
+          'Luxemburg Livförsäkringspension - Kombinerad pensions- och livskydd',
+          'Företagspensionsscheman - Arbetsgivarsponsrade planer med skattefördelar',
+          'Internationell Pensionsplanering - Gränsöverskridande och expat lösningar',
+          'Pensionsoptimering - Skatteeffektiva pensionsstrategier'
+        ]
       }
     }
     return fallbacks[serviceType]?.[currentLanguage] || fallbacks[serviceType]?.en || []
@@ -82,6 +174,98 @@ const Services = () => {
           'Omfattande skadestöd och försvar',
           'Regelbundna policygenomgångar och uppdateringar',
           'Personliga täckningsrekommendationer'
+        ]
+      },
+      dedicatedLifeInsurance: {
+        en: [
+          'Specialized expertise in life insurance products',
+          'Personalized needs analysis and coverage recommendations',
+          'Advanced features like living benefits and estate planning',
+          'Tax-advantaged wealth building strategies',
+          'Ongoing policy management and support'
+        ],
+        fr: [
+          'Expertise spécialisée dans les produits d\'assurance vie',
+          'Analyse personnalisée des besoins et recommandations de couverture',
+          'Fonctionnalités avancées comme les prestations de vie et planification successorale',
+          'Stratégies de création de richesse avec avantages fiscaux',
+          'Gestion et support continus des polices'
+        ],
+        sv: [
+          'Specialiserad expertis inom livförsäkringsprodukter',
+          'Personlig behovsanalys och täckningsrekommendationer',
+          'Avancerade funktioner som levande förmåner och dödsboplanering',
+          'Skattefördelaktiga förmögenhetsbyggande strategier',
+          'Pågående policyförvaltning och stöd'
+        ]
+      },
+      investmentAdviser: {
+        en: [
+          'Fiduciary standard - we act in your best interests',
+          'Personalized approach tailored to your goals',
+          'Transparent fee structure with no hidden costs',
+          'Continuous portfolio monitoring and adjustments',
+          'Long-term focus with disciplined investment approach'
+        ],
+        fr: [
+          'Standard fiduciaire - nous agissons dans votre meilleur intérêt',
+          'Approche personnalisée adaptée à vos objectifs',
+          'Structure de frais transparente sans coûts cachés',
+          'Surveillance continue du portefeuille et ajustements',
+          'Focus à long terme avec approche d\'investissement disciplinée'
+        ],
+        sv: [
+          'Fiduciary standard - vi agerar i ditt bästa intresse',
+          'Personlig approach anpassad till dina mål',
+          'Transparent avgiftsstruktur utan dolda kostnader',
+          'Kontinuerlig portföljövervakning och justeringar',
+          'Långsiktigt fokus med disciplinerad investeringsmetod'
+        ]
+      },
+      brokerInBank: {
+        en: [
+          'Extensive network of banking partners and institutions',
+          'Negotiated best terms and competitive interest rates',
+          'Expert guidance through complex banking processes',
+          'Time-saving research and comparison services',
+          'Regulatory compliance and professional licensing'
+        ],
+        fr: [
+          'Vaste réseau de partenaires bancaires et d\'institutions',
+          'Négociation des meilleures conditions et taux d\'intérêt compétitifs',
+          'Guidance experte à travers des processus bancaires complexes',
+          'Services de recherche et de comparaison qui font gagner du temps',
+          'Conformité réglementaire et licence professionnelle'
+        ],
+        sv: [
+          'Omfattande nätverk av bankpartners och institutioner',
+          'Förhandlade bästa villkor och konkurrenskraftiga räntor',
+          'Expertvägledning genom komplexa bankprocesser',
+          'Tidsbesparande forsknings- och jämförelsetjänster',
+          'Regulatorisk efterlevnad och professionell licensiering'
+        ]
+      },
+      privatePensionPlan: {
+        en: [
+          'Luxembourg tax advantages and regulatory security',
+          'EU-wide pension portability and international mobility',
+          'Investment flexibility with multi-currency options',
+          'Strong creditor protection and asset segregation',
+          'Professional management and institutional access'
+        ],
+        fr: [
+          'Avantages fiscaux luxembourgeois et sécurité réglementaire',
+          'Portabilité de pension à l\'échelle de l\'UE et mobilité internationale',
+          'Flexibilité d\'investissement avec options multi-devises',
+          'Protection forte des créanciers et ségrégation des actifs',
+          'Gestion professionnelle et accès institutionnel'
+        ],
+        sv: [
+          'Luxemburgs skattefördelar och regulatorisk säkerhet',
+          'EU-omfattande pensionsportabilitet och internationell mobilitet',
+          'Investeringsflexibilitet med multivalutaalternativ',
+          'Starkt borgenärsskydd och tillgångsseparation',
+          'Professionell förvaltning och institutionell åtkomst'
         ]
       }
     }
@@ -224,8 +408,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.dedicatedLifeInsurance.overview'),
-        services: getTranslatedArray('services.mainServices.dedicatedLifeInsurance.services'),
-        benefits: getTranslatedArray('services.mainServices.dedicatedLifeInsurance.benefits')
+        services: getTranslatedArray('services.mainServices.dedicatedLifeInsurance.services', getFallbackServices('dedicatedLifeInsurance')),
+        benefits: getTranslatedArray('services.mainServices.dedicatedLifeInsurance.benefits', getFallbackBenefits('dedicatedLifeInsurance'))
       }
     },
     {
@@ -247,8 +431,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.investmentAdviser.overview'),
-        services: getTranslatedArray('services.mainServices.investmentAdviser.services'),
-        benefits: getTranslatedArray('services.mainServices.investmentAdviser.benefits')
+        services: getTranslatedArray('services.mainServices.investmentAdviser.services', getFallbackServices('investmentAdviser')),
+        benefits: getTranslatedArray('services.mainServices.investmentAdviser.benefits', getFallbackBenefits('investmentAdviser'))
       }
     },
     {
@@ -270,8 +454,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.brokerInBank.overview'),
-        services: getTranslatedArray('services.mainServices.brokerInBank.services'),
-        benefits: getTranslatedArray('services.mainServices.brokerInBank.benefits')
+        services: getTranslatedArray('services.mainServices.brokerInBank.services', getFallbackServices('brokerInBank')),
+        benefits: getTranslatedArray('services.mainServices.brokerInBank.benefits', getFallbackBenefits('brokerInBank'))
       }
     },
     {
@@ -293,8 +477,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.privatePensionPlan.overview'),
-        services: getTranslatedArray('services.mainServices.privatePensionPlan.services'),
-        benefits: getTranslatedArray('services.mainServices.privatePensionPlan.benefits')
+        services: getTranslatedArray('services.mainServices.privatePensionPlan.services', getFallbackServices('privatePensionPlan')),
+        benefits: getTranslatedArray('services.mainServices.privatePensionPlan.benefits', getFallbackBenefits('privatePensionPlan'))
       }
     }
   ]
