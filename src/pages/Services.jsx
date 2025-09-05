@@ -5,9 +5,88 @@ import { useLocation } from '../contexts/LocationContext'
 import './Services.css'
 
 const Services = () => {
-  const { t } = useLanguage()
+  const { t, currentLanguage } = useLanguage()
   const { currentLocationData } = useLocation()
   const [searchParams] = useSearchParams()
+
+  // Helper function to get translated arrays safely
+  const getTranslatedArray = (key, fallback = []) => {
+    try {
+      const result = t(key)
+      // If result is an array, return it
+      if (Array.isArray(result)) {
+        return result
+      }
+      // If result is a string (meaning translation failed), return fallback
+      if (typeof result === 'string') {
+        console.log(`Translation key '${key}' returned string instead of array:`, result)
+        return fallback
+      }
+      return fallback
+    } catch (error) {
+      console.log(`Translation key '${key}' failed:`, error)
+      return fallback
+    }
+  }
+
+  // Fallback content for each service in different languages
+  const getFallbackServices = (serviceType) => {
+    const fallbacks = {
+      insurance: {
+        en: [
+          'Life Insurance - Term, Whole, Universal, and Variable life options',
+          'Health Insurance - Individual, family, and group health plans',
+          'Property Insurance - Homeowners, renters, and commercial property',
+          'Business Insurance - Liability, workers compensation, and cyber protection',
+          'Auto Insurance - Comprehensive vehicle protection and coverage'
+        ],
+        fr: [
+          'Assurance Vie - Options temporaires, entières, universelles et variables',
+          'Assurance Santé - Plans individuels, familiaux et de groupe',
+          'Assurance Propriété - Propriétaires, locataires et biens commerciaux',
+          'Assurance Entreprise - Responsabilité, compensation des travailleurs et protection cyber',
+          'Assurance Auto - Protection complète et couverture des véhicules'
+        ],
+        sv: [
+          'Livförsäkring - Termin, Hel, Universell och Variabel livsalternativ',
+          'Hälsoförsäkring - Individuella, familje- och grupphälsoplaner',
+          'Egendomsförsäkring - Husägare, hyresgäster och kommersiell egendom',
+          'Företagsförsäkring - Ansvar, arbetsskadeersättning och cyberskydd',
+          'Bilförsäkring - Omfattande fordonsskydd och täckning'
+        ]
+      }
+    }
+    return fallbacks[serviceType]?.[currentLanguage] || fallbacks[serviceType]?.en || []
+  }
+
+  const getFallbackBenefits = (serviceType) => {
+    const fallbacks = {
+      insurance: {
+        en: [
+          'Expert guidance from licensed insurance professionals',
+          'Competitive rates from multiple insurance carriers',
+          'Comprehensive claims support and advocacy',
+          'Regular policy reviews and updates',
+          'Personalized coverage recommendations'
+        ],
+        fr: [
+          'Conseils d\'experts de professionnels d\'assurance agréés',
+          'Tarifs compétitifs de multiples compagnies d\'assurance',
+          'Support complet pour les réclamations et plaidoyer',
+          'Révisions et mises à jour régulières des polices',
+          'Recommandations de couverture personnalisées'
+        ],
+        sv: [
+          'Expertvägledning från licensierade försäkringsproffs',
+          'Konkurrenskraftiga priser från flera försäkringsbolag',
+          'Omfattande skadestöd och försvar',
+          'Regelbundna policygenomgångar och uppdateringar',
+          'Personliga täckningsrekommendationer'
+        ]
+      }
+    }
+    return fallbacks[serviceType]?.[currentLanguage] || fallbacks[serviceType]?.en || []
+  }
   const [expandedServices, setExpandedServices] = useState(new Set())
 
   // Auto-expand service if specified in URL parameters
@@ -122,20 +201,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.insurance.overview'),
-        services: [
-          'Life Insurance - Term, Whole, Universal, and Variable life options',
-          'Health Insurance - Individual, family, and group health plans',
-          'Property Insurance - Homeowners, renters, and commercial property',
-          'Business Insurance - Liability, workers compensation, and cyber protection',
-          'Auto Insurance - Comprehensive vehicle protection and coverage'
-        ],
-        benefits: [
-          'Expert guidance from licensed insurance professionals',
-          'Competitive rates from multiple insurance carriers',
-          'Comprehensive claims support and advocacy',
-          'Regular policy reviews and updates',
-          'Personalized coverage recommendations'
-        ]
+        services: getTranslatedArray('services.mainServices.insurance.services', getFallbackServices('insurance')),
+        benefits: getTranslatedArray('services.mainServices.insurance.benefits', getFallbackBenefits('insurance'))
       }
     },
     {
@@ -157,20 +224,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.dedicatedLifeInsurance.overview'),
-        services: [
-          'Term Life Insurance - 10, 20, or 30-year term options with level premiums',
-          'Whole Life Insurance - Lifetime coverage with cash value accumulation',
-          'Universal Life Insurance - Flexible premiums and adjustable death benefits',
-          'Variable Life Insurance - Investment-linked cash value growth',
-          'Group Life Insurance - Employer-sponsored life insurance plans'
-        ],
-        benefits: [
-          'Specialized expertise in life insurance products',
-          'Personalized needs analysis and coverage recommendations',
-          'Advanced features like living benefits and estate planning',
-          'Tax-advantaged wealth building strategies',
-          'Ongoing policy management and support'
-        ]
+        services: getTranslatedArray('services.mainServices.dedicatedLifeInsurance.services'),
+        benefits: getTranslatedArray('services.mainServices.dedicatedLifeInsurance.benefits')
       }
     },
     {
@@ -192,20 +247,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.investmentAdviser.overview'),
-        services: [
-          'Portfolio Management - Customized investment portfolios and asset allocation',
-          'Investment Planning - Goal-based strategies and retirement planning',
-          'Research & Analysis - Market research and investment due diligence',
-          'Wealth Management - High net worth and institutional services',
-          'Tax-Efficient Investing - Strategies to minimize tax impact'
-        ],
-        benefits: [
-          'Fiduciary standard - we act in your best interests',
-          'Personalized approach tailored to your goals',
-          'Transparent fee structure with no hidden costs',
-          'Continuous portfolio monitoring and adjustments',
-          'Long-term focus with disciplined investment approach'
-        ]
+        services: getTranslatedArray('services.mainServices.investmentAdviser.services'),
+        benefits: getTranslatedArray('services.mainServices.investmentAdviser.benefits')
       }
     },
     {
@@ -227,20 +270,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.brokerInBank.overview'),
-        services: [
-          'Loan Brokerage - Mortgages, personal, business, and commercial lending',
-          'Banking Services - Business banking, international solutions, treasury management',
-          'Credit Solutions - Lines of credit, credit cards, asset-based lending',
-          'Specialized Banking - Private banking, offshore solutions, multi-currency accounts',
-          'Trade Finance - Letters of credit, invoice financing, and factoring'
-        ],
-        benefits: [
-          'Extensive network of banking partners and institutions',
-          'Negotiated best terms and competitive interest rates',
-          'Expert guidance through complex banking processes',
-          'Time-saving research and comparison services',
-          'Regulatory compliance and professional licensing'
-        ]
+        services: getTranslatedArray('services.mainServices.brokerInBank.services'),
+        benefits: getTranslatedArray('services.mainServices.brokerInBank.benefits')
       }
     },
     {
@@ -262,20 +293,8 @@ const Services = () => {
       ]).slice(0, 1), // Only show one video
       details: {
         overview: t('services.mainServices.privatePensionPlan.overview'),
-        services: [
-          'SEPCAV Plans - Specialized investment funds with maximum flexibility',
-          'Luxembourg Life Insurance Pension - Combined retirement and life protection',
-          'Corporate Pension Schemes - Employer-sponsored plans with tax advantages',
-          'International Pension Planning - Cross-border and expat solutions',
-          'Pension Optimization - Tax-efficient retirement strategies'
-        ],
-        benefits: [
-          'Luxembourg tax advantages and regulatory security',
-          'EU-wide pension portability and international mobility',
-          'Investment flexibility with multi-currency options',
-          'Strong creditor protection and asset segregation',
-          'Professional management and institutional access'
-        ]
+        services: getTranslatedArray('services.mainServices.privatePensionPlan.services'),
+        benefits: getTranslatedArray('services.mainServices.privatePensionPlan.benefits')
       }
     }
   ]

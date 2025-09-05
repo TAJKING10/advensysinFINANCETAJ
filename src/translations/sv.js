@@ -213,7 +213,7 @@ export default {
           'Bilförsäkring - Omfattande fordonsskydd och täckning'
         ],
         benefits: [
-          'Expertvbägledning från licensierade försäkringsproffs',
+          'Expertvägledning från licensierade försäkringsproffs',
           'Konkurrenskraftiga priser från flera försäkringsbolag',
           'Omfattande skadestöd och försvar',
           'Regelbundna policygenomgångar och uppdateringar',
@@ -291,8 +291,84 @@ export default {
           'Luxemburgs skattefördelar och regulatorisk säkerhet',
           'EU-omfattande pensionsportabilitet och internationell mobilitet',
           'Investeringsflexibilitet med multivalutaalternativ',
-          'Starkt borpänarskydd och tillgångsseparation',
+          'Starkt borgenärsskydd och tillgångsseparation',
           'Professionell förvaltning och institutionell åtkomst'
+        ]
+      },
+      brokerInBankExpanded: {
+        title: 'Bankmäklartjänster',
+        shortDescription: 'Bankmellanhands tjänster för optimala lösningar',
+        overview: 'Som licensierade bankmellanhander överbryggr vi klyftan mellan dig och finansiella institutioner för att säkra de bästa bankprodukterna och tjänsterna med optimala villkor.',
+        services: [
+          'Lånemäkling - Hypotekslån, personliga, affärs- och kommersiella lån',
+          'Banktjänster - Affärsbank, internationella lösningar, treasury management',
+          'Kreditlösningar - Kreditlinjer, kreditkort, tillgångsbaserade lån',
+          'Specialiserad Bank - Privatbank, offshore lösningar, multivalutakonton',
+          'Handelsfinansiering - Remburs, fakturafinansiering och factoring'
+        ],
+        benefits: [
+          'Omfattande nätverk av bankpartners och institutioner',
+          'Förhandlade bästa villkor och konkurrenskraftiga räntor',
+          'Expertvägledning genom komplexa bankprocesser',
+          'Tidsbesparande forsknings- och jämförelsetjänster',
+          'Regulatorisk efterlevnad och professionell licensiering'
+        ]
+      },
+      investmentAdviserExpanded: {
+        title: 'Investeringsrådgivartjänster',
+        shortDescription: 'Professionell investeringsrådgivning för förmögenhetsbyggande',
+        overview: 'Som registrerade investeringsrådgivare tillhandahåller vi personlig investeringsvägledning och portföljförvaltningstjänster designade för att hjälpa dig uppnå dina finansiella mål genom disciplinerade, forskningsdrivna strategier.',
+        services: [
+          'Portföljförvaltning - Anpassade investeringsportföljer och tillgångsallokering',
+          'Investeringsplanering - Målbaserade strategier och pensionsplanering',
+          'Forskning & Analys - Marknadsforskning och investeringsdue diligence',
+          'Förmögenhetsförvaltning - Högförmögna och institutionella tjänster',
+          'Skatteeffektiv Investering - Strategier för att minimera skattepåverkan'
+        ],
+        benefits: [
+          'Fiduciary standard - vi agerar i ditt bästa intresse',
+          'Personlig approach anpassad till dina mål',
+          'Transparent avgiftsstruktur utan dolda kostnader',
+          'Kontinuerlig portföljövervakning och justeringar',
+          'Långsiktigt fokus med disciplinerad investeringsmetod'
+        ]
+      },
+      generalInsuranceExpanded: {
+        title: 'Försäkringstjänster',
+        shortDescription: 'Omfattande försäkringslösningar skräddarsydda för dina behov',
+        overview: 'På Advensys Insurance Finance tillhandahåller vi omfattande försäkringslösningar som skyddar det som betyder mest för dig. Vårt erfarna team arbetar med ledande försäkringsbolag för att erbjuda konkurrenskraftiga priser och omfattande täckning.',
+        services: [
+          'Livförsäkring - Termin, Hel, Universell och Variabel livsalternativ',
+          'Hälsoförsäkring - Individuella, familje- och grupphälsoplaner',
+          'Egendomsförsäkring - Husägare, hyresgäster och kommersiell egendom',
+          'Företagsförsäkring - Ansvar, arbetsskadeersättning och cyberskydd',
+          'Bilförsäkring - Omfattande fordonsskydd och täckning'
+        ],
+        benefits: [
+          'Expertvägledning från licensierade försäkringsproffs',
+          'Konkurrenskraftiga priser från flera försäkringsbolag',
+          'Omfattande skadestöd och försvar',
+          'Regelbundna policygenomgångar och uppdateringar',
+          'Personliga täckningsrekommendationer'
+        ]
+      },
+      lifeInsuranceExpanded: {
+        title: 'Dedikerad Livförsäkring',
+        shortDescription: 'Specialiserade livförsäkringsprodukter för finansiell säkerhet',
+        overview: 'Våra dedikerade livförsäkringstjänster fokuserar uteslutande på att tillhandahålla omfattande livförsäkringslösningar som säkerställer att dina nära och kära är finansiellt skyddade när de behöver det mest.',
+        services: [
+          'Terminslivförsäkring - 10, 20 eller 30-års terminsalternativ med nivåpremier',
+          'Hel Livförsäkring - Livstid täckning med kontantvärdeackumulation',
+          'Universell Livförsäkring - Flexibla premier och justerbara dödsförmåner',
+          'Variabel Livförsäkring - Investeringslänkad kontantvärdetillväxt',
+          'Grupplivförsäkring - Arbetsgivarsponsrade livförsäkringsplaner'
+        ],
+        benefits: [
+          'Specialiserad expertis inom livförsäkringsprodukter',
+          'Personlig behovsanalys och täckningsrekommendationer',
+          'Avancerade funktioner som levande förmåner och dödsboplanering',
+          'Skattefördelaktiga förmögenhetsbyggande strategier',
+          'Pågående policyförvaltning och stöd'
         ]
       }
     },

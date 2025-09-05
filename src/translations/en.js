@@ -282,7 +282,7 @@ export default {
         overview: 'Luxembourg private pension plans offer unparalleled advantages for retirement planning, combining political stability, robust regulatory framework, and significant tax benefits for optimal retirement security.',
         services: [
           'SEPCAV Plans - Specialized investment funds with maximum flexibility',
-          'Luxembourg Life Insurance Pension - Combined retirement and life protection',
+          'Luxembourg Life Insurance Pension - Combined retirement and life protection', 
           'Corporate Pension Schemes - Employer-sponsored plans with tax advantages',
           'International Pension Planning - Cross-border and expat solutions',
           'Pension Optimization - Tax-efficient retirement strategies'
@@ -293,6 +293,82 @@ export default {
           'Investment flexibility with multi-currency options',
           'Strong creditor protection and asset segregation',
           'Professional management and institutional access'
+        ]
+      },
+      brokerInBankExpanded: {
+        title: 'Broker in Bank Services',
+        shortDescription: 'Banking intermediary services for optimal solutions',
+        overview: 'As licensed banking intermediaries, we bridge the gap between you and financial institutions to secure the best banking products and services with optimal terms and conditions.',
+        services: [
+          'Loan Brokerage - Mortgages, personal, business, and commercial lending',
+          'Banking Services - Business banking, international solutions, treasury management',
+          'Credit Solutions - Lines of credit, credit cards, asset-based lending',
+          'Specialized Banking - Private banking, offshore solutions, multi-currency accounts',
+          'Trade Finance - Letters of credit, invoice financing, and factoring'
+        ],
+        benefits: [
+          'Extensive network of banking partners and institutions',
+          'Negotiated best terms and competitive interest rates',
+          'Expert guidance through complex banking processes',
+          'Time-saving research and comparison services',
+          'Regulatory compliance and professional licensing'
+        ]
+      },
+      investmentAdviserExpanded: {
+        title: 'Investment Adviser Services',
+        shortDescription: 'Professional investment advisory for wealth building',
+        overview: 'As registered investment advisers, we provide personalized investment guidance and portfolio management services designed to help you achieve your financial goals through disciplined, research-driven strategies.',
+        services: [
+          'Portfolio Management - Customized investment portfolios and asset allocation',
+          'Investment Planning - Goal-based strategies and retirement planning',
+          'Research & Analysis - Market research and investment due diligence',
+          'Wealth Management - High net worth and institutional services',
+          'Tax-Efficient Investing - Strategies to minimize tax impact'
+        ],
+        benefits: [
+          'Fiduciary standard - we act in your best interests',
+          'Personalized approach tailored to your goals',
+          'Transparent fee structure with no hidden costs',
+          'Continuous portfolio monitoring and adjustments',
+          'Long-term focus with disciplined investment approach'
+        ]
+      },
+      generalInsuranceExpanded: {
+        title: 'Insurance Services',
+        shortDescription: 'Comprehensive insurance solutions tailored to your needs',
+        overview: 'At Advensys Insurance Finance, we provide comprehensive insurance solutions that protect what matters most to you. Our experienced team works with leading insurance carriers to offer competitive rates and comprehensive coverage.',
+        services: [
+          'Life Insurance - Term, Whole, Universal, and Variable life options',
+          'Health Insurance - Individual, family, and group health plans',
+          'Property Insurance - Homeowners, renters, and commercial property',
+          'Business Insurance - Liability, workers compensation, and cyber protection',
+          'Auto Insurance - Comprehensive vehicle protection and coverage'
+        ],
+        benefits: [
+          'Expert guidance from licensed insurance professionals',
+          'Competitive rates from multiple insurance carriers',
+          'Comprehensive claims support and advocacy',
+          'Regular policy reviews and updates',
+          'Personalized coverage recommendations'
+        ]
+      },
+      lifeInsuranceExpanded: {
+        title: 'Dedicated Life Insurance',
+        shortDescription: 'Specialized life insurance products for financial security',
+        overview: 'Our dedicated life insurance services focus exclusively on providing comprehensive life insurance solutions that ensure your loved ones are financially protected when they need it most.',
+        services: [
+          'Term Life Insurance - 10, 20, or 30-year term options with level premiums',
+          'Whole Life Insurance - Lifetime coverage with cash value accumulation',
+          'Universal Life Insurance - Flexible premiums and adjustable death benefits',
+          'Variable Life Insurance - Investment-linked cash value growth',
+          'Group Life Insurance - Employer-sponsored life insurance plans'
+        ],
+        benefits: [
+          'Specialized expertise in life insurance products',
+          'Personalized needs analysis and coverage recommendations',
+          'Advanced features like living benefits and estate planning',
+          'Tax-advantaged wealth building strategies',
+          'Ongoing policy management and support'
         ]
       }
     },

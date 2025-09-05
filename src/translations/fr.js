@@ -294,6 +294,82 @@ export default {
           'Protection forte des créanciers et ségrégation des actifs',
           'Gestion professionnelle et accès institutionnel'
         ]
+      },
+      brokerInBankExpanded: {
+        title: 'Services de Courtier en Banque',
+        shortDescription: 'Services d\'intermédiation bancaire pour des solutions optimales',
+        overview: 'En tant qu\'intermédiaires bancaires agréés, nous comblons le fossé entre vous et les institutions financières pour sécuriser les meilleurs produits et services bancaires avec des termes et conditions optimaux.',
+        services: [
+          'Courtage de Prêts - Hypothèques, prêts personnels, commerciaux et d\'entreprise',
+          'Services Bancaires - Banque d\'affaires, solutions internationales, gestion de trésorerie',
+          'Solutions de Crédit - Lignes de crédit, cartes de crédit, prêts sur actifs',
+          'Banque Spécialisée - Banque privée, solutions offshore, comptes multi-devises',
+          'Financement Commercial - Lettres de crédit, financement de factures et affacturage'
+        ],
+        benefits: [
+          'Vaste réseau de partenaires bancaires et d\'institutions',
+          'Négociation des meilleures conditions et taux d\'intérêt compétitifs',
+          'Guidance experte à travers des processus bancaires complexes',
+          'Services de recherche et de comparaison qui font gagner du temps',
+          'Conformité réglementaire et licence professionnelle'
+        ]
+      },
+      investmentAdviserExpanded: {
+        title: 'Services de Conseiller en Investissement',
+        shortDescription: 'Conseil professionnel en investissement pour la création de patrimoine',
+        overview: 'En tant que conseillers en investissement agréés, nous fournissons des conseils d\'investissement personnalisés et des services de gestion de portefeuille conçus pour vous aider à atteindre vos objectifs financiers grâce à des stratégies disciplinées et basées sur la recherche.',
+        services: [
+          'Gestion de Portefeuille - Portefeuilles d\'investissement personnalisés et allocation d\'actifs',
+          'Planification d\'Investissement - Stratégies basées sur les objectifs et planification de retraite',
+          'Recherche et Analyse - Recherche de marché et diligence raisonnable d\'investissement',
+          'Gestion de Patrimoine - Services pour fortunés et institutionnels',
+          'Investissement Fiscalement Efficace - Stratégies pour minimiser l\'impact fiscal'
+        ],
+        benefits: [
+          'Standard fiduciaire - nous agissons dans votre meilleur intérêt',
+          'Approche personnalisée adaptée à vos objectifs',
+          'Structure de frais transparente sans coûts cachés',
+          'Surveillance continue du portefeuille et ajustements',
+          'Focus à long terme avec approche d\'investissement disciplinée'
+        ]
+      },
+      generalInsuranceExpanded: {
+        title: 'Services d\'Assurance',
+        shortDescription: 'Solutions d\'assurance complètes adaptées à vos besoins',
+        overview: 'Chez Advensys Insurance Finance, nous fournissons des solutions d\'assurance complètes qui protègent ce qui compte le plus pour vous. Notre équipe expérimentée travaille avec les principales compagnies d\'assurance pour offrir des tarifs compétitifs et une couverture complète.',
+        services: [
+          'Assurance Vie - Options temporaires, entières, universelles et variables',
+          'Assurance Santé - Plans individuels, familiaux et de groupe',
+          'Assurance Propriété - Propriétaires, locataires et biens commerciaux',
+          'Assurance Entreprise - Responsabilité, compensation des travailleurs et protection cyber',
+          'Assurance Auto - Protection complète et couverture des véhicules'
+        ],
+        benefits: [
+          'Conseils d\'experts de professionnels d\'assurance agréés',
+          'Tarifs compétitifs de multiples compagnies d\'assurance',
+          'Support complet pour les réclamations et plaidoyer',
+          'Révisions et mises à jour régulières des polices',
+          'Recommandations de couverture personnalisées'
+        ]
+      },
+      lifeInsuranceExpanded: {
+        title: 'Assurance Vie Dédiée',
+        shortDescription: 'Produits d\'assurance vie spécialisés pour la sécurité financière',
+        overview: 'Nos services d\'assurance vie dédiés se concentrent exclusivement sur la fourniture de solutions d\'assurance vie complètes qui garantissent que vos proches sont financièrement protégés quand ils en ont le plus besoin.',
+        services: [
+          'Assurance Vie Temporaire - Options de 10, 20 ou 30 ans avec primes nivelées',
+          'Assurance Vie Entière - Couverture à vie avec accumulation de valeur de rachat',
+          'Assurance Vie Universelle - Primes flexibles et prestations de décès ajustables',
+          'Assurance Vie Variable - Croissance de la valeur de rachat liée aux investissements',
+          'Assurance Vie de Groupe - Plans d\'assurance vie parrainés par l\'employeur'
+        ],
+        benefits: [
+          'Expertise spécialisée dans les produits d\'assurance vie',
+          'Analyse personnalisée des besoins et recommandations de couverture',
+          'Fonctionnalités avancées comme les prestations de vie et planification successorale',
+          'Stratégies de création de richesse avec avantages fiscaux',
+          'Gestion et support continus des polices'
+        ]
       }
     },
     items: {
