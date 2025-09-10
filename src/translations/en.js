@@ -609,7 +609,12 @@ export default {
       health: 'Health Insurance',
       auto: 'Auto Insurance',
       home: 'Home Insurance',
-      business: 'Business Insurance'
+      business: 'Business Insurance',
+      insurance: 'Insurance Services',
+      dedicatedLife: 'Dedicated Life Insurance',
+      investment: 'Investment Adviser',
+      banking: 'Broker in Bank',
+      privatePension: 'Private Pension Plan'
     },
     contact: {
       title: 'Contact Info',

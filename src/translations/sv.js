@@ -609,7 +609,12 @@ export default {
       health: 'Sjukförsäkring',
       auto: 'Bilförsäkring',
       home: 'Hemförsäkring',
-      business: 'Företagsförsäkring'
+      business: 'Företagsförsäkring',
+      insurance: 'Försäkringstjänster',
+      dedicatedLife: 'Dedikerad Livförsäkring',
+      investment: 'Investeringsrådgivare',
+      banking: 'Bankmaklärare',
+      privatePension: 'Privat Pensionsplan'
     },
     contact: {
       title: 'Kontaktinformation',

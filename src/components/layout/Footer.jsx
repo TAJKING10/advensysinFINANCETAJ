@@ -16,12 +16,13 @@ const Footer = () => {
   }
 
   const handleServiceClick = (service) => {
+    // Create service map based on current translations
     const serviceMap = {
-      'Insurance Services': 'insurance',
-      'Dedicated Life Insurance': 'dedicated-life-insurance',
-      'Investment Adviser': 'investment-adviser',
-      'Broker in Bank': 'broker-in-bank',
-      'Private Pension Plan': 'private-pension-plan'
+      [t('footer.services.insurance')]: 'insurance',
+      [t('footer.services.dedicatedLife')]: 'dedicated-life-insurance',
+      [t('footer.services.investment')]: 'investment-adviser',
+      [t('footer.services.banking')]: 'broker-in-bank',
+      [t('footer.services.privatePension')]: 'private-pension-plan'
     }
     const serviceId = serviceMap[service]
     if (serviceId) {
@@ -44,11 +45,11 @@ const Footer = () => {
   ]
 
   const services = [
-    'Insurance Services',
-    'Dedicated Life Insurance',
-    'Investment Adviser',
-    'Broker in Bank',
-    'Private Pension Plan'
+    t('footer.services.insurance'),
+    t('footer.services.dedicatedLife'),
+    t('footer.services.investment'),
+    t('footer.services.banking'),
+    t('footer.services.privatePension')
   ]
 
   return (
