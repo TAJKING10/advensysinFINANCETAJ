@@ -632,7 +632,84 @@ export default {
       error: 'Prenumeration misslyckades. Vänligen försök igen.'
     },
     copyright: '© 2024 Advensys Insurance Finance. Alla rättigheter förbehållna.',
-    developedBy: 'Utvecklad av'
+    developedBy: 'Utvecklad av',
+    legalInformation: 'Juridisk Information',
+    oriasAuthorization: 'Auktorisation ORIAS/LPS: 21003660'
+  },
+
+  // Legal Page
+  legal: {
+    title: 'Juridisk Information',
+    termsConditions: 'Villkor & Bestämmelser',
+    privacyPolicy: 'Integritetspolicy',
+    identification: {
+      title: 'IDENTIFIERING',
+      legalStatus: 'Juridisk status',
+      socialCapital: 'Aktiekapital',
+      address: 'Adress',
+      phone: 'TELEFON',
+      email: 'E-post',
+      vatNumber: 'Momsregistreringsnummer',
+      registration: 'Registrering',
+      registrationText: 'Registrerad hos ORIAS under nr.21003660 som:',
+      services: {
+        investment: 'Finansiell investeringsrådgivning, medlem av LA COMPAGNIE CIF, en förening godkänd av Autorité des Marchés Financiers',
+        insurance: 'Försäkringsmäkleri',
+        banking: 'Mäkleri eller förmedling av bankoperationer, tjänster och betalningar'
+      },
+      civilLiability: 'Civilrättsligt ansvar',
+      civilLiabilityText: 'tecknad av MMA IARD 14 Boulevard Marie et Alexandre Oyon 72030 Le Mans CEDEX 9.',
+      disclaimer: 'Kan inte ta emot något instrument, fond eller värde.'
+    },
+    generalConditions: {
+      title: 'ALLMÄNNA ANVÄNDARVILLKOR',
+      information: 'Informationen på denna webbplats är inte kontraktuell och kan innehålla tekniska felaktigheter eller typografiska fel. Denna information kan ändras periodiskt och ändringar kommer att införlivas i nya utgåvor.',
+      responsibility: '"Advensys Insurance Finance S.A.R.L." kan inte hållas ansvarig för fel eller utelämnanden i den spridda informationen eller för tekniska problem som påträffas på webbplatsen och på alla andra webbplatser till vilka länkar upprättas, eller för någon tolkning av informationen som publiceras på denna webbplats.',
+      changes: '"Advensys Insurance Finance S.A.R.L." kan när som helst, utan förvarning, göra förbättringar eller ändringar av produkterna, programmen eller tjänsterna som beskrivs på denna webbplats.',
+      direction: 'Ledningen av publikationen säkerställs av ledaren för "Advensys Insurance Finance S.A.R.L.".'
+    },
+    gdpr: {
+      title: 'GDPR',
+      rights: 'Internetanvändare har rätt till åtkomst, rättelse, begränsning, invändning av legitima skäl, rätt att bli glömd, rätt till portabilitet med förbehåll för tillämpliga juridiska och regulatoriska bestämmelser. De har också möjlighet att lämna in ett klagomål till CNIL.',
+      exercise: 'Denna rätt utövas per post, med identitetsbevis, till: Advensys Insurance Finance S.A.R.L. – Irfan Abdul- 66 avenue des Champs Elysées, 75008 Paris'
+    },
+    designHost: {
+      title: 'DESIGN, WEBBDESIGN OCH VÄRD',
+      design: 'Design',
+      webDesign: 'Webbdesign',
+      host: 'Värd'
+    },
+    dataProtection: {
+      title: 'SKYDD AV PERSONUPPGIFTER',
+      commitment: '"Advensys Insurance Finance S.A.R.L" är engagerad i en process för att skydda personuppgifterna för sina internetanvändare, i enlighet med dataskyddslagen daterad 6 januari 1978 som ändrad, samt med den allmänna dataskyddsförordningen nr 2016/679 (GDPR).'
+    },
+    dataController: {
+      title: 'ANSVARIG FÖR BEHANDLINGEN',
+      definition: 'För personuppgifter, i betydelsen av GDPR, som samlas in i samband med navigering, är den registeransvarige "Advensys Insurance Finance S.A.R.L", representerad av sin chef.',
+      processing: 'Personuppgifter behandlas endast av den registeransvarige och av personer som auktoriserats av den registeransvarige med avseende på de uppgifter de utför.'
+    },
+    dataCollection: {
+      title: 'INSAMLING AV PERSONUPPGIFTER',
+      definition: 'Enligt dataskyddslagen och den allmänna dataskyddsförordningen utgör all information som rör en fysisk person som är identifierad eller som kan identifieras, direkt eller indirekt, genom hänvisning till ett identifikationsnummer eller till ett eller flera element som är specifika, personuppgifter.',
+      consent: 'Alla personuppgifter som rör internetanvändare samlas in direkt från dem. "Advensys Insurance Finance S.A.R.L" åtar sig att få samtycke från internetanvändare och/eller att tillåta dem att motsätta sig användningen av deras personuppgifter.'
+    },
+    dataTypes: {
+      title: 'TYPER AV DATA OCH SYFTE MED INSAMLING',
+      collected: 'Följande data från internetanvändare kan samlas in av "Advensys Insurance Finance S.A.R.L": efternamn, förnamn, adress, e-post och IP-adress för Google Analytics',
+      purpose: 'Denna insamlade data behandlas huvudsakligen för att: möjliggöra navigering på webbplatsen, producera statistik.',
+      legitimateInterest: 'Insamlingen av personuppgifter baseras på det legitima intresset för "Advensys Insurance Finance S.A.R.L" att erbjuda:',
+      services: {
+        news: 'nyheter och tjänster av intresse för alla som söker information om yrket som finansiell investeringsrådgivare, ett jobb eller en praktikplats',
+        wealth: 'information om förmögenhetsförvaltning och finansiella investeringstjänster'
+      },
+      location: 'Behandlingen som utförs av "Advensys Insurance Finance S.A.R.L" är belägen uteslutande i Frankrike.'
+    },
+    dataRetention: {
+      title: 'DATALAGRING',
+      purpose: 'Personuppgifter sparas endast för den tid som är nödvändig för det syfte som eftersträvas av behandlingen:',
+      navigation: 'navigering på webbplatsen och statistik: 1 år',
+      membership: 'Medlemskap: medlemskapsbehandlingstiden (några veckor)'
+    }
   },
 
   // Services Page

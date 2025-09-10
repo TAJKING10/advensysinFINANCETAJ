@@ -632,7 +632,84 @@ export default {
       error: 'Échec de l\'abonnement. Veuillez réessayer.'
     },
     copyright: '© 2024 Advensys Insurance Finance. Tous droits réservés.',
-    developedBy: 'Développé par'
+    developedBy: 'Développé par',
+    legalInformation: 'Informations Légales',
+    oriasAuthorization: 'Autorisation ORIAS/LPS : 21003660'
+  },
+
+  // Legal Page
+  legal: {
+    title: 'Informations Légales',
+    termsConditions: 'Conditions Générales',
+    privacyPolicy: 'Politique de Confidentialité',
+    identification: {
+      title: 'IDENTIFICATION',
+      legalStatus: 'Statut juridique',
+      socialCapital: 'Capital Social',
+      address: 'Adresse',
+      phone: 'TÉLÉPHONE',
+      email: 'E-mail',
+      vatNumber: 'Numéro de TVA',
+      registration: 'Enregistrement',
+      registrationText: 'Enregistré auprès d\'ORIAS sous le n°21003660 en tant que :',
+      services: {
+        investment: 'Conseil en investissement financier, membre de LA COMPAGNIE CIF, association agréée par l\'Autorité des Marchés Financiers',
+        insurance: 'Courtage en assurance',
+        banking: 'Courtage ou intermédiation en opérations bancaires, services et paiements'
+      },
+      civilLiability: 'Responsabilité civile',
+      civilLiabilityText: 'souscrite auprès de MMA IARD 14 Boulevard Marie et Alexandre Oyon 72030 Le Mans CEDEX 9.',
+      disclaimer: 'Ne peut recevoir aucun instrument, fonds ou valeur.'
+    },
+    generalConditions: {
+      title: 'CONDITIONS GÉNÉRALES D\'UTILISATION',
+      information: 'Les informations de ce site ne sont pas contractuelles et peuvent contenir des inexactitudes techniques ou des erreurs typographiques. Ces informations peuvent être modifiées périodiquement et les modifications seront incorporées dans de nouvelles éditions.',
+      responsibility: 'La "Advensys Insurance Finance S.A.R.L." ne peut être tenue responsable des erreurs ou omissions dans les informations diffusées ou des problèmes techniques rencontrés sur le site et sur tous les autres sites auxquels des liens sont établis, ou de toute interprétation des informations publiées sur ce site.',
+      changes: '"Advensys Insurance Finance S.A.R.L." peut, à tout moment, sans préavis, apporter des améliorations ou des modifications aux produits, programmes ou services décrits sur ce site.',
+      direction: 'La direction de la publication est assurée par le dirigeant de "Advensys Insurance Finance S.A.R.L.".'
+    },
+    gdpr: {
+      title: 'RGPD',
+      rights: 'Les internautes disposent d\'un droit d\'accès, de rectification, de limitation, d\'opposition pour motifs légitimes, droit à l\'oubli, droit à la portabilité sous réserve des dispositions légales et réglementaires applicables. Ils ont également la possibilité de déposer une plainte auprès de la CNIL.',
+      exercise: 'Ce droit s\'exerce par courrier, avec justificatif d\'identité, à : Advensys Insurance Finance S.A.R.L. – Irfan Abdul- 66 avenue des Champs Elysées, 75008 Paris'
+    },
+    designHost: {
+      title: 'CONCEPTION, DESIGN WEB ET HÉBERGEUR',
+      design: 'Conception',
+      webDesign: 'Design web',
+      host: 'Hébergeur'
+    },
+    dataProtection: {
+      title: 'PROTECTION DES DONNÉES PERSONNELLES',
+      commitment: 'La "Advensys Insurance Finance S.A.R.L" s\'engage dans une démarche de protection des données personnelles de ses internautes, conformément à la Loi Informatique et Libertés du 6 janvier 1978 modifiée, ainsi qu\'au Règlement Général sur la Protection des Données n° 2016/679 (RGPD).'
+    },
+    dataController: {
+      title: 'RESPONSABLE DU TRAITEMENT',
+      definition: 'Pour les données personnelles, au sens du RGPD, collectées dans le cadre de la navigation, le responsable du traitement est "Advensys Insurance Finance S.A.R.L", représentée par son dirigeant.',
+      processing: 'Les données personnelles ne sont traitées que par le responsable du traitement et par les personnes habilitées par le responsable du traitement au regard des tâches qu\'elles accomplissent.'
+    },
+    dataCollection: {
+      title: 'COLLECTE DES DONNÉES PERSONNELLES',
+      definition: 'Selon la Loi Informatique et Libertés et le Règlement Général sur la Protection des Données, toute information se rapportant à une personne physique identifiée ou qui peut être identifiée, directement ou indirectement, par référence à un numéro d\'identification ou à un ou plusieurs éléments qui lui sont propres, constitue une donnée personnelle.',
+      consent: 'Toutes les données personnelles concernant les internautes sont collectées directement auprès d\'eux. La "Advensys Insurance Finance S.A.R.L" s\'engage à obtenir le consentement des internautes et/ou à leur permettre de s\'opposer à l\'utilisation de leurs données personnelles.'
+    },
+    dataTypes: {
+      title: 'TYPES DE DONNÉES ET FINALITÉ DE LA COLLECTE',
+      collected: 'Les données suivantes des internautes peuvent être collectées par la "Advensys Insurance Finance S.A.R.L" : nom, prénom, adresse, email et adresse IP pour Google Analytics',
+      purpose: 'Ces données collectées sont principalement traitées pour : permettre la navigation sur le site, produire des statistiques.',
+      legitimateInterest: 'La collecte de données personnelles est basée sur l\'intérêt légitime de la "Advensys Insurance Finance S.A.R.L" d\'offrir :',
+      services: {
+        news: 'des actualités et services d\'intérêt pour toute personne recherchant des informations sur le métier de conseil en investissement financier, un emploi ou un stage',
+        wealth: 'des informations sur la gestion de patrimoine et les services d\'investissement financier'
+      },
+      location: 'Le traitement effectué par la "Advensys Insurance Finance S.A.R.L" est situé exclusivement en France métropolitaine.'
+    },
+    dataRetention: {
+      title: 'CONSERVATION DES DONNÉES',
+      purpose: 'Les données personnelles ne sont conservées que le temps nécessaire à la finalité poursuivie par le traitement :',
+      navigation: 'navigation sur le site et statistiques : 1 an',
+      membership: 'Adhésion : le temps de traitement de l\'adhésion (quelques semaines)'
+    }
   },
 
   // Services Page
