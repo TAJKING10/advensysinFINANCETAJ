@@ -5,7 +5,7 @@ import './NewsDetail.css'
 
 const NewsDetail = () => {
   const { id } = useParams()
-  const { t } = useLanguage()
+  const { t, currentLanguage } = useLanguage()
 
   const newsArticles = [
     {
@@ -385,8 +385,12 @@ const NewsDetail = () => {
   }
 
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' }
-    return new Date(dateString).toLocaleDateString(undefined, options)
+    const date = new Date(dateString)
+    const locale = currentLanguage === 'fr' ? 'fr-FR' : currentLanguage === 'sv' ? 'sv-SE' : 'en-US'
+    const month = date.toLocaleDateString(locale, { month: 'long' })
+    const day = date.getDate()
+    const year = date.getFullYear()
+    return `${month} ${day}, ${year}`
   }
 
   return (

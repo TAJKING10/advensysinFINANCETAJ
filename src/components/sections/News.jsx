@@ -4,7 +4,7 @@ import { useLanguage } from '../../contexts/LanguageContext'
 import './News.css'
 
 const News = () => {
-  const { t } = useLanguage()
+  const { t, currentLanguage } = useLanguage()
   const navigate = useNavigate()
 
   const handleReadMoreClick = (link) => {
@@ -35,8 +35,12 @@ const News = () => {
   ]
 
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' }
-    return new Date(dateString).toLocaleDateString(undefined, options)
+    const date = new Date(dateString)
+    const locale = currentLanguage === 'fr' ? 'fr-FR' : currentLanguage === 'sv' ? 'sv-SE' : 'en-US'
+    const month = date.toLocaleDateString(locale, { month: 'long' })
+    const day = date.getDate()
+    const year = date.getFullYear()
+    return `${month} ${day}, ${year}`
   }
 
   return (
