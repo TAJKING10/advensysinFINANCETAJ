@@ -98,10 +98,10 @@ const Services = () => {
         <div className="services-cta">
           <div className="cta-content">
             <h3 className="cta-title">{t('services.readyToStart')}</h3>
-            <p className="cta-description">{t('services.contactToday')} to discuss your financial needs and find the perfect solution for you.</p>
+            <p className="cta-description">{t('services.ctaDescription')}</p>
             <div className="cta-actions">
               <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary btn-lg" style={{ border: 'none', cursor: 'pointer' }}>
-                {t('common.contactUs')} Today
+                {t('services.contactUsToday')}
               </button>
               <a href={`tel:${currentLocationData?.phone}`} className="cta-phone">
                 <img src="/assets/phone.svg" alt="Phone" />
