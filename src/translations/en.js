@@ -428,6 +428,7 @@ export default {
       customerFocus: 'Customer Focus',
       integrityDesc: 'We operate with honesty and transparency in all our dealings.',
       excellenceDesc: 'We strive for the highest standards in everything we do.',
+      innovationDesc: 'We embrace cutting-edge solutions and continuously evolve to meet changing needs.',
       customerFocusDesc: 'Your needs and satisfaction are our top priority.'
     },
     achievements: {

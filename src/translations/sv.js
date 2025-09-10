@@ -428,6 +428,7 @@ export default {
       customerFocus: 'Kundfokus',
       integrityDesc: 'Vi arbetar med ärlighet och transparens i alla våra affärer.',
       excellenceDesc: 'Vi strävar efter högsta standard i allt vi gör.',
+      innovationDesc: 'Vi omfamnar banbrytande lösningar och utvecklas kontinuerligt för att möta förändrade behov.',
       customerFocusDesc: 'Dina behov och tillfredsställelse är vår högsta prioritet.'
     },
     achievements: {
