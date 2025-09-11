@@ -449,7 +449,7 @@ export default {
         description: 'Always here when you need us'
       }
     },
-    heroTitle: 'Why Choose',
+    heroTitle: 'Why Choose ',
     heroTitleHighlight: 'Advensys?',
     heroDescription: 'With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
     learnMoreBtn: 'Learn More',
@@ -465,7 +465,7 @@ export default {
       }
     },
     whyChoose: {
-      title: 'Why Choose Advensys?',
+      title: 'Why Choose ADVENSYS?',
       expertise: {
         title: 'Expert Knowledge',
         description: 'Our certified professionals have deep industry expertise to guide you to the best solutions.'
@@ -875,6 +875,8 @@ export default {
       success: 'Successfully subscribed!',
       error: 'Subscription failed. Please try again.'
     },
+    legalInformation: 'Legal Information',
+    oriasAuthorization: 'ORIAS Authorization',
     copyright: '© 2024 Advensys Insurance Finance. All rights reserved.',
     developedBy: 'Developed by',
     legalInformation: 'Legal Information',
@@ -962,7 +964,7 @@ export default {
     subtitle: 'Comprehensive Protection Solutions',
     description: 'Discover our full range of insurance services designed to protect you, your family, and your business.',
     whyChooseUs: {
-      title: 'Why Choose Advensys?',
+      title: 'Why Choose ADVENSYS?',
       description: 'We combine years of experience with personalized service to deliver the best insurance solutions for our clients.',
       experience: {
         title: 'Years of Experience',
@@ -1225,6 +1227,10 @@ export default {
       disclaimer: 'All information provided is subject to change without notice. Please verify current terms and conditions.',
       contactInfo: {
         title: 'CONTACT INFORMATION',
+        nameLabel: 'Name',
+        addressLabel: 'Address',
+        phoneLabel: 'Phone',
+        emailLabel: 'E-mail',
         name: 'Irfan Abdul',
         address: '66 avenue des Champs Elysées, 75008 Paris',
         phone: '06 98 21 44 46',

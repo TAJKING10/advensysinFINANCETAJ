@@ -449,7 +449,7 @@ export default {
         description: 'Toujours là quand vous avez besoin de nous'
       }
     },
-    heroTitle: 'Pourquoi Choisir',
+    heroTitle: 'Pourquoi Choisir ',
     heroTitleHighlight: 'Advensys?',
     heroDescription: 'Avec plus de 18 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
     learnMoreBtn: 'En Savoir Plus',
@@ -465,7 +465,7 @@ export default {
       }
     },
     whyChoose: {
-      title: 'Pourquoi Choisir Advensys?',
+      title: 'Pourquoi Choisir ADVENSYS?',
       expertise: {
         title: 'Expertise Professionnelle',
         description: 'Nos professionnels certifiés ont une expertise approfondie de l\'industrie pour vous guider vers les meilleures solutions.'
@@ -844,6 +844,8 @@ export default {
       success: 'Abonnement réussi !',
       error: 'Échec de l\'abonnement. Veuillez réessayer.'
     },
+    legalInformation: 'Informations Légales',
+    oriasAuthorization: 'Autorisation ORIAS',
     copyright: '© 2024 Advensys Insurance Finance. Tous droits réservés.',
     developedBy: 'Développé par'
   },
@@ -854,7 +856,7 @@ export default {
     subtitle: 'Solutions de Protection Complètes',
     description: 'Découvrez notre gamme complète de services d\'assurance conçus pour vous protéger, vous, votre famille et votre entreprise.',
     whyChooseUs: {
-      title: 'Pourquoi Choisir Advensys ?',
+      title: 'Pourquoi Choisir ADVENSYS ?',
       description: 'Nous combinons des années d\'expérience avec un service personnalisé pour offrir les meilleures solutions d\'assurance à nos clients.',
       experience: {
         title: 'Années d\'Expérience',
@@ -1117,6 +1119,10 @@ export default {
       disclaimer: 'Toutes les informations fournies sont susceptibles de modification sans préavis. Veuillez vérifier les conditions générales actuelles.',
       contactInfo: {
         title: 'INFORMATIONS DE CONTACT',
+        nameLabel: 'Nom',
+        addressLabel: 'Adresse',
+        phoneLabel: 'Téléphone',
+        emailLabel: 'E-mail',
         name: 'Irfan Abdul',
         address: '66 avenue des Champs Elysées, 75008 Paris',
         phone: '06 98 21 44 46',

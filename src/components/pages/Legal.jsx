@@ -37,20 +37,20 @@ const Legal = () => {
           </section>
 
           <section className="legal-section">
-            <h4>CONTACT INFORMATION</h4>
+            <h4>{t('legal.identification.contactInfo.title')}</h4>
             <div className="legal-info">
-              <p><strong>Name:</strong> Irfan Abdul</p>
-              <p><strong>Address:</strong> 66 avenue des Champs Elysées, 75008 Paris</p>
-              <p><strong>Phone:</strong> 06 98 21 44 46</p>
-              <p><strong>E-mail:</strong> contact@advensys-in-finance.com</p>
+              <p><strong>{t('legal.identification.contactInfo.nameLabel')}:</strong> {t('legal.identification.contactInfo.name')}</p>
+              <p><strong>{t('legal.identification.contactInfo.addressLabel')}:</strong> {t('legal.identification.contactInfo.address')}</p>
+              <p><strong>{t('legal.identification.contactInfo.phoneLabel')}:</strong> {t('legal.identification.contactInfo.phone')}</p>
+              <p><strong>{t('legal.identification.contactInfo.emailLabel')}:</strong> {t('legal.identification.contactInfo.email')}</p>
             </div>
           </section>
 
           <section className="legal-section">
-            <h4>PROPERTY</h4>
+            <h4>{t('legal.identification.property.title')}</h4>
             <div className="legal-info">
-              <p>The name and logo "Advensys In-Finance" are registered trademarks of the company "Advensys Insurance Finance".</p>
-              <p>The website www. "http://sweden.advensys-in-finance.com/sweden/" is the property of "Advensys Insurance Finance Sarl".</p>
+              <p>{t('legal.identification.property.trademark')}</p>
+              <p>{t('legal.identification.property.website')}</p>
             </div>
           </section>
 
