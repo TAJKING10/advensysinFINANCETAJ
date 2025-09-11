@@ -409,7 +409,7 @@ export default {
   about: {
     title: 'Om Advensys',
     subtitle: 'Din Betrodda Försäkringspartner',
-    description: 'Med över 15 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.',
+    description: 'Med över 18 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.',
     mission: {
       title: 'Vårt Uppdrag',
       description: 'Att tillhandahålla exceptionella försäkrings- och finansiella tjänster som skyddar våra kunders mest värdefulla tillgångar samtidigt som vi bygger långsiktiga relationer baserade på förtroende och tillförlitlighet.'
@@ -451,7 +451,7 @@ export default {
     },
     heroTitle: 'Varför Välja',
     heroTitleHighlight: 'Advensys?',
-    heroDescription: 'Med över 15 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.',
+    heroDescription: 'Med över 18 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.',
     learnMoreBtn: 'Läs Mer',
     experienceBadge: 'Års Erfarenhet',
     highlights: {
@@ -521,7 +521,44 @@ export default {
         category: 'Privat Pensionsplan',
         readTime: '5 min läsning',
         author: 'Finansiella Planeringsteamet',
-        authorBio: 'Vårt finansiella planeringsteam specialiserar sig på luxemburgska pensionslösningar och internationell pensionsplanering.'
+        authorBio: 'Vårt finansiella planeringsteam specialiserar sig på luxemburgska pensionslösningar och internationell pensionsplanering.',
+        content: `
+          <h2>Privat Pensionsplan Förmåner för Din Pension</h2>
+          <p>Luxemburgska privata pensionsplaner erbjuder oförlikneliga fördelar för pensionsplanering, som kombinerar politisk stabilitet, robust regulatoriskt ramverk och betydande skatteförmåner för optimal pensionssäkerhet.</p>
+          
+          <h3>Varför Välja Luxemburgska Pensionsplaner?</h3>
+          <p>Luxemburg har etablerat sig som en ledande jurisdiktion för pensionsplanering med sina stabila politiska och ekonomiska miljöer, tillsammans med ett sofistikerat regulatoriskt ramverk som skyddar investerares intressen.</p>
+          
+          <h3>Skatteförmåner</h3>
+          <p>Luxemburgska pensionsplaner erbjuder betydande skattefördelar:</p>
+          <ul>
+            <li><strong>Skatteuppskjuten Tillväxt:</strong> Investeringar växer utan omedelbar skattepåverkan</li>
+            <li><strong>Flexibla Bidrag:</strong> Anpassa dina bidrag baserat på din finansiella situation</li>
+            <li><strong>Internationell Skatteoptimering:</strong> Dra nytta av Luxemburgs skatteavtal</li>
+            <li><strong>Arvsskattefördelar:</strong> Effektiv överföring av förmögenhet till nästa generation</li>
+          </ul>
+
+          <h3>Investeringsalternativ</h3>
+          <p>Våra luxemburgska pensionsplaner erbjuder:</p>
+          <ul>
+            <li>SEPCAV-planer med maximal investeringsflexibilitet</li>
+            <li>Multivaluta investeringsalternativ</li>
+            <li>Tillgång till institutionella investeringsfonder</li>
+            <li>Professionell portföljförvaltning</li>
+            <li>Regulatorisk övervakning och skydd</li>
+          </ul>
+
+          <h3>Regulatorisk Säkerhet</h3>
+          <p>Luxemburg erbjuder:</p>
+          <ol>
+            <li><strong>Stark Regulatorisk Miljö:</strong> Omfattande investerarskydd</li>
+            <li><strong>Politisk Stabilitet:</strong> Långsiktig säkerhet för dina pensionsinvesteringar</li>
+            <li><strong>EU-medlemskap:</strong> Fördelar av EU-regulatoriska standarder</li>
+            <li><strong>Internationell Erkännande:</strong> Globalt respekterad finansiell jurisdiktion</li>
+          </ol>
+
+          <p>Säkra din pensionsframtid med våra luxemburgska privata pensionsplaner och dra nytta av världsklass pensionsplanering.</p>
+        `
       },
       investment: {
         title: 'Professionella Investeringsrådgivningstjänster',
@@ -529,7 +566,44 @@ export default {
         category: 'Investeringsrådgivare',
         readTime: '4 min läsning',
         author: 'Investeringsteamet',
-        authorBio: 'Vårt investeringsrådgivningsteam består av erfarna proffs med expertis inom portföljförvaltning och finansiell planering.'
+        authorBio: 'Vårt investeringsrådgivningsteam består av erfarna proffs med expertis inom portföljförvaltning och finansiell planering.',
+        content: `
+          <h2>Professionella Investeringsrådgivningstjänster</h2>
+          <p>Att bygga välstånd kräver mer än att bara spara pengar. Våra professionella investeringsrådgivningstjänster hjälper dig att skapa en omfattande investeringsstrategi som är anpassad till dina finansiella mål och risktolerans.</p>
+          
+          <h3>Varför Välja ADVENSYS?</h3>
+          <p>Med över 18 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.</p>
+          
+          <h3>Omfattande Portföljförvaltning</h3>
+          <p>Våra investeringsrådgivningstjänster inkluderar:</p>
+          <ul>
+            <li><strong>Tillgångsallokering:</strong> Strategisk fördelning av investeringar över olika tillgångsklasser</li>
+            <li><strong>Riskbedömning:</strong> Grundlig utvärdering av din risktolerans och investeringshorisont</li>
+            <li><strong>Prestationsövervakning:</strong> Regelbunden granskning och justering av din investeringsportfölj</li>
+            <li><strong>Skatteeffektiva Strategier:</strong> Minimera skatteeffekten på dina investeringsavkastningar</li>
+          </ul>
+
+          <h3>Investeringsalternativ</h3>
+          <p>Vi erbjuder tillgång till ett brett utbud av investeringsinstrument:</p>
+          <ul>
+            <li>Värdepappersfonder och ETF:er</li>
+            <li>Individuella aktier och obligationer</li>
+            <li>Alternativa investeringar</li>
+            <li>Internationella marknader</li>
+            <li>Pensionskonton (401k, IRA)</li>
+          </ul>
+
+          <h3>Personlig Investeringsstrategi</h3>
+          <p>Varje klient får en anpassad investeringsplan baserad på:</p>
+          <ol>
+            <li><strong>Finansiella Mål:</strong> Förstå dina kort- och långsiktiga mål</li>
+            <li><strong>Risktolerans:</strong> Bedöma din komfortnivå med marknadsvolatilitet</li>
+            <li><strong>Tidshorisont:</strong> Överväga när du behöver tillgång till dina investeringar</li>
+            <li><strong>Nuvarande Finansiella Situation:</strong> Utvärdera dina befintliga tillgångar och inkomster</li>
+          </ol>
+
+          <p>Börja bygga din förmögenhet idag med professionell investeringsvägledning från våra certifierade rådgivare.</p>
+        `
       },
       banking: {
         title: 'Bankmaklärartjänster: Din Finansiella Bro',
@@ -537,7 +611,44 @@ export default {
         category: 'Bankmaklärare',
         readTime: '6 min läsning',
         author: 'Banklösningsteamet',
-        authorBio: 'Vårt banklösningsteam består av licensierade bankmellanhander med omfattande erfarenhet inom finansiella tjänster.'
+        authorBio: 'Vårt banklösningsteam består av licensierade bankmellanhander med omfattande erfarenhet inom finansiella tjänster.',
+        content: `
+          <h2>Bankmaklärartjänster: Din Finansiella Bro</h2>
+          <p>Som licensierade bankmellanhander överbryggr vi klyftan mellan dig och finansiella institutioner för att säkra de bästa bankprodukterna och tjänsterna med optimala villkor.</p>
+          
+          <h3>Vad är en Bankmäklare?</h3>
+          <p>En bankmäklare fungerar som en mellanhand mellan kunder och finansiella institutioner, och använder sina branschrelationer och expertis för att förhandla fram de bästa villkoren för lån, banktjänster och finansiella produkter.</p>
+          
+          <h3>Våra Bankmäklartjänster</h3>
+          <p>Vi erbjuder omfattande bankmäklartjänster inom:</p>
+          <ul>
+            <li><strong>Lånemäkling:</strong> Hypotekslån, personliga lån, affärslån och kommersiella lån</li>
+            <li><strong>Banktjänster:</strong> Affärsbank, internationella lösningar, treasury management</li>
+            <li><strong>Kreditlösningar:</strong> Kreditlinjer, kreditkort, tillgångsbaserade lån</li>
+            <li><strong>Specialiserad Bank:</strong> Privatbank, offshore lösningar, multivalutakonton</li>
+          </ul>
+
+          <h3>Fördelar med Våra Tjänster</h3>
+          <p>Genom att arbeta med oss får du:</p>
+          <ul>
+            <li>Tillgång till vårt omfattande nätverk av bankpartners</li>
+            <li>Förhandlade bästa villkor och konkurrenskraftiga räntor</li>
+            <li>Expertvägledning genom komplexa bankprocesser</li>
+            <li>Tidsbesparande forsknings- och jämförelsetjänster</li>
+            <li>Professionell licensiering och regulatorisk efterlevnad</li>
+          </ul>
+
+          <h3>Vår Process</h3>
+          <p>Så här arbetar vi:</p>
+          <ol>
+            <li><strong>Behovsanalys:</strong> Vi utvärderar dina specifika finansiella behov</li>
+            <li><strong>Marknadsforskning:</strong> Vi jämför alternativ från flera finansiella institutioner</li>
+            <li><strong>Förhandling:</strong> Vi förhandlar fram de bästa villkoren å dina vägnar</li>
+            <li><strong>Implementering:</strong> Vi hjälper dig genom ansöknings- och godkännandeprocessen</li>
+          </ol>
+
+          <p>Låt våra bankmäklartjänster hjälpa dig navigera i den komplexa finansiella världen och säkra de bästa möjliga villkoren för dina bankbehov.</p>
+        `
       },
       lifeInsurance: {
         title: 'Dedikerad Livförsäkring: Skydda Ditt Arv',
@@ -545,7 +656,45 @@ export default {
         category: 'Dedikerad Livförsäkring',
         readTime: '7 min läsning',
         author: 'Livförsäkringsspecialister',
-        authorBio: 'Våra livförsäkringsspecialister har omfattande erfarenhet av alla typer av livförsäkringsprodukter och dödsboplaneringsstrategier.'
+        authorBio: 'Våra livförsäkringsspecialister har omfattande erfarenhet av alla typer av livförsäkringsprodukter och dödsboplaneringsstrategier.',
+        content: `
+          <h2>Dedikerad Livförsäkring: Skydda Ditt Arv</h2>
+          <p>Våra dedikerade livförsäkringstjänster fokuserar uteslutande på att tillhandahålla omfattande livförsäkringslösningar som säkerställer att dina nära och kära är finansiellt skyddade när de behöver det mest.</p>
+          
+          <h3>Varför Livförsäkring är Avgörande</h3>
+          <p>Livförsäkring är mer än bara en policy - det är en kärlekshandling som säkerställer att din familjs finansiella framtid är trygg även när du inte längre är där för att försörja dem.</p>
+          
+          <h3>Våra Livförsäkringsprodukter</h3>
+          <p>Vi erbjuder ett komplett utbud av livförsäkringslösningar:</p>
+          <ul>
+            <li><strong>Terminslivförsäkring:</strong> 10, 20 eller 30-års terminsalternativ med nivåpremier</li>
+            <li><strong>Hel Livförsäkring:</strong> Livstid täckning med kontantvärdeackumulation</li>
+            <li><strong>Universell Livförsäkring:</strong> Flexibla premier och justerbara dödsförmåner</li>
+            <li><strong>Variabel Livförsäkring:</strong> Investeringslänkad kontantvärdetillväxt</li>
+            <li><strong>Grupplivförsäkring:</strong> Arbetsgivarsponsrade livförsäkringsplaner</li>
+          </ul>
+
+          <h3>Avancerade Funktioner</h3>
+          <p>Våra livförsäkringspolicyer inkluderar:</p>
+          <ul>
+            <li>Levande förmåner för kritiska sjukdomar</li>
+            <li>Långtidsvårdsryttare</li>
+            <li>Dödsboplaneringsverktyg</li>
+            <li>Skattefördelaktiga förmögenhetsbyggande strategier</li>
+            <li>Flexibla betalningsalternativ</li>
+          </ul>
+
+          <h3>Vår Specialiserade Approach</h3>
+          <p>Som dedikerade livförsäkringsspecialister erbjuder vi:</p>
+          <ol>
+            <li><strong>Personlig Behovsanalys:</strong> Grundlig utvärdering av dina familjs finansiella behov</li>
+            <li><strong>Anpassade Rekommendationer:</strong> Skräddarsydda lösningar baserade på din situation</li>
+            <li><strong>Pågående Policyförvaltning:</strong> Kontinuerlig support och policygranskningar</li>
+            <li><strong>Skadestöd:</strong> Hjälp för dina förmånstagare när de behöver det mest</li>
+          </ol>
+
+          <p>Skydda det som betyder mest - din familjs finansiella framtid. Kontakta våra livförsäkringsspecialister idag för en personlig konsultation.</p>
+        `
       },
       insurance: {
         title: 'Omfattande Försäkringstjänster för Komplett Skydd',
@@ -553,7 +702,56 @@ export default {
         category: 'Försäkringstjänster',
         readTime: '8 min läsning',
         author: 'Försäkringsrkådgivningsteamet',
-        authorBio: 'Vårt försäkringsrkådgivningsteam består av licensierade proffs med expertis inom alla viktiga försäkringskategorier.'
+        authorBio: 'Vårt försäkringsrkådgivningsteam består av licensierade proffs med expertis inom alla viktiga försäkringskategorier.',
+        content: `
+          <h2>Omfattande Försäkringstjänster för Komplett Skydd</h2>
+          <p>På Advensys Insurance Finance tillhandahåller vi omfattande försäkringslösningar som skyddar det som betyder mest för dig. Vårt erfarna team arbetar med ledande försäkringsbolag för att erbjuda konkurrenskraftiga priser och omfattande täckning.</p>
+          
+          <h3>Vårt Fullständiga Utbud av Försäkringstjänster</h3>
+          <p>Vi erbjuder ett komplett spektrum av försäkringslösningar för att möta alla dina skyddsbehov:</p>
+          
+          <h4>Livförsäkring</h4>
+          <ul>
+            <li>Termin-, hel-, universal- och variabla livsalternativ</li>
+            <li>Grupplivförsäkring för anställda</li>
+            <li>Dödsboplanering och förmögenhetsöverföring</li>
+          </ul>
+
+          <h4>Hälsoförsäkring</h4>
+          <ul>
+            <li>Individuella, familje- och grupphälsoplaner</li>
+            <li>Kompletterande hälsotäckning</li>
+            <li>Tandvårds- och synförsäkring</li>
+            <li>Internationellt hälsoskydd</li>
+          </ul>
+
+          <h4>Egendomsförsäkring</h4>
+          <ul>
+            <li>Hemförsäkring för husägare och hyresgäster</li>
+            <li>Bostadsrättsförsäkring</li>
+            <li>Personligt egendomsskydd</li>
+            <li>Ansvarsskydd</li>
+          </ul>
+
+          <h4>Företagsförsäkring</h4>
+          <ul>
+            <li>Allmän och professionell ansvarsförsäkring</li>
+            <li>Kommersiell fastighetsförsäkring</li>
+            <li>Arbetsskadeförsäkring</li>
+            <li>Cyberansvarsförsäkring</li>
+          </ul>
+
+          <h3>Varför Välja Våra Försäkringstjänster</h3>
+          <p>Vi utmärker oss genom:</p>
+          <ol>
+            <li><strong>Expertvägledning:</strong> Licensierade försäkringsproffs med djup branschkunskap</li>
+            <li><strong>Konkurrenskraftiga Priser:</strong> Vi arbetar med flera försäkringsbolag för bästa priser</li>
+            <li><strong>Personlig Service:</strong> Skräddarsydda lösningar för dina unika behov</li>
+            <li><strong>Omfattande Support:</strong> Från policyval till skadestöd</li>
+          </ol>
+
+          <p>Skydda det som betyder mest med våra omfattande försäkringstjänster. Kontakta oss idag för en gratis konsultation och personlig offert.</p>
+        `
       }
     }
   },
@@ -632,84 +830,7 @@ export default {
       error: 'Prenumeration misslyckades. Vänligen försök igen.'
     },
     copyright: '© 2024 Advensys Insurance Finance. Alla rättigheter förbehållna.',
-    developedBy: 'Utvecklad av',
-    legalInformation: 'Juridisk Information',
-    oriasAuthorization: 'Auktorisation ORIAS/LPS: 21003660'
-  },
-
-  // Legal Page
-  legal: {
-    title: 'Juridisk Information',
-    termsConditions: 'Villkor & Bestämmelser',
-    privacyPolicy: 'Integritetspolicy',
-    identification: {
-      title: 'IDENTIFIERING',
-      legalStatus: 'Juridisk status',
-      socialCapital: 'Aktiekapital',
-      address: 'Adress',
-      phone: 'TELEFON',
-      email: 'E-post',
-      vatNumber: 'Momsregistreringsnummer',
-      registration: 'Registrering',
-      registrationText: 'Registrerad hos ORIAS under nr.21003660 som:',
-      services: {
-        investment: 'Finansiell investeringsrådgivning, medlem av LA COMPAGNIE CIF, en förening godkänd av Autorité des Marchés Financiers',
-        insurance: 'Försäkringsmäkleri',
-        banking: 'Mäkleri eller förmedling av bankoperationer, tjänster och betalningar'
-      },
-      civilLiability: 'Civilrättsligt ansvar',
-      civilLiabilityText: 'tecknad av MMA IARD 14 Boulevard Marie et Alexandre Oyon 72030 Le Mans CEDEX 9.',
-      disclaimer: 'Kan inte ta emot något instrument, fond eller värde.'
-    },
-    generalConditions: {
-      title: 'ALLMÄNNA ANVÄNDARVILLKOR',
-      information: 'Informationen på denna webbplats är inte kontraktuell och kan innehålla tekniska felaktigheter eller typografiska fel. Denna information kan ändras periodiskt och ändringar kommer att införlivas i nya utgåvor.',
-      responsibility: '"Advensys Insurance Finance S.A.R.L." kan inte hållas ansvarig för fel eller utelämnanden i den spridda informationen eller för tekniska problem som påträffas på webbplatsen och på alla andra webbplatser till vilka länkar upprättas, eller för någon tolkning av informationen som publiceras på denna webbplats.',
-      changes: '"Advensys Insurance Finance S.A.R.L." kan när som helst, utan förvarning, göra förbättringar eller ändringar av produkterna, programmen eller tjänsterna som beskrivs på denna webbplats.',
-      direction: 'Ledningen av publikationen säkerställs av ledaren för "Advensys Insurance Finance S.A.R.L.".'
-    },
-    gdpr: {
-      title: 'GDPR',
-      rights: 'Internetanvändare har rätt till åtkomst, rättelse, begränsning, invändning av legitima skäl, rätt att bli glömd, rätt till portabilitet med förbehåll för tillämpliga juridiska och regulatoriska bestämmelser. De har också möjlighet att lämna in ett klagomål till CNIL.',
-      exercise: 'Denna rätt utövas per post, med identitetsbevis, till: Advensys Insurance Finance S.A.R.L. – Irfan Abdul- 66 avenue des Champs Elysées, 75008 Paris'
-    },
-    designHost: {
-      title: 'DESIGN, WEBBDESIGN OCH VÄRD',
-      design: 'Design',
-      webDesign: 'Webbdesign',
-      host: 'Värd'
-    },
-    dataProtection: {
-      title: 'SKYDD AV PERSONUPPGIFTER',
-      commitment: '"Advensys Insurance Finance S.A.R.L" är engagerad i en process för att skydda personuppgifterna för sina internetanvändare, i enlighet med dataskyddslagen daterad 6 januari 1978 som ändrad, samt med den allmänna dataskyddsförordningen nr 2016/679 (GDPR).'
-    },
-    dataController: {
-      title: 'ANSVARIG FÖR BEHANDLINGEN',
-      definition: 'För personuppgifter, i betydelsen av GDPR, som samlas in i samband med navigering, är den registeransvarige "Advensys Insurance Finance S.A.R.L", representerad av sin chef.',
-      processing: 'Personuppgifter behandlas endast av den registeransvarige och av personer som auktoriserats av den registeransvarige med avseende på de uppgifter de utför.'
-    },
-    dataCollection: {
-      title: 'INSAMLING AV PERSONUPPGIFTER',
-      definition: 'Enligt dataskyddslagen och den allmänna dataskyddsförordningen utgör all information som rör en fysisk person som är identifierad eller som kan identifieras, direkt eller indirekt, genom hänvisning till ett identifikationsnummer eller till ett eller flera element som är specifika, personuppgifter.',
-      consent: 'Alla personuppgifter som rör internetanvändare samlas in direkt från dem. "Advensys Insurance Finance S.A.R.L" åtar sig att få samtycke från internetanvändare och/eller att tillåta dem att motsätta sig användningen av deras personuppgifter.'
-    },
-    dataTypes: {
-      title: 'TYPER AV DATA OCH SYFTE MED INSAMLING',
-      collected: 'Följande data från internetanvändare kan samlas in av "Advensys Insurance Finance S.A.R.L": efternamn, förnamn, adress, e-post och IP-adress för Google Analytics',
-      purpose: 'Denna insamlade data behandlas huvudsakligen för att: möjliggöra navigering på webbplatsen, producera statistik.',
-      legitimateInterest: 'Insamlingen av personuppgifter baseras på det legitima intresset för "Advensys Insurance Finance S.A.R.L" att erbjuda:',
-      services: {
-        news: 'nyheter och tjänster av intresse för alla som söker information om yrket som finansiell investeringsrådgivare, ett jobb eller en praktikplats',
-        wealth: 'information om förmögenhetsförvaltning och finansiella investeringstjänster'
-      },
-      location: 'Behandlingen som utförs av "Advensys Insurance Finance S.A.R.L" är belägen uteslutande i Frankrike.'
-    },
-    dataRetention: {
-      title: 'DATALAGRING',
-      purpose: 'Personuppgifter sparas endast för den tid som är nödvändig för det syfte som eftersträvas av behandlingen:',
-      navigation: 'navigering på webbplatsen och statistik: 1 år',
-      membership: 'Medlemskap: medlemskapsbehandlingstiden (några veckor)'
-    }
+    developedBy: 'Utvecklad av'
   },
 
   // Services Page
@@ -722,7 +843,7 @@ export default {
       description: 'Vi kombinerar års erfarenhet med personlig service för att leverera de bästa försäkringslösningarna för våra kunder.',
       experience: {
         title: 'Års Erfarenhet',
-        description: 'Över 15 års expertis inom försäkringsbranschen.'
+        description: 'Över 18 års expertis inom försäkringsbranschen.'
       },
       personalized: {
         title: 'Personlig Service',
@@ -888,7 +1009,7 @@ export default {
       director: {
         name: 'Sarah Johnson',
         position: 'Verksamhetsdirektör',
-        bio: 'Sarah bidrar med 15 års operativ excellens till vårt team och säkerställer smidiga processer och exceptionell kundupplevelse i alla kontaktpunkter.'
+        bio: 'Sarah bidrar med 18 års operativ excellens till vårt team och säkerställer smidiga processer och exceptionell kundupplevelse i alla kontaktpunkter.'
       }
     },
     licenses: {
@@ -951,6 +1072,95 @@ export default {
       description: 'Prenumerera på vårt nyhetsbrev för att få de senaste finansnyheterna, tipsen och uppdateringarna direkt i din inkorg.',
       placeholder: 'Ange din e-postadress',
       subscribe: 'Prenumerera'
+    }
+  },
+
+  // Juridisk Information
+  legal: {
+    title: 'Juridisk Information',
+    termsConditions: 'Allmänna Villkor',
+    privacyPolicy: 'Integritetspolicy',
+    identification: {
+      title: 'FÖRETAGSIDENTIFIERING',
+      legalStatus: 'Advensys Insurance Finance SARL',
+      socialCapital: '20 000 EUR',
+      address: '66 avenue des Champs Elysées, 75008 Paris',
+      phone: '+33 6 98 21 44 46',
+      email: 'contact@advensys-in-finance.com – www.advensys-in-finance.com',
+      siret: '89511129200010',
+      ape: '6622Z',
+      vatNumber: 'FR50895111292',
+      registration: 'Registrerad hos Paris Handelsdomstol',
+      registrationText: 'Företag registrerat hos Paris Handelsdomstol under nummer 895111292',
+      services: {
+        investment: 'Investeringsrådgivningstjänster',
+        insurance: 'Försäkringsmäklartjänster',
+        banking: 'Bankförmedlingstjänster'
+      },
+      civilLiability: 'Professionell Ansvarsförsäkring',
+      civilLiabilityText: 'Professionell ansvarsförsäkring som täcker våra aktiviteter innehas hos AXA France',
+      disclaimer: 'All information som tillhandahålls kan ändras utan föregående meddelande. Vänligen verifiera aktuella villkor.',
+      contactInfo: {
+        title: 'KONTAKTINFORMATION',
+        name: 'Irfan Abdul',
+        address: '66 avenue des Champs Elysées, 75008 Paris',
+        phone: '06 98 21 44 46',
+        email: 'contact@advensys-in-finance.com'
+      },
+      property: {
+        title: 'IMMATERIELLA RÄTTIGHETER',
+        trademark: 'Namnet och logotypen "Advensys In-Finance" är registrerade varumärken som tillhör företaget "Advensys Insurance Finance".',
+        website: 'Webbplatsen www.sweden.advensys-in-finance.com/sweden/ är egendom av "Advensys Insurance Finance Sarl".'
+      }
+    },
+    generalConditions: {
+      title: 'ALLMÄNNA ANVÄNDARVILLKOR',
+      information: 'Genom att komma åt denna webbplats godkänner du att följa dessa användarvillkor.',
+      responsibility: 'Företaget frånsäger sig allt ansvar för skador som uppstår till följd av användningen av denna webbplats.',
+      changes: 'Dessa användarvillkor kan ändras när som helst utan föregående meddelande.',
+      direction: 'Alla tvister som rör användningen av denna webbplats är föremål för fransk lag och franska domstolars jurisdiktion.'
+    },
+    gdpr: {
+      title: 'GDPR-EFTERLEVNAD',
+      rights: 'Du har rätt att få tillgång till, rätta, radera och porta dina personuppgifter.',
+      exercise: 'För att utöva dessa rättigheter, vänligen kontakta oss på contact@advensys-in-finance.com'
+    },
+    designHost: {
+      title: 'DESIGN OCH HOSTING',
+      design: 'Advensys Insurance Finance S.A.R.L. – 66 Avenue des Champs Elysées, F-75008 Paris – SIRET: 89511129200010',
+      webDesign: 'Advensys Insurance Finance S.A.R.L. – 66 Avenue des Champs Elysées, F-75008 Paris – SIRET: 89511129200010',
+      host: 'OVH SAS – 2 rue Kellermann – 59100 Roubaix – France – SIRET: 424 761 419 00045'
+    },
+    dataProtection: {
+      title: 'DATASKYDD',
+      commitment: 'Vi är engagerade i att skydda dina personuppgifter och respektera dina integritetsrättigheter.'
+    },
+    dataController: {
+      title: 'PERSONUPPGIFTSANSVARIG',
+      definition: 'Advensys Insurance Finance S.A.R.L. agerar som personuppgiftsansvarig för alla personuppgifter som samlas in via denna webbplats.',
+      processing: 'Vi behandlar dina uppgifter i enlighet med tillämpliga dataskyddslagar och förordningar.'
+    },
+    dataCollection: {
+      title: 'DATAINSAMLING',
+      definition: 'Vi samlar in personuppgifter som du frivilligt tillhandahåller oss genom våra webbplatsformulär och kommunikation.',
+      consent: 'Alla personuppgifter som rör internetanvändare samlas in direkt från dem. Advensys Insurance Finance S.A.R.L. åtar sig att få samtycke från internetanvändare och/eller att tillåta dem att motsätta sig användningen av sina personuppgifter.'
+    },
+    dataTypes: {
+      title: 'TYPER AV DATA OCH SYFTE MED INSAMLING',
+      collected: 'Följande data från internetanvändare kan samlas in av Advensys Insurance Finance S.A.R.L.: efternamn, förnamn, adress, e-post och IP-adress för Google Analytics',
+      purpose: 'Denna insamlade data behandlas huvudsakligen för att: möjliggöra navigering på webbplatsen, producera statistik.',
+      legitimateInterest: 'Insamlingen av personuppgifter baseras på Advensys Insurance Finance S.A.R.L.:s berättigade intresse att erbjuda:',
+      services: {
+        news: 'nyheter och tjänster av intresse för alla som söker information om yrket finansiell investeringsrådgivning, ett jobb eller en praktikplats',
+        wealth: 'information om förmögenhetsförvaltning och finansiella investeringstjänster'
+      },
+      location: 'Behandlingen som utförs av Advensys Insurance Finance S.A.R.L. är belägen uteslutande i Frankrike.'
+    },
+    dataRetention: {
+      title: 'DATALAGRING',
+      purpose: 'Personuppgifter sparas endast så länge som är nödvändigt för det syfte som behandlingen syftar till:',
+      navigation: 'navigering på webbplatsen och statistik: 1 år',
+      membership: 'Medlemskap: medlemskapsbehandlingstiden (några veckor)'
     }
   }
 }

@@ -409,7 +409,7 @@ export default {
   about: {
     title: 'About Advensys',
     subtitle: 'Your Trusted Insurance Partner',
-    description: 'With over 15 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
+    description: 'With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
     mission: {
       title: 'Our Mission',
       description: 'To provide exceptional insurance and financial services that protect our clients\' most valuable assets while building long-term relationships based on trust and reliability.'
@@ -451,7 +451,7 @@ export default {
     },
     heroTitle: 'Why Choose',
     heroTitleHighlight: 'Advensys?',
-    heroDescription: 'With over 15 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
+    heroDescription: 'With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
     learnMoreBtn: 'Learn More',
     experienceBadge: 'Years of Experience',
     highlights: {
@@ -521,7 +521,48 @@ export default {
         category: 'Private Pension Plan',
         readTime: '5 min read',
         author: 'Financial Planning Team',
-        authorBio: 'Our financial planning team specializes in Luxembourg pension solutions and international retirement planning.'
+        authorBio: 'Our financial planning team specializes in Luxembourg pension solutions and international retirement planning.',
+        content: `
+          <h2>Luxembourg Private Pension Plans: Your Path to Secure Retirement</h2>
+          <p>Luxembourg has established itself as a premier destination for private pension planning, offering unparalleled advantages for retirement security through its robust regulatory framework and significant tax benefits.</p>
+          
+          <h3>Why Choose Luxembourg for Your Pension Plan?</h3>
+          <ul>
+            <li><strong>Political Stability:</strong> Luxembourg's stable political environment provides long-term security for your retirement investments.</li>
+            <li><strong>Regulatory Excellence:</strong> Strong regulatory oversight ensures your pension assets are protected and professionally managed.</li>
+            <li><strong>Tax Advantages:</strong> Significant tax benefits during accumulation and distribution phases.</li>
+            <li><strong>EU Portability:</strong> Pension plans that move with you across European Union countries.</li>
+          </ul>
+
+          <h3>SEPCAV Plans: Maximum Investment Flexibility</h3>
+          <p>Specialized investment funds (SEPCAV) offer unprecedented flexibility in your pension planning. These plans allow you to:</p>
+          <ul>
+            <li>Choose from a wide range of investment options</li>
+            <li>Adjust your investment strategy as market conditions change</li>
+            <li>Benefit from professional fund management</li>
+            <li>Access international investment opportunities</li>
+          </ul>
+
+          <h3>Tax Optimization Strategies</h3>
+          <p>Our pension planning experts help you maximize tax efficiency through:</p>
+          <ul>
+            <li>Strategic contribution timing to minimize current tax liability</li>
+            <li>Asset allocation strategies that optimize tax treatment</li>
+            <li>Distribution planning to minimize retirement tax burden</li>
+            <li>Cross-border tax planning for international clients</li>
+          </ul>
+
+          <h3>Getting Started with Your Luxembourg Pension Plan</h3>
+          <p>Our comprehensive pension planning process includes:</p>
+          <ol>
+            <li><strong>Personal Consultation:</strong> Understanding your retirement goals and current financial situation</li>
+            <li><strong>Plan Design:</strong> Creating a customized pension strategy tailored to your needs</li>
+            <li><strong>Implementation:</strong> Setting up your Luxembourg pension plan with proper documentation</li>
+            <li><strong>Ongoing Management:</strong> Regular reviews and adjustments to keep your plan on track</li>
+          </ol>
+
+          <p>Contact our pension planning specialists today to learn how a Luxembourg private pension plan can secure your financial future.</p>
+        `
       },
       investment: {
         title: 'Professional Investment Advisory Services',
@@ -529,7 +570,44 @@ export default {
         category: 'Investment Adviser',
         readTime: '4 min read',
         author: 'Investment Team',
-        authorBio: 'Our investment advisory team consists of experienced professionals with expertise in portfolio management and financial planning.'
+        authorBio: 'Our investment advisory team consists of experienced professionals with expertise in portfolio management and financial planning.',
+        content: `
+          <h2>Professional Investment Advisory Services</h2>
+          <p>Building wealth requires more than just saving money. Our professional investment advisory services help you create a comprehensive investment strategy that aligns with your financial goals and risk tolerance.</p>
+          
+          <h3>Why Choose ADVENSYS?</h3>
+          <p>With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.</p>
+          
+          <h3>Comprehensive Portfolio Management</h3>
+          <p>Our investment advisory services include:</p>
+          <ul>
+            <li><strong>Asset Allocation:</strong> Strategic distribution of investments across different asset classes</li>
+            <li><strong>Risk Assessment:</strong> Thorough evaluation of your risk tolerance and investment timeline</li>
+            <li><strong>Performance Monitoring:</strong> Regular review and adjustment of your investment portfolio</li>
+            <li><strong>Tax-Efficient Strategies:</strong> Minimizing tax impact on your investment returns</li>
+          </ul>
+
+          <h3>Investment Options</h3>
+          <p>We offer access to a wide range of investment vehicles:</p>
+          <ul>
+            <li>Mutual funds and ETFs</li>
+            <li>Individual stocks and bonds</li>
+            <li>Alternative investments</li>
+            <li>International markets</li>
+            <li>Retirement accounts (401k, IRA)</li>
+          </ul>
+
+          <h3>Personalized Investment Strategy</h3>
+          <p>Every client receives a customized investment plan based on:</p>
+          <ol>
+            <li><strong>Financial Goals:</strong> Understanding your short and long-term objectives</li>
+            <li><strong>Risk Tolerance:</strong> Assessing your comfort level with market volatility</li>
+            <li><strong>Time Horizon:</strong> Considering when you'll need access to your investments</li>
+            <li><strong>Current Financial Situation:</strong> Evaluating your existing assets and income</li>
+          </ol>
+
+          <p>Start building your wealth today with professional investment guidance from our certified advisors.</p>
+        `
       },
       banking: {
         title: 'Broker in Bank Services: Your Financial Bridge',
@@ -537,7 +615,48 @@ export default {
         category: 'Broker in Bank',
         readTime: '6 min read',
         author: 'Banking Solutions Team',
-        authorBio: 'Our banking solutions team consists of licensed banking intermediaries with extensive experience in financial services.'
+        authorBio: 'Our banking solutions team consists of licensed banking intermediaries with extensive experience in financial services.',
+        content: `
+          <h2>Bridging You to Optimal Banking Solutions</h2>
+          <p>As licensed banking intermediaries, we bridge the gap between you and financial institutions to secure the best banking products and services with optimal terms and conditions.</p>
+
+          <h3>Why Choose ADVENSYS?</h3>
+          <p>With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.</p>
+
+          <h3>Extensive Banking Network</h3>
+          <p>Our extensive network of banking partners and financial institutions enables us to:</p>
+          <ul>
+            <li>Compare rates and terms from multiple lenders</li>
+            <li>Negotiate better conditions on your behalf</li>
+            <li>Access specialized banking products</li>
+            <li>Provide solutions for complex financial needs</li>
+          </ul>
+
+          <h3>Comprehensive Loan Brokerage Services</h3>
+          
+          <h4>Mortgage Solutions</h4>
+          <p>Whether you're purchasing your first home or refinancing an existing mortgage, we help you find competitive rates and favorable terms from our network of mortgage lenders.</p>
+
+          <h4>Business Lending</h4>
+          <p>From startup capital to expansion financing, we connect businesses with the right lending solutions:</p>
+          <ul>
+            <li>Term loans for equipment and expansion</li>
+            <li>Lines of credit for working capital</li>
+            <li>SBA loans for qualified businesses</li>
+            <li>Commercial real estate financing</li>
+          </ul>
+
+          <h4>Personal Banking Solutions</h4>
+          <p>We help individuals access the banking services they need:</p>
+          <ul>
+            <li>Personal loans for major purchases</li>
+            <li>Auto loans with competitive rates</li>
+            <li>Home equity loans and lines of credit</li>
+            <li>Debt consolidation solutions</li>
+          </ul>
+
+          <p>Contact our banking specialists to discover how we can help you secure the best banking solutions for your needs.</p>
+        `
       },
       lifeInsurance: {
         title: 'Dedicated Life Insurance: Protecting Your Legacy',
@@ -545,7 +664,55 @@ export default {
         category: 'Dedicated Life Insurance',
         readTime: '7 min read',
         author: 'Life Insurance Specialists',
-        authorBio: 'Our life insurance specialists have extensive experience in all types of life insurance products and estate planning strategies.'
+        authorBio: 'Our life insurance specialists have extensive experience in all types of life insurance products and estate planning strategies.',
+        content: `
+          <h2>Dedicated Life Insurance: Protecting Your Legacy</h2>
+          <p>Our dedicated life insurance services focus exclusively on providing comprehensive life insurance solutions that ensure your loved ones are financially protected when they need it most.</p>
+          
+          <h3>Why Choose ADVENSYS?</h3>
+          <p>With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.</p>
+          
+          <h3>Types of Life Insurance Available</h3>
+          <ul>
+            <li><strong>Term Life Insurance:</strong> 10, 20, or 30-year term options with level premiums</li>
+            <li><strong>Whole Life Insurance:</strong> Lifetime coverage with cash value accumulation</li>
+            <li><strong>Universal Life Insurance:</strong> Flexible premiums and adjustable death benefits</li>
+            <li><strong>Variable Life Insurance:</strong> Investment-linked cash value growth</li>
+            <li><strong>Group Life Insurance:</strong> Employer-sponsored life insurance plans</li>
+          </ul>
+
+          <h3>Advanced Life Insurance Features</h3>
+          <p>Modern life insurance policies offer advanced features such as:</p>
+          <ul>
+            <li>Living benefits for critical illness</li>
+            <li>Long-term care riders</li>
+            <li>Estate planning tools</li>
+            <li>Tax-advantaged wealth building strategies</li>
+            <li>Flexible payment options</li>
+          </ul>
+
+          <h3>Why Life Insurance is Essential</h3>
+          <p>Life insurance provides:</p>
+          <ol>
+            <li><strong>Income Replacement:</strong> Replaces lost income for your family</li>
+            <li><strong>Debt Coverage:</strong> Pays off mortgages and other debts</li>
+            <li><strong>Education Expenses:</strong> Secures your children's educational future</li>
+            <li><strong>Final Expenses:</strong> Covers funeral costs and estate expenses</li>
+            <li><strong>Legacy Creation:</strong> Leaves a financial legacy for your beneficiaries</li>
+          </ol>
+
+          <h3>Our Life Insurance Process</h3>
+          <p>We guide you through every step:</p>
+          <ol>
+            <li>Personalized needs analysis</li>
+            <li>Tailored product recommendations</li>
+            <li>Rate and benefit comparisons</li>
+            <li>Underwriting assistance</li>
+            <li>Ongoing policy management</li>
+          </ol>
+
+          <p>Protect your family's financial future with our dedicated life insurance solutions. Contact our specialists today.</p>
+        `
       },
       insurance: {
         title: 'Comprehensive Insurance Services for Complete Protection',
@@ -553,7 +720,84 @@ export default {
         category: 'Insurance Services',
         readTime: '8 min read',
         author: 'Insurance Advisory Team',
-        authorBio: 'Our insurance advisory team consists of licensed professionals with expertise across all major insurance categories.'
+        authorBio: 'Our insurance advisory team consists of licensed professionals with expertise across all major insurance categories.',
+        content: `
+          <h2>Complete Protection for All Your Insurance Needs</h2>
+          <p>At Advensys Insurance Finance, we provide comprehensive insurance solutions that protect what matters most to you. Our experienced team works with leading insurance carriers to offer competitive rates and comprehensive coverage across all major insurance categories.</p>
+
+          <h3>Why Choose ADVENSYS?</h3>
+          <p>With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.</p>
+
+          <h3>Life Insurance Solutions</h3>
+          <p>Protecting your family's financial future with comprehensive life insurance options:</p>
+          
+          <h4>Term Life Insurance</h4>
+          <ul>
+            <li>10, 20, and 30-year term options with level premiums</li>
+            <li>Convertible policies for future flexibility</li>
+            <li>Return of premium options available</li>
+          </ul>
+
+          <h4>Permanent Life Insurance</h4>
+          <ul>
+            <li>Whole life policies with guaranteed cash value</li>
+            <li>Universal life with flexible premiums</li>
+            <li>Variable life with investment options</li>
+          </ul>
+
+          <h3>Health Insurance Coverage</h3>
+          <p>Comprehensive health protection for individuals and families:</p>
+          <ul>
+            <li>Individual and family health plans</li>
+            <li>Group health insurance for businesses</li>
+            <li>Supplemental health coverage options</li>
+            <li>Dental and vision insurance plans</li>
+            <li>Short-term medical coverage</li>
+          </ul>
+
+          <h3>Property Insurance Protection</h3>
+          <p>Safeguarding your most valuable assets:</p>
+          <ul>
+            <li>Homeowners insurance with comprehensive coverage</li>
+            <li>Renters insurance for personal belongings</li>
+            <li>Condominium insurance tailored coverage</li>
+            <li>Personal property and liability protection</li>
+            <li>Additional living expenses coverage</li>
+          </ul>
+
+          <h3>Business Insurance Solutions</h3>
+          <p>Protecting your business from various risks:</p>
+          <ul>
+            <li>General Liability: Protection against third-party claims</li>
+            <li>Professional Liability: Errors and omissions coverage</li>
+            <li>Workers' Compensation: Employee injury and illness protection</li>
+            <li>Cyber Liability: Data breach and cyber attack protection</li>
+            <li>Business Interruption: Income protection during covered events</li>
+          </ul>
+
+          <h3>Auto Insurance Coverage</h3>
+          <p>Comprehensive vehicle protection with competitive rates:</p>
+          <ul>
+            <li>Liability coverage for bodily injury and property damage</li>
+            <li>Comprehensive coverage for non-collision events</li>
+            <li>Collision coverage for accident damage</li>
+            <li>Uninsured/underinsured motorist protection</li>
+            <li>Personal injury protection (PIP)</li>
+          </ul>
+
+          <h3>Why Choose Our Insurance Services?</h3>
+          
+          <h4>Expert Guidance</h4>
+          <p>Our licensed insurance professionals provide expert guidance throughout the entire process, from initial consultation to claims support.</p>
+
+          <h4>Competitive Rates</h4>
+          <p>We work with multiple insurance carriers to ensure you get competitive rates and the best value for your insurance dollar.</p>
+
+          <h4>Comprehensive Claims Support</h4>
+          <p>When you need to file a claim, our experienced team guides you through the process and advocates for your interests.</p>
+
+          <p>Contact our insurance specialists today to discuss your coverage needs and get a personalized quote.</p>
+        `
       }
     }
   },
@@ -722,7 +966,7 @@ export default {
       description: 'We combine years of experience with personalized service to deliver the best insurance solutions for our clients.',
       experience: {
         title: 'Years of Experience',
-        description: 'Over 15 years of expertise in the insurance industry.'
+        description: 'Over 18 years of expertise in the insurance industry.'
       },
       personalized: {
         title: 'Personalized Service',
@@ -888,7 +1132,7 @@ export default {
       director: {
         name: 'Sarah Johnson',
         position: 'Operations Director',
-        bio: 'Sarah brings 15 years of operational excellence to our team, ensuring smooth processes and exceptional customer experience across all touchpoints.'
+        bio: 'Sarah brings 18 years of operational excellence to our team, ensuring smooth processes and exceptional customer experience across all touchpoints.'
       }
     },
     licenses: {
@@ -951,6 +1195,95 @@ export default {
       description: 'Subscribe to our newsletter to receive the latest financial news, tips, and updates directly in your inbox.',
       placeholder: 'Enter your email address',
       subscribe: 'Subscribe'
+    }
+  },
+
+  // Legal Information
+  legal: {
+    title: 'Legal Information',
+    termsConditions: 'Terms and Conditions',
+    privacyPolicy: 'Privacy Policy',
+    identification: {
+      title: 'COMPANY IDENTIFICATION',
+      legalStatus: 'Advensys Insurance Finance SARL',
+      socialCapital: '20,000 EUR',
+      address: '66 avenue des Champs Elysées, 75008 Paris',
+      phone: '+33 6 98 21 44 46',
+      email: 'contact@advensys-in-finance.com – www.advensys-in-finance.com',
+      siret: '89511129200010',
+      ape: '6622Z',
+      vatNumber: 'FR50895111292',
+      registration: 'Registered with the Paris Commercial Court',
+      registrationText: 'Company registered with the Paris Commercial Court under number 895111292',
+      services: {
+        investment: 'Investment Advisory Services',
+        insurance: 'Insurance Brokerage Services',
+        banking: 'Banking Intermediation Services'
+      },
+      civilLiability: 'Professional Civil Liability Insurance',
+      civilLiabilityText: 'Professional civil liability insurance covering our activities is held with AXA France',
+      disclaimer: 'All information provided is subject to change without notice. Please verify current terms and conditions.',
+      contactInfo: {
+        title: 'CONTACT INFORMATION',
+        name: 'Irfan Abdul',
+        address: '66 avenue des Champs Elysées, 75008 Paris',
+        phone: '06 98 21 44 46',
+        email: 'contact@advensys-in-finance.com'
+      },
+      property: {
+        title: 'INTELLECTUAL PROPERTY',
+        trademark: 'The name and logo "Advensys In-Finance" are registered trademarks of the company "Advensys Insurance Finance".',
+        website: 'The website www.sweden.advensys-in-finance.com/sweden/ is the property of "Advensys Insurance Finance Sarl".'
+      }
+    },
+    generalConditions: {
+      title: 'GENERAL CONDITIONS OF USE',
+      information: 'By accessing this website, you agree to comply with these terms and conditions of use.',
+      responsibility: 'The company disclaims any responsibility for damages resulting from the use of this website.',
+      changes: 'These terms and conditions may be modified at any time without prior notice.',
+      direction: 'Any dispute relating to the use of this website is subject to French law and the jurisdiction of French courts.'
+    },
+    gdpr: {
+      title: 'GDPR COMPLIANCE',
+      rights: 'You have the right to access, rectify, delete, and port your personal data.',
+      exercise: 'To exercise these rights, please contact us at contact@advensys-in-finance.com'
+    },
+    designHost: {
+      title: 'DESIGN AND HOSTING',
+      design: 'Advensys Insurance Finance S.A.R.L. – 66 Avenue des Champs Elysées, F-75008 Paris – SIRET: 89511129200010',
+      webDesign: 'Advensys Insurance Finance S.A.R.L. – 66 Avenue des Champs Elysées, F-75008 Paris – SIRET: 89511129200010',
+      host: 'OVH SAS – 2 rue Kellermann – 59100 Roubaix – France – SIRET: 424 761 419 00045'
+    },
+    dataProtection: {
+      title: 'DATA PROTECTION',
+      commitment: 'We are committed to protecting your personal data and respecting your privacy rights.'
+    },
+    dataController: {
+      title: 'DATA CONTROLLER',
+      definition: 'Advensys Insurance Finance S.A.R.L. acts as the data controller for all personal data collected through this website.',
+      processing: 'We process your data in accordance with applicable data protection laws and regulations.'
+    },
+    dataCollection: {
+      title: 'DATA COLLECTION',
+      definition: 'We collect personal data that you voluntarily provide to us through our website forms and communications.',
+      consent: 'All personal data concerning Internet users is collected directly from them. Advensys Insurance Finance S.A.R.L. undertakes to obtain the consent of Internet users and/or to allow them to oppose the use of their personal data.'
+    },
+    dataTypes: {
+      title: 'TYPES OF DATA AND PURPOSE OF COLLECTION',
+      collected: 'The following data from Internet users may be collected by Advensys Insurance Finance S.A.R.L.: surname, first name, address, email and IP address for Google Analytics',
+      purpose: 'This collected data is mainly processed for: allow navigation on the site, produce statistics.',
+      legitimateInterest: 'The collection of personal data is based on the legitimate interest of Advensys Insurance Finance S.A.R.L. to offer:',
+      services: {
+        news: 'news and services of interest to anyone looking for information on the profession of financial investment advice, a job or an internship',
+        wealth: 'information on wealth management and financial investment services'
+      },
+      location: 'The processing carried out by Advensys Insurance Finance S.A.R.L. is located exclusively in Metropolitan France.'
+    },
+    dataRetention: {
+      title: 'DATA RETENTION',
+      purpose: 'Personal data is kept only for the time necessary for the purpose pursued by the processing:',
+      navigation: 'navigation on the site and statistics: 1 year',
+      membership: 'Membership: the membership processing time (a few weeks)'
     }
   }
 }

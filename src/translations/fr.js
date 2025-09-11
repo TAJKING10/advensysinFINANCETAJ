@@ -409,7 +409,7 @@ export default {
   about: {
     title: 'À Propos d\'Advensys',
     subtitle: 'Votre Partenaire d\'Assurance de Confiance',
-    description: 'Avec plus de 15 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
+    description: 'Avec plus de 18 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
     mission: {
       title: 'Notre Mission',
       description: 'Fournir des services d\'assurance et financiers exceptionnels qui protègent les actifs les plus précieux de nos clients tout en construisant des relations à long terme basées sur la confiance et la fiabilité.'
@@ -451,7 +451,7 @@ export default {
     },
     heroTitle: 'Pourquoi Choisir',
     heroTitleHighlight: 'Advensys?',
-    heroDescription: 'Avec plus de 15 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
+    heroDescription: 'Avec plus de 18 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
     learnMoreBtn: 'En Savoir Plus',
     experienceBadge: 'Années d\'Expérience',
     highlights: {
@@ -521,15 +521,93 @@ export default {
         category: 'Plan de Pension Privé',
         readTime: '5 min de lecture',
         author: 'Équipe de Planification Financière',
-        authorBio: 'Notre équipe de planification financière se spécialise dans les solutions de pension luxembourgeoises et la planification de retraite internationale.'
-      },
+      authorBio: 'Notre équipe de planification financière se spécialise dans les solutions de pension luxembourgeoises et la planification de retraite internationale.',
+      content: `
+        <h2>Plans de Pension Privés du Luxembourg : Votre Chemin vers une Retraite Sécurisée</h2>
+        <p>Le Luxembourg s'est établi comme une destination de premier plan pour la planification de pension privée, offrant des avantages inégalés pour la sécurité de la retraite grâce à son cadre réglementaire robuste et ses avantages fiscaux significatifs.</p>
+        
+        <h3>Pourquoi Choisir le Luxembourg pour Votre Plan de Pension ?</h3>
+        <ul>
+          <li><strong>Stabilité Politique :</strong> L'environnement politique stable du Luxembourg offre une sécurité à long terme pour vos investissements de retraite.</li>
+          <li><strong>Excellence Réglementaire :</strong> Une surveillance réglementaire forte garantit que vos actifs de pension sont protégés et gérés professionnellement.</li>
+          <li><strong>Avantages Fiscaux :</strong> Avantages fiscaux significatifs pendant les phases d'accumulation et de distribution.</li>
+          <li><strong>Portabilité UE :</strong> Plans de pension qui vous suivent dans tous les pays de l'Union européenne.</li>
+        </ul>
+
+        <h3>Plans SEPCAV : Flexibilité d'Investissement Maximale</h3>
+        <p>Les fonds d'investissement spécialisés (SEPCAV) offrent une flexibilité sans précédent dans votre planification de pension. Ces plans vous permettent de :</p>
+        <ul>
+          <li>Choisir parmi une large gamme d'options d'investissement</li>
+          <li>Ajuster votre stratégie d'investissement selon les conditions du marché</li>
+          <li>Bénéficier de la gestion professionnelle de fonds</li>
+          <li>Accéder aux opportunités d'investissement internationales</li>
+        </ul>
+
+        <h3>Stratégies d'Optimisation Fiscale</h3>
+        <p>Nos experts en planification de pension vous aident à maximiser l'efficacité fiscale grâce à :</p>
+        <ul>
+          <li>Timing stratégique des contributions pour minimiser l'obligation fiscale actuelle</li>
+          <li>Stratégies d'allocation d'actifs qui optimisent le traitement fiscal</li>
+          <li>Planification de distribution pour minimiser le fardeau fiscal de la retraite</li>
+          <li>Planification fiscale transfrontalière pour les clients internationaux</li>
+        </ul>
+
+        <h3>Commencer avec Votre Plan de Pension Luxembourgeois</h3>
+        <p>Notre processus complet de planification de pension comprend :</p>
+        <ol>
+          <li><strong>Consultation Personnelle :</strong> Comprendre vos objectifs de retraite et votre situation financière actuelle</li>
+          <li><strong>Conception du Plan :</strong> Créer une stratégie de pension personnalisée adaptée à vos besoins</li>
+          <li><strong>Mise en Œuvre :</strong> Établir votre plan de pension luxembourgeois avec la documentation appropriée</li>
+          <li><strong>Gestion Continue :</strong> Révisions et ajustements réguliers pour maintenir votre plan sur la bonne voie</li>
+        </ol>
+
+        <p>Contactez nos spécialistes en planification de pension aujourd'hui pour apprendre comment un plan de pension privé luxembourgeois peut sécuriser votre avenir financier.</p>
+      `
+    },
       investment: {
         title: 'Services Professionnels de Conseil en Investissement',
         excerpt: 'Apprenez-en davantage sur nos services complets de conseil en investissement conçus pour vous aider à créer de la richesse et atteindre vos objectifs financiers.',
         category: 'Conseiller en Investissement',
         readTime: '4 min de lecture',
         author: 'Équipe d\'Investissement',
-        authorBio: 'Notre équipe de conseil en investissement est composée de professionnels expérimentés avec une expertise en planification financière.'
+        authorBio: 'Notre équipe de conseil en investissement est composée de professionnels expérimentés avec une expertise en planification financière.',
+        content: `
+          <h2>Services Professionnels de Conseil en Investissement</h2>
+          <p>Construire la richesse nécessite plus que simplement économiser de l\'argent. Nos services professionnels de conseil en investissement vous aident à créer une stratégie d\'investissement complète qui s\'aligne avec vos objectifs financiers et votre tolérance au risque.</p>
+          
+          <h3>Pourquoi Choisir ADVENSYS ?</h3>
+          <p>Avec plus de 18 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.</p>
+          
+          <h3>Gestion de Portefeuille Complète</h3>
+          <p>Nos services de conseil en investissement comprennent :</p>
+          <ul>
+            <li><strong>Allocation d\'Actifs :</strong> Distribution stratégique des investissements entre différentes classes d\'actifs</li>
+            <li><strong>Évaluation des Risques :</strong> Évaluation approfondie de votre tolérance au risque et de votre horizon d\'investissement</li>
+            <li><strong>Surveillance de la Performance :</strong> Révision et ajustement réguliers de votre portefeuille d\'investissement</li>
+            <li><strong>Stratégies Fiscalement Efficaces :</strong> Minimiser l\'impact fiscal sur vos rendements d\'investissement</li>
+          </ul>
+
+          <h3>Options d\'Investissement</h3>
+          <p>Nous offrons l\'accès à une large gamme de véhicules d\'investissement :</p>
+          <ul>
+            <li>Fonds communs de placement et ETF</li>
+            <li>Actions et obligations individuelles</li>
+            <li>Investissements alternatifs</li>
+            <li>Marchés internationaux</li>
+            <li>Comptes de retraite (401k, IRA)</li>
+          </ul>
+
+          <h3>Stratégie d\'Investissement Personnalisée</h3>
+          <p>Chaque client reçoit un plan d\'investissement personnalisé basé sur :</p>
+          <ol>
+            <li><strong>Objectifs Financiers :</strong> Comprendre vos objectifs à court et long terme</li>
+            <li><strong>Tolérance au Risque :</strong> Évaluer votre niveau de confort avec la volatilité du marché</li>
+            <li><strong>Horizon Temporel :</strong> Considérer quand vous aurez besoin d\'accéder à vos investissements</li>
+            <li><strong>Situation Financière Actuelle :</strong> Évaluer vos actifs et revenus existants</li>
+          </ol>
+
+          <p>Commencez à construire votre richesse aujourd\'hui avec des conseils d\'investissement professionnels de nos conseillers certifiés.</p>
+        `
       },
       banking: {
         title: 'Services Courtier en Banque : Votre Pont Financier',
@@ -537,7 +615,42 @@ export default {
         category: 'Courtier en Banque',
         readTime: '6 min de lecture',
         author: 'Équipe Solutions Bancaires',
-        authorBio: 'Notre équipe de solutions bancaires est composée d\'intermédiaires bancaires agréés avec une vaste expérience dans les services financiers.'
+        authorBio: 'Notre équipe de solutions bancaires est composée d\'intermédiaires bancaires agréés avec une vaste expérience dans les services financiers.',
+        content: `
+          <h2>Services Courtier en Banque : Votre Pont Financier</h2>
+          <p>En tant qu\'intermédiaires bancaires agréés, nous comblons le fossé entre vous et les institutions financières pour sécuriser les meilleurs produits et services bancaires avec des termes et conditions optimaux.</p>
+          
+          <h3>Qu\'est-ce qu\'un Courtier en Banque ?</h3>
+          <p>Un courtier en banque agit comme un intermédiaire entre les clients et les institutions financières, utilisant son expertise et ses relations pour négocier les meilleures conditions pour vos besoins bancaires.</p>
+          
+          <h3>Nos Services de Courtage Bancaire</h3>
+          <ul>
+            <li><strong>Courtage de Prêts :</strong> Hypothèques, prêts personnels, commerciaux et d\'entreprise</li>
+            <li><strong>Services Bancaires :</strong> Banque d\'affaires, solutions internationales, gestion de trésorerie</li>
+            <li><strong>Solutions de Crédit :</strong> Lignes de crédit, cartes de crédit, prêts sur actifs</li>
+            <li><strong>Banque Spécialisée :</strong> Banque privée, solutions offshore, comptes multi-devises</li>
+            <li><strong>Financement Commercial :</strong> Lettres de crédit, financement de factures et affacturage</li>
+          </ul>
+
+          <h3>Avantages de Nos Services</h3>
+          <ul>
+            <li>Vaste réseau de partenaires bancaires et d\'institutions</li>
+            <li>Négociation des meilleures conditions et taux d\'intérêt compétitifs</li>
+            <li>Guidance experte à travers des processus bancaires complexes</li>
+            <li>Services de recherche et de comparaison qui font gagner du temps</li>
+            <li>Conformité réglementaire et licence professionnelle</li>
+          </ul>
+
+          <h3>Notre Processus</h3>
+          <ol>
+            <li><strong>Consultation :</strong> Comprendre vos besoins bancaires spécifiques</li>
+            <li><strong>Recherche :</strong> Identifier les meilleures options parmi nos partenaires</li>
+            <li><strong>Négociation :</strong> Sécuriser les conditions les plus favorables</li>
+            <li><strong>Facilitation :</strong> Guider le processus d\'approbation et de mise en place</li>
+          </ol>
+
+          <p>Laissez nos experts bancaires vous aider à naviguer dans le paysage financier complexe et sécuriser les meilleures solutions bancaires pour vos besoins.</p>
+        `
       },
       lifeInsurance: {
         title: 'Assurance Vie Dédiée : Protéger Votre Héritage',
@@ -545,7 +658,52 @@ export default {
         category: 'Assurance Vie Dédiée',
         readTime: '7 min de lecture',
         author: 'Spécialistes en Assurance Vie',
-        authorBio: 'Nos spécialistes en assurance vie ont une vaste expérience dans tous les types de produits d\'assurance vie et les stratégies de planification successorale.'
+        authorBio: 'Nos spécialistes en assurance vie ont une vaste expérience dans tous les types de produits d\'assurance vie et les stratégies de planification successorale.',
+        content: `
+          <h2>Assurance Vie Dédiée : Protéger Votre Héritage</h2>
+          <p>Nos services d\'assurance vie dédiés se concentrent exclusivement sur la fourniture de solutions d\'assurance vie complètes qui garantissent que vos proches sont financièrement protégés quand ils en ont le plus besoin.</p>
+          
+          <h3>Types d\'Assurance Vie Disponibles</h3>
+          <ul>
+            <li><strong>Assurance Vie Temporaire :</strong> Options de 10, 20 ou 30 ans avec primes nivelées</li>
+            <li><strong>Assurance Vie Entière :</strong> Couverture à vie avec accumulation de valeur de rachat</li>
+            <li><strong>Assurance Vie Universelle :</strong> Primes flexibles et prestations de décès ajustables</li>
+            <li><strong>Assurance Vie Variable :</strong> Croissance de la valeur de rachat liée aux investissements</li>
+            <li><strong>Assurance Vie de Groupe :</strong> Plans d\'assurance vie parrainés par l\'employeur</li>
+          </ul>
+
+          <h3>Fonctionnalités Avancées</h3>
+          <p>Nos polices d\'assurance vie incluent des fonctionnalités avancées telles que :</p>
+          <ul>
+            <li>Prestations de vie pour maladies graves</li>
+            <li>Options de planification successorale</li>
+            <li>Stratégies de création de richesse avec avantages fiscaux</li>
+            <li>Flexibilité de paiement des primes</li>
+            <li>Options de conversion et de renouvellement</li>
+          </ul>
+
+          <h3>Pourquoi l\'Assurance Vie est Essentielle</h3>
+          <p>L\'assurance vie fournit :</p>
+          <ol>
+            <li><strong>Protection du Revenu :</strong> Remplace le revenu perdu pour votre famille</li>
+            <li><strong>Couverture des Dettes :</strong> Paie les hypothèques et autres dettes</li>
+            <li><strong>Frais d\'Éducation :</strong> Sécurise l\'avenir éducatif de vos enfants</li>
+            <li><strong>Frais Finaux :</strong> Couvre les coûts funéraires et les frais de succession</li>
+            <li><strong>Héritage :</strong> Laisse un héritage financier à vos bénéficiaires</li>
+          </ol>
+
+          <h3>Notre Processus d\'Assurance Vie</h3>
+          <p>Nous vous guidons à travers chaque étape :</p>
+          <ol>
+            <li>Analyse des besoins personnalisée</li>
+            <li>Recommandations de produits adaptées</li>
+            <li>Comparaison des tarifs et des prestations</li>
+            <li>Assistance pour la souscription</li>
+            <li>Gestion continue des polices</li>
+          </ol>
+
+          <p>Protégez l\'avenir financier de votre famille avec nos solutions d\'assurance vie dédiées. Contactez nos spécialistes aujourd\'hui.</p>
+        `
       },
       insurance: {
         title: 'Services d\'Assurance Complets pour une Protection Complète',
@@ -553,7 +711,62 @@ export default {
         category: 'Services d\'Assurance',
         readTime: '8 min de lecture',
         author: 'Équipe Conseil en Assurance',
-        authorBio: 'Notre équipe de conseil en assurance est composée de professionnels agréés avec une expertise dans toutes les principales catégories d\'assurance.'
+        authorBio: 'Notre équipe de conseil en assurance est composée de professionnels agréés avec une expertise dans toutes les principales catégories d\'assurance.',
+        content: `
+          <h2>Services d\'Assurance Complets pour une Protection Complète</h2>
+          <p>Chez Advensys Insurance Finance, nous comprenons que l\'assurance est plus que de simples polices—c\'est une tranquillité d\'esprit. Nos services d\'assurance complets sont conçus pour vous protéger, vous, votre famille et vos actifs des défis inattendus de la vie.</p>
+          
+          <h3>Notre Gamme Complète de Services d\'Assurance</h3>
+          
+          <h4>Assurance Vie</h4>
+          <ul>
+            <li>Options d\'assurance vie temporaire, entière, universelle et variable</li>
+            <li>Assurance vie collective et individuelle</li>
+            <li>Stratégies de planification successorale</li>
+          </ul>
+
+          <h4>Assurance Santé</h4>
+          <ul>
+            <li>Plans de santé individuels, familiaux et collectifs</li>
+            <li>Assurance dentaire et vision</li>
+            <li>Couverture santé internationale</li>
+            <li>Assurance santé complémentaire</li>
+          </ul>
+
+          <h4>Assurance Propriété</h4>
+          <ul>
+            <li>Assurance propriétaire et locataire</li>
+            <li>Assurance copropriété</li>
+            <li>Couverture des biens personnels</li>
+            <li>Protection de responsabilité personnelle</li>
+          </ul>
+
+          <h4>Assurance Entreprise</h4>
+          <ul>
+            <li>Assurance responsabilité civile générale</li>
+            <li>Assurance propriété commerciale</li>
+            <li>Assurance indemnisation des travailleurs</li>
+            <li>Assurance responsabilité cyber</li>
+          </ul>
+
+          <h3>Pourquoi Choisir Nos Services d\'Assurance</h3>
+          <ul>
+            <li><strong>Conseils d\'Experts :</strong> Professionnels expérimentés en assurance</li>
+            <li><strong>Tarifs Compétitifs :</strong> Travail avec plusieurs assureurs</li>
+            <li><strong>Assistance aux Réclamations :</strong> Support complet pour les réclamations</li>
+            <li><strong>Révisions Régulières :</strong> Mise à jour continue de votre couverture</li>
+          </ul>
+
+          <h3>Notre Processus d\'Assurance</h3>
+          <ol>
+            <li><strong>Évaluation :</strong> Analyse complète de vos besoins</li>
+            <li><strong>Recommandation :</strong> Solutions personnalisées</li>
+            <li><strong>Mise en Œuvre :</strong> Sélection et mise en place des polices</li>
+            <li><strong>Support Continu :</strong> Révisions et assistance continues</li>
+          </ol>
+
+          <p>Protégez ce qui compte le plus avec nos solutions d\'assurance complètes. Contactez nos experts aujourd\'hui pour une consultation personnalisée.</p>
+        `
       }
     }
   },
@@ -632,84 +845,7 @@ export default {
       error: 'Échec de l\'abonnement. Veuillez réessayer.'
     },
     copyright: '© 2024 Advensys Insurance Finance. Tous droits réservés.',
-    developedBy: 'Développé par',
-    legalInformation: 'Informations Légales',
-    oriasAuthorization: 'Autorisation ORIAS/LPS : 21003660'
-  },
-
-  // Legal Page
-  legal: {
-    title: 'Informations Légales',
-    termsConditions: 'Conditions Générales',
-    privacyPolicy: 'Politique de Confidentialité',
-    identification: {
-      title: 'IDENTIFICATION',
-      legalStatus: 'Statut juridique',
-      socialCapital: 'Capital Social',
-      address: 'Adresse',
-      phone: 'TÉLÉPHONE',
-      email: 'E-mail',
-      vatNumber: 'Numéro de TVA',
-      registration: 'Enregistrement',
-      registrationText: 'Enregistré auprès d\'ORIAS sous le n°21003660 en tant que :',
-      services: {
-        investment: 'Conseil en investissement financier, membre de LA COMPAGNIE CIF, association agréée par l\'Autorité des Marchés Financiers',
-        insurance: 'Courtage en assurance',
-        banking: 'Courtage ou intermédiation en opérations bancaires, services et paiements'
-      },
-      civilLiability: 'Responsabilité civile',
-      civilLiabilityText: 'souscrite auprès de MMA IARD 14 Boulevard Marie et Alexandre Oyon 72030 Le Mans CEDEX 9.',
-      disclaimer: 'Ne peut recevoir aucun instrument, fonds ou valeur.'
-    },
-    generalConditions: {
-      title: 'CONDITIONS GÉNÉRALES D\'UTILISATION',
-      information: 'Les informations de ce site ne sont pas contractuelles et peuvent contenir des inexactitudes techniques ou des erreurs typographiques. Ces informations peuvent être modifiées périodiquement et les modifications seront incorporées dans de nouvelles éditions.',
-      responsibility: 'La "Advensys Insurance Finance S.A.R.L." ne peut être tenue responsable des erreurs ou omissions dans les informations diffusées ou des problèmes techniques rencontrés sur le site et sur tous les autres sites auxquels des liens sont établis, ou de toute interprétation des informations publiées sur ce site.',
-      changes: '"Advensys Insurance Finance S.A.R.L." peut, à tout moment, sans préavis, apporter des améliorations ou des modifications aux produits, programmes ou services décrits sur ce site.',
-      direction: 'La direction de la publication est assurée par le dirigeant de "Advensys Insurance Finance S.A.R.L.".'
-    },
-    gdpr: {
-      title: 'RGPD',
-      rights: 'Les internautes disposent d\'un droit d\'accès, de rectification, de limitation, d\'opposition pour motifs légitimes, droit à l\'oubli, droit à la portabilité sous réserve des dispositions légales et réglementaires applicables. Ils ont également la possibilité de déposer une plainte auprès de la CNIL.',
-      exercise: 'Ce droit s\'exerce par courrier, avec justificatif d\'identité, à : Advensys Insurance Finance S.A.R.L. – Irfan Abdul- 66 avenue des Champs Elysées, 75008 Paris'
-    },
-    designHost: {
-      title: 'CONCEPTION, DESIGN WEB ET HÉBERGEUR',
-      design: 'Conception',
-      webDesign: 'Design web',
-      host: 'Hébergeur'
-    },
-    dataProtection: {
-      title: 'PROTECTION DES DONNÉES PERSONNELLES',
-      commitment: 'La "Advensys Insurance Finance S.A.R.L" s\'engage dans une démarche de protection des données personnelles de ses internautes, conformément à la Loi Informatique et Libertés du 6 janvier 1978 modifiée, ainsi qu\'au Règlement Général sur la Protection des Données n° 2016/679 (RGPD).'
-    },
-    dataController: {
-      title: 'RESPONSABLE DU TRAITEMENT',
-      definition: 'Pour les données personnelles, au sens du RGPD, collectées dans le cadre de la navigation, le responsable du traitement est "Advensys Insurance Finance S.A.R.L", représentée par son dirigeant.',
-      processing: 'Les données personnelles ne sont traitées que par le responsable du traitement et par les personnes habilitées par le responsable du traitement au regard des tâches qu\'elles accomplissent.'
-    },
-    dataCollection: {
-      title: 'COLLECTE DES DONNÉES PERSONNELLES',
-      definition: 'Selon la Loi Informatique et Libertés et le Règlement Général sur la Protection des Données, toute information se rapportant à une personne physique identifiée ou qui peut être identifiée, directement ou indirectement, par référence à un numéro d\'identification ou à un ou plusieurs éléments qui lui sont propres, constitue une donnée personnelle.',
-      consent: 'Toutes les données personnelles concernant les internautes sont collectées directement auprès d\'eux. La "Advensys Insurance Finance S.A.R.L" s\'engage à obtenir le consentement des internautes et/ou à leur permettre de s\'opposer à l\'utilisation de leurs données personnelles.'
-    },
-    dataTypes: {
-      title: 'TYPES DE DONNÉES ET FINALITÉ DE LA COLLECTE',
-      collected: 'Les données suivantes des internautes peuvent être collectées par la "Advensys Insurance Finance S.A.R.L" : nom, prénom, adresse, email et adresse IP pour Google Analytics',
-      purpose: 'Ces données collectées sont principalement traitées pour : permettre la navigation sur le site, produire des statistiques.',
-      legitimateInterest: 'La collecte de données personnelles est basée sur l\'intérêt légitime de la "Advensys Insurance Finance S.A.R.L" d\'offrir :',
-      services: {
-        news: 'des actualités et services d\'intérêt pour toute personne recherchant des informations sur le métier de conseil en investissement financier, un emploi ou un stage',
-        wealth: 'des informations sur la gestion de patrimoine et les services d\'investissement financier'
-      },
-      location: 'Le traitement effectué par la "Advensys Insurance Finance S.A.R.L" est situé exclusivement en France métropolitaine.'
-    },
-    dataRetention: {
-      title: 'CONSERVATION DES DONNÉES',
-      purpose: 'Les données personnelles ne sont conservées que le temps nécessaire à la finalité poursuivie par le traitement :',
-      navigation: 'navigation sur le site et statistiques : 1 an',
-      membership: 'Adhésion : le temps de traitement de l\'adhésion (quelques semaines)'
-    }
+    developedBy: 'Développé par'
   },
 
   // Services Page
@@ -722,7 +858,7 @@ export default {
       description: 'Nous combinons des années d\'expérience avec un service personnalisé pour offrir les meilleures solutions d\'assurance à nos clients.',
       experience: {
         title: 'Années d\'Expérience',
-        description: 'Plus de 15 ans d\'expertise dans l\'industrie de l\'assurance.'
+        description: 'Plus de 18 ans d\'expertise dans l\'industrie de l\'assurance.'
       },
       personalized: {
         title: 'Service Personnalisé',
@@ -888,7 +1024,7 @@ export default {
       director: {
         name: 'Sarah Johnson',
         position: 'Directrice des Opérations',
-        bio: 'Sarah apporte 15 ans d\'excellence opérationnelle à notre équipe, garantissant des processus fluides et une expérience client exceptionnelle à tous les points de contact.'
+        bio: 'Sarah apporte 18 ans d\'excellence opérationnelle à notre équipe, garantissant des processus fluides et une expérience client exceptionnelle à tous les points de contact.'
       }
     },
     licenses: {
@@ -951,6 +1087,95 @@ export default {
       description: 'Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles financières, conseils et mises à jour directement dans votre boîte de réception.',
       placeholder: 'Entrez votre adresse email',
       subscribe: 'S\'abonner'
+    }
+  },
+
+  // Informations Légales
+  legal: {
+    title: 'Informations Légales',
+    termsConditions: 'Conditions Générales',
+    privacyPolicy: 'Politique de Confidentialité',
+    identification: {
+      title: 'IDENTIFICATION DE L\'ENTREPRISE',
+      legalStatus: 'Advensys Insurance Finance SARL',
+      socialCapital: '20 000 EUR',
+      address: '66 avenue des Champs Elysées, 75008 Paris',
+      phone: '+33 6 98 21 44 46',
+      email: 'contact@advensys-in-finance.com – www.advensys-in-finance.com',
+      siret: '89511129200010',
+      ape: '6622Z',
+      vatNumber: 'FR50895111292',
+      registration: 'Immatriculée au Registre du Commerce de Paris',
+      registrationText: 'Société immatriculée au Registre du Commerce de Paris sous le numéro 895111292',
+      services: {
+        investment: 'Services de Conseil en Investissement',
+        insurance: 'Services de Courtage en Assurance',
+        banking: 'Services d\'Intermédiation Bancaire'
+      },
+      civilLiability: 'Assurance Responsabilité Civile Professionnelle',
+      civilLiabilityText: 'L\'assurance responsabilité civile professionnelle couvrant nos activités est souscrite auprès d\'AXA France',
+      disclaimer: 'Toutes les informations fournies sont susceptibles de modification sans préavis. Veuillez vérifier les conditions générales actuelles.',
+      contactInfo: {
+        title: 'INFORMATIONS DE CONTACT',
+        name: 'Irfan Abdul',
+        address: '66 avenue des Champs Elysées, 75008 Paris',
+        phone: '06 98 21 44 46',
+        email: 'contact@advensys-in-finance.com'
+      },
+      property: {
+        title: 'PROPRIÉTÉ INTELLECTUELLE',
+        trademark: 'Le nom et le logo "Advensys In-Finance" sont des marques déposées de la société "Advensys Insurance Finance".',
+        website: 'Le site web www.sweden.advensys-in-finance.com/sweden/ est la propriété d\'"Advensys Insurance Finance Sarl".'
+      }
+    },
+    generalConditions: {
+      title: 'CONDITIONS GÉNÉRALES D\'UTILISATION',
+      information: 'En accédant à ce site web, vous acceptez de vous conformer à ces conditions générales d\'utilisation.',
+      responsibility: 'La société décline toute responsabilité pour les dommages résultant de l\'utilisation de ce site web.',
+      changes: 'Ces conditions générales peuvent être modifiées à tout moment sans préavis.',
+      direction: 'Tout litige relatif à l\'utilisation de ce site web est soumis au droit français et à la juridiction des tribunaux français.'
+    },
+    gdpr: {
+      title: 'CONFORMITÉ RGPD',
+      rights: 'Vous avez le droit d\'accéder, de rectifier, de supprimer et de porter vos données personnelles.',
+      exercise: 'Pour exercer ces droits, veuillez nous contacter à contact@advensys-in-finance.com'
+    },
+    designHost: {
+      title: 'CONCEPTION ET HÉBERGEMENT',
+      design: 'Advensys Insurance Finance S.A.R.L. – 66 Avenue des Champs Elysées, F-75008 Paris – SIRET: 89511129200010',
+      webDesign: 'Advensys Insurance Finance S.A.R.L. – 66 Avenue des Champs Elysées, F-75008 Paris – SIRET: 89511129200010',
+      host: 'OVH SAS – 2 rue Kellermann – 59100 Roubaix – France – SIRET: 424 761 419 00045'
+    },
+    dataProtection: {
+      title: 'PROTECTION DES DONNÉES',
+      commitment: 'Nous nous engageons à protéger vos données personnelles et à respecter vos droits à la vie privée.'
+    },
+    dataController: {
+      title: 'RESPONSABLE DU TRAITEMENT',
+      definition: 'Advensys Insurance Finance S.A.R.L. agit en tant que responsable du traitement pour toutes les données personnelles collectées via ce site web.',
+      processing: 'Nous traitons vos données conformément aux lois et réglementations applicables en matière de protection des données.'
+    },
+    dataCollection: {
+      title: 'COLLECTE DE DONNÉES',
+      definition: 'Nous collectons les données personnelles que vous nous fournissez volontairement via les formulaires de notre site web et nos communications.',
+      consent: 'Toutes les données personnelles concernant les internautes sont collectées directement auprès d\'eux. Advensys Insurance Finance S.A.R.L. s\'engage à obtenir le consentement des internautes et/ou à leur permettre de s\'opposer à l\'utilisation de leurs données personnelles.'
+    },
+    dataTypes: {
+      title: 'TYPES DE DONNÉES ET FINALITÉ DE LA COLLECTE',
+      collected: 'Les données suivantes des internautes peuvent être collectées par Advensys Insurance Finance S.A.R.L. : nom, prénom, adresse, email et adresse IP pour Google Analytics',
+      purpose: 'Ces données collectées sont principalement traitées pour : permettre la navigation sur le site, produire des statistiques.',
+      legitimateInterest: 'La collecte de données personnelles est basée sur l\'intérêt légitime d\'Advensys Insurance Finance S.A.R.L. d\'offrir :',
+      services: {
+        news: 'des actualités et services d\'intérêt pour toute personne recherchant des informations sur la profession de conseil en investissement financier, un emploi ou un stage',
+        wealth: 'des informations sur la gestion de patrimoine et les services d\'investissement financier'
+      },
+      location: 'Le traitement effectué par Advensys Insurance Finance S.A.R.L. est situé exclusivement en France métropolitaine.'
+    },
+    dataRetention: {
+      title: 'CONSERVATION DES DONNÉES',
+      purpose: 'Les données personnelles ne sont conservées que le temps nécessaire à la finalité poursuivie par le traitement :',
+      navigation: 'navigation sur le site et statistiques : 1 an',
+      membership: 'Adhésion : la durée du traitement d\'adhésion (quelques semaines)'
     }
   }
 }
