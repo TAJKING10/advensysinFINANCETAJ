@@ -449,7 +449,7 @@ export default {
         description: 'Alltid här när du behöver oss'
       }
     },
-    heroTitle: 'Varför Välja ',
+    heroTitle: 'Varför Välja',
     heroTitleHighlight: 'Advensys?',
     heroDescription: 'Med över 18 års erfarenhet inom försäkringsbranschen har Advensys Insurance Finance tillhandahållit pålitliga och omfattande försäkringslösningar till privatpersoner och företag.',
     learnMoreBtn: 'Läs Mer',

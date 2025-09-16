@@ -449,7 +449,7 @@ export default {
         description: 'Toujours là quand vous avez besoin de nous'
       }
     },
-    heroTitle: 'Pourquoi Choisir ',
+    heroTitle: 'Pourquoi Choisir',
     heroTitleHighlight: 'Advensys?',
     heroDescription: 'Avec plus de 18 ans d\'expérience dans l\'industrie de l\'assurance, Advensys Insurance Finance fournit des solutions d\'assurance fiables et complètes aux particuliers et aux entreprises.',
     learnMoreBtn: 'En Savoir Plus',

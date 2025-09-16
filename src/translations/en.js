@@ -449,7 +449,7 @@ export default {
         description: 'Always here when you need us'
       }
     },
-    heroTitle: 'Why Choose ',
+    heroTitle: 'Why Choose',
     heroTitleHighlight: 'Advensys?',
     heroDescription: 'With over 18 years of experience in the insurance industry, Advensys Insurance Finance has been providing reliable and comprehensive insurance solutions to individuals and businesses.',
     learnMoreBtn: 'Learn More',
