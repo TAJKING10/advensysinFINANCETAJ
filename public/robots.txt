@@ -1,0 +1,15 @@
+# robots.txt for advensys-in-finance.com
+# Production environment - Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths if any exist
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://advensys-in-finance.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1

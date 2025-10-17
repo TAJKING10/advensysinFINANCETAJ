@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://advensys-in-finance.com/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/about</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/about"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/contact</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/contact"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/news</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/news"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/news"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/glossary</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/glossary"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/glossary"/>
+  </url>
+  <!-- Corporate Finance Service Pages -->
+  <url>
+    <loc>https://advensys-in-finance.com/services/corporate-finance-luxembourg</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/corporate-finance-luxembourg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/corporate-finance-luxembourg"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/fundraising-luxembourg</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/fundraising-luxembourg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/fundraising-luxembourg"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/m-and-a-advisory-luxembourg</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/m-and-a-advisory-luxembourg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/m-and-a-advisory-luxembourg"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/valuation-services-luxembourg</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/valuation-services-luxembourg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/valuation-services-luxembourg"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/treasury-management-luxembourg</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/treasury-management-luxembourg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/treasury-management-luxembourg"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/regulatory-reporting-luxembourg</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/regulatory-reporting-luxembourg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/regulatory-reporting-luxembourg"/>
+  </url>
+  <!-- Existing Service Pages -->
+  <url>
+    <loc>https://advensys-in-finance.com/services/insurance</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/insurance"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/insurance"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/dedicated-life-insurance</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/dedicated-life-insurance"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/dedicated-life-insurance"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/investment-adviser</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/investment-adviser"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/investment-adviser"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/broker-in-bank</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/broker-in-bank"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/broker-in-bank"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/services/private-pension-plan</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/services/private-pension-plan"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/services/private-pension-plan"/>
+  </url>
+  <url>
+    <loc>https://advensys-in-finance.com/legal</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://advensys-in-finance.com/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://advensys-in-finance.com/fr/legal"/>
+  </url>
+</urlset>
