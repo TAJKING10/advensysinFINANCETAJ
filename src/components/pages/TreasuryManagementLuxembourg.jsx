@@ -15,7 +15,7 @@ const TreasuryManagementLuxembourg = () => {
       answer: 'A 13-week (rolling quarterly) cash flow forecast projects cash inflows and outflows week-by-week for the next 13 weeks. It includes: customer payments, supplier payments, payroll, taxes, debt service, and capex. Updated weekly, it provides early warning of cash shortfalls and helps prioritize payments. Essential for SMEs in growth or turnaround situations.'
     },
     {
-      question: 'How can I improve my company's working capital?',
+      question: 'How can I improve my company\'s working capital?',
       answer: 'Working capital improvements focus on: (1) Accounts receivable — accelerate collections, offer early payment discounts, tighten credit terms; (2) Inventory — reduce excess stock, improve turnover, just-in-time procurement; (3) Accounts payable — extend payment terms without damaging relationships, prioritize supplier payments strategically. We analyze your cash conversion cycle and implement quick wins.'
     },
     {
@@ -263,7 +263,7 @@ const TreasuryManagementLuxembourg = () => {
               <div style={{ border: '1px solid #e0e0e0', padding: '1.25rem', borderRadius: '8px' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#002b5c' }}>Cash Conversion Cycle (CCC)</h3>
                 <p><strong>Formula:</strong> DSO + DIO - DPO<br />
-                <strong>Target:</strong> <30 days (shorter is better)<br />
+                <strong>Target:</strong> &lt;30 days (shorter is better)<br />
                 <strong>Meaning:</strong> How long cash is tied up in operations</p>
               </div>
               <div style={{ border: '1px solid #e0e0e0', padding: '1.25rem', borderRadius: '8px' }}>
@@ -275,7 +275,7 @@ const TreasuryManagementLuxembourg = () => {
               <div style={{ border: '1px solid #e0e0e0', padding: '1.25rem', borderRadius: '8px' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#002b5c' }}>Cash Runway</h3>
                 <p><strong>Formula:</strong> Cash Balance / Monthly Cash Burn<br />
-                <strong>Target:</strong> >6 months<br />
+                <strong>Target:</strong> &gt;6 months<br />
                 <strong>Meaning:</strong> How long until you run out of cash</p>
               </div>
             </div>

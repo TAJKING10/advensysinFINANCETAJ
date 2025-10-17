@@ -31,7 +31,7 @@ const InsuranceService = () => {
     },
     {
       question: 'Do you help with insurance claims?',
-      answer: 'Yes. We provide comprehensive claims support: documentation assistance, claim filing, liaison with insurance carriers, negotiation for fair settlements, and appeals if claims are denied. We work as your advocate throughout the entire claims process to ensure you receive the full benefits you're entitled to.'
+      answer: 'Yes. We provide comprehensive claims support: documentation assistance, claim filing, liaison with insurance carriers, negotiation for fair settlements, and appeals if claims are denied. We work as your advocate throughout the entire claims process to ensure you receive the full benefits you are entitled to.'
     },
     {
       question: 'Can I bundle multiple insurance policies for better rates?',
