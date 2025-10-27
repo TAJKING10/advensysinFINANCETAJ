@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './ServicePages.css'
+import SEOHead from '../ui/SEOHead'
 
 const BrokerInBank = () => {
   return (
     <div className="service-page">
+      <SEOHead
+        title="Broker in Bank Luxembourg | Loan Brokerage & Banking Services"
+        description="Professional banking intermediary services in Luxembourg: mortgage loans, business lending, commercial banking, trade finance. Expert negotiation, best terms, 24h response."
+        keywords="loan broker Luxembourg, banking services Luxembourg, mortgage broker, business loans Luxembourg, commercial banking, trade finance Luxembourg"
+      />
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">

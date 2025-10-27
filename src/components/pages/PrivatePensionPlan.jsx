@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './ServicePages.css'
+import SEOHead from '../ui/SEOHead'
 
 const PrivatePensionPlan = () => {
   return (
     <div className="service-page">
+      <SEOHead
+        title="Private Pension Plan Luxembourg | SEPCAV, Life Insurance Pension"
+        description="Luxembourg private pension plans: SEPCAV funds, life insurance pensions, corporate schemes. Tax advantages, EU portability, asset protection. Expert guidance, 24h response."
+        keywords="private pension Luxembourg, SEPCAV Luxembourg, pension plan Luxembourg, retirement planning Luxembourg, Luxembourg life insurance pension, tax-efficient pension"
+      />
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">

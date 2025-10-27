@@ -2,11 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './ServicePages.css'
 import { useLanguage } from '../../contexts/LanguageContext'
+import SEOHead from '../ui/SEOHead'
 
 const DedicatedLifeInsurance = () => {
   const { t } = useLanguage()
   return (
     <div className="service-page">
+      <SEOHead
+        title="Dedicated Life Insurance Luxembourg | Term, Whole, Universal Life"
+        description="Specialized life insurance solutions in Luxembourg: term life, whole life, universal life, and variable life insurance. Expert advice, personalized coverage, 24h response."
+        keywords="life insurance Luxembourg, term life insurance, whole life insurance, universal life insurance, variable life insurance, life insurance advisor"
+      />
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">

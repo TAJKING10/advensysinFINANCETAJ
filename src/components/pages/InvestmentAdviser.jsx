@@ -2,11 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './ServicePages.css'
 import { useLanguage } from '../../contexts/LanguageContext'
+import SEOHead from '../ui/SEOHead'
 
 const InvestmentAdviser = () => {
   const { t } = useLanguage()
   return (
     <div className="service-page">
+      <SEOHead
+        title="Investment Adviser Luxembourg | Portfolio Management & Wealth Advisory"
+        description="Fiduciary investment advisory in Luxembourg: portfolio management, retirement planning, wealth management. Personalized strategies, transparent fees, 24h response."
+        keywords="investment adviser Luxembourg, portfolio management, wealth management Luxembourg, financial advisor, retirement planning, investment planning"
+      />
       <div className="container">
         {/* Back Navigation */}
         <div className="back-navigation">
